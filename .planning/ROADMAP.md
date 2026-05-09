@@ -3,7 +3,7 @@
 **Created:** 2026-05-09
 **Last revised:** 2026-05-09 (added Phase 2: Infrastructure & Repo Setup)
 **Granularity:** standard
-**Coverage:** 95/95 v1 requirements mapped
+**Coverage:** 96/96 v1 requirements mapped
 **Project horizon:** 4-6 years (likely the upper end — see "Brutally Honest Timeline" below)
 
 > **Scope reminder:** v1 = the full 30+ hour shipping game. The vertical slice is Milestone 1 within v1, NOT v1 itself. Architectural systems are sized for the full game from day one; only content scopes down for the slice.
@@ -56,7 +56,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 **Goal:** Lock design pillars, four-killer mitigations, stack, and sustainability rhythms before any code or content is written. Resolve the open architectural questions (action-driven vs wall-clock time; Dialogue Manager vs Dialogic; pre-committed Year-3-Wall tripwires) so phase 2+ work doesn't re-litigate them.
 **Depends on:** Nothing (first phase)
 **Estimated duration:** ~1 month (research, decisions, document drafting; no code)
-**Requirements:** HEALTH-01, HEALTH-02, HEALTH-03, HEALTH-04, HEALTH-05
+**Requirements:** HEALTH-01, HEALTH-02, HEALTH-03, HEALTH-04, HEALTH-05, MKTG-06
 **Success Criteria** (what must be TRUE):
   1. SCOPE.md log exists with rationale-tracking template; `slice-debt.md` exists; both have a worked example entry to prove the format works
   2. "Why play at hour 200" doc exists, explicitly applying the four-engine retention strategy (state-tagged dialogue, 3+ active threads, seasonal recurrence, player-driven goals)
@@ -64,6 +64,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
   4. Sustainable-pace cadence document exists (target ~25 hrs/week, daily/weekly/monthly/quarterly rhythms named)
   5. Persona-zero playtest ritual is established and the first 15-min session has actually happened (HEALTH-05 requires ongoing maintenance — first session is the proof)
   6. Action-driven vs wall-clock time decision is resolved and documented; Dialogue Manager (not Dialogic) confirmed as locked
+  7. **Demographic validation evidence collected and documented (MKTG-06).** At least 10 cozy life sims have had their Steam negative reviews mined for top complaint patterns; results compared to persona-zero's stated dislikes and to existing FEATURES/PITFALLS research; one cozy-community survey or qualitative source (r/CozyGamers thread / cozy Discord pulse) supplements the review mining; findings written up in `MARKET-EVIDENCE.md` with explicit "thesis confirmed / refined / rejected" verdict. If the verdict is "rejected" or "significantly refined," the rest of the roadmap is revisited before Phase 2 begins.
 **Plans:** TBD
 
 ---
@@ -254,7 +255,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 
 ### Coverage map (all 95 v1 requirements)
 
-**Phase 1 (5):** HEALTH-01, HEALTH-02, HEALTH-03, HEALTH-04, HEALTH-05
+**Phase 1 (6):** HEALTH-01, HEALTH-02, HEALTH-03, HEALTH-04, HEALTH-05, MKTG-06
 
 **Phase 2 (11):** INFRA-01, INFRA-02, INFRA-03, INFRA-04, INFRA-05, INFRA-06, INFRA-07, INFRA-08, INFRA-09, INFRA-10, INFRA-11
 
@@ -278,7 +279,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 
 **Phase 12 (M2):** (launch — no new REQ-IDs)
 
-**Total mapped:** 95 unique REQ-IDs (5 + 11 + 23 + 11 + 8 + 24 + 7 + 10 + slice-spans + 1 + 0 + 0). Coverage = 95/95 ✓.
+**Total mapped:** 96 unique REQ-IDs (6 + 11 + 23 + 11 + 8 + 24 + 7 + 10 + slice-spans + 1 + 0 + 0). Coverage = 96/96 ✓.
 
 ### Coverage notes (intentional cross-phase mappings)
 
@@ -293,7 +294,7 @@ A few requirements span multiple phases by design — they are anchored to the p
 
 ### No orphaned requirements
 
-All 95 v1 requirements have a phase. Coverage is complete.
+All 96 v1 requirements have a phase. Coverage is complete.
 
 ### v2 requirements (deferred, not in v1 scope)
 

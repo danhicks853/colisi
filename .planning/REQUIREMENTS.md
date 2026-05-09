@@ -148,6 +148,7 @@
 - [ ] **MKTG-03**: Free demo (the vertical slice) ships through at least one Steam Next Fest before v1 launch
 - [ ] **MKTG-04**: Discord server exists for community building
 - [ ] **MKTG-05**: Capsule art and trailer are commissioned to professional quality (highest-ROI budget exception)
+- [ ] **MKTG-06**: Demographic-validation evidence is collected and documented before any external marketing copy is finalized — Steam review mining of 10-20 similar cozy life sims (top complaints in negative reviews), at least one cozy-community survey (r/CozyGamers, cozy Discords), and sales-data analysis on "cozy without time pressure" titles. Results inform marketing positioning and verify (or correct) the project's market hypothesis. This delivers empirical grounding for the "underserved demographic" claim that n=1 persona research cannot provide on its own
 
 ### Project Health & Sustainability
 
@@ -322,6 +323,7 @@ All 95 v1 requirements mapped to phases. Coverage = 95/95.
 | MKTG-03 | Phase 8 | Pending |
 | MKTG-04 | Phase 8 | Pending |
 | MKTG-05 | Phase 8 (capsule for slice) / Phase 11 (M2 trailer) | Pending |
+| MKTG-06 | Phase 1 (validation work fits with vision lock; results referenced in Phase 8 marketing copy) | Pending |
 | HEALTH-01 | Phase 1 (ongoing across all phases) | Pending |
 | HEALTH-02 | Phase 1 (ongoing across all phases) | Pending |
 | HEALTH-03 | Phase 1 (re-checked at every phase transition) | Pending |
@@ -329,8 +331,8 @@ All 95 v1 requirements mapped to phases. Coverage = 95/95.
 | HEALTH-05 | Phase 1 (ongoing across all phases) | Pending |
 
 **Coverage:**
-- v1 requirements: 95 total (84 original + 11 INFRA-XX added 2026-05-09)
-- Mapped to phases: 95 (100%) ✓
+- v1 requirements: 96 total (84 original + 11 INFRA-XX + MKTG-06 added 2026-05-09)
+- Mapped to phases: 96 (100%) ✓
 - Unmapped: 0
 
 ---

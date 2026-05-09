@@ -28,7 +28,7 @@ M2: [          ] 0/4 phases (sketch only)
 v1: [          ] 0/12 phases total
 ```
 
-**Requirements:** 1/95 mapped requirements satisfied (INFRA-03 complete: repo at `https://github.com/danhicks853/colisi.git`). The other 94 are pending — Phase 1 is planning/decisions, Phase 2 is infrastructure setup, and shippable game-system REQs begin in Phase 3.
+**Requirements:** 1/96 mapped requirements satisfied (INFRA-03 complete: repo at `https://github.com/danhicks853/colisi.git`). The other 95 are pending — Phase 1 is planning/decisions/market validation, Phase 2 is infrastructure setup, and shippable game-system REQs begin in Phase 3.
 
 ---
 

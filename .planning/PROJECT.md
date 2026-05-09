@@ -6,7 +6,7 @@
 
 ## What This Is
 
-Colisi is a 3D narrative-driven cozy life sim for the underserved "deep cozy enjoyer" demographic — players who love Stardew-class relationship and crafting loops but who consistently bounce off time-pressure systems, difficulty-curve walls, and "story ends → game ends" content cliffs. The game crosses Baldur's Gate 3's companion-driven branching narrative with The Sims' player-expression and life-control loops, wrapped in a whimsical fantasy / magical realism aesthetic. Setting includes spirits, witches, talking animals, and other gentle-magic elements.
+Colisi is a 3D narrative-driven cozy life sim aimed at cozy-genre players who report friction with time-pressure systems, difficulty-curve walls, and "story ends → game ends" content cliffs — friction that is widely documented across the cozy community (Stardew forums, the "14-Heart-Events-For-All" mod, Kitfox/Tanya X. Short's "Designing for Coziness," "best cozy games without time limits" lists, industry post-mortems). *Whether this constitutes a meaningfully "underserved demographic" is a market hypothesis that needs validation before the Steam page launches in Phase 8 — see Phase 2 demographic-validation work.* The game crosses Baldur's Gate 3's companion-driven branching narrative with The Sims' player-expression and life-control loops, wrapped in a whimsical fantasy / magical realism aesthetic. Setting includes spirits, witches, talking animals, and other gentle-magic elements.
 
 The core fantasy, in the lead persona's own words: **"Talking to the people and finding where I fit in."**
 
@@ -63,7 +63,14 @@ The core fantasy, in the lead persona's own words: **"Talking to the people and 
 
 ## Context
 
-**Persona research foundation:** Lead persona (Daniel's wife) was interviewed against her Steam library — most-played games and finished-end-to-end games — with structured questions about loves and hates per title, plus quit-early-due-to-frustration data. Full corpus saved to `.planning/research/PERSONA.md`. This is unusually rigorous foundational research for an indie project and should drive design decisions throughout. When in doubt, return to the persona corpus.
+**Persona research foundation:** Lead persona (Daniel's wife) was interviewed against her Steam library — most-played games and finished-end-to-end games — with structured questions about loves and hates per title, plus quit-early-due-to-frustration data. Full corpus saved to `.planning/research/PERSONA.md`.
+
+**What persona-zero is, and isn't, evidence of:**
+- ✓ **A design anchor** — turns general cozy-genre patterns into specific design constraints. Cooper's "design for one specific person" principle: better coherence than designing for an abstract demographic.
+- ✓ **A renewable feedback loop** — lead persona lives in the household. Most solo devs lack any feedback loop until late playtest. This is a *development* advantage.
+- ✓ **An anti-feature commitment device** — "no time pressure" is hard to hold to without a specific bounce reason; persona's quit-reasons make abstractions concrete.
+- ✗ **NOT market evidence.** n=1 is not statistical validation. The market thesis (that the friction patterns persona identifies are widely felt enough to support a commercial product) is *separately* supported by external research cited in FEATURES.md and PITFALLS.md (Stardew forum complaints, mod evidence, "cozy without time limits" lists, Kitfox / Tanya X. Short, industry post-mortems). Persona aligns with and adds specificity to that broader corpus but does not replace it.
+- ✗ **NOT a competitive moat.** Anyone could replicate this research approach. The execution and craft are the moat, not the persona research.
 
 **Persona's "dream cross" (her words):** *"If I could find a game that was a cross of Baldur's Gate and the Sims, that would be perfect for me."* Translated:
 - *From BG3:* companions ("makes me feel less alone"), gradual progression, decisions impact gameplay, branching narrative, party-feeling
@@ -71,7 +78,7 @@ The core fantasy, in the lead persona's own words: **"Talking to the people and 
 
 **The "endgame problem" pattern:** Across nearly every game persona bounced off (Bear & Breakfast, Spirittea, RCT, Sims, Little Witch in the Woods, Paperbark), the failure mode is the same: content runs out, story ends, or progression flatlines, and there's no reason to keep playing. She loves Stardew at 1000+ hours specifically because NPC interactions kept giving her a reason to return. **Solving the endgame problem is therefore the central design challenge.** Likely solution shapes: characters whose dialogue and arcs continue to evolve indefinitely; multiple intertwining narrative threads so when one ends, others continue; player-driven goals (Sims-style) that don't require new authored content to be meaningful; seasonal / event-driven content that creates ongoing rhythms.
 
-**Market position:** "Underserved deep cozy enjoyer demographic" — players who want Stardew's relationship depth without its time pressure, BG3's companion-driven branching without its combat-skill demands, and The Sims' expression without its content-cliff "then what" problem. Current market hits some of these but not all in one product. Strong commercial thesis if executed.
+**Market hypothesis (NOT yet validated):** Cozy players want Stardew's relationship depth without its time pressure, BG3's companion-driven branching without its combat-skill demands, and The Sims' expression without its content-cliff "then what" problem. Current market hits some of these but not all in one product. *This is a hypothesis backed by qualitative external sources (cozy community complaints, mod evidence, industry essays) and aligned with persona-zero, but it is not yet validated with market evidence (Steam review mining, demographic surveys, sales-data analysis on similar titles). Validation work is required before the Steam page launches — see Phase 2.*
 
 **Technical environment:**
 - Godot 4 chosen as engine: free MIT license (no royalties, no Unity-style pricing risk), strong 3D in v4, GDScript is beginner-accessible
@@ -99,7 +106,7 @@ The core fantasy, in the lead persona's own words: **"Talking to the people and 
 |----------|-----------|---------|
 | Engine: Godot 4 (not Unity, not Unreal) | Free MIT license, no royalty risk, beginner-accessible GDScript, strong 3D in v4, healthy indie ecosystem | — Pending |
 | Setting: Whimsical fantasy / magical realism | Distinctive vs cottagecore-saturated cozy market; allows non-human NPCs (spirits, witches, talking animals) which expand narrative possibility | — Pending |
-| Audience: Commercial product for persona's underserved demographic | Persona zero is the wife; design north star is the broader cozy-enjoyer demographic underserved by current market | — Pending |
+| Audience: Commercial product for cozy-genre players reporting friction with time pressure / difficulty walls / endgame cliffs | Persona zero is the wife (design anchor + feedback loop, not market evidence). The broader market hypothesis that this is a meaningfully underserved demographic is qualitatively supported by external research but NOT yet validated with market evidence (Steam review mining, surveys, sales-data analysis). Phase 2 includes validation work | — Pending |
 | Scope: 30+ hour systems-rich game (not small narrative gem) | User chose this explicitly with full awareness of timeline implications; aligned to commercial ambition | — Pending |
 | Strategy: Vertical-slice-first, full-game architecture from day one | Lets us validate the loop and build a wishlist before scaling content; avoids throwaway architecture | — Pending |
 | No real-time-pressure mechanics (no day clocks, no missable windows) | Hardest-hitting persona dislike, also strongest market differentiator | — Pending |

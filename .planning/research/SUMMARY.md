@@ -211,7 +211,7 @@ The 5 things that, if we get wrong, will cost months of rework or kill the proje
 
 ## Non-Obvious Wins
 
-1. **Persona-zero feedback rhythm is a unique competitive advantage.** Lead persona lives in the house; ritualize 15-min playtest sessions from week 1, not slice-completion. Renewable motivation + direction-correction no full-time team has cheaper access to.
+1. **Persona-zero is a design anchor and feedback loop, NOT a competitive moat or market validation.** n=1 is not statistical evidence for "underserved demographic" claims. Use persona-zero for what it actually is: (a) a design constraint anchor that makes "no time pressure" / "no difficulty walls" concrete, (b) a renewable feedback loop most solo devs lack, (c) an anti-feature commitment device. The market hypothesis itself needs separate validation work (Steam review mining, cozy community surveys) before any external marketing copy is finalized — see MKTG-06 in Phase 1.
 2. **Capsule art is the highest-ROI dollar in the entire project.** A $300 commissioned capsule moves wishlist conversion from 1–2% to 8–12%. Single most valuable budget exception. Lock for Phase 7.
 3. **Steam page launches at slice (~month 18), not at launch.** Most common solo-dev mistake. 12–18 months of wishlist building = difference between commercial success and flop.
 4. **No AI-generated content for shipped product.** Steam has rejected games with AI assets. Copyright provenance unsettled. Persona's demographic values human-made craft. Reputation risk asymmetric.
@@ -236,6 +236,7 @@ The 5 things that, if we get wrong, will cost months of rework or kill the proje
 
 ### Gaps to Address
 
+- **Market hypothesis validation (Phase 1, MKTG-06).** The "underserved deep cozy enjoyer demographic" framing is qualitatively supported by external research (Stardew forum complaints, mod evidence, Tanya X. Short, "cozy without time limits" lists) but is NOT statistically validated. Persona-zero is n=1 and is a design anchor, not market evidence. Demographic-validation work (Steam review mining of 10-20 similar cozy life sims, cozy-community survey, sales-data analysis) must complete in Phase 1 before the rest of the roadmap is committed in earnest. If the market thesis is rejected or significantly refined, the roadmap is revised before Phase 2 begins.
 - **Action-driven vs wall-clock time decision (Phase 1).** Single most architecturally consequential open question.
 - **Final dialogue tooling pick (Phase 1).** Architecture says Dialogue Manager; stack defaulted to Dialogic 2. Architecture rationale wins.
 - **NPC count cap for full game (before Phase 5).**
