@@ -1,4 +1,4 @@
-# Requirements: Cozy Life Sim (working title)
+# Requirements: Colisi
 
 **Defined:** 2026-05-09
 **Core Value:** Characters and relationships that keep evolving, in a world that never punishes the player.

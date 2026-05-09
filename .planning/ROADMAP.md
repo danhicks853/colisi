@@ -1,4 +1,4 @@
-# Roadmap: Cozy Life Sim (working title)
+# Roadmap: Colisi
 
 **Created:** 2026-05-09
 **Granularity:** standard

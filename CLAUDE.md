@@ -1,7 +1,7 @@
 <!-- GSD:project-start source:PROJECT.md -->
 ## Project
 
-**Cozy Life Sim (working title)**
+**Colisi** *(project codename; final shipped game title TBD by Phase 7 Steam page launch)*
 
 A 3D narrative-driven cozy life sim for the underserved "deep cozy enjoyer" demographic — players who love Stardew-class relationship and crafting loops but who consistently bounce off time-pressure systems, difficulty-curve walls, and "story ends → game ends" content cliffs. The game crosses Baldur's Gate 3's companion-driven branching narrative with The Sims' player-expression and life-control loops, wrapped in a whimsical fantasy / magical realism aesthetic. Setting includes spirits, witches, talking animals, and other gentle-magic elements.
 

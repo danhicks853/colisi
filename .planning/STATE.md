@@ -1,6 +1,6 @@
-# Project State: Cozy Life Sim (working title)
+# Project State: Colisi
 
-**Last updated:** 2026-05-09 (after roadmap creation)
+**Last updated:** 2026-05-09 (after roadmap creation + project codename lock)
 
 ---
 

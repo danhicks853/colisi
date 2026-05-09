@@ -1,8 +1,10 @@
-# Cozy Life Sim (working title)
+# Colisi
+
+> **Project codename:** Colisi (locked 2026-05-09). Used in repo, planning docs, devlog handles, and internal communication. The shipped *game title* may evolve as the world and characters crystallize; final game title decision deadline is the Steam page launch in Phase 7.
 
 ## What This Is
 
-A 3D narrative-driven cozy life sim for the underserved "deep cozy enjoyer" demographic — players who love Stardew-class relationship and crafting loops but who consistently bounce off time-pressure systems, difficulty-curve walls, and "story ends → game ends" content cliffs. The game crosses Baldur's Gate 3's companion-driven branching narrative with The Sims' player-expression and life-control loops, wrapped in a whimsical fantasy / magical realism aesthetic. Setting includes spirits, witches, talking animals, and other gentle-magic elements.
+Colisi is a 3D narrative-driven cozy life sim for the underserved "deep cozy enjoyer" demographic — players who love Stardew-class relationship and crafting loops but who consistently bounce off time-pressure systems, difficulty-curve walls, and "story ends → game ends" content cliffs. The game crosses Baldur's Gate 3's companion-driven branching narrative with The Sims' player-expression and life-control loops, wrapped in a whimsical fantasy / magical realism aesthetic. Setting includes spirits, witches, talking animals, and other gentle-magic elements.
 
 The core fantasy, in the lead persona's own words: **"Talking to the people and finding where I fit in."**
 
@@ -103,6 +105,7 @@ The core fantasy, in the lead persona's own words: **"Talking to the people and 
 | Single-player only | Persona quit Palia for requiring multiplayer; multiplayer also adds enormous solo-dev complexity | — Pending |
 | Distribution: Steam + itch.io v1; console / mobile deferred | Cost, certification, and design-port complexity push these out of v1 | — Pending |
 | Art: Stylized 3D, Blender pipeline | Solo dev budget reality and brand identity | — Pending |
+| Project codename: Colisi (2026-05-09) | Internal-use name for repo, planning, devlog handles. Final shipped game title is TBD by Phase 7 Steam page launch — early enough to commit a name, late enough to defer the final title until world/characters crystallize | — Pending |
 
 ## Evolution
 
@@ -122,4 +125,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-05-09 after initialization*
+*Last updated: 2026-05-09 after project codename lock (Colisi)*
