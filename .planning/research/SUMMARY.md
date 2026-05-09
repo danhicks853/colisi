@@ -158,7 +158,7 @@ FEATURES implies 5–6 phases focused on game systems. PITFALLS implies 9+ phase
 
 Detailed phasing deferred to a re-planning session at end of M1. Rough shape:
 
-- **Phase 8: Content Scaling** — full NPC roster, procedural-template dialogue layer, more zones, full crafting recipe set, festival/event system, NPC-to-NPC gossip, full companion-on-outings for 4–6, decoration breadth, romance arcs.
+- **Phase 8 (renumbered to Phase 9 after Phase 2: Infrastructure was inserted): Content Scaling** — full NPC roster, more zones, full crafting recipe set, festival/event system, NPC-to-NPC gossip, full companion-on-outings for 4–6, decoration breadth, romance arcs. *(Procedural-template dialogue layer REMOVED 2026-05-09 per AI policy in PHILOSOPHY.md — all dialogue must be hand-authored, no Mad-Libs runtime template-filling. Endgame retention leans on the other three engines plus player-driven goals; dialogue authoring load is correspondingly higher.)*
 - **Phase 9: Polish, Accessibility Re-Audit, Localization** — CSV → PO; pick 1–2 high-leverage languages.
 - **Phase 10: Pre-Launch Marketing** — second Next Fest demo, trailer, pricing benchmarked, launch-week discount planned.
 - **Phase 11: Launch + Post-Launch v1.x**.
@@ -177,7 +177,7 @@ Detailed phasing deferred to a re-planning session at end of M1. Rough shape:
 - **Phase 1:** Action-driven time vs wall-clock — novel cozy execution; brief prototype + decision review.
 - **Phase 3:** Dialogue-eligibility cascade tuning is high-leverage but no perfect cozy precedent.
 - **Phase 5:** Companion-on-outings is HIGH complexity and emotionally load-bearing; dedicated research for camera/blend behavior.
-- **Phase 8 (M2):** Procedural-template dialogue layer needs prototyping before content authors author against it.
+- ~~**Phase 8 (M2):** Procedural-template dialogue layer needs prototyping before content authors author against it.~~ **STRUCK 2026-05-09:** Procedural-template dialogue layer is removed from the plan per AI policy (PHILOSOPHY.md Section V). All dialogue is hand-authored.
 
 **Phases with standard, well-documented patterns (research-phase optional):**
 - Phase 2, 4, 6, 7 — canonical Godot 4 patterns, checklist-driven polish, well-documented marketing patterns.

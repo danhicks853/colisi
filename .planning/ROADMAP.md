@@ -43,7 +43,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 
 ### Milestone 2: Production & Launch (years 2-4+, sketch only)
 
-- [ ] **Phase 9: Content Scaling** — Full NPC roster (12+), procedural-template dialogue layer, more zones, full crafting/decoration breadth, festivals, NPC gossip, romance arcs
+- [ ] **Phase 9: Content Scaling** — Full NPC roster (12+), more zones, full crafting/decoration breadth, festivals, NPC gossip, romance arcs. *(Procedural-template dialogue layer REMOVED — see Phase 9 detail; AI policy decision means all dialogue must be hand-authored, increasing the authoring load.)*
 - [ ] **Phase 10: Polish, Accessibility Re-Audit, Localization** — CSV-to-PO migration, 1-2 high-leverage non-English languages, full a11y re-audit
 - [ ] **Phase 11: Pre-Launch Marketing** — Second Next Fest demo, commissioned trailer, pricing benchmark, launch-week discount strategy
 - [ ] **Phase 12: Launch + Post-Launch v1.x** — Ship, monitor, hotfix, post-launch content cadence
@@ -193,7 +193,9 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 ---
 
 ### Phase 9: Content Scaling (Milestone 2 — sketch only)
-**Goal:** Scale slice systems to full-game content — the full NPC roster (slice has 4, full game has 12+), procedural-template dialogue layer for endgame retention depth, more zones to reach 8 total, full crafting recipe set, festival/event system with year-over-year evolution, full NPC-to-NPC gossip propagation, full companion-on-outings for 4-6 NPCs, romance arcs (cozy-tuned, no punishing fail states).
+**Goal:** Scale slice systems to full-game content — the full NPC roster (slice has 4, full game has 12+), more zones to reach 8 total, full crafting recipe set, festival/event system with year-over-year evolution, full NPC-to-NPC gossip propagation, full companion-on-outings for 4-6 NPCs, romance arcs (cozy-tuned, no punishing fail states).
+
+**IMPORTANT design change (logged 2026-05-09):** The procedural-template dialogue layer that was previously planned here is REMOVED per the AI policy in PHILOSOPHY.md Section V. Decision: all dialogue lines must be hand-authored — Mad-Libs-style runtime template-filling is off the table even though the templates would be human-written. Endgame retention now leans entirely on the other three engines from SUMMARY.md (state-tagged authored dialogue with no max state, always 3+ active narrative threads, seasonal recurrence with persistent variation across years) plus player-driven creative goals. **Net effect: the dialogue authoring load for full game is substantially higher than originally planned.** This is a known cost of holding the AI line; it does not change the design center. Phase 9 will need an explicit dialogue-authoring budget and pacing plan derived from slice metrics at end-of-M1 retro.
 **Depends on:** Phase 8 + end-of-M1 retro
 **Estimated duration:** TBD at end-of-M1 retro (rough: 18-30 months)
 **Requirements:** NPC-01 (full 12+ NPC roster — slice covered 4), HOME-03 (full 50+ furniture items — slice covered ~10)

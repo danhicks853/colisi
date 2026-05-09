@@ -176,8 +176,8 @@ Deferred to post-v1 expansion / sequel content. Tracked but not in v1 roadmap.
 
 ### Procedural Layer
 
-- **PROC-01**: Procedural minor NPCs (visitors, traders) with template-driven dialogue
-- **PROC-02**: Procedural-template dialogue layer that fills barks from world state via Mad-Libs-style templates
+- **PROC-01**: Procedural minor NPCs (visitors, traders) with hand-authored dialogue (the NPC's existence may be procedural; their lines must be human-written)
+- ~~**PROC-02**: Procedural-template dialogue layer that fills barks from world state via Mad-Libs-style templates~~ **REMOVED 2026-05-09** — moved to Out of Scope per AI policy in PHILOSOPHY.md Section V. Mad-Libs-style runtime template-filling produces dialogue lines that aren't directly authored; off the table.
 
 ### Modding & Community Content
 
@@ -219,6 +219,9 @@ Explicitly excluded. Documented to prevent scope creep.
 | Real-time multiplayer / MMO features | Out of scope architecturally and for solo-dev tractability. |
 | Voice acting (full VO) in v1 | Cost-prohibitive at v1 budget. Defer to v2 if commercial success warrants. |
 | Stardew-Killer external positioning | Marketing trap. Lead with persona-gap positioning instead. |
+| Procedural-template dialogue at runtime (Mad-Libs-style) | AI policy in PHILOSOPHY.md Section V — produces dialogue lines that aren't directly authored. All dialogue must be hand-written. Endgame retention leans on the other three retention engines (state-tagged dialogue, multiple narrative threads, seasonal recurrence) plus player-driven goals. |
+| AI-generated visual or audio assets in shipped product | AI policy. All art and audio is human-generated, period — no AI-generated placeholders, no AI-generated reference art, no AI-generated music. See AI-DISCLOSURE.md. |
+| AI-generated dialogue, item descriptions, character/NPC/place names, devlog posts, Steam page copy, marketing tweets | AI policy. All authorial content human-written. AI as brainstorming partner OK; AI as author NOT OK. See AI-DISCLOSURE.md. |
 
 ---
 
