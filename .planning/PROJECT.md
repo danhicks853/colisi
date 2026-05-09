@@ -1,6 +1,8 @@
 # Colisi
 
-> **Project codename:** Colisi (locked 2026-05-09). Used in repo, planning docs, devlog handles, and internal communication. The shipped *game title* may evolve as the world and characters crystallize; final game title decision deadline is the Steam page launch in Phase 7.
+> **Project codename:** Colisi (locked 2026-05-09).
+> **Pronunciation:** *COH-LIE-SIGH* (/koʊˈlaɪsaɪ/)
+> **Etymology:** Initialism of **CO**zy **LI**fe **SI**m. Used in repo, planning docs, devlog handles, and internal communication. The shipped *game title* may evolve as the world and characters crystallize; final game title decision deadline is the Steam page launch in Phase 7.
 
 ## What This Is
 
@@ -105,7 +107,7 @@ The core fantasy, in the lead persona's own words: **"Talking to the people and 
 | Single-player only | Persona quit Palia for requiring multiplayer; multiplayer also adds enormous solo-dev complexity | — Pending |
 | Distribution: Steam + itch.io v1; console / mobile deferred | Cost, certification, and design-port complexity push these out of v1 | — Pending |
 | Art: Stylized 3D, Blender pipeline | Solo dev budget reality and brand identity | — Pending |
-| Project codename: Colisi (2026-05-09) | Internal-use name for repo, planning, devlog handles. Final shipped game title is TBD by Phase 7 Steam page launch — early enough to commit a name, late enough to defer the final title until world/characters crystallize | — Pending |
+| Project codename: Colisi (2026-05-09) — pronounced COH-LIE-SIGH, initialism of COzy LIfe SIm | Internal-use name for repo, planning, devlog handles. Final shipped game title is TBD by Phase 7 Steam page launch — early enough to commit a name, late enough to defer the final title until world/characters crystallize | — Pending |
 
 ## Evolution
 
