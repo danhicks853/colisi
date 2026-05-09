@@ -1,6 +1,6 @@
 # Project State: Colisi
 
-**Last updated:** 2026-05-09 (after roadmap creation + project codename lock)
+**Last updated:** 2026-05-09 (after Phase 2: Infrastructure & Repo Setup insertion)
 
 ---
 
@@ -17,18 +17,18 @@
 ## Current Position
 
 **Milestone:** 1 of 2 (Vertical Slice)
-**Phase:** 1 of 11 — Foundations & Vision Lock
+**Phase:** 1 of 12 — Foundations & Vision Lock
 **Plan:** None active (planning not yet started)
-**Status:** Roadmap created. Awaiting `/gsd:plan-phase 1` to begin Phase 1 planning.
+**Status:** Roadmap created (revised with Phase 2: Infrastructure & Repo Setup added). Awaiting `/gsd:plan-phase 1` to begin Phase 1 planning.
 
 **Progress bar:**
 ```
-M1: [          ] 0/7 phases
+M1: [          ] 0/8 phases
 M2: [          ] 0/4 phases (sketch only)
-v1: [          ] 0/11 phases total
+v1: [          ] 0/12 phases total
 ```
 
-**Requirements:** 0/84 mapped requirements satisfied (none yet — phase 1 is a planning/decisions phase, no REQs verifiable until Phase 2 work begins).
+**Requirements:** 1/95 mapped requirements satisfied (INFRA-03 complete: repo at `https://github.com/danhicks853/colisi.git`). The other 94 are pending — Phase 1 is planning/decisions, Phase 2 is infrastructure setup, and shippable game-system REQs begin in Phase 3.
 
 ---
 
@@ -36,7 +36,7 @@ v1: [          ] 0/11 phases total
 
 **Project age:** 1 day (initialized 2026-05-09)
 **Estimated total horizon:** 4-6 years (likely upper end — see roadmap "Brutally Honest Timeline")
-**M1 estimated duration:** 18-24 months
+**M1 estimated duration:** 19-25 months (was 18-24; added ~2-3 weeks for Phase 2: Infrastructure & Repo Setup)
 **M2 estimated duration:** 3-4+ additional years
 
 **Current pace target:** ~25 hours/week sustainable solo cadence (HEALTH-04 — to be formalized in Phase 1)

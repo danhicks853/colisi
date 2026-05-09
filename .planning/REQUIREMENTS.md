@@ -9,6 +9,20 @@
 
 ## v1 Requirements
 
+### Infrastructure & Repository
+
+- [ ] **INFRA-01**: Repo configured with Git LFS *before any binary assets are committed* (.gitattributes tracking .png, .jpg, .ogg, .wav, .mp3, .glb, .gltf, .blend, .fbx, .ttf, .otf, .exr, .hdr, .tres binary forms)
+- [ ] **INFRA-02**: Project has a Godot-tuned `.gitignore` excluding engine cache (`.godot/`), generated import metadata (`.import/` for older 4.x), per-developer build configs, and any export-preset secrets
+- [ ] **INFRA-03**: Repo is hosted on GitHub at `https://github.com/danhicks853/colisi.git` with main branch as the source of truth and at least one push completed (DONE 2026-05-09)
+- [ ] **INFRA-04**: Backup/redundancy strategy is implemented and tested with a documented restore procedure (primary: GitHub; secondary: local cloud sync of working directory; restore tested at least once)
+- [ ] **INFRA-05**: Folder structure and naming conventions for the Godot project are documented in `CONVENTIONS.md` (where scenes / scripts / assets / addons live, plus naming rules for scenes, scripts, resources, dialogue files)
+- [ ] **INFRA-06**: License decision is made and a `LICENSE` file exists at repo root (default lean: "All Rights Reserved" copyright notice, since this is a commercial closed-source game with public source visibility)
+- [ ] **INFRA-07**: Editor configuration committed (`.editorconfig` for consistent line endings and indentation across machines/editors; `.vscode/` settings if VS Code is used as secondary editor)
+- [ ] **INFRA-08**: Decision recorded on art-source repo split (Blender source files: in main repo via LFS, OR separate `colisi-art-source` repo for LFS quota management); follow-through deliverable based on decision
+- [ ] **INFRA-09**: Minimal CI configured: GitHub Actions workflow that runs `godot --headless --import` to verify the project imports without errors on every push to main (free unlimited minutes on public repo)
+- [ ] **INFRA-10**: `README.md`, `CONTRIBUTING.md` (solo-dev / future-self facing), and `CHANGELOG.md` skeletons exist with documented format conventions; README includes project status, dev setup instructions, and codename pronunciation
+- [ ] **INFRA-11**: Privacy review completed for public-repo visibility — decision recorded on whether `PERSONA.md` and other personal-data-bearing planning artifacts stay public, get redacted, or move to a `.local/` ignored path
+
 ### Player & Controls
 
 - [ ] **CTRL-01**: Player can move a 3D character in third-person view with WASD on KBM and analog stick on gamepad
@@ -209,94 +223,105 @@ Explicitly excluded. Documented to prevent scope creep.
 
 ## Traceability
 
-All 84 v1 requirements mapped to phases. Coverage = 84/84.
+All 95 v1 requirements mapped to phases. Coverage = 95/95.
 
 | Requirement | Phase | Status |
 |---|---|---|
-| CTRL-01 | Phase 2 | Pending |
-| CTRL-02 | Phase 2 | Pending |
-| CTRL-03 | Phase 2 | Pending |
-| CTRL-04 | Phase 2 | Pending |
-| CTRL-05 | Phase 2 | Pending |
-| CTRL-06 | Phase 2 | Pending |
-| CTRL-07 | Phase 2 | Pending |
-| CTRL-08 | Phase 2 | Pending |
-| NPC-01 | Phase 5 (slice subset of 4) / Phase 8 (full 12+) | Pending |
-| NPC-02 | Phase 4 | Pending |
-| NPC-03 | Phase 3 | Pending |
-| NPC-04 | Phase 5 | Pending |
-| NPC-05 | Phase 3 | Pending |
-| NPC-06 | Phase 5 | Pending |
-| NPC-07 | Phase 3 | Pending |
-| NPC-08 | Phase 5 | Pending |
-| NPC-09 | Phase 6 (slice gossip 4 NPCs) / Phase 8 (full propagation) | Pending |
-| NARR-01 | Phase 3 | Pending |
-| NARR-02 | Phase 3 | Pending |
-| NARR-03 | Phase 5 | Pending |
-| NARR-04 | Phase 5 | Pending |
-| NARR-05 | Phase 5 | Pending |
-| NARR-06 | Phase 3 | Pending |
-| NARR-07 | Phase 3 | Pending |
-| COMP-01 | Phase 5 | Pending |
-| COMP-02 | Phase 5 | Pending |
-| COMP-03 | Phase 5 | Pending |
-| COMP-04 | Phase 5 | Pending |
-| WORLD-01 | Phase 4 | Pending |
-| WORLD-02 | Phase 4 | Pending |
-| WORLD-03 | Phase 4 | Pending |
-| WORLD-04 | Phase 5 | Pending |
-| WORLD-05 | Phase 4 | Pending |
-| WORLD-06 | Phase 4 | Pending |
-| WORLD-07 | Phase 4 | Pending |
-| CRAFT-01 | Phase 5 | Pending |
-| CRAFT-02 | Phase 5 | Pending |
-| CRAFT-03 | Phase 5 | Pending |
-| CRAFT-04 | Phase 3 | Pending |
-| CRAFT-05 | Phase 3 | Pending |
-| CRAFT-06 | Phase 3 | Pending |
-| CRAFT-07 | Phase 3 | Pending |
-| HOME-01 | Phase 5 | Pending |
-| HOME-02 | Phase 5 | Pending |
-| HOME-03 | Phase 5 (slice subset ~10) / Phase 8 (full 50+) | Pending |
-| HOME-04 | Phase 5 | Pending |
-| HOME-05 | Phase 5 | Pending |
-| SAVE-01 | Phase 2 | Pending |
-| SAVE-02 | Phase 2 | Pending |
-| SAVE-03 | Phase 2 | Pending |
-| SAVE-04 | Phase 2 | Pending |
-| SAVE-05 | Phase 2 | Pending |
-| SAVE-06 | Phase 6 | Pending |
-| UI-01 | Phase 2 | Pending |
-| UI-02 | Phase 6 | Pending |
-| UI-03 | Phase 6 | Pending |
-| UI-04 | Phase 2 | Pending |
-| UI-05 | Phase 2 | Pending |
-| UI-06 | Phase 2 | Pending |
-| UI-07 | Phase 2 | Pending |
-| UI-08 | Phase 2 | Pending |
-| UI-09 | Phase 6 | Pending |
-| UI-10 | Phase 6 | Pending |
-| ONB-01 | Phase 2 | Pending |
-| ONB-02 | Phase 5 | Pending |
-| ONB-03 | Phase 6 | Pending |
-| ONB-04 | Phase 4 | Pending |
-| AUDIO-01 | Phase 5 | Pending |
-| AUDIO-02 | Phase 5 | Pending |
-| AUDIO-03 | Phase 5 | Pending |
-| DIST-01 | Phase 7 | Pending |
-| DIST-02 | Phase 7 | Pending |
-| DIST-03 | Phase 7 | Pending |
-| DIST-04 | Phase 7 | Pending |
-| DIST-05 | Phase 7 | Pending |
-| DIST-06 | Phase 2 | Pending |
-| LOC-01 | Phase 2 | Pending |
-| LOC-02 | Phase 9 (M2) | Pending |
-| LOC-03 | Phase 2 | Pending |
-| MKTG-01 | Phase 7 | Pending |
-| MKTG-02 | Phase 7 (devlog launches during Phase 2 timeline ~month 3; verified live in Phase 7) | Pending |
-| MKTG-03 | Phase 7 | Pending |
-| MKTG-04 | Phase 7 | Pending |
-| MKTG-05 | Phase 7 (capsule for slice) / Phase 10 (M2 trailer) | Pending |
+| INFRA-01 | Phase 2 | Pending |
+| INFRA-02 | Phase 2 | Pending |
+| INFRA-03 | Phase 2 | Complete (DONE 2026-05-09) |
+| INFRA-04 | Phase 2 | Pending |
+| INFRA-05 | Phase 2 | Pending |
+| INFRA-06 | Phase 2 | Pending |
+| INFRA-07 | Phase 2 | Pending |
+| INFRA-08 | Phase 2 | Pending |
+| INFRA-09 | Phase 2 | Pending |
+| INFRA-10 | Phase 2 | Pending |
+| INFRA-11 | Phase 2 | Pending |
+| CTRL-01 | Phase 3 | Pending |
+| CTRL-02 | Phase 3 | Pending |
+| CTRL-03 | Phase 3 | Pending |
+| CTRL-04 | Phase 3 | Pending |
+| CTRL-05 | Phase 3 | Pending |
+| CTRL-06 | Phase 3 | Pending |
+| CTRL-07 | Phase 3 | Pending |
+| CTRL-08 | Phase 3 | Pending |
+| NPC-01 | Phase 6 (slice subset of 4) / Phase 9 (full 12+) | Pending |
+| NPC-02 | Phase 5 | Pending |
+| NPC-03 | Phase 4 | Pending |
+| NPC-04 | Phase 6 | Pending |
+| NPC-05 | Phase 4 | Pending |
+| NPC-06 | Phase 6 | Pending |
+| NPC-07 | Phase 4 | Pending |
+| NPC-08 | Phase 6 | Pending |
+| NPC-09 | Phase 7 (slice gossip 4 NPCs) / Phase 9 (full propagation) | Pending |
+| NARR-01 | Phase 4 | Pending |
+| NARR-02 | Phase 4 | Pending |
+| NARR-03 | Phase 6 | Pending |
+| NARR-04 | Phase 6 | Pending |
+| NARR-05 | Phase 6 | Pending |
+| NARR-06 | Phase 4 | Pending |
+| NARR-07 | Phase 4 | Pending |
+| COMP-01 | Phase 6 | Pending |
+| COMP-02 | Phase 6 | Pending |
+| COMP-03 | Phase 6 | Pending |
+| COMP-04 | Phase 6 | Pending |
+| WORLD-01 | Phase 5 | Pending |
+| WORLD-02 | Phase 5 | Pending |
+| WORLD-03 | Phase 5 | Pending |
+| WORLD-04 | Phase 6 | Pending |
+| WORLD-05 | Phase 5 | Pending |
+| WORLD-06 | Phase 5 | Pending |
+| WORLD-07 | Phase 5 | Pending |
+| CRAFT-01 | Phase 6 | Pending |
+| CRAFT-02 | Phase 6 | Pending |
+| CRAFT-03 | Phase 6 | Pending |
+| CRAFT-04 | Phase 4 | Pending |
+| CRAFT-05 | Phase 4 | Pending |
+| CRAFT-06 | Phase 4 | Pending |
+| CRAFT-07 | Phase 4 | Pending |
+| HOME-01 | Phase 6 | Pending |
+| HOME-02 | Phase 6 | Pending |
+| HOME-03 | Phase 6 (slice subset ~10) / Phase 9 (full 50+) | Pending |
+| HOME-04 | Phase 6 | Pending |
+| HOME-05 | Phase 6 | Pending |
+| SAVE-01 | Phase 3 | Pending |
+| SAVE-02 | Phase 3 | Pending |
+| SAVE-03 | Phase 3 | Pending |
+| SAVE-04 | Phase 3 | Pending |
+| SAVE-05 | Phase 3 | Pending |
+| SAVE-06 | Phase 7 | Pending |
+| UI-01 | Phase 3 | Pending |
+| UI-02 | Phase 7 | Pending |
+| UI-03 | Phase 7 | Pending |
+| UI-04 | Phase 3 | Pending |
+| UI-05 | Phase 3 | Pending |
+| UI-06 | Phase 3 | Pending |
+| UI-07 | Phase 3 | Pending |
+| UI-08 | Phase 3 | Pending |
+| UI-09 | Phase 7 | Pending |
+| UI-10 | Phase 7 | Pending |
+| ONB-01 | Phase 3 | Pending |
+| ONB-02 | Phase 6 | Pending |
+| ONB-03 | Phase 7 | Pending |
+| ONB-04 | Phase 5 | Pending |
+| AUDIO-01 | Phase 6 | Pending |
+| AUDIO-02 | Phase 6 | Pending |
+| AUDIO-03 | Phase 6 | Pending |
+| DIST-01 | Phase 8 | Pending |
+| DIST-02 | Phase 8 | Pending |
+| DIST-03 | Phase 8 | Pending |
+| DIST-04 | Phase 8 | Pending |
+| DIST-05 | Phase 8 | Pending |
+| DIST-06 | Phase 3 | Pending |
+| LOC-01 | Phase 3 | Pending |
+| LOC-02 | Phase 10 (M2) | Pending |
+| LOC-03 | Phase 3 | Pending |
+| MKTG-01 | Phase 8 | Pending |
+| MKTG-02 | Phase 8 (devlog launches during Phase 3 timeline ~month 3; verified live in Phase 8) | Pending |
+| MKTG-03 | Phase 8 | Pending |
+| MKTG-04 | Phase 8 | Pending |
+| MKTG-05 | Phase 8 (capsule for slice) / Phase 11 (M2 trailer) | Pending |
 | HEALTH-01 | Phase 1 (ongoing across all phases) | Pending |
 | HEALTH-02 | Phase 1 (ongoing across all phases) | Pending |
 | HEALTH-03 | Phase 1 (re-checked at every phase transition) | Pending |
@@ -304,8 +329,8 @@ All 84 v1 requirements mapped to phases. Coverage = 84/84.
 | HEALTH-05 | Phase 1 (ongoing across all phases) | Pending |
 
 **Coverage:**
-- v1 requirements: 84 total
-- Mapped to phases: 84 (100%) ✓
+- v1 requirements: 95 total (84 original + 11 INFRA-XX added 2026-05-09)
+- Mapped to phases: 95 (100%) ✓
 - Unmapped: 0
 
 ---
