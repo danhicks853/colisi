@@ -1,0 +1,287 @@
+# Roadmap: Cozy Life Sim (working title)
+
+**Created:** 2026-05-09
+**Granularity:** standard
+**Coverage:** 84/84 v1 requirements mapped
+**Project horizon:** 4-6 years (likely the upper end — see "Brutally Honest Timeline" below)
+
+> **Scope reminder:** v1 = the full 30+ hour shipping game. The vertical slice is Milestone 1 within v1, NOT v1 itself. Architectural systems are sized for the full game from day one; only content scopes down for the slice.
+
+---
+
+## Brutally Honest Timeline
+
+The synthesizer recommended **12-18 months for the slice**. After mapping all 84 requirements against actual phase work for a **solo beginner**, my honest assessment is:
+
+- **Milestone 1 (Vertical Slice + Steam page):** **18-24 months** is more realistic than 12-18. The slice-blocking foundations alone (Phase 2) are ~4-5 months for a beginner who has never written GDScript or rigged a Blender character. Phase 5 (slice content production) is ~6-9 months once you account for art pipeline learning. This is not a discouragement — it's planning honesty so the Year-3-Wall tripwires actually fire correctly.
+- **Milestone 2 (Production & Launch):** **3-4 additional years** to ship 30+ hours. The 4-year horizon is achievable only if the slice ships at month 18 AND content scaling productivity hits ~2-3× slice rate (because tools and pipelines are now built). The 6-year horizon is the more probable outcome for a solo beginner. **Plan for 5-6 years total. Celebrate if you ship in 4.**
+- **Year-3-Wall tripwire (HEALTH-03):** If at month 36 you don't have a shipped slice with 1k+ wishlists AND productivity data showing 30hr scope is reachable in 24-36 more months, that's the pre-committed pivot point. Cut to 15-20hr scope, ship as "Cozy Life Sim Vol. 1," do Vol. 2 as DLC if commercially warranted.
+
+**The four killers** are baked into the phase structure (Phase 1 vision lock, SCOPE.md discipline gates at every transition, sustainable-pace cadence, the four-engine endgame retention strategy). Rhetorical commitment alone won't save the project; the structure has to.
+
+---
+
+## Milestone Structure
+
+This roadmap details **Milestone 1** (phases 1-7). **Milestone 2** (phases 8-11) is sketched only — detailed phasing is deferred until end-of-M1 retro provides honest content-pacing data. This is intentional. Trying to fully detail M2 today is the trap.
+
+---
+
+## Phases
+
+### Milestone 1: Vertical Slice (months 0 to ~18-24)
+
+- [ ] **Phase 1: Foundations & Vision Lock** — Lock pillars, four-killer mitigations, sustainability rhythms before code
+- [ ] **Phase 2: Project Skeleton & Foundational Systems** — Build the nine slice-blocking foundations (autoloads, save w/ versioning, controller, dialogue integration, input remap)
+- [ ] **Phase 3: One-NPC Happy Path** — Prove dialogue + relationships + state-flag branching + narrative-meta architecture end-to-end with a single NPC
+- [ ] **Phase 4: Zones & World Systems** — 3-4 zones with transitions, persistent zone state, visual day/night, schedule-driven NPCs
+- [ ] **Phase 5: Slice Content Production** — 4 NPCs with full state-tagged dialogue, 1 spirit/animal companion w/ outings, narrative-tied recipes, decoration
+- [ ] **Phase 6: Slice Polish & Hardening** — 2026 accessibility verified, controller/KBM parity, perf budget on min-spec, save migration hardened, ring-2 playtester
+- [ ] **Phase 7: Steam Page Launch + Public Demo** — Wishlist machine starts. Steam page with capsule art, slice as free demo at Next Fest, itch.io page, Discord, weekly tracking
+
+### Milestone 2: Production & Launch (years 2-4+, sketch only)
+
+- [ ] **Phase 8: Content Scaling** — Full NPC roster (12+), procedural-template dialogue layer, more zones, full crafting/decoration breadth, festivals, NPC gossip, romance arcs
+- [ ] **Phase 9: Polish, Accessibility Re-Audit, Localization** — CSV-to-PO migration, 1-2 high-leverage non-English languages, full a11y re-audit
+- [ ] **Phase 10: Pre-Launch Marketing** — Second Next Fest demo, commissioned trailer, pricing benchmark, launch-week discount strategy
+- [ ] **Phase 11: Launch + Post-Launch v1.x** — Ship, monitor, hotfix, post-launch content cadence
+
+---
+
+## Phase Details
+
+### Phase 1: Foundations & Vision Lock
+**Goal:** Lock design pillars, four-killer mitigations, stack, and sustainability rhythms before any code or content is written. Resolve the open architectural questions (action-driven vs wall-clock time; Dialogue Manager vs Dialogic; pre-committed Year-3-Wall tripwires) so phase 2+ work doesn't re-litigate them.
+**Depends on:** Nothing (first phase)
+**Estimated duration:** ~1 month (research, decisions, document drafting; no code)
+**Requirements:** HEALTH-01, HEALTH-02, HEALTH-03, HEALTH-04, HEALTH-05
+**Success Criteria** (what must be TRUE):
+  1. SCOPE.md log exists with rationale-tracking template; `slice-debt.md` exists; both have a worked example entry to prove the format works
+  2. "Why play at hour 200" doc exists, explicitly applying the four-engine retention strategy (state-tagged dialogue, 3+ active threads, seasonal recurrence, player-driven goals)
+  3. Pre-committed Year-3-Wall pivot tripwires are written down with specific miss-criteria (e.g., "if at month 36 wishlist count is below X, cut scope to Y")
+  4. Sustainable-pace cadence document exists (target ~25 hrs/week, daily/weekly/monthly/quarterly rhythms named)
+  5. Persona-zero playtest ritual is established and the first 15-min session has actually happened (HEALTH-05 requires ongoing maintenance — first session is the proof)
+  6. Action-driven vs wall-clock time decision is resolved and documented; Dialogue Manager (not Dialogic) confirmed as locked
+**Plans:** TBD
+
+---
+
+### Phase 2: Project Skeleton & Foundational Systems
+**Goal:** Build the nine slice-blocking foundations identified by the architecture researcher. Every system here is the real shipping system, not a slice-only stub. By end of phase, an empty world exists where a player character can move, interact with placeholder objects, open menus, save/load, and have all settings persist — with localization scaffolding and versioned save schema in place from day one.
+**Depends on:** Phase 1
+**Estimated duration:** ~4-5 months (this is "learning Godot/Blender/GDScript while building the real systems"; the SUMMARY estimate of "3-4 months" is optimistic for a beginner)
+**Requirements:** CTRL-01, CTRL-02, CTRL-03, CTRL-04, CTRL-05, CTRL-06, CTRL-07, CTRL-08, SAVE-01, SAVE-02, SAVE-03, SAVE-04, SAVE-05, UI-01, UI-04, UI-05, UI-06, UI-07, UI-08, LOC-01, LOC-03, DIST-06, ONB-01
+**Success Criteria** (what must be TRUE):
+  1. Player can move a 3D character through an empty test scene with WASD or analog stick, rotate camera with mouse or right stick, run with one modifier, and interact with a context-sensitive placeholder object using one button (no chord schemes anywhere)
+  2. Player can open a settings menu, remap any control on KBM and gamepad, adjust independent volume sliders, change window mode and graphics preset, scale UI text to 150%, and have all of it persist across game restarts
+  3. Player can manually save to one of three slots, see the game autosave at a triggered event, and load a saved game with all state restored — including a successfully applied schema migration from version 1 to version 2 in a test
+  4. Every player-visible string in the test scene routes through `tr()`; a CSV translation table exists; Noto Sans CJK fallback font is configured and a test Chinese-character string renders without missing glyphs
+  5. The five autoloads (EventBus, GameState, SaveManager, TimeService, Settings) plus DialogueManager are loaded; Git LFS is configured before first commit; performance budget is documented (200 draw calls, 100k visible verts target on integrated GPU)
+  6. Onboarding stub: a new player who has never played the project can move, interact, open inventory, and trigger placeholder dialogue within 5 minutes of starting the test build
+**Plans:** TBD
+**UI hint:** yes
+
+---
+
+### Phase 3: One-NPC Happy Path
+**Goal:** Prove the entire NPC + dialogue + relationships + state-flag branching + narrative-metadata-on-items architecture stack end-to-end with a single named NPC before scaling content. This phase de-risks the highest-leverage system in the project; if any pattern (eligibility cascade, multi-axis relationships, mutation discipline, persistent branching) fails here, fix it now while there are 150 lines to refactor — not 1500.
+**Depends on:** Phase 2
+**Estimated duration:** ~2-3 months
+**Requirements:** NPC-03, NPC-05, NPC-07, NARR-01, NARR-02, NARR-06, NARR-07, CRAFT-04, CRAFT-05, CRAFT-06, CRAFT-07
+**Success Criteria** (what must be TRUE):
+  1. One named NPC exists with multi-axis relationship state (trust, intimacy, respect, familiarity) — not a single hearts integer — and the player's gifts and dialogue choices visibly move different axes
+  2. Player can have ~150 lines of state-tagged dialogue with the NPC; the dialogue-eligibility cascade picks lines based on world flags, arc state, and recent player actions, not friendship tier
+  3. At least one persistent branching choice is in the NPC's dialogue; the choice mutates a flag on GameState, that flag is checked by the NPC's later dialogue (and ideally by an item description elsewhere), and a save/reload preserves the consequence; the player never has to restart to re-branch
+  4. Narrative-metadata-on-items is demonstrated: at least 3 items have `NarrativeMeta` (first-collected dialogue, lore entry, NPC reference); collecting one for the first time triggers a one-shot dialogue line; gifting one to the NPC triggers a recipe unlock or new conversation
+  5. Player has a journal/log that displays past choices and their outcomes (NARR-06); puzzles in this phase (if any) telegraph their solution clearly enough that a non-developer can solve them in under 10 minutes
+  6. Player has a usable inventory with no degradation, no durability, and capacity sufficient that nothing in the slice content gets blocked by inventory management
+**Plans:** TBD
+
+---
+
+### Phase 4: Zones & World Systems
+**Goal:** Move from "test scene" to "world." Build the 3-4 zones the slice will use, with persistent zone state, fast-travel between unlocked zones, schedule-driven NPC location, and a visual day/night cycle that is fully decoupled from any gameplay clock. Lock the action-driven time model in code (the decision was made in Phase 1; this phase implements it).
+**Depends on:** Phase 3
+**Estimated duration:** ~2-3 months
+**Requirements:** NPC-02, WORLD-01, WORLD-02, WORLD-03, WORLD-05, WORLD-06, WORLD-07, ONB-04
+**Success Criteria** (what must be TRUE):
+  1. Player can move between 3-4 zones via clear transitions; zones load with autosave; zone-specific state (placed items, harvested resources, NPC locations) persists across zone exits and re-entries and across save/load
+  2. World has a visible day/night cycle that affects lighting, NPC schedule positions, and ambient audio — but never imposes any gameplay penalty, time limit, or missable content; the player can stand still indefinitely and nothing closes
+  3. NPCs in a zone are at scheduled locations driven by an in-game time-of-day; the schedule is visible to the player (NPC is physically there to see) without any pressure on the player to be there at a specific moment
+  4. In-game time advances on player rest action or major event completion, never on wall-clock; the player can pause anywhere mid-conversation, mid-decoration, mid-action and the world holds state
+  5. Once a zone is discovered, the player can fast-travel back to it from any other unlocked zone via a journal/map UI
+  6. A new player with no prior cozy-game or 3D-game experience can navigate between two zones, find an NPC, and trigger dialogue without external help (ONB-04 verified informally with persona-zero)
+**Plans:** TBD
+**UI hint:** yes
+
+---
+
+### Phase 5: Slice Content Production
+**Goal:** Produce the actual slice content — 4 NPCs (one of which is a non-human spirit/talking-animal companion who can accompany the player on outings), narrative-tied crafting and decoration, soft-pinned future events. This is the longest phase by wall time. Slice debt is logged honestly throughout (HEALTH-02 in continuous use).
+**Depends on:** Phase 4
+**Estimated duration:** ~6-9 months (longest single phase; art pipeline learning + content authoring at solo-beginner pace; SUMMARY's "6-10 months" inside Phase 2 was for the foundations *and* slice content combined and underestimated)
+**Requirements:** NPC-01 (slice subset of 4), NPC-04, NPC-06, NPC-08, NARR-03, NARR-04, NARR-05, COMP-01, COMP-02, COMP-03, COMP-04, WORLD-04, CRAFT-01, CRAFT-02, CRAFT-03, HOME-01, HOME-02, HOME-03 (slice subset of ~10), HOME-04, HOME-05, ONB-02, AUDIO-01, AUDIO-02, AUDIO-03
+**Success Criteria** (what must be TRUE):
+  1. Slice contains 4 named NPCs (3 human, 1 non-human spirit/talking-animal companion); each has distinct personality and schedule, an arc state machine with at least 3 stages, ~150 state-tagged dialogue lines, and references to seasons/events when relevant
+  2. Player can invite the spirit/talking-animal companion on at least one outing; companion provides reactive location-aware and activity-aware dialogue while accompanying; the companion accompaniment moves the multi-axis relationship state and arc; companion never permanently leaves or dies as a fail-state
+  3. At least 3 narrative threads are active concurrently in the slice; each has a satisfying (bittersweet allowed, no forced-tragic) resolution path; the slice demonstrates that the game continues to be meaningful after the most prominent thread resolves
+  4. Player can gather resources (foraging at minimum), craft 5-10 narrative-tied recipes at a crafting station, with recipes unlocked through NPC interaction not skill trees; gifting crafted items triggers NPC reactions
+  5. Player has a customizable home with 5-10 placeable furniture/decoration items; placement, rotation, move, and remove all work; NPCs comment on the home when they visit; home decoration state fully saves and restores
+  6. First-day onboarding sequence introduces NPCs, gathering, crafting, and journal in a way persona-zero (or another ring-1 tester) can complete without external help
+  7. Original or CC0 music score has at least one day-themed and one season-themed track; SFX coverage exists for player actions, world ambience, NPC barks, and UI; audio buses can be muted independently
+**Plans:** TBD
+**UI hint:** yes
+
+---
+
+### Phase 6: Slice Polish & Hardening
+**Goal:** Take the rough-but-complete slice and harden it for public release. 2026 accessibility baseline verified end-to-end, full controller/KBM parity tested, performance budget met on integrated-GPU min-spec hardware, save migration framework hardened (because once it ships publicly, you can't break saves). First ring-2 playtester (someone outside the household) plays the slice and you watch.
+**Depends on:** Phase 5
+**Estimated duration:** ~2-3 months
+**Requirements:** NPC-09 (slice version — 4 NPCs gossiping about each other), UI-02, UI-03, UI-09, UI-10, ONB-03, SAVE-06
+**Success Criteria** (what must be TRUE):
+  1. Slice debt log is fully reconciled: every entry either marked resolved with the real implementation in code, or marked carried-forward-to-M2 with explicit promotion-or-payoff strategy
+  2. Full 2026 accessibility baseline verified: text scaling at 150% works in all menus and dialogue, colorblind-friendly palette confirmed, all dialogue/narrative content has accurate subtitles by default, content warning shows at first launch, optional gentle tutorial available for first-run players, no new core mechanic ever appears in slice without re-tutorialization
+  3. Slice plays at 60fps on integrated-GPU hardware (minimum spec target); draw call and vertex budgets met; controller and KBM both fully navigate every UI screen with no mouse required
+  4. Save migration framework is hardened with at least 2 real migrations applied (v1->v2->v3); saves cloud-sync via Steam Cloud (SteamService autoload wired); 3 rolling autosaves preserved alongside the 3 manual slots
+  5. NPCs in the slice reference what other NPCs have done or said when world state permits (gossip layer working at slice scale of 4 NPCs — not the full M2 propagation)
+  6. At least one ring-2 playtester (not Daniel, not the lead persona — someone unfamiliar with the project) completes the first hour of slice content; their session is observed and notes are logged for the slice-retro doc
+**Plans:** TBD
+**UI hint:** yes
+
+---
+
+### Phase 7: Steam Page Launch + Public Demo
+**Goal:** The wishlist machine starts. Steam page goes up at slice ship (synthesizer was emphatic: this is the highest-ROI moment in the entire project's marketing posture). Slice ships as a free demo synced to a Steam Next Fest. itch.io page goes live. Discord exists. The capsule art commission (~$300, the project's single highest-ROI dollar) ships. By end of phase, weekly wishlist tracking is the project's heartbeat.
+**Depends on:** Phase 6
+**Estimated duration:** ~2 months (the work is mostly external — Steam approval timelines, Next Fest scheduling, capsule art turnaround — not engineering)
+**Requirements:** DIST-01, DIST-02, DIST-03, DIST-04, DIST-05, MKTG-01, MKTG-02, MKTG-03, MKTG-04, MKTG-05
+**Success Criteria** (what must be TRUE):
+  1. Steam page is live with: commissioned professional capsule art, screenshots from the slice, a slice-derived trailer (or at minimum a slice-derived gameplay video), accurate genre/tag set positioned around "deep cozy enjoyer" (no "Stardew killer" framing anywhere)
+  2. Slice ships as a free playable demo on Steam, scheduled to be live during a Steam Next Fest; Steam integration includes achievements, cloud saves, and Steam Input controller support
+  3. Itch.io page is live with the slice build pushed via butler (automation pattern documented even if first push was manual)
+  4. Public devlog has been live since approximately month 3 of development (MKTG-02 — this requirement first becomes verifiable here but the cadence began long ago); Discord server exists for community building
+  5. Weekly wishlist count is being tracked in a project log; first 1000-wishlist target is named with a date by which it should be hit
+  6. Game runs on Windows, macOS, and Linux from Steam; itch.io build covers at minimum Windows and Linux
+**Plans:** TBD
+**UI hint:** yes
+
+---
+
+### Phase 8: Content Scaling (Milestone 2 — sketch only)
+**Goal:** Scale slice systems to full-game content — the full NPC roster (slice has 4, full game has 12+), procedural-template dialogue layer for endgame retention depth, more zones to reach 8 total, full crafting recipe set, festival/event system with year-over-year evolution, full NPC-to-NPC gossip propagation, full companion-on-outings for 4-6 NPCs, romance arcs (cozy-tuned, no punishing fail states).
+**Depends on:** Phase 7 + end-of-M1 retro
+**Estimated duration:** TBD at end-of-M1 retro (rough: 18-30 months)
+**Requirements:** NPC-01 (full 12+ NPC roster — slice covered 4), HOME-03 (full 50+ furniture items — slice covered ~10)
+**Success Criteria:** TBD — derive from M1 actuals and persona-zero feedback during M1
+**Plans:** TBD (detailed phasing deferred until end-of-M1 retro)
+
+---
+
+### Phase 9: Polish, Accessibility Re-Audit, Localization (Milestone 2 — sketch only)
+**Goal:** Pre-launch polish pass. CSV-to-PO migration done; pick 1-2 high-leverage non-English languages and ship localizations; full accessibility re-audit against 2027/2028 baseline (the bar will have moved by then).
+**Depends on:** Phase 8
+**Estimated duration:** TBD at end-of-M1 retro (rough: 6-9 months)
+**Requirements:** LOC-02
+**Success Criteria:** TBD — derive at end-of-M1 retro
+**Plans:** TBD (detailed phasing deferred until end-of-M1 retro)
+
+---
+
+### Phase 10: Pre-Launch Marketing (Milestone 2 — sketch only)
+**Goal:** Wishlist conversion play. Second Next Fest demo (improved over Phase 7's), commissioned trailer at professional quality, pricing benchmarked against 5-10 cozy life sims at launch, launch-week discount strategy planned, review-copy distribution plan ready.
+**Depends on:** Phase 9
+**Estimated duration:** TBD (rough: 3-4 months)
+**Requirements:** (no new REQ-IDs — MKTG-05 was already mapped to Phase 7 for capsule; the trailer commission cadence here is a continuation of MKTG-05's "professional quality" intent, planned in M2 retro)
+**Success Criteria:** TBD — derive at end-of-M1 retro
+**Plans:** TBD (detailed phasing deferred until end-of-M1 retro)
+
+---
+
+### Phase 11: Launch + Post-Launch v1.x (Milestone 2 — sketch only)
+**Goal:** Ship. Monitor reviews and crash reports. Hotfix critical issues. Establish post-launch content cadence — v1.1, v1.2 content updates that satisfy the cozy-genre player expectation of continued investment from the dev.
+**Depends on:** Phase 10
+**Estimated duration:** TBD (rough: 6-12 months for v1.0 + v1.x patches before any v2 work)
+**Requirements:** (no new REQ-IDs — all 84 v1 requirements are mapped to phases 1-7 and 8-9; v2 requirements are tracked separately)
+**Success Criteria:** TBD — derive at end-of-M1 retro
+**Plans:** TBD (detailed phasing deferred until end-of-M1 retro)
+
+---
+
+## Progress
+
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 1. Foundations & Vision Lock | 0/0 | Not started | - |
+| 2. Project Skeleton & Foundational Systems | 0/0 | Not started | - |
+| 3. One-NPC Happy Path | 0/0 | Not started | - |
+| 4. Zones & World Systems | 0/0 | Not started | - |
+| 5. Slice Content Production | 0/0 | Not started | - |
+| 6. Slice Polish & Hardening | 0/0 | Not started | - |
+| 7. Steam Page Launch + Public Demo | 0/0 | Not started | - |
+| 8. Content Scaling (M2 sketch) | 0/0 | Not started | - |
+| 9. Polish, Accessibility Re-Audit, Localization (M2 sketch) | 0/0 | Not started | - |
+| 10. Pre-Launch Marketing (M2 sketch) | 0/0 | Not started | - |
+| 11. Launch + Post-Launch v1.x (M2 sketch) | 0/0 | Not started | - |
+
+---
+
+## Coverage Notes
+
+### Coverage map (all 84 v1 requirements)
+
+**Phase 1 (5):** HEALTH-01, HEALTH-02, HEALTH-03, HEALTH-04, HEALTH-05
+
+**Phase 2 (23):** CTRL-01, CTRL-02, CTRL-03, CTRL-04, CTRL-05, CTRL-06, CTRL-07, CTRL-08, SAVE-01, SAVE-02, SAVE-03, SAVE-04, SAVE-05, UI-01, UI-04, UI-05, UI-06, UI-07, UI-08, LOC-01, LOC-03, DIST-06, ONB-01
+
+**Phase 3 (11):** NPC-03, NPC-05, NPC-07, NARR-01, NARR-02, NARR-06, NARR-07, CRAFT-04, CRAFT-05, CRAFT-06, CRAFT-07
+
+**Phase 4 (8):** NPC-02, WORLD-01, WORLD-02, WORLD-03, WORLD-05, WORLD-06, WORLD-07, ONB-04
+
+**Phase 5 (24):** NPC-01 (slice subset), NPC-04, NPC-06, NPC-08, NARR-03, NARR-04, NARR-05, COMP-01, COMP-02, COMP-03, COMP-04, WORLD-04, CRAFT-01, CRAFT-02, CRAFT-03, HOME-01, HOME-02, HOME-03 (slice subset), HOME-04, HOME-05, ONB-02, AUDIO-01, AUDIO-02, AUDIO-03
+
+**Phase 6 (7):** NPC-09 (slice version), UI-02, UI-03, UI-09, UI-10, ONB-03, SAVE-06
+
+**Phase 7 (10):** DIST-01, DIST-02, DIST-03, DIST-04, DIST-05, MKTG-01, MKTG-02, MKTG-03, MKTG-04, MKTG-05
+
+**Phase 8 (M2 — content scale-up of slice REQs):** NPC-01 full roster, HOME-03 full set
+
+**Phase 9 (M2):** LOC-02
+
+**Phase 10 (M2):** (continuations only — no new REQ-IDs)
+
+**Phase 11 (M2):** (launch — no new REQ-IDs)
+
+**Total mapped:** 84 unique REQ-IDs (5 + 23 + 11 + 8 + 24 + 7 + 10 + 0_new_in_8 + 1 + 0 + 0; counts above show NPC-01 and HOME-03 each spanning a slice phase and a M2 scale-up phase but counted once for total coverage). Coverage = 84/84 ✓.
+
+### Coverage notes (intentional cross-phase mappings)
+
+A few requirements span multiple phases by design — they are anchored to the phase where they FIRST become required, with explicit notes in later phases about ongoing or scaled-up work:
+
+- **NPC-01 ("at least 12 named NPCs in v1"):** Anchored to Phase 5 for the slice subset (4 NPCs); the remaining 8+ NPCs come in Phase 8 (Content Scaling). Counted in Phase 5 in the coverage table because that's where slice content satisfies the architectural pattern; full v1 satisfaction is at Phase 8.
+- **HOME-03 ("at least 50 placeable furniture/decoration items by end-game"):** Anchored to Phase 5 for the slice subset (~10 items); remaining ~40 come in Phase 8. Same anchoring rationale as NPC-01.
+- **NPC-09 ("NPC-to-NPC gossip layer"):** Anchored to Phase 6 at slice scale (4-NPC gossip working); full propagation across 12+ NPCs in Phase 8.
+- **HEALTH-04, HEALTH-05 (sustainability and persona-zero playtest rituals):** Anchored to Phase 1 where they FIRST become required, but they are explicitly ongoing across every phase. No phase is "done" with HEALTH-04 — every transition checks the cadence is being held.
+- **MKTG-02 ("public devlog launches by month 3"):** Anchored to Phase 7 in the coverage table (where it's *verified* as live — Steam page and devlog both have public presence). The actual devlog launch happens during Phase 2 timeline (~month 3 absolute). Marked at Phase 7 because that's where its public-presence requirement becomes observably true alongside the Steam page.
+
+### No orphaned requirements
+
+All 84 v1 requirements have a phase. Coverage is complete.
+
+### v2 requirements (deferred, not in v1 scope)
+
+ROM-01, ROM-02, REPLAY-01, REPLAY-02, PROC-01, PROC-02, MOD-01, MOD-02, PLAT-01, PLAT-02 — tracked in REQUIREMENTS.md, not roadmapped.
+
+---
+
+## Risks That Could Force a Re-Plan
+
+1. **Year-3-Wall tripwire fires** (HEALTH-03): if at month 36 the slice has shipped but wishlist count is below the pre-committed threshold, scope cut to 15-20hr "Vol. 1" is the planned response. Will require a roadmap revision.
+2. **Phase 2 takes longer than 5 months:** if Godot/GDScript/Blender learning overhead exceeds estimate, Phase 2 budget extends and pushes everything right. This is the most likely overrun. Tripwire: at month 6, if all 9 slice-blocking foundations aren't in place, take a hard look before starting Phase 3.
+3. **Phase 5 art pipeline disaster:** 4 NPC characters at full quality is the biggest single solo-dev unknown. If Blender pipeline doesn't yield a usable character in <3 weeks, consider reducing to 3 NPCs in slice or buying a paid asset pack (single biggest budget-exception candidate after capsule art).
+4. **Persona-zero unavailability:** the persona-zero playtest rhythm (HEALTH-05) depends on the lead persona being available. If she becomes unavailable for an extended period, the project loses one of its most cited unique advantages and a contingency feedback loop must be designed.
+
+---
+
+*Roadmap created: 2026-05-09*
+*Last updated: 2026-05-09 after initial creation*

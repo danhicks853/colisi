@@ -209,17 +209,106 @@ Explicitly excluded. Documented to prevent scope creep.
 
 ## Traceability
 
-Phase mapping is filled in during roadmap creation. Empty initially.
+All 84 v1 requirements mapped to phases. Coverage = 84/84.
 
 | Requirement | Phase | Status |
 |---|---|---|
-| (filled by roadmapper) | | |
+| CTRL-01 | Phase 2 | Pending |
+| CTRL-02 | Phase 2 | Pending |
+| CTRL-03 | Phase 2 | Pending |
+| CTRL-04 | Phase 2 | Pending |
+| CTRL-05 | Phase 2 | Pending |
+| CTRL-06 | Phase 2 | Pending |
+| CTRL-07 | Phase 2 | Pending |
+| CTRL-08 | Phase 2 | Pending |
+| NPC-01 | Phase 5 (slice subset of 4) / Phase 8 (full 12+) | Pending |
+| NPC-02 | Phase 4 | Pending |
+| NPC-03 | Phase 3 | Pending |
+| NPC-04 | Phase 5 | Pending |
+| NPC-05 | Phase 3 | Pending |
+| NPC-06 | Phase 5 | Pending |
+| NPC-07 | Phase 3 | Pending |
+| NPC-08 | Phase 5 | Pending |
+| NPC-09 | Phase 6 (slice gossip 4 NPCs) / Phase 8 (full propagation) | Pending |
+| NARR-01 | Phase 3 | Pending |
+| NARR-02 | Phase 3 | Pending |
+| NARR-03 | Phase 5 | Pending |
+| NARR-04 | Phase 5 | Pending |
+| NARR-05 | Phase 5 | Pending |
+| NARR-06 | Phase 3 | Pending |
+| NARR-07 | Phase 3 | Pending |
+| COMP-01 | Phase 5 | Pending |
+| COMP-02 | Phase 5 | Pending |
+| COMP-03 | Phase 5 | Pending |
+| COMP-04 | Phase 5 | Pending |
+| WORLD-01 | Phase 4 | Pending |
+| WORLD-02 | Phase 4 | Pending |
+| WORLD-03 | Phase 4 | Pending |
+| WORLD-04 | Phase 5 | Pending |
+| WORLD-05 | Phase 4 | Pending |
+| WORLD-06 | Phase 4 | Pending |
+| WORLD-07 | Phase 4 | Pending |
+| CRAFT-01 | Phase 5 | Pending |
+| CRAFT-02 | Phase 5 | Pending |
+| CRAFT-03 | Phase 5 | Pending |
+| CRAFT-04 | Phase 3 | Pending |
+| CRAFT-05 | Phase 3 | Pending |
+| CRAFT-06 | Phase 3 | Pending |
+| CRAFT-07 | Phase 3 | Pending |
+| HOME-01 | Phase 5 | Pending |
+| HOME-02 | Phase 5 | Pending |
+| HOME-03 | Phase 5 (slice subset ~10) / Phase 8 (full 50+) | Pending |
+| HOME-04 | Phase 5 | Pending |
+| HOME-05 | Phase 5 | Pending |
+| SAVE-01 | Phase 2 | Pending |
+| SAVE-02 | Phase 2 | Pending |
+| SAVE-03 | Phase 2 | Pending |
+| SAVE-04 | Phase 2 | Pending |
+| SAVE-05 | Phase 2 | Pending |
+| SAVE-06 | Phase 6 | Pending |
+| UI-01 | Phase 2 | Pending |
+| UI-02 | Phase 6 | Pending |
+| UI-03 | Phase 6 | Pending |
+| UI-04 | Phase 2 | Pending |
+| UI-05 | Phase 2 | Pending |
+| UI-06 | Phase 2 | Pending |
+| UI-07 | Phase 2 | Pending |
+| UI-08 | Phase 2 | Pending |
+| UI-09 | Phase 6 | Pending |
+| UI-10 | Phase 6 | Pending |
+| ONB-01 | Phase 2 | Pending |
+| ONB-02 | Phase 5 | Pending |
+| ONB-03 | Phase 6 | Pending |
+| ONB-04 | Phase 4 | Pending |
+| AUDIO-01 | Phase 5 | Pending |
+| AUDIO-02 | Phase 5 | Pending |
+| AUDIO-03 | Phase 5 | Pending |
+| DIST-01 | Phase 7 | Pending |
+| DIST-02 | Phase 7 | Pending |
+| DIST-03 | Phase 7 | Pending |
+| DIST-04 | Phase 7 | Pending |
+| DIST-05 | Phase 7 | Pending |
+| DIST-06 | Phase 2 | Pending |
+| LOC-01 | Phase 2 | Pending |
+| LOC-02 | Phase 9 (M2) | Pending |
+| LOC-03 | Phase 2 | Pending |
+| MKTG-01 | Phase 7 | Pending |
+| MKTG-02 | Phase 7 (devlog launches during Phase 2 timeline ~month 3; verified live in Phase 7) | Pending |
+| MKTG-03 | Phase 7 | Pending |
+| MKTG-04 | Phase 7 | Pending |
+| MKTG-05 | Phase 7 (capsule for slice) / Phase 10 (M2 trailer) | Pending |
+| HEALTH-01 | Phase 1 (ongoing across all phases) | Pending |
+| HEALTH-02 | Phase 1 (ongoing across all phases) | Pending |
+| HEALTH-03 | Phase 1 (re-checked at every phase transition) | Pending |
+| HEALTH-04 | Phase 1 (ongoing across all phases) | Pending |
+| HEALTH-05 | Phase 1 (ongoing across all phases) | Pending |
 
 **Coverage:**
 - v1 requirements: 84 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 84 ⚠️ (will resolve during roadmap creation)
+- Mapped to phases: 84 (100%) ✓
+- Unmapped: 0
 
 ---
+
 *Requirements defined: 2026-05-09*
-*Last updated: 2026-05-09 after initial definition*
+*Last updated: 2026-05-09 after roadmap creation (traceability table populated)*
