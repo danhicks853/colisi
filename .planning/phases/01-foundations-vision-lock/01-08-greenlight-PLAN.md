@@ -2,7 +2,7 @@
 phase: 01-foundations-vision-lock
 plan: 08
 type: execute
-wave: 4
+wave: 5
 depends_on:
   - 01-00-deliverable-scaffolding
   - 01-01-vision-pack

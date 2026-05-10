@@ -23,6 +23,7 @@ must_haves:
     - "Survey distributed per D-MKTG-03 to r/CozyGamers + 2-3 cozy Discords + cozy social tags; ≥50 responses collected"
     - "MARKET-EVIDENCE.md final with explicit Confirmed | Refined | Rejected verdict per D-MKTG-04 triangulation rubric; supporting tables filled; if Rejected or Refined-significantly, roadmap-revision impact note present and ROADMAP.md amendment queued before Phase 2"
     - "MARKET-EVIDENCE.md moves from deliverables/validation-pack/ to .planning/MARKET-EVIDENCE.md (live document at planning root per VALIDATION.md sign-off)"
+    - "Outside-reviewer cosignature step on the verdict is sequenced AFTER plan 01-06 (which designates the reviewer); all other Task 3 work — survey distribution, response collection, LLM classification, Daniel verification, draft verdict authoring — proceeds independently in wave 2"
   artifacts:
     - path: ".planning/phases/01-foundations-vision-lock/research/mktg-06-game-list.md"
       provides: "Daniel-curated 10-20 game list with selection rule applied + per-game inclusion rationale"
@@ -46,6 +47,10 @@ must_haves:
       to: "Daniel survey distribution log"
       via: "Distribution log captures channel + permission + response count"
       pattern: "(r/CozyGamers|Discord|response count)"
+    - from: "MARKET-EVIDENCE.md outside-reviewer cosignature line"
+      to: "deliverables/process-pack/21-year3wall-tripwires.md (outside reviewer designation from plan 01-06)"
+      via: "Cosignature step is gated on plan 01-06 completing reviewer designation; runs intra-task after 01-06 lands"
+      pattern: "(outside reviewer|co-confirmation)"
 ---
 
 <objective>
@@ -60,6 +65,8 @@ Output: Final MARKET-EVIDENCE.md at .planning/ root with verdict + supporting ta
 **AI-policy boundary:** Steam review LLM-classification (D-MKTG-02) is research-synthesis-allowed BECAUSE Daniel verifies 100% of LLM tags before they enter the verdict. Survey-question drafting is allowed (Claude drafts neutral wording; Daniel critiques for leading-question bias — copy-edit, not creative). Verdict authoring is Daniel-only (the verdict statement is a load-bearing decision, not a synthesis).
 
 Per `01-RESEARCH.md` Pitfall 4 (MKTG-06 confirmation bias): the discipline is to honor the pre-committed rubric (D-MKTG-04) before data is in. Don't bias game selection. Don't bias survey wording. Don't explain away critical reviews. Outside reviewer reads the final MARKET-EVIDENCE.md before verdict is final (cross-link to D-WALL-05 designated reviewer in plan 01-06).
+
+**Cross-plan sequencing note:** This plan runs in wave 2 in parallel with vision pack / risk pack — the long-tail survey collection cannot afford to be gated on later waves. However, the outside-reviewer cosignature *sub-step* of Task 3 is gated on plan 01-06 (which designates the reviewer per D-WALL-05). All Task 3 work up to and including draft verdict authoring is wave-2-independent; only the cosignature seal-off waits on 01-06 to land.
 </objective>
 
 <execution_context>
@@ -227,6 +234,19 @@ Per `01-RESEARCH.md` Pitfall 4 (MKTG-06 confirmation bias): the discipline is to
     .planning/phases/01-foundations-vision-lock/deliverables/process-pack/21-year3wall-tripwires.md (outside reviewer designation — same reviewer reads MARKET-EVIDENCE.md before final verdict per Pitfall 4)
   </read_first>
   <action>
+    **CROSS-PLAN SEQUENCING (read this before starting Task 3):**
+
+    Task 3 has FIVE sub-steps (A through F below). Sub-steps A, B, C, and the *draft* portion of E are **wave-2-independent** — they do NOT depend on plan 01-06 and can run in parallel with 01-06's work. The outside-reviewer **cosignature** sub-step (Step D) and the *finalization* of E (writing the final co-signed verdict) are GATED ON PLAN 01-06 COMPLETING. Specifically:
+
+    - **Wave-2-independent (start immediately, don't wait on 01-06):** Step A (publish + distribute survey), Step B (export results + analyze), Step C (apply rubric, compute draft verdict), Step E up to but not including signatures (populate result tables, write draft verdict statement, write roadmap-revision impact paragraph if applicable).
+    - **Gated on plan 01-06 (outside reviewer designation must exist first):** Step D (outside-reviewer reads + cosigns), the signature line in Step E, Step F (move to planning root with final cosigned verdict).
+
+    Why: plan 01-06 is the plan that designates the outside reviewer (per D-WALL-05). Until 01-06 lands, there is no designated reviewer to cosign. The bulk of Task 3's work (survey collection + classification triangulation + verdict drafting) is independent of who the reviewer is, so we don't gate it on 01-06; only the cosignature seal is gated. This is a real-world parallel-execution pattern: do the long-tail data collection in parallel; serialize only the final cosignature.
+
+    Operationally: if 01-06 has NOT completed by the time Steps A-C are done and the draft verdict is written, Task 3 PAUSES at "draft verdict written; awaiting outside-reviewer designation from 01-06" and resumes when 01-06's reviewer-designation lands. In practice 01-06 lands in wave 4 and Task 3's long-tail (survey collection ~2-4 weeks) means 01-06 will almost certainly complete before Step D needs to run. This sequencing note is documentation of the dependency, not a synchronization barrier that should block Steps A-C.
+
+    ---
+
     **Step A — Daniel publishes survey + distributes (Daniel-only):**
     - Build Google Form with the Daniel-finalized survey questions.
     - Distribute per the channels with Approved permission (from Task 1 distribution log):
@@ -246,10 +266,18 @@ Per `01-RESEARCH.md` Pitfall 4 (MKTG-06 confirmation bias): the discipline is to
     - **Refined** = appear in 4-6 games OR 25-40% survey → narrative needs adjustment, but thesis core holds
     - **Rejected** = appear in <4 games AND <25% survey → thesis is wrong; ROADMAP.md revisited before Phase 2
 
-    Daniel computes from review tallies + survey data; writes the verdict statement.
+    Daniel computes from review tallies + survey data; writes the *draft* verdict statement.
 
     **Step D — Outside reviewer reads MARKET-EVIDENCE.md draft before verdict is final** (per Pitfall 4):
-    The same outside reviewer designated in plan 01-06 reads the methodology + data + draft verdict and either confirms or challenges. If challenges → Daniel responds. The outside reviewer's confirmation is the bias-check guardrail.
+
+    **GATED ON PLAN 01-06 COMPLETION.** This sub-step CANNOT execute until plan 01-06 has designated the outside reviewer (per D-WALL-05) in `21-year3wall-tripwires.md`. If 01-06 has not completed when Daniel reaches this step, pause Task 3 here and resume when 01-06's reviewer-designation lands.
+
+    Once the outside reviewer is designated:
+    - The same outside reviewer designated in plan 01-06 reads the methodology + data + draft verdict and either confirms or challenges.
+    - If challenges → Daniel responds; verdict may be revised.
+    - The outside reviewer's confirmation is the bias-check guardrail.
+
+    Per AI policy: Claude does NOT pose as the outside reviewer. The cosignature is between Daniel and the human reviewer.
 
     **Step E — Final MARKET-EVIDENCE.md authored:**
     Daniel populates the result tables in 27-MARKET-EVIDENCE.md scaffold:
@@ -260,7 +288,9 @@ Per `01-RESEARCH.md` Pitfall 4 (MKTG-06 confirmation bias): the discipline is to
     - **Verdict statement:** explicit Confirmed | Refined | Rejected with supporting bullet points + which rubric criteria fired
     - **Roadmap-revision impact (if Refined or Rejected):** Daniel writes 1 paragraph naming what in ROADMAP.md needs amendment + queues ROADMAP.md amendment for the Phase 1 → Phase 2 transition.
 
-    Daniel signature line: `**Daniel signature:** {YYYY-MM-DD} — verdict signed; outside reviewer co-confirmation: {reviewer name} on {date}`.
+    The first four bullets above can be drafted wave-2-independently. The final bullets *signature line* requires Step D's cosignature to be complete:
+
+    Daniel signature line (POST-Step-D): `**Daniel signature:** {YYYY-MM-DD} — verdict signed; outside reviewer co-confirmation: {reviewer name} on {date}`.
 
     **Step F — Move MARKET-EVIDENCE.md to planning root:**
     Per VALIDATION.md sign-off and HEALTH-01 / MKTG-06 wording ("project tracks"), copy/move the final 27-MARKET-EVIDENCE.md to `.planning/MARKET-EVIDENCE.md`. The deliverables/ scaffold copy stays as the Phase 1 staging location. Both should remain consistent (or use a symlink approach if filesystem supports — for cross-platform Windows + git, a duplicate-with-cross-link-note is safest).
@@ -280,12 +310,13 @@ Per `01-RESEARCH.md` Pitfall 4 (MKTG-06 confirmation bias): the discipline is to
     - Methodology elements all reflected (D-MKTG-01..06): `grep -cE 'D-MKTG-0[1-6]' .planning/MARKET-EVIDENCE.md` returns ≥6.
     - Per-game complaint tally table populated (game list count rows): `grep -cE '^\| [A-Za-z]' .planning/MARKET-EVIDENCE.md` returns ≥30 (mix of game-list rows + survey-tally rows + verdict rows).
     - Outside reviewer confirmation line: `grep -F 'outside reviewer' .planning/MARKET-EVIDENCE.md` returns ≥1, AND a date pattern present.
+    - Outside-reviewer cosignature step was sequenced AFTER plan 01-06 (manual check / git log): the cosignature date in MARKET-EVIDENCE.md must be on or after the date plan 01-06 designated the reviewer in 21-year3wall-tripwires.md. Cross-check: `grep -F 'Outside reviewer name:' .planning/phases/01-foundations-vision-lock/deliverables/process-pack/21-year3wall-tripwires.md` returns ≥1 BEFORE the MARKET-EVIDENCE.md cosignature step is performed.
     - Daniel signature: `grep -F 'Daniel signature:' .planning/MARKET-EVIDENCE.md` returns ≥1.
     - If verdict = Rejected or Refined-significantly: roadmap-revision impact section populated: `grep -ciE '(roadmap revision|ROADMAP.md amendment|Phase 2 entry)' .planning/MARKET-EVIDENCE.md` returns ≥1 in the impact section (only required if verdict ≠ Confirmed).
     - SCOPE.md has entry for MKTG-06 verdict: `grep -F 'MKTG-06 verdict' .planning/SCOPE.md` returns ≥1.
     - Both deliverables/validation-pack/27-MARKET-EVIDENCE.md and .planning/MARKET-EVIDENCE.md present (staging + canonical): `test -f .planning/phases/01-foundations-vision-lock/deliverables/validation-pack/27-MARKET-EVIDENCE.md && test -f .planning/MARKET-EVIDENCE.md`.
   </acceptance_criteria>
-  <done>MARKET-EVIDENCE.md final at planning root with explicit verdict + supporting tables; outside reviewer confirmed; SCOPE.md entry logged; if verdict ≠ Confirmed, ROADMAP.md amendment queued for Phase 1 → Phase 2 transition.</done>
+  <done>MARKET-EVIDENCE.md final at planning root with explicit verdict + supporting tables; outside reviewer confirmed (cosignature step sequenced after plan 01-06's reviewer designation); SCOPE.md entry logged; if verdict ≠ Confirmed, ROADMAP.md amendment queued for Phase 1 → Phase 2 transition.</done>
 </task>
 
 </tasks>
@@ -293,7 +324,7 @@ Per `01-RESEARCH.md` Pitfall 4 (MKTG-06 confirmation bias): the discipline is to
 <verification>
 After all 3 tasks:
 1. **MKTG-06 verdict authored** with explicit Confirmed | Refined | Rejected statement + supporting data tables.
-2. **Outside reviewer confirmation** logged (anti-bias check per Pitfall 4).
+2. **Outside reviewer confirmation** logged (anti-bias check per Pitfall 4); cosignature sub-step sequenced after plan 01-06's reviewer designation.
 3. **SCOPE.md entry logged** for the verdict (per HEALTH-01 + PHILOSOPHY.md Amendment Process).
 4. **If verdict ≠ Confirmed** — ROADMAP-revision impact section populated; ROADMAP amendment queued for Phase 2 transition.
 5. **AI-policy compliance:** All LLM tags Daniel-verified; verdict statement Daniel-only; no marketing copy generated.
@@ -305,8 +336,9 @@ After all 3 tasks:
 - MKTG-06 requirement satisfied: thesis empirically tested before any external marketing copy is finalized.
 - HEALTH-01 progresses (SCOPE.md entry for verdict + roadmap-revision queue if applicable).
 - If verdict = Rejected or Refined: roadmap-revision impact noted; ROADMAP.md amendment queued for Phase 1 → Phase 2 transition (NOT executed in this plan; deferred to /gsd:transition).
+- Cross-plan sequencing honored: bulk of Task 3 runs in wave 2; only outside-reviewer cosignature sub-step waits on plan 01-06's reviewer designation.
 </success_criteria>
 
 <output>
-After completion, create `.planning/phases/01-foundations-vision-lock/01-07-mktg-06-validation-SUMMARY.md` documenting: 3 task outcomes, final game count, total survey responses, verdict + supporting tally counts, outside reviewer confirmation date, ROADMAP amendment queue status (none / queued for X amendment).
+After completion, create `.planning/phases/01-foundations-vision-lock/01-07-mktg-06-validation-SUMMARY.md` documenting: 3 task outcomes, final game count, total survey responses, verdict + supporting tally counts, outside reviewer confirmation date (and confirmation that designation came from plan 01-06 before cosignature), ROADMAP amendment queue status (none / queued for X amendment).
 </output>

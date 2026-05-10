@@ -2,7 +2,7 @@
 phase: 01-foundations-vision-lock
 plan: 06
 type: execute
-wave: 3
+wave: 4
 depends_on:
   - 01-00-deliverable-scaffolding
   - 01-03-loops-journey
@@ -267,4 +267,5 @@ After all 3 tasks:
 
 <output>
 After completion, create `.planning/phases/01-foundations-vision-lock/01-06-decision-locks-tripwires-SUMMARY.md` documenting: 4 file outcomes, threshold values Daniel set per checkpoint, outside reviewer name + relationship, trigger-list resolution (LOCKED with list OR DEFERRED with rationale).
+</output>
 </output>
