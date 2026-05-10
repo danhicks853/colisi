@@ -218,10 +218,8 @@ Mechanics this pillar justifies (REQ-IDs from `.planning/REQUIREMENTS.md`):
 
 **Total: 20 REQs justified directly + 1 enabler.** UI-08 (localization-routing), UI-09 (content warning), and LOC-01..03 (translation tables, non-English ship, CJK fonts) considered and rejected — they're localization-architecture concerns better housed in a future Localization treatment (probably surfaces in Phase 10 / M2 production phase, not as a Vision Bible pillar).
 
-## Pillar 4: {1–3 word name} *(optional — collapse to 3 if 4 feels redundant)*
-
-## Pillar 5: {1–3 word name} *(optional — only if 5 is the natural shape)*
+*(Pillars 4 and 5 considered and dropped — Daniel decided 2026-05-10 to ship at 3 pillars. The trio Character Development × Never Punishing × Approachability covers the project's mechanical, ethical, and accessibility dimensions without overlap. Future pillar additions ("Living World", "Player Expression", or art-style-as-pillar) can be amended in if a future system fails the discriminator test against the existing trio.)*
 
 ## Cross-references
 
-*(Claude populates once drafts land.)*
+Migrated to canonical: `.planning/phases/01-foundations-vision-lock/deliverables/vision-pack/02-pillars-of-play.md` (cross-refs populated in canonical).
