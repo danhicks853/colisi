@@ -91,7 +91,67 @@ Mechanics this pillar justifies (REQ-IDs from `.planning/REQUIREMENTS.md`):
 
 **Total: 22 REQs justified directly + 1 enabler** (NPC-06, NPC-08, WORLD-01, WORLD-02 considered and rejected as belonging to other pillars or — in WORLD-02's case — explicitly outside this pillar's scope because the wisp is a catalyst, not an agent of world-change).
 
-## Pillar 2: {1–3 word name}
+## Pillar 2: Never Punishing
+
+Why?
+Punishing the player for not meeting arbitrary goals defeats the purpose of the game entirely. Deep-Cozy players do not want the anxiety of these arbitrary goals, which introduce friction and affect enjoyment. The player should feel rewarded by their choices and should have the freedom to make NO choices, without a timer or energy bar dictating how many choices they can make or how long they can take to make them. This enforces the design of player control and allows for evolving relationships in a world that never punishes you. 
+
+Design Implications
+- No mechanic introduces a time-based failure state — neither countdown timers (the press-X-in-5-seconds shape) nor expiration windows (the missable-event shape). Time advances as consequence of player action, never as pressure on it.
+- Overarching game mechanics cannot rely on an energy, usage, or depletion mechanic. This includes survival-shape hunger / thirst decay, or action-economy based energy bars that decrement on-action. This enables the player to make any number of meaningful choices within any time frame. An acceptable alternative would be to provide the player with a puzzle state where each move is a discrete event / state advance. (An event where the player learns to mine before teaching a villager could provide them with an ethereal pickaxe. Each strike of the pickaxe dislodges a large geode little by little. After 8 strikes, the geode is freed and the wisp dismisses the pickaxe.)
+- Time increments are acceptable, provided they do not lock the player out of ANY content. If we teach a villager to fish, and we then increment to a new season, this cannot lock the player out of teaching a different villager to dance.
+
+Failure Mode Signature
+Mode: The player experiences failure states based on time or decremental states.
+
+Signals:
+- The player asks why a minigame ended early or showed a failure state without action.
+Check to see if the minigame has a timer added that expired.
+- The player states that they are unable to continue gameplay or use an item after a certain amount of actions. i.e. "why can't I use that pickaxe anymore? Where did it go?"
+Check to see if a resource or meter was added that prevents gameplay upon depletion
+- The player states they are unable to trigger an NPC event after a time-based increment (i.e. season)
+- The player notes an NPC state change based solely on time increment, and not based on a choice they made.
+Check to see if a time increment precluded an NPC or village event, or caused an NPC state change, through no fault of the player
+
+Anti-Clauses
+- Energy depletion systems of any kind will NEVER be added to this game.
+- Expiring timers of ANY kind will not be added to this game. These include mini-game specific timers. Every mechanic of the game should allow the player to walk away from their computer and come back 15 days later to the same state.
+- Negative consequences will ALWAYS be clearly telegraphed to the player, and ALWAYS be a result of a choice the player made. This ties into the Character Development pillar as well.
+- We will never add interactive player combat mechanics of ANY kind. Ever.
+
+Mechanics this pillar justifies (REQ-IDs from `.planning/REQUIREMENTS.md`):
+
+*World, time, and seasonal pacing:*
+- **WORLD-03** — Day/night cycle is purely cosmetic, not tied to gameplay-pressure mechanics. Direct enforcement of DI #1 (time advances as consequence of player action, never as pressure).
+- **WORLD-04** — Seasonal cycle is recurrent across years, never expiring. Direct enforcement of DI #3 (time increments don't lock content) and anti-clause 2 (no expiration windows).
+- **WORLD-05** — NO real-time-pressure mechanics: no day clock, no missable windows, no stamina, no tool durability, no bedtime forcing. **The flagship REQ for this pillar** — the consolidated forbiddance enforced at world architecture.
+- **WORLD-06** — Time advances on player action / rest, not on wall-clock. Direct DI #1 enforcement.
+- **WORLD-07** — Free fast-travel between unlocked zones once discovered. Anti-friction; player's pace is theirs.
+
+*Player resources (no depletion):*
+- **CTRL-04** — Sprint with no stamina or fatigue penalty. Direct anti-clause 1 enforcement.
+- **CRAFT-06** — Sufficient inventory capacity for a full play session, no inventory-management punishment. Anti-friction at the resource layer.
+- **CRAFT-07** — No item degrades or breaks (no tool durability). Direct anti-clause 1 enforcement.
+
+*Narrative consequences (telegraphed + player-chosen):*
+- **NARR-02** — No restart-to-rebranch CYOA. Direct DI #3 enforcement (no content lockout).
+- **NARR-04** — Multiple satisfying endings; bittersweet allowed; no forced-tragic regardless of player choice. Direct anti-clause 3 enforcement.
+- **NARR-07** — Puzzles telegraph their solution clearly — no ambiguous hidden-logic puzzle is required to progress. Direct anti-clause 3 enforcement (telegraph half).
+
+*NPC + companion systems (no time-pressure, no fail-state):*
+- **NPC-02** — NPC schedules visible to player **without time pressure on the player**. Direct DI #1 enforcement at NPC scheduling.
+- **COMP-04** — No "companion has left forever" / "companion has died" punishing fail-state from companion mechanics. Direct anti-clause 3 enforcement at companion architecture.
+
+*Save (the 15-days test, in code):*
+- **SAVE-05** — Player can never reach a state where their save becomes unrecoverable due to in-game choices. **Direct enforcement of the "walk away from your computer and come back 15 days later to the same state" test from anti-clause 2** at the save layer.
+
+*Negative space — Out of Scope (the pillar's enforced forbiddances):*
+- This pillar is *also* enforced by the entirety of `.planning/REQUIREMENTS.md` **Out of Scope** — day clocks, bedtime forcing, energy depletion, stamina, tool durability, missable / time-windowed events, endgame difficulty curves / stat-check walls, permadeath, required combat (now amended to "interactive player combat mechanics of any kind" per anti-clause 4 and SCOPE.md 2026-05-10 NARR-06 entry's combat-row amendment queue), forced tragic endings, restart-from-beginning CYOA mechanics, skill trees that gate progression, hidden / secret-locked best endings, mid-game introduction of untaught core mechanics. **Half this pillar's load is carried by the negative space.** Future-Daniel reading this section in 2027: when auditing a feature pitch against this pillar, check both the affirmative REQs above AND the Out of Scope list.
+
+*Enabler (not directly justified, but required for this pillar's diagnostic):*
+- **HEALTH-05** — Persona-zero playtest ritual. Without HEALTH-05 sessions, the failure-mode signature's signals can't be captured.
+
+**Total: 14 REQs justified directly + 1 enabler + the entire Out of Scope list as enforced negative space.** ONB-03 and ONB-04 considered and routed to the future "Approachability" pillar (Pillar 3 candidate) where they belong as accessibility/onboarding rules rather than anti-punishment rules.
 
 ## Pillar 3: {1–3 word name}
 
