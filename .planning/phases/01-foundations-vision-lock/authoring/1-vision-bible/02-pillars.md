@@ -153,7 +153,70 @@ Mechanics this pillar justifies (REQ-IDs from `.planning/REQUIREMENTS.md`):
 
 **Total: 14 REQs justified directly + 1 enabler + the entire Out of Scope list as enforced negative space.** ONB-03 and ONB-04 considered and routed to the future "Approachability" pillar (Pillar 3 candidate) where they belong as accessibility/onboarding rules rather than anti-punishment rules.
 
-## Pillar 3: {1–3 word name}
+## Pillar 3: Approachability
+Why?
+Approachability is not a polish layer added after the “real” game is finished — it is a structural constraint on every system in Colisi. The deep-cozy demographic this game is built for disproportionately includes players with little or no prior gaming literacy, players unfamiliar with 3D navigation conventions, and players using low-spec laptops or integrated GPUs. These players frequently bounce off otherwise-interesting games before reaching the relationship systems that Pillars 1 and 2 are protecting. If Colisi silently assumes knowledge of camera control, inventory conventions, stat-sheet interpretation, or multi-input execution, then the audience the game is specifically FOR never reaches the character-development gameplay that defines the experience. Approachability therefore means reducing unnecessary interpretation load wherever possible: mechanics must be taught through use, inputs must remain simple and consistent, and the player must never feel embarrassed for not understanding a “standard” gaming convention. Pillar 1 ensures the player’s choices matter; Pillar 2 ensures those choices are never punished; Pillar 3 ensures the player can actually reach and understand the choice surface in the first place.
+
+Design Implications
+- Every new mechanic MUST be introduced through guided interaction before the player is expected to use it independently.
+- All critical gameplay information should be surfaced through diegetic or immediately understandable presentation, not buried inside layered UI menus or abstract stat sheets.
+- Core controls must remain consistent for the entire game. Once the player learns an interaction pattern, future systems should reuse that pattern whenever possible.
+- Any mechanic that depends on prior gaming conventions (quest logs, crafting hierarchies, camera assumptions, radial menus, inventory taxonomy, etc.) must be explicitly taught in-context before use.
+- The game must remain playable and visually readable on low-end hardware and integrated GPUs without degrading gameplay comprehension.
+
+Failure-mode Signature
+Mode: The player struggles to interact with the game because the design assumes prior gaming literacy, hidden conventions, or unexplained interface logic.
+
+Signals:
+- The player asks how to perform basic movement, interaction, or camera-control tasks after onboarding.
+- The player repeatedly opens menus searching for information that should have been visually or contextually obvious.
+- The player avoids engaging with a mechanic because they are afraid of "doing it wrong."
+- The player fails a mechanic because they misunderstood the input language, not because they made a meaningful decision.
+- The player verbally compares the game to "something gamers would understand," or states that they feel inexperienced, confused, or overwhelmed.
+
+When these signals appear, we should investigate onboarding clarity, interface readability, input consistency, and whether the mechanic relies on assumed gaming conventions rather than taught interaction patterns.
+
+Anti-clauses:
+- We will NEVER introduce new systems mid-game, outside of minigame mechanics.
+- We will NEVER require key combinations of any kind to achieve any result.
+- We will NEVER assume that the player knows how to complete common game tasks, such as movement in a 3D space, camera rotation, or interaction targeting.
+- We will NEVER hide critical gameplay understanding behind layered menus, dense stat sheets, or unexplained UI abstractions.
+- We will NEVER require fast reaction speed or mechanical execution precision to progress.
+
+Mechanics this pillar justifies (REQ-IDs from `.planning/REQUIREMENTS.md`):
+
+*Hardware (the DI #5 anchor):*
+- **DIST-06** — Acceptable performance (target 60fps) on integrated-GPU hardware (the cozy demographic floor). Direct DI #5 enforcement.
+
+*Controls (input simplicity):*
+- **CTRL-01** — 3D character movement on WASD + analog stick. Conventional and universal input bindings.
+- **CTRL-02** — Camera rotation on mouse + right stick. Conventional input.
+- **CTRL-03** — Single primary action button (E / A or X) for context-sensitive interaction. Anti-modifier-stack approach.
+- **CTRL-05** — Pause / open menu / journal anytime without losing game state. Anti-friction.
+- **CTRL-06** — Full control remapping on KBM and gamepad. Accessibility.
+- **CTRL-07** — Gamepad-first navigation; every UI screen gamepad-navigable without mouse. Accessibility.
+- **CTRL-08** — No chord or modifier-combination input requirement (e.g., Shift+Click+Drag). Direct anti-clause 2 enforcement.
+
+*Onboarding:*
+- **ONB-01** — New player learns core controls (move, interact, inventory, dialogue) within first 5 minutes. Direct DI #1 enforcement.
+- **ONB-02** — New player completes a first-day sequence introducing NPCs, gathering, crafting, journal. Direct DI #1 enforcement at the slice-onboarding layer.
+- **ONB-03** — Game never introduces a new core control or system in late-game without re-tutorializing it. Direct anti-clause 1 enforcement.
+- **ONB-04** — Game never demands prior gaming literacy. Direct anti-clause 3 enforcement.
+
+*UI accessibility:*
+- **UI-01** — UI text scaling up to ≥150% of base size. Accessibility.
+- **UI-02** — Colorblind-friendly palette (or default colorblind-friendly). Accessibility.
+- **UI-03** — Subtitles for all spoken / narrative content by default. Accessibility.
+- **UI-04** — Independent volume controls (master/music/SFX/dialogue/ambience). Accessibility.
+- **UI-05** — Pause anytime including during dialogue. Anti-friction.
+- **UI-06** — Window mode adjustment (fullscreen / windowed / borderless). Accessibility.
+- **UI-07** — Graphics quality presets targeting integrated-GPU hardware. Direct DI #5 enforcement at the rendering layer.
+- **UI-10** — First-run optional tutorial for someone who has never played a cozy game. Direct DI #1 enforcement at first-launch.
+
+*Enabler (not directly justified, but required for this pillar's diagnostic):*
+- **HEALTH-05** — Persona-zero playtest ritual. Without HEALTH-05 sessions (Dawn-shape player encountering the game cold), the failure-mode signature's signals can't be captured. Same enabler role as Pillars 1 and 2.
+
+**Total: 20 REQs justified directly + 1 enabler.** UI-08 (localization-routing), UI-09 (content warning), and LOC-01..03 (translation tables, non-English ship, CJK fonts) considered and rejected — they're localization-architecture concerns better housed in a future Localization treatment (probably surfaces in Phase 10 / M2 production phase, not as a Vision Bible pillar).
 
 ## Pillar 4: {1–3 word name} *(optional — collapse to 3 if 4 feels redundant)*
 
