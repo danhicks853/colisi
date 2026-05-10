@@ -3,71 +3,51 @@ deliverable: 06
 pack: loops-journey
 title: Player Journey Map
 author: Daniel
-ai_role: structure-only
+ai_role: structure-only + paraphrase from Daniel transcription (per Daniel directive 2026-05-10)
 depends_on:
   - 01-vision-pitch.md
   - 02-pillars-of-play.md
   - 05-core-loops.md
 decisions_referenced:
   - D-SCOPE-06
+  - D-VISION-01..11
 downstream_consumers:
-  - 23-why-play-at-hour-200.md (hour 100 / hour 500 rows feed retention doc)
-  - 09-slice-scenario-sketch.md (first-hour row anchors slice scenario)
+  - 23-why-play-at-hour-200.md (hour 100 / hour 500 rows feed retention doc; D-VISION-09 NG+ + D-VISION-10 village-as-canvas as primary engagement engines)
+  - 09-slice-scenario-sketch.md (first 5 min + first hour + hour 10 anchor slice scenario; hour 10 = slice end-state with cliffhanger)
   - Phase 6 onboarding plans (first 5 min / first hour rows guide ONB-01..04)
-  - 08-failure-mode-analysis.md (each row's "what goes wrong" feeds failure modes)
+  - 08-failure-mode-analysis.md (each row's pillar-failure cells consolidated into per-pillar bounce signatures)
+authored_at: authoring/2-game-design-doc/06-player-journey.md (migrated to canonical 2026-05-10)
 ---
 
-> **AI POLICY (PHILOSOPHY.md §V):** Daniel authors all content in this file. Claude provides ONLY the table structure below and refuses to draft player-feeling prose, action descriptions, or systems narratives. Claude critiques drafts when Daniel requests.
+> **AI POLICY (PHILOSOPHY.md §V):** Daniel authored all content. Claude paraphrased per Daniel transcription per Daniel directive 2026-05-10. Claude critiques drafts when Daniel requests.
 
 # Player Journey Map — Colisi
 
-> Per `D-SCOPE-06`: the player's experience across the time arc of a 30+ hour cozy life sim. Five canonical time marks (first 5 min / first hour / hour 10 / hour 100 / hour 500). The "hour 100" and "hour 500" rows are the rows where the four-killer endgame cliff (`PITFALLS` Pitfall 3) shows up — they are load-bearing.
+> Per `D-SCOPE-06`: the player's experience across the time arc of a 30+ hour cozy life sim. Five canonical time marks (first 5 min / first hour / hour 10 / hour 100 / hour 500). The "hour 100" and "hour 500" rows are where the four-killer endgame cliff (`PITFALLS` Pitfall 3) shows up — they are load-bearing.
 >
-> **Source format** (per `01-RESEARCH.md` Pattern 6): Yu-kai Chou phase model adapted for life-sim. Discovery / Onboarding / Scaffolding / Endgame phases are the standard four-phase model from gamification literature.
+> **Hour 10 = vertical slice end-state** (per `ROADMAP.md` Phase 6/7 success criteria — slice ends with cliffhanger to drive wishlist engagement). All system-support REQ-IDs map to REQUIREMENTS.md.
 
 ---
 
-## Journey table
+## 5-horizon journey table
 
-| Time mark | Phase (Yu-kai Chou) | What player is doing | What player is feeling | What systems support it | What goes wrong if pillar X fails |
+| Horizon | Yu-kai Chou phase | What player is doing | What player is feeling | System support (REQ-IDs) | Pillar-failure cross-reference |
 |---|---|---|---|---|---|
-| **First 5 min** | Onboarding | {Daniel authors} | {Daniel authors} | {Daniel authors — likely CTRL-01..08, ONB-01} | {Daniel authors — failure mode if onboarding pillar fails} |
-| **First hour** | Onboarding → Scaffolding | {Daniel authors} | {Daniel authors} | {Daniel authors — likely CTRL, ONB-02, NPC introductions, first match observation per D-VISION-04} | {Daniel authors} |
-| **Hour 10** | Scaffolding | {Daniel authors} | {Daniel authors} | {Daniel authors — likely NPC, NARR, COMP, match-puzzle layer per D-VISION-04} | {Daniel authors} |
-| **Hour 100** | Endgame | {Daniel authors — multi-thread narrative concurrent} | {Daniel authors} | {Daniel authors — multi-axis relationships NPC-03, state-tagged dialogue NPC-05, NARR-03 multi-thread} | {Daniel authors — content-cliff failure mode} |
-| **Hour 500** | Endgame | {Daniel authors — player-driven goals} | {Daniel authors} | {Daniel authors — four-engine retention strategy, cross-ref 23-why-play-at-hour-200.md} | {Daniel authors — endgame cliff has fully manifested} |
-
----
-
-## Journey notes
-
-### First 5 min
-
-{Daniel authors — what's the very first impression? What does the player learn to do? Anchors to ONB-01 (core controls in 5 min).}
-
-### First hour
-
-{Daniel authors — what's the "session 1 hook"? What experience does the player carry away? Should leave them wanting to come back tomorrow.}
-
-### Hour 10
-
-{Daniel authors — by hour 10, the player is past the new-toy phase. What's the new compounding interest? Likely the first matchmaking setup that lands.}
-
-### Hour 100
-
-{Daniel authors — by hour 100, the player is in Endgame phase per Yu-kai Chou. The retention engines (state-tagged dialogue / multi-thread / seasonal recurrence / player-driven goals) must be load-bearing here. If they fail here, the persona-zero bounce reason fires.}
-
-### Hour 500
-
-{Daniel authors — hour 500 is the existential test. What is the player still finding meaningful? Cross-ref `23-why-play-at-hour-200.md` — that doc should have an answer for every cell of this row.}
+| **First 5 min** | Onboarding | Completing simple tutorial objectives — flying the wisp through self-generated cloud rings to learn WASD movement, camera control, and the interact button. After ~3 cycles, the wisp notices the village's faint glow: first story hook. | Playful and curious. Controls land organically (the wisp "entertains itself" with cloud rings rather than feeling tutorialized); the village's glow pulls attention as the first emotional draw. | ONB-01..04 (onboarding sequence), CTRL-01 (controls + camera), WORLD-01..02 (world / atmospheric zones) | **If Pillar 2 (Never Punishing) fails:** missed cloud rings produce frustration-coded responses (timeout, retry counter, "tutorial failed" message) instead of gentle wisp feedback + camera reset; first-5-min establishes the wrong contract and players brace for punishment.<br>**If Pillar 3 (Approachability) fails:** tutorial reads as chore rather than play; the wisp's playful self-direction becomes forced instruction; players who bounce off "tutorial gates" in other games bounce here. |
+| **First hour** | Onboarding → Scaffolding | Wisp drifts through the village while most villagers can't yet see it. Player explores freely; at POIs the wisp narrates observational context (the town's state, individual villagers' moods and behavior). Player eventually crosses paths with the one villager who CAN see the wisp — first branching dialog and first magic-tutoring minigame both land in this encounter. | Discovery and quiet intrigue. The wisp's POI-narration seeds character context before direct interaction; players learn the village's texture (something's off — villagers are unhappy, things need help) from an observer's vantage. The first sighted-villager encounter shifts the emotional register: surprise + curiosity, "I'm being seen now." | NPC-01..02 (villager presence + interaction baseline), NARR-01..04 (branching dialog, narrative system, state-tagged dialogue), COMP-01..04 (relationship baseline; per inversion reinterpretation 2026-05-10 — wisp IS the companion), WORLD-01..03 (zones + POIs + atmospheric context), CTRL-01 (continued controls), ONB-04 (onboarding completion) | **If Pillar 1 (Character Development) fails:** wisp narration reads generic; villagers don't differentiate via observation; the first sighted encounter has no felt-context to land against.<br>**If Pillar 2 (Never Punishing) fails:** first dialog has stat-checks or fail states; first minigame has lose conditions; player learns "I can mess this up" instead of "I can play freely."<br>**If Pillar 3 (Approachability) fails:** dialog branching feels overwhelming or unclear; player can't read which choices matter or what's expected. |
+| **Hour 10** | Scaffolding | Player has interacted with and helped several villagers, completed their first matchmaking (meet-cute), and reached the slice's cliffhanger ending. **This horizon = vertical slice end-state** (per `ROADMAP.md` Phase 6/7 success criteria — slice ends with cliffhanger to drive wishlist engagement and demo continuation). | Investment, accomplishment, and "I want more." Player has individual relationships with several villagers, has felt the matchmaking puzzle layer click, and the cliffhanger pulls toward continuation. Slice-only players reach this beat and — if the slice did its job — wishlist. | NPC-01..09 (full villager interaction surface for slice cast of ~4), NARR-01..06 (branching dialog + state-tagged + per-villager replay system online per SAVE-04 amendment), COMP-01..04 (relationship matrix populated; wisp-as-companion reinterpretation), HOME-01..05 (sprite home/sanctum operating per D-VISION-10 Layer 1 starting sanctum + 2 upgrade slots in slice + 1 faerie house if any villager arc completes), SAVE-04 (event log accumulating per-villager history), magic-tutoring + matchmaking systems both functional, optional discoverable: stray black cat per D-VISION-11 (cat appears, arc does NOT complete in slice — wishlist hook) | **If Pillar 1 (Character Development) fails:** meet-cute feels mechanical, not earned; villagers feel interchangeable; cliffhanger doesn't pull because player doesn't care about anyone — **no wishlist conversion**.<br>**If Pillar 2 (Never Punishing) fails:** fail state somewhere along the path blocks the player from reaching meet-cute; gates frustrate; the slice's "never punishes" promise broke before its key proof point.<br>**If Pillar 3 (Approachability) fails:** matchmaking puzzle layer was opaque; player completed it accidentally without understanding their agency in it; meet-cute lands but player can't articulate "I did that." |
+| **Hour 100** | Endgame | Player has likely completed primary content arcs (individual relationships finalized, all available matchmaking complete). Engagement shifts from execution to witnessing: returning to village for comfort, discovering accumulated state-tagged dialogue depth, attending seasonal events with full context, catching cascading-thread-surfaced new anchors, watching villager replays from new perspectives. Player who reached completion may have entered NG+ (per D-VISION-09 time-loop — wisp narrates with accumulated cross-playthrough memory; previously-chosen dialog options UI-highlighted; ~20-50 archetypal recall trigger points per playthrough). | Comfort and ownership ("this is my village now"). Layered discovery — finding state-tagged dialog states that only fire after accumulated event thresholds. Wisp-as-companion deepening (especially across NG+ runs — the wisp grows with you). No urgency, no pressure; pure investment. The third Harvest Festival hits different than the first because state-tagged dialogue reflects accumulated context. | Full slice system surface plus: NARR-06 replay in primary-mode use; D-VISION-09 NG+ infrastructure (multi-playthrough event log per SAVE-04 amendment; archetypal event tagging + dialog-highlight UI per NARR-06 amendment); D-VISION-10 village-as-canvas at full ~50+ upgrade slots + 12-15 faerie houses; D-VISION-11 animal sanctuary unlocked + animal rescue meta-loop anchor active; seasonal-recurrence scaffolding with character-coded + seasonal audio (AUDIO-01/02 architectural commitment); full state-tagged dialogue corpus; four-engine retention strategy from `23-why-play-at-hour-200.md` (plan 01-06) | **If Pillar 1 (Character Development) fails:** villagers feel static at hour 100; no accumulated depth; wisp's NG+ memory feels gimmicky rather than meaningful; player has no reason to return — **the entire hour-100+ value proposition collapses**.<br>**If Pillar 2 (Never Punishing) fails:** any difficulty escalation, optimization pressure, or fail state introduced for hour-100+ retention violates persona-zero's #1 bounce reason and the locked cozy-promise anti-clauses. The cardinal failure mode at this horizon.<br>**If Pillar 3 (Approachability) fails:** NG+ launches without a clear re-introduction tutorial; wisp's archetypal recall narration confuses ("why is the wisp referencing things I don't remember?"); dialog highlights feel mysterious without explanation; NG+ "rules" (3-run cap, time-loop framing, archetypal triggers) read as opaque or arbitrary. NG+ technically slides past the "mid-game introduction of untaught mechanics" anti-clause because it's a NEW save — but only if the new-game framing + re-introduction tutorial land cleanly. **NG+ re-introduction tutorial is a Phase 4 (dialogue/NARR scripting) + Phase 6 (full-game content) design item flagged at D-VISION-09 lock — full-game scope, not slice scope** (slice ends at hour 10 cliffhanger; NG+ never fires in slice). |
+| **Hour 500** | Endgame | Player has likely completed all NG+ runs (D-VISION-09 cap of 3 NG+ saves; with pristine playthrough = 4 total). Engagement is *pure return* — checking in on favorite playthroughs' saves, attending seasonal events with maximal accumulated context, watching villager replays as primary mode, drifting through the village for the felt-sense of "this place exists." Few players reach this horizon; documented for design intent, not engineered as discrete content. | The village is *home*. Returns are about comfort and recognition rather than progression. The wisp at NG+3 is a deeply-developed companion with archetypal memory across all four playthroughs; its narration carries texture that pristine-playthrough players never see. Player may bounce between save files (each a different timeline) — the experience at hour 500 is the *constellation* of all your playthroughs, not any single one. | Same infrastructure as Hour 100 (no new systems). Depth comes from accumulated event-log state across all 4 save files; NG+3 wisp memory at peak; full state-tagged dialogue corpus exhaustively explored; seasonal recurrence accumulated context (4+ in-world years per playthrough × 4 playthroughs = 16+ Harvest Festivals witnessed) | **If Pillar 1 fails:** nothing left to discover even with deepest state-tagged accumulation; wisp memory feels exhausted; the village stops feeling like home.<br>**If Pillar 2 fails:** any "loyalty reward" / "completionist score" / "achievement metagame" introduced at hour 500 to retain players violates the cozy promise. Hour 500 is a witnessing experience, not a goal to chase.<br>**If Pillar 3 fails:** by this horizon, all NG+ tutorials should be long-internalized; failure here would mean the player still feels the wisp's memory system is opaque after 500 hours, which means the original NG+ re-introduction tutorial failed at hour 30-50. |
 
 ---
 
 ## Cross-references
 
-- `.planning/phases/01-foundations-vision-lock/01-CONTEXT.md` — `D-SCOPE-06`
-- `02-pillars-of-play.md` — "what goes wrong if pillar X fails" column maps to failure-mode-analysis
-- `05-core-loops.md` — journey marks position the loops in player-time
-- `08-failure-mode-analysis.md` — each row's failure mode is a row in failure-mode analysis
-- `23-why-play-at-hour-200.md` — hour 100 / hour 500 rows feed retention doc
-- `.planning/research/PITFALLS.md` Pitfall 3 — the cliff that hour-100 / hour-500 rows must mitigate
+- `.planning/phases/01-foundations-vision-lock/01-CONTEXT.md` — `D-SCOPE-06`, `D-VISION-01..11`, all D-VISION decisions inform horizon experiences
+- `01-vision-pitch.md` — capsule line and core fantasy anchor first 5 min through hour 10
+- `02-pillars-of-play.md` — pillar-failure cross-reference column derived from each pillar's failure-mode signature
+- `05-core-loops.md` — moment-to-moment / session / meta loops position within the journey
+- `08-failure-mode-analysis.md` — per-pillar bounce signatures consolidated from this doc's pillar-failure column across 5 horizons
+- `09-slice-scenario-sketch.md` (plan 01-04) — slice scenario walks the first 5 min + first hour + hour 10 rows
+- `23-why-play-at-hour-200.md` (plan 01-06) — hour 100 + hour 500 retention design derives from these rows
+- `.planning/SCOPE.md` rows 6-10 (2026-05-10) — D-VISION-09/10/11 + WORLD-01 + AUDIO architectural commits informing hour 100+ engagement engines

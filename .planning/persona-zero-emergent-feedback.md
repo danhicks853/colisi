@@ -80,7 +80,7 @@ A running log of casual design feedback from Dawn (persona-zero) that surfaces *
 
 **Source:** Dawn (persona-zero) — casual conversation, not a HEALTH-05 ritual session
 
-**Status:** candidate
+**Status:** **adopted** *(2026-05-10 — Daniel committed during 07-pillar-mechanic-matrix.md NPC-06 reinterpretation discussion; D-VISION-11 LOCKED — stray black cat as tutorial case for animal rescue meta-loop anchor type, using existing magic-tutoring + matchmaking mechanics. SCOPE.md row 8 logs the lock; CONTEXT.md D-VISION-11 entry; STATE.md decisions log 2026-05-10. Cat is optional discoverable companion in slice; arc does NOT complete in slice (cliffhanger wishlist hook). Animal rescue added to meta-loop anchor-type catalog.)*
 
 **Context:** Casual conversation with Dawn. Topic: cozy life sim mechanics Dawn loves.
 
@@ -109,3 +109,75 @@ A running log of casual design feedback from Dawn (persona-zero) that surfaces *
 **Anti-policy check:** Pet adoption mechanics are a *category* of mechanic (allowed); specific pet names / animal shelter name / breed naming would all be Daniel-authored creative content under D-VISION-08.
 
 **Review hook:** Surfaces during plan 01-03 (Loops & Journey Pack) authoring, plan 01-04 (Scenario Pack) authoring, plan 01-05 (World & Style Pack) authoring. Decision needed at minimum during plan 01-02 (Pillar × Mechanic Matrix) — does this mechanic family score against the existing pillars? — and plan 01-03 (Core Loops) — moment-to-moment vs meta integration?
+
+---
+
+### 2026-05-10 — Faerie houses (Dawn)
+
+**Source:** Dawn (persona-zero) — casual conversation in response to Daniel's question about personalizable spaces vs communal aesthetic rewards
+
+**Status:** **adopted** *(2026-05-10 — Daniel committed during 07-pillar-mechanic-matrix.md HOME-cluster reinterpretation discussion; D-VISION-10 LOCKED Layer 3. SCOPE.md row 7 logs the lock; CONTEXT.md D-VISION-10 entry; STATE.md decisions log 2026-05-10.)*
+
+**Context:** Daniel asked Dawn for feedback on the design tension between personalizable wisp spaces vs communal earned-aesthetic (the choice space we'd been working through for HOME-cluster transmutation under sprite premise). Dawn's contribution found the third path that gives both via different mechanics with different framings.
+
+**Core idea (Dawn):** When the wisp fully completes a villager arc, that villager places a faerie house for the wisp. The faerie house is an instanced area, NOT customizable, but is themed and decorated based on the villager who placed it.
+
+**Why this is structurally significant:**
+- Restores some "personalizable space" feel (multiple sanctums, one per fully-completed villager arc) without re-introducing customization mechanics
+- Preserves the "wisp is a guest, not an owner" framing — villagers decorate FOR the wisp; the wisp doesn't decorate for itself
+- Each faerie house is a Pillar 1 character relationship crystallized — every space is a record of who that villager became through their arc with the wisp
+- No customization burden for player (one less mechanic to design, balance, or learn)
+- Phase 6 content load: 12-15 unique faerie house designs (one per villager) — bounded
+- Strong NG+ replayability: which arcs you complete and how affects faerie-house unlock state across playthroughs
+- Pairs with Layer 1 starting sanctum and Layer 2 village-as-canvas to form a 3-layer architecture for the wisp's relationship to space
+
+**Architectural lock under D-VISION-10 Layer 3:**
+- 12-15 villager-themed faerie house designs (full game)
+- 1 design in slice (whichever single villager arc completes within slice scope, if any)
+- After unlocking, any faerie house can serve as a rest location alongside starting sanctum (D-TIME-03 rest-trigger flexibility)
+- Themed and decorated based on the villager who placed it — final designs Daniel-authored at Phase 6 content authoring per AI policy
+
+**Tonal alignment check:** ✓ Persona-gap-resonant (Dawn directly contributed; cozy aesthetic; fits magical-realism setting). ✓ Cozy guardrails preserved (no customization pressure, faerie houses are gifts not chores, no fail state). ✓ AI policy: faerie house themes / specific decor / villager-aesthetic codifications are Daniel-authored creative content under D-VISION-08; Claude does not generate.
+
+**Possible cross-pollination with prior log entries:**
+- The pet-adoption entry (2026-05-10 Dawn) and faerie houses entry compose a coherent set of Dawn-sourced design moves: both center on character-relationship records (faerie house = villager arc record; pet adoption = relationship-formation record). The pet's eventual home could be in a faerie house (the cat's adopter places one).
+- The NARR-06 replay reframe (2026-05-10 Daniel) and faerie houses reinforce each other: replays could include the faerie house placement moment as a significance-marked event-log entry; visiting a faerie house in NG+ could include wisp recall narration ("I remember when you placed this one").
+
+**Review hook:** Already adopted; lives in 26-architecture-ratification.md sprite-premise REQ amendments (HOME cluster), 07-pillar-mechanic-matrix.md HOME row scoring, 12-world-bible-v0.1.md (plan 01-05 — faerie house aesthetic frameworks per villager), 09-slice-scenario-sketch.md (plan 01-04 — slice's single faerie house placement scene).
+
+---
+
+### 2026-05-10 — Seasonal audio (Dawn)
+
+**Source:** Dawn (persona-zero) — audit feedback during 07-pillar-mechanic-matrix.md AUDIO weak-signal resolution discussion
+
+**Status:** **adopted** *(2026-05-10 — Daniel committed during AUDIO weak-signal resolution; AUDIO-01 + AUDIO-02 architectural commitment locked: character-coded leitmotifs + seasonal variations. SCOPE.md row added; STATE.md decisions log 2026-05-10; AUDIO-01 + AUDIO-02 REQUIREMENTS.md amendments queued for Phase 1→2 transition.)*
+
+**Context:** Daniel asked Dawn for audit feedback on AUDIO-01 + AUDIO-02 (originally scoring weakly across all pillars at 1,1,1) during 07-pillar-mechanic-matrix.md weak-signal resolution. Dawn's feedback surfaced a specific design pattern she values from comparable cozy games.
+
+**Core idea (Dawn):** Dawn liked in Stardew Valley when the music and audio cues changed with the seasons. She wants seasonal audio variations in Colisi.
+
+**Why this is structurally significant:**
+- Reinforces Pillar 2 never-expiring engine — seasonal audio recurs across in-world years with accumulated context (year 4's autumn music feels different because of year 1's autumn arrangement still in memory)
+- Pairs with seasonal-recurrence anchor type in the meta-loop (audio commits to the same recurrence pattern that dialogue and world-visual state-tagging already commit to)
+- Bounded production scope: 4 seasonal variations per audio asset, not unbounded content drips
+- Strengthens NG+ replay context — replays carry season-specific audio that reflects the in-world season the event happened in
+
+**Combined with character-coded audio commitment:**
+Daniel paired Dawn's seasonal audio feedback with character-coded leitmotifs (each of the 12-15 villagers has a signature leitmotif; specific characters / places / activities have signature SFX cues). The combined commitment is:
+- AUDIO-01 (music): per-villager leitmotifs × 4 seasonal arrangements
+- AUDIO-02 (SFX): per-character/place/activity SFX cues + seasonal ambient SFX layers (autumn leaves underfoot, winter snow muffle, spring birdsong density, summer evening crickets)
+
+**Architectural lock:**
+- Phase 6 audio production scope: ~12-15 villager leitmotifs × 4 seasons + per-character/place/activity SFX cues + seasonal ambient SFX layers per zone
+- Bounded but real production commitment
+- AUDIO-01 + AUDIO-02 REQUIREMENTS.md amendments queued for Phase 1→2 transition
+
+**Tonal alignment check:** ✓ Persona-zero-resonant (direct Dawn audit feedback). ✓ Cozy guardrails preserved (seasonal audio recurs, never expires; doesn't introduce time pressure). ✓ AI policy: actual music composition + SFX recording is Daniel-authored (or composer-hired post-revenue per `D-MUSIC` deferred decision); Claude does not generate audio assets.
+
+**Possible cross-pollination with prior log entries:**
+- The pet-adoption entry + cat tutorial (D-VISION-11): the cat could have its own audio signature — magical chime when discovered, custom purring sound, possible leitmotif if its arc completes
+- The faerie houses entry (D-VISION-10 Layer 3): each faerie house could have a signature ambient bed reflecting its villager's leitmotif at low volume
+- The NARR-06 replay reframe: replays carry both villager leitmotif AND seasonal audio context for the moment being replayed — strengthens "felt-sense of impact" of the replay system
+
+**Review hook:** Already adopted; lives in 26-architecture-ratification.md (audio architecture amendment), 07-pillar-mechanic-matrix.md AUDIO row scoring, 12-world-bible-v0.1.md (plan 01-05 — per-character audio frameworks), 13-style-guide-v0.1.md (plan 01-05 — audio aesthetic direction), 23-why-play-at-hour-200.md (plan 01-06 — seasonal audio reinforces never-expiring retention engine).

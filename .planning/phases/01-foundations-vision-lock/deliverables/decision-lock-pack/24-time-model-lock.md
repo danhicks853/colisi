@@ -86,13 +86,34 @@ Locks here in plan 01-03 OR 01-06 AFTER Core Loops Pack drafts exist, OR explici
 
 Daniel's pushback during the discussion (verbatim from `01-CONTEXT.md`): *"how can we answer these questions if we don't know what the core game loop is?"* — captured. Rationale for deferring trigger-list lock: the loop itself is the source of truth.
 
-**Status:** {pending plan 01-03 / 01-06 output — Daniel authors per D-TIME-05; or explicitly defer to Phase 4/5 with rationale}
+**Status:** LOCKED 2026-05-10 plan 01-03 (Few-trigger model — Daniel decision after Core Loops draft).
+
+**Model:** Few-trigger (chosen over Single-trigger / Multi-trigger / Defer). Rationale: minimal triggers preserve "player can stand still indefinitely" (D-TIME-02) while giving festivals + major arcs structural calendar-impact that the seasonal-recurrence anchor type in the meta loop needs.
 
 **Locked-here triggers:**
-- {Daniel authors after `05-core-loops.md` is drafted in plan 01-03}
+
+1. **Rest at sprite home/sanctum** → advances to next morning. Primary day-advancement trigger; player-initiated; closes the session loop's node 5 (Close OR re-orient — choosing Close routes through this trigger).
+2. **Festival participation** → consumes the day (advances to next morning at festival's natural close). Festival-scheduled event; player chooses to attend; the act of attending books the day. Gives festivals (and the seasonal-recurrence meta-loop anchor) structural calendar-weight.
 
 **Deferred-to-Phase-4/5 triggers (with rationale):**
-- {Daniel authors if any}
+
+1. **Multi-day arc beats** — DEFERRED per D-TIME-05. Some arcs may have explicit "this happens over the next N days" beats (e.g., a villager builds a workshop over a week; replay shows compressed time during construction). These are *arc-specific* time-passage beats, not generic player-action triggers. Defer rationale: depends on Phase 4 dialogue/scenario design + Phase 6 individual arc authoring; locking pre-slice would constrain narrative without observed feel. When deferred trigger fires, it's content-driven (the arc's NARR/SAVE design says so), not a canonical action a player takes.
+
+**Explicit non-triggers (for clarity):**
+
+- Magic-tutoring activity completion — does NOT advance time. Player can do many in one day.
+- Major arc completion (matchmaking pair, magic-mastery breakthrough) — does NOT *itself* advance time; it unlocks structural beats (replay-as-revelation available, cascading thread surfaces next anchor).
+- Zone transition — does NOT advance time. Sprite drifts freely between zones.
+- Dialog scene completion — does NOT advance time.
+- Standing still / drifting / observing — does NOT advance time. (D-TIME-02 honored.)
+
+**Architectural implications (Phase 3 / Phase 4):**
+
+- **Phase 3 SAVE schema** (per SAVE-04 amendment 2026-05-10): event log records each trigger fire with timestamp + significance marker. `current_day` is a top-level field on the save record; villager schedules re-derive from `current_day` on day-rollover.
+- **Phase 4 NARR**: only festival NARR scenes and rest-prompts need calendar-tier scripting; all other scenes are calendar-tier-agnostic (firing based on relationship state + cumulative event-log markers, not "what day is it").
+- **Continuous NPC pathing** (D-TIME-04): NPCs follow per-day schedules; schedules loop within a day and reset on day-rollover. Player observing villager-X-at-task at 3pm vs 7pm sees the same task if the day hasn't advanced — matches D-TIME-02 (no real-time pressure).
+
+**Cross-link:** Full trigger list with rationale lives in `05-core-loops.md` § Trigger list. This doc references that as source of truth.
 
 ---
 
