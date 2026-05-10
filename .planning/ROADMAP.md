@@ -1,7 +1,7 @@
 # Roadmap: Colisi
 
 **Created:** 2026-05-09
-**Last revised:** 2026-05-09 (added Phase 2: Infrastructure & Repo Setup)
+**Last revised:** 2026-05-09 (added Phase 2: Infrastructure & Repo Setup; Phase 1 scope expanded to full mature-studio pre-production set + vision LOCKED to magical-sprite + matchmaking premise)
 **Granularity:** standard
 **Coverage:** 96/96 v1 requirements mapped
 **Project horizon:** 4-6 years (likely the upper end — see "Brutally Honest Timeline" below)
@@ -14,7 +14,7 @@
 
 The synthesizer recommended **12-18 months for the slice**. After mapping all requirements against actual phase work for a **solo beginner**, my honest assessment is:
 
-- **Milestone 1 (Vertical Slice + Steam page):** **19-25 months** is more realistic than 12-18 (revised after adding Phase 2: Infrastructure ~2-3 weeks). The slice-blocking foundations alone (Phase 3) are ~4-5 months for a beginner who has never written GDScript or rigged a Blender character. Phase 6 (slice content production) is ~6-9 months once you account for art pipeline learning. This is not a discouragement — it's planning honesty so the Year-3-Wall tripwires actually fire correctly.
+- **Milestone 1 (Vertical Slice + Steam page):** **22-32 months** is the current honest estimate (revised 2026-05-09 after Phase 1 scope expanded to the full 28-artifact mature-studio pre-production set; Phase 1 alone now estimated 4-8 months at sustainable nightly pace). The slice-blocking foundations (Phase 3) are still ~4-5 months for a beginner who has never written GDScript or rigged a Blender character. Phase 6 (slice content production) is ~6-9 months once you account for art pipeline learning. This is not a discouragement — it's planning honesty so the Year-3-Wall tripwires actually fire correctly. Per Daniel's directive 2026-05-09: time is not the constraint; quality is. M1 ships when M1 ships.
 - **Milestone 2 (Production & Launch):** **3-4 additional years** to ship 30+ hours. The 4-year horizon is achievable only if the slice ships at month 19-25 AND content scaling productivity hits ~2-3× slice rate (because tools and pipelines are now built). The 6-year horizon is the more probable outcome for a solo beginner. **Plan for 5-6 years total. Celebrate if you ship in 4.**
 - **Year-3-Wall tripwire (HEALTH-03):** If at month 36 you don't have a shipped slice with 1k+ wishlists AND productivity data showing 30hr scope is reachable in 24-36 more months, that's the pre-committed pivot point. Cut to 15-20hr scope, ship as "Colisi Vol. 1," do Vol. 2 as DLC if commercially warranted.
 
@@ -53,19 +53,68 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 ## Phase Details
 
 ### Phase 1: Foundations & Vision Lock
-**Goal:** Lock design pillars, four-killer mitigations, stack, and sustainability rhythms before any code or content is written. Resolve the open architectural questions (action-driven vs wall-clock time; Dialogue Manager vs Dialogic; pre-committed Year-3-Wall tripwires) so phase 2+ work doesn't re-litigate them.
+**Goal:** Lock the project vision and produce the full mature-studio pre-production deliverable set (28 artifacts across 9 packs) before any code or content is written. Per directive 2026-05-09 (logged in `.planning/phases/01-foundations-vision-lock/01-CONTEXT.md`): mirror established studio orthodoxy; do not trim deliverables for solo-dev pragmatism; time is not the constraint.
+
+**Vision LOCKED 2026-05-09 (this phase's central creative breakthrough, validated by persona-zero in real-time):** Player is a magical helper-sprite. Each villager has their own kind of personal magic that the player-sprite enables through relationship. Sprite distributes power, never accumulates it. Central puzzle layer: matchmaking-via-environmental-manipulation — the sprite observes villagers and gently engineers meet-cute encounters between compatible pairs. See `01-CONTEXT.md` D-VISION-01 through D-VISION-08 for the full premise lock.
+
 **Depends on:** Nothing (first phase)
-**Estimated duration:** ~1 month (research, decisions, document drafting; no code)
+**Estimated duration:** As long as it takes — Daniel's directive: "I dont care how long it takes; this project will be done right the first time." First sub-deliverable (premise pitch + persona-zero gate confirmation) within first 2 weeks. Full 28-artifact set: estimate 4-8 months at sustainable nightly pace; will not gate Phase 2 entry on calendar.
 **Requirements:** HEALTH-01, HEALTH-02, HEALTH-03, HEALTH-04, HEALTH-05, MKTG-06
-**Success Criteria** (what must be TRUE):
-  1. SCOPE.md log exists with rationale-tracking template; `slice-debt.md` exists; both have a worked example entry to prove the format works
-  2. "Why play at hour 200" doc exists, explicitly applying the four-engine retention strategy (state-tagged dialogue, 3+ active threads, seasonal recurrence, player-driven goals)
-  3. Pre-committed Year-3-Wall pivot tripwires are written down with specific miss-criteria (e.g., "if at month 36 wishlist count is below X, cut scope to Y")
-  4. Sustainable-pace cadence document exists (target ~25 hrs/week, daily/weekly/monthly/quarterly rhythms named)
-  5. Persona-zero playtest ritual is established and the first 15-min session has actually happened (HEALTH-05 requires ongoing maintenance — first session is the proof)
-  6. Action-driven vs wall-clock time decision is resolved and documented; Dialogue Manager (not Dialogic) confirmed as locked
-  7. **Demographic validation evidence collected and documented (MKTG-06).** At least 10 cozy life sims have had their Steam negative reviews mined for top complaint patterns; results compared to persona-zero's stated dislikes and to existing FEATURES/PITFALLS research; one cozy-community survey or qualitative source (r/CozyGamers thread / cozy Discord pulse) supplements the review mining; findings written up in `MARKET-EVIDENCE.md` with explicit "thesis confirmed / refined / rejected" verdict. If the verdict is "rejected" or "significantly refined," the rest of the roadmap is revisited before Phase 2 begins.
+**Authorship boundaries (AI policy — PHILOSOPHY.md §V):** Daniel authors all in-world creative content (premise pitch, world bible content, magic system codifications, voice bible content, dialogue voice samples, naming systems, narrative voice, reference deck curation). Claude provides document templates, structural skeletons (matrices, tables), and synthesis-only deliverables (risk registers, capability matrices, anti-positioning structure), and critiques drafts. Claude does NOT generate names, lore, dialogue, reference imagery, or any creative content.
+
+**Success Criteria** (what must be TRUE — organized into 9 deliverable packs per studio orthodoxy):
+
+**Vision Pack:**
+  1. Vision pitch / one-pager exists (elevator + paragraph + capsule line) anchored on the locked sprite-helper + matchmaking premise
+  2. Pillars of Play doc exists with 3-5 pillars, each having paragraph elaboration + 3-5 specific design implications + 3-5 anti-pillar clauses
+  3. Core Fantasy statement exists (one paragraph + one capsule sentence)
+  4. Anti-positioning doc exists with explicit divergence sections vs Stardew, BG3, Sims, Spiritfarer, Coral Island, Coffee Talk, Palia (and anything else relevant)
+
+**Loops & Journey Pack:**
+  5. Core Loops diagram exists showing nested moment-to-moment / session / meta loops, derived from the locked sprite premise
+  6. Player Journey map exists covering first 5 min / first hour / hour 10 / hour 100 / hour 500
+  7. Pillar × Mechanic matrix exists; every proposed mechanic justified against ≥1 pillar; orphan mechanics flagged for cut or held aside with rationale
+  8. Failure-mode analysis exists; each pillar has a "bounce signature" describing what failing it looks like in playtest
+
+**Scenario Pack:**
+  9. Slice Scenario sketch exists (screenwriter-style walkthrough of slice content end-to-end, ≥ "first hour of slice")
+  10. Wow beats list exists (the trailer/marketing screenshots in advance — what the slice demonstrates that makes a player wishlist)
+  11. 30-second elevator demo sketch exists (what plays in the first half-minute of public demos)
+
+**World & Style Pack:**
+  12. World Bible v0.1 exists at DEEP scope (full v1 setting bible: all 8 zones outlined, full pantheon/lore, magic system spec interpreted as soft-magic-with-cultural-tier-vocabulary, Stardew-shape calendar with Colisi-flavored season names + festival framework, every culture sketched, naming-system rules per culture). Magic tone locked: soft magic with codified vibes per `01-CONTEXT.md` D-WORLD-02 and D-WORLD-04.
+  13. Mood/reference deck exists; human-curated only (Daniel + Dawn); zero AI-generated reference art per AI policy. Already-collected anchor: Sandara Tang druid + leaf-fawn (Cozy Companion); Hades character art; Okami art style; Borderlands cel-shading corroboration; Studio Ghibli thematic delight.
+  14. Style Guide v0.1 exists at Full depth across visual / audio / narrative voice / UI tone — visual direction named with palette + silhouette + style frames + UI visual direction; audio direction with genre + instrumentation principles + soundscape per zone archetype + SFX tone + voice/dialogue policy; narrative voice bible with POV rules + register + sentence-shape tendencies + tone references + forbidden language + narrator presence; UI tone principles only (full mockups Phase 3)
+
+**Risk & Capability Pack:**
+  15. Risk register exists with explicit risks + likelihood + impact + mitigation + early-warning tripwire per risk
+  16. Capability gap matrix exists with skills required vs current proficiency vs acquisition plan + deadline
+  17. Tools/pipeline ratification doc exists (STACK.md ratified into a Phase-1-locked tools doc)
+
+**Process Pack:**
+  18. SCOPE.md log exists with rationale-tracking template + a worked example (the inaugural entry: "Phase 1 scope expansion 2026-05-09 to full orthodox 28-artifact set")
+  19. slice-debt.md log exists with a worked example
+  20. Sustainable-pace cadence doc exists per `01-CONTEXT.md` D-SUST-01–08: continuous nightly session, no hour tracking, milestone-based goals, monthly retro + quarterly review, bi-weekly persona-zero playtest ritual
+  21. Year-3-Wall pivot tripwires doc exists per `01-CONTEXT.md` D-WALL-01–07: cascade m6/12/24/36 with multi-OR triggers, 1-week structured pause-and-replan protocol, Replan Doc with 3-scenario evaluation, pre-committed outside reviewer co-sign, re-baseline-and-rearm if continue-as-is. Specific metric thresholds per checkpoint authored during this phase.
+  22. Persona-zero playtest ritual is established and at least 2 sessions have occurred (initial + one bi-weekly follow-up)
+  23. "Why play at hour 200" retention doc exists, explicitly applying the four-engine retention strategy (state-tagged authored dialogue, 3+ active narrative threads, seasonal recurrence, player-driven goals — now reinterpreted for the sprite-matchmaking premise)
+
+**Decision Lock Pack:**
+  24. Time-model lock recorded per `01-CONTEXT.md` D-TIME-01–05: pure action-driven contract, player-controlled day/night, continuous NPC pathing during play. Trigger list (canonical actions that advance time) authored from Core Loops Pack output (D-SCOPE-05) within this phase, OR explicitly deferred to Phase 4 with rationale.
+  25. Stack ratification recorded — STACK.md decisions locked, no re-litigation in Phase 2+
+  26. Architecture ratification recorded — ARCHITECTURE.md ratified as the locked v1 architecture; any premise-driven re-interpretations (sprite movement model, HOME/CRAFT/COMP shifts) noted as REQUIREMENTS.md interpretation amendments
+
+**Validation Pack:**
+  27. **MKTG-06 demographic validation** — `MARKET-EVIDENCE.md` exists with: hybrid game-list (selection rule + Daniel curation, 10-20 games), LLM-assisted negative-review classification + Daniel verification of every tag, formal Google Form survey distributed to r/CozyGamers + 2-3 cozy Discords + cozy social tags (target 50-100 responses), explicit thesis-confirmed/refined/rejected verdict using the triangulation rubric in `01-CONTEXT.md` D-MKTG-04. If verdict is "rejected" or "significantly refined," rest of roadmap revisited before Phase 2.
+
+**Greenlight:**
+  28. Greenlight document exists, dated, signed by Daniel as solo-dev producer, with explicit "knowing what I now know, I commit to this" statement. Gates Phase 2 entry. Includes pre-committed Year-3-Wall tripwire criteria as load-bearing co-signature.
+
 **Plans:** TBD
+
+---
+**Amendment log:**
+- 2026-05-09: Phase 1 scope expanded from 7 success criteria (process docs + decision-locks + MKTG-06) to full 28-artifact orthodox pre-production deliverable set. Driver: vision-lock breakthrough during `/gsd:discuss-phase 1` session + Daniel's explicit directive to mirror mature-studio practice. Premise locked the same session (magical sprite + matchmaking) with persona-zero validation. Inaugural SCOPE.md entry will retroactively log this expansion as the bootstrap precedent.
 
 ---
 
@@ -315,4 +364,4 @@ ROM-01, ROM-02, REPLAY-01, REPLAY-02, PROC-01, PROC-02, MOD-01, MOD-02, PLAT-01,
 ---
 
 *Roadmap created: 2026-05-09*
-*Last updated: 2026-05-09 after Phase 2 (Infrastructure & Repo Setup) insertion*
+*Last updated: 2026-05-09 after Phase 1 scope expansion + vision lock (magical helper-sprite + matchmaking puzzle layer)*
