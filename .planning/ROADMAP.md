@@ -112,7 +112,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 
 **Plans:** 9 plans (1 wave-1 scaffolding + 7 wave-2/3 deliverable-pack plans + 1 wave-4 greenlight)
 - [x] 01-00-deliverable-scaffolding-PLAN.md — Wave 1: Claude scaffolds all 28 deliverable skeletons + .planning/SCOPE.md + .planning/slice-debt.md + .planning/playtest-log/ infrastructure
-- [ ] 01-01-vision-pack-PLAN.md — Wave 2: Daniel authors Vision Pitch + Pillars + Core Fantasy + Anti-positioning; persona-zero session 1 (HEALTH-05)
+- [x] 01-01-vision-pack-PLAN.md — Wave 2: Daniel authors Vision Pitch + Pillars + Core Fantasy + Anti-positioning; persona-zero session 1 (HEALTH-05)
 - [ ] 01-02-risk-capability-process-PLAN.md — Wave 2: Daniel verifies + signs Risk Register / Capability Matrix / Tools-Pipeline / Stack / Architecture / Persona-zero ritual / Sustainable-pace; amends REQUIREMENTS.md HEALTH-04 wording
 - [ ] 01-03-loops-journey-PLAN.md — Wave 3: Daniel authors Core Loops + Player Journey + Pillar×Mechanic matrix + Failure-mode analysis (depends on Vision Pack pillars)
 - [ ] 01-04-scenario-pack-PLAN.md — Wave 3: Daniel authors Slice Scenario + Wow Beats + 30s Elevator Demo (depends on Vision Pack)

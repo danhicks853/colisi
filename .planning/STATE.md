@@ -30,22 +30,22 @@ progress:
 ## Current Position
 
 Phase: 01 (foundations-vision-lock) — EXECUTING
-Plan: 1 of 9 complete (01-00 scaffolding); 8 plans remaining
+Plan: 2 of 9 complete (01-00 scaffolding, 01-01 Vision Pack); 7 plans remaining
 **Milestone:** 1 of 2 (Vertical Slice)
 **Phase:** 1 of 12 — Foundations & Vision Lock
-**Plan:** 01-00 (deliverable scaffolding) COMPLETE 2026-05-10; next plan = 01-01 (Vision Pack — Daniel authors)
-**Status:** Executing Phase 01
+**Plan:** 01-01 (Vision Pack) COMPLETE 2026-05-10; next plan = 01-02 (Risk/Capability/Process sign-off + REQUIREMENTS.md amendments)
+**Status:** Executing Phase 01. Vision Pack canonical (4 docs: pitch, pillars, core fantasy, anti-positioning); HEALTH-05 session 1 complete; 3 architectural amendments queued in SCOPE.md for plan 01-02 sign-off (NARR-06 replay reframe, SAVE-04 event-log schema, combat-row tightening).
 
 **Progress bar:**
 
 ```
-Phase 01 plans: [█░░░░░░░░░] 1/9 complete (11%)
+Phase 01 plans: [██░░░░░░░░] 2/9 complete (22%)
 M1: [          ] 0/8 phases
 M2: [          ] 0/4 phases (sketch only)
 v1: [          ] 0/12 phases total
 ```
 
-**Requirements:** 3/96 mapped requirements satisfied + 1 ritual-established. Complete: INFRA-03 (repo at `https://github.com/danhicks853/colisi.git`); HEALTH-01 (`.planning/SCOPE.md` log created 2026-05-10 plan 01-00); HEALTH-02 (`.planning/slice-debt.md` log created 2026-05-10 plan 01-00). Ritual-established: HEALTH-05 (persona-zero ritual scaffold + playtest-log dir ready; full satisfaction at 2 sessions in plans 01-01 + 01-08). 92 still pending.
+**Requirements:** 3/96 mapped requirements satisfied + 1 ritual progressing. Complete: INFRA-03 (repo at `https://github.com/danhicks853/colisi.git`); HEALTH-01 (`.planning/SCOPE.md` log created 2026-05-10 plan 01-00); HEALTH-02 (`.planning/slice-debt.md` log created 2026-05-10 plan 01-00). Ritual-progressing: HEALTH-05 (session 1 of 2 minimum complete 2026-05-10; session 2 pending plan 01-08). 56 unique v1 REQs now have a pillar enforcement layer (Pillars 1, 2, 3 collectively, ~58% of v1 surface). 3 REQUIREMENTS.md amendments queued for plan 01-02 sign-off. 92 REQs still pending direct satisfaction.
 
 ---
 
