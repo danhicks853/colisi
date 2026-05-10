@@ -110,7 +110,16 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 **Greenlight:**
   28. Greenlight document exists, dated, signed by Daniel as solo-dev producer, with explicit "knowing what I now know, I commit to this" statement. Gates Phase 2 entry. Includes pre-committed Year-3-Wall tripwire criteria as load-bearing co-signature.
 
-**Plans:** TBD
+**Plans:** 9 plans (1 wave-1 scaffolding + 7 wave-2/3 deliverable-pack plans + 1 wave-4 greenlight)
+- [ ] 01-00-deliverable-scaffolding-PLAN.md — Wave 1: Claude scaffolds all 28 deliverable skeletons + .planning/SCOPE.md + .planning/slice-debt.md + .planning/playtest-log/ infrastructure
+- [ ] 01-01-vision-pack-PLAN.md — Wave 2: Daniel authors Vision Pitch + Pillars + Core Fantasy + Anti-positioning; persona-zero session 1 (HEALTH-05)
+- [ ] 01-02-risk-capability-process-PLAN.md — Wave 2: Daniel verifies + signs Risk Register / Capability Matrix / Tools-Pipeline / Stack / Architecture / Persona-zero ritual / Sustainable-pace; amends REQUIREMENTS.md HEALTH-04 wording
+- [ ] 01-03-loops-journey-PLAN.md — Wave 3: Daniel authors Core Loops + Player Journey + Pillar×Mechanic matrix + Failure-mode analysis (depends on Vision Pack pillars)
+- [ ] 01-04-scenario-pack-PLAN.md — Wave 3: Daniel authors Slice Scenario + Wow Beats + 30s Elevator Demo (depends on Vision Pack)
+- [ ] 01-05-world-style-pack-PLAN.md — Wave 3: Daniel authors World Bible v0.1 (DEEP) + Mood Deck (zero-AI) + Style Guide v0.1 (Full)
+- [ ] 01-06-decision-locks-tripwires-PLAN.md — Wave 3: Daniel populates Year-3-Wall thresholds (after comparable-game research) + writes Hour-200 retention four-engine application + finalizes Time-model lock; designates outside reviewer
+- [ ] 01-07-mktg-06-validation-PLAN.md — Wave 2 (long-tail): Build game list + draft + critique survey + Steam review LLM classification with 100% Daniel verification + survey distribution + verdict authoring
+- [ ] 01-08-greenlight-PLAN.md — Wave 4: Persona-zero session 2 (HEALTH-05 minimum reached) + Daniel signs Greenlight + outside reviewer cosigns Year-3-Wall criteria — gates Phase 2 entry
 
 ---
 **Amendment log:**
@@ -287,7 +296,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundations & Vision Lock | 0/0 | Not started | - |
+| 1. Foundations & Vision Lock | 0/9 | Planned | - |
 | 2. Infrastructure & Repo Setup | 0/0 | Not started | - |
 | 3. Project Skeleton & Foundational Systems | 0/0 | Not started | - |
 | 4. One-NPC Happy Path | 0/0 | Not started | - |
