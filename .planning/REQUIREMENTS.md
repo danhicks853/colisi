@@ -156,7 +156,7 @@
 - [x] **HEALTH-02**: Project tracks a `slice-debt.md` log of every shortcut taken for the slice, with explicit promotion-or-payoff strategy *(COMPLETE 2026-05-10 plan 01-00: `.planning/slice-debt.md` created with format spec + 1 worked example)*
 - [ ] **HEALTH-03**: Project has pre-committed Year-3-Wall pivot tripwires (specific milestones whose miss triggers a scope cut or pause-and-reassess)
 - [ ] **HEALTH-04**: Project commits to a sustainable solo-dev cadence (target ~25 hours/week, daily/weekly/monthly/quarterly rhythms documented) *(WORDING AMENDMENT PENDING plan 01-06: "~25 hours/week" supersedes by D-SUST-01..02 milestone-based cadence; see `20-sustainable-pace-cadence.md`)*
-- [ ] **HEALTH-05**: Persona-zero playtest ritual established and maintained from project month 1 *(RITUAL ESTABLISHED 2026-05-10 plan 01-00: `22-personazero-playtest-ritual.md` documents protocol; `.planning/playtest-log/` ready; first 2 sessions during plans 01-01 + 01-08 to fully satisfy "maintained")*
+- [ ] **HEALTH-05**: Persona-zero playtest ritual established and maintained from project month 1 *(RITUAL ESTABLISHED 2026-05-10 plan 01-00: `22-personazero-playtest-ritual.md` documents protocol; `.planning/playtest-log/` ready. SESSION 1 OF 2 COMPLETE 2026-05-10 plan 01-01: `2026-05-10-vision-pack-reaction.md` logged; Dawn's responses to D-SUST-07 questions all affirmative with no friction signals. Session 2 scheduled in plan 01-08 ≥14 days later per D-SUST-07 cadence rule.)*
 
 ---
 
@@ -331,7 +331,7 @@ All 95 v1 requirements mapped to phases. Coverage = 95/95.
 | HEALTH-02 | Phase 1 (ongoing across all phases) | Complete (2026-05-10 plan 01-00) |
 | HEALTH-03 | Phase 1 (re-checked at every phase transition) | Pending |
 | HEALTH-04 | Phase 1 (ongoing across all phases) | Pending |
-| HEALTH-05 | Phase 1 (ongoing across all phases) | Ritual established (2026-05-10 plan 01-00); 2 sessions pending plans 01-01 + 01-08 |
+| HEALTH-05 | Phase 1 (ongoing across all phases) | Ritual established (2026-05-10 plan 01-00); session 1 complete (2026-05-10 plan 01-01); session 2 pending plan 01-08 |
 
 **Coverage:**
 - v1 requirements: 96 total (84 original + 11 INFRA-XX + MKTG-06 added 2026-05-09)
