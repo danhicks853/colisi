@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v0.1
 milestone_name: milestone
-status: planning
-last_updated: "2026-05-10T01:27:10.504Z"
+status: executing
+last_updated: "2026-05-10T03:40:34.639Z"
 progress:
   total_phases: 12
   completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  total_plans: 9
+  completed_plans: 1
 ---
 
 # Project State: Colisi
@@ -21,7 +21,7 @@ progress:
 
 **Core value:** Characters and relationships that keep evolving, in a world that never punishes the player.
 
-**Current focus:** Phase 1 — Foundations & Vision Lock. No code yet. **Vision LOCKED 2026-05-09** during `/gsd:discuss-phase 1`: player is a magical helper-sprite enabling each villager's personal magic; matchmaking-via-environmental-manipulation as the central puzzle layer; persona-zero (Dawn) validated and co-developed. Phase 1 scope expanded to full mature-studio pre-production set (28 artifacts across 9 packs). Authoring all the deliverable docs is the work of Phase 1 — Daniel writes all in-world creative content per AI policy; Claude provides templates, structural skeletons, and synthesis-only deliverables.
+**Current focus:** Phase 01 — foundations-vision-lock
 
 **Top-line strategic stance:** Architect for the full 30+ hour shipping game from day one. Vertical slice (Milestone 1, phases 1-7) is a checkpoint and wishlist driver, not the endpoint. Full game (Milestone 2, phases 8-11) detailed phasing is deferred until end-of-M1 retro provides honest content-pacing data.
 
@@ -29,20 +29,23 @@ progress:
 
 ## Current Position
 
+Phase: 01 (foundations-vision-lock) — EXECUTING
+Plan: 1 of 9 complete (01-00 scaffolding); 8 plans remaining
 **Milestone:** 1 of 2 (Vertical Slice)
 **Phase:** 1 of 12 — Foundations & Vision Lock
-**Plan:** None active (CONTEXT.md captured 2026-05-09; planning not yet started)
-**Status:** Phase 1 CONTEXT.md written; vision LOCKED; Phase 1 scope expanded to full orthodox 28-artifact pre-production set. Awaiting `/gsd:plan-phase 1` to begin Phase 1 planning.
+**Plan:** 01-00 (deliverable scaffolding) COMPLETE 2026-05-10; next plan = 01-01 (Vision Pack — Daniel authors)
+**Status:** Executing Phase 01
 
 **Progress bar:**
 
 ```
+Phase 01 plans: [█░░░░░░░░░] 1/9 complete (11%)
 M1: [          ] 0/8 phases
 M2: [          ] 0/4 phases (sketch only)
 v1: [          ] 0/12 phases total
 ```
 
-**Requirements:** 1/96 mapped requirements satisfied (INFRA-03 complete: repo at `https://github.com/danhicks853/colisi.git`). The other 95 are pending — Phase 1 is planning/decisions/market validation, Phase 2 is infrastructure setup, and shippable game-system REQs begin in Phase 3.
+**Requirements:** 3/96 mapped requirements satisfied + 1 ritual-established. Complete: INFRA-03 (repo at `https://github.com/danhicks853/colisi.git`); HEALTH-01 (`.planning/SCOPE.md` log created 2026-05-10 plan 01-00); HEALTH-02 (`.planning/slice-debt.md` log created 2026-05-10 plan 01-00). Ritual-established: HEALTH-05 (persona-zero ritual scaffold + playtest-log dir ready; full satisfaction at 2 sessions in plans 01-01 + 01-08). 92 still pending.
 
 ---
 
@@ -82,6 +85,7 @@ v1: [          ] 0/12 phases total
 | 2026-05-09 | World Bible v0.1 depth: DEEP (full v1 setting bible — 8 zones, full pantheon/lore, magic system as cultural/atmospheric tiers (NOT mechanical TTRPG tiers), Stardew-shape calendar with Colisi-flavored season names, every culture, naming-system rules) | Mature-studio orthodoxy directive applied | Phase 1 — discuss-phase |
 | 2026-05-09 | Magic tone: soft magic with codified vibes (Brandon Sanderson terminology — whimsical, atmospheric, not used to solve plot problems; codified what magic CAN'T do) | Cozy-game tone preservation; deus-ex-machina prevention | Phase 1 — discuss-phase |
 | 2026-05-09 | Style Guide v0.1 depth: Full v0.1 across visual / audio / narrative voice / UI tone (per orthodoxy directive). Reference deck anchored on Sandara Tang druid + leaf-fawn (primary), with Hades character art, Okami art style, Borderlands cel-shading, Studio Ghibli themes. Visual direction synthesis is Daniel's call (tension between soft-painterly and bold-graphic-ink-line schools). | Visual references collected with Dawn during session | Phase 1 — discuss-phase |
+| 2026-05-10 | Plan 01-00 scaffolding complete: 26 deliverable scaffolds + SCOPE.md (HEALTH-01 inaugural log) + slice-debt.md (HEALTH-02 inaugural log) + .planning/playtest-log/ (HEALTH-05 prerequisite). AI policy boundary held on every creative-content slot — zero Claude-generated names / in-world prose / dialogue / palettes / voice samples / marketing copy across all 14 creative-content scaffolds. | 12 synthesis-allowed scaffolds populated from research/STACK.md, research/ARCHITECTURE.md, research/PITFALLS.md, research/SUMMARY.md, and CONTEXT.md decisions. HEALTH-04 wording amendment surfaced (deferred to plan 01-06). Outside-reviewer designation tracked as Phase 1 blocker. | Phase 1 — execute-plan 01-00 |
 
 ### Open decisions
 
@@ -109,12 +113,20 @@ v1: [          ] 0/12 phases total
 
 ### Active todos (project-level)
 
-- [ ] Run `/gsd:plan-phase 1` to begin Phase 1 planning (full 28-artifact orthodox pre-production set; vision is locked, deliverable authoring is the work)
-- [ ] After Phase 1: run `/gsd:plan-phase 2` for infrastructure & repo setup
-- [x] Establish persona-zero (Dawn) playtest ritual structure (LOCKED 2026-05-09: bi-weekly 30-min, structured note template, logged to `.planning/playtest-log/YYYY-MM-DD.md`); first 2 sessions must happen during Phase 1 (premise pitch reaction + bi-weekly follow-up)
+- [x] Run `/gsd:plan-phase 1` to begin Phase 1 planning (DONE: 9-plan set generated 2026-05-09)
+- [x] Plan 01-00 (deliverable scaffolding): 26 deliverable scaffolds + SCOPE.md + slice-debt.md + .planning/playtest-log/ — COMPLETE 2026-05-10
+- [ ] Plan 01-01 (Vision Pack): Daniel authors Vision Pitch + Pillars + Core Fantasy + Anti-positioning; persona-zero session 1 (HEALTH-05 first session)
+- [ ] Plan 01-02 (Risk-Capability-Process): Daniel signs Risk Register / Capability Matrix / Tools-Pipeline / Stack / Architecture / Persona-zero ritual / Sustainable-pace
+- [ ] Plan 01-03 (Loops & Journey): Daniel authors Core Loops + Player Journey + Pillar×Mechanic matrix + Failure-mode analysis
+- [ ] Plan 01-04 (Scenario Pack): Daniel authors Slice Scenario + Wow Beats + 30s Elevator Demo
+- [ ] Plan 01-05 (World & Style Pack): Daniel authors World Bible v0.1 + Mood Deck (zero-AI) + Style Guide v0.1
+- [ ] Plan 01-06 (Decision Locks + Tripwires): Daniel populates Year-3-Wall thresholds + Hour-200 retention four-engine application + finalizes Time-model lock + designates outside reviewer
+- [ ] Plan 01-07 (MKTG-06 validation): build game list + draft survey + Steam review LLM classification + survey distribution + verdict
+- [ ] Plan 01-08 (Greenlight): Persona-zero session 2 + Daniel signs Greenlight + outside reviewer cosigns Year-3-Wall criteria — gates Phase 2
+- [x] Establish persona-zero (Dawn) playtest ritual structure (LOCKED 2026-05-09: bi-weekly 30-min, structured note template, logged to `.planning/playtest-log/YYYY-MM-DD.md`); ritual scaffolded in `22-personazero-playtest-ritual.md`; first 2 sessions during plans 01-01 + 01-08
 - [ ] Initialize Git LFS BEFORE first code commit (Phase 2 work, but `.gitattributes` and LFS setup can be staged in Phase 1)
-- [ ] Create `.planning/playtest-log/` directory at start of Phase 1 execution
-- [ ] First Phase 1 sub-deliverable: premise pitch (1-2 page, Daniel-authored) within first 2 weeks of Phase 1 execution
+- [x] Create `.planning/playtest-log/` directory at start of Phase 1 execution (DONE 2026-05-10 in plan 01-00)
+- [ ] First Phase 1 sub-deliverable: premise pitch (1-2 page, Daniel-authored; scaffold ready at `01-vision-pitch.md`); plan 01-01
 
 ### Blockers
 
@@ -122,17 +134,17 @@ None currently.
 
 ### Slice debt log (HEALTH-02)
 
-Empty — populated during Phase 2+ as architectural shortcuts are intentionally taken with explicit promotion-or-payoff strategies.
+Created 2026-05-10 during plan 01-00 execution at `.planning/slice-debt.md`. Format spec + 1 illustrative worked example. Empty of real entries; first real entry expected Phase 2+ as architectural shortcuts are intentionally taken with explicit promotion-or-payoff strategies. See `slice-debt.md`.
 
 ### SCOPE.md log (HEALTH-01)
 
-Empty — populated as scope changes occur. **Inaugural entry queued for Phase 1 execution:** Phase 1 scope expansion 2026-05-09 from 7 success criteria to full 28-artifact orthodox pre-production set, with Daniel's directive ("mirror studio orthodoxy; time is not the constraint") as rationale and the vision lock (magical helper-sprite + matchmaking) as the central event of the same session. Second entry: "Two-milestone structure with detailed M1 phasing only" (carry-forward from initial roadmap creation).
+Created 2026-05-10 during plan 01-00 execution at `.planning/SCOPE.md`. Format spec + 2 inaugural entries (both dated 2026-05-09): Phase 1 scope expansion (7 success criteria → 28-artifact orthodox pre-production set) + Two-milestone roadmap structure (M1 = slice; M2 detail deferred). See `SCOPE.md`.
 
 ---
 
 ## Session Continuity
 
-**Last session:** 2026-05-10T01:27:10.501Z
+**Last session:** 2026-05-10T03:40:34.636Z
 
 - Defined PROJECT.md
 - Generated PERSONA.md, FEATURES.md, STACK.md, ARCHITECTURE.md, PITFALLS.md research

@@ -111,7 +111,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
   28. Greenlight document exists, dated, signed by Daniel as solo-dev producer, with explicit "knowing what I now know, I commit to this" statement. Gates Phase 2 entry. Includes pre-committed Year-3-Wall tripwire criteria as load-bearing co-signature.
 
 **Plans:** 9 plans (1 wave-1 scaffolding + 7 wave-2/3 deliverable-pack plans + 1 wave-4 greenlight)
-- [ ] 01-00-deliverable-scaffolding-PLAN.md — Wave 1: Claude scaffolds all 28 deliverable skeletons + .planning/SCOPE.md + .planning/slice-debt.md + .planning/playtest-log/ infrastructure
+- [x] 01-00-deliverable-scaffolding-PLAN.md — Wave 1: Claude scaffolds all 28 deliverable skeletons + .planning/SCOPE.md + .planning/slice-debt.md + .planning/playtest-log/ infrastructure
 - [ ] 01-01-vision-pack-PLAN.md — Wave 2: Daniel authors Vision Pitch + Pillars + Core Fantasy + Anti-positioning; persona-zero session 1 (HEALTH-05)
 - [ ] 01-02-risk-capability-process-PLAN.md — Wave 2: Daniel verifies + signs Risk Register / Capability Matrix / Tools-Pipeline / Stack / Architecture / Persona-zero ritual / Sustainable-pace; amends REQUIREMENTS.md HEALTH-04 wording
 - [ ] 01-03-loops-journey-PLAN.md — Wave 3: Daniel authors Core Loops + Player Journey + Pillar×Mechanic matrix + Failure-mode analysis (depends on Vision Pack pillars)
@@ -296,7 +296,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundations & Vision Lock | 0/9 | Planned | - |
+| 1. Foundations & Vision Lock | 1/9 | In Progress | - |
 | 2. Infrastructure & Repo Setup | 0/0 | Not started | - |
 | 3. Project Skeleton & Foundational Systems | 0/0 | Not started | - |
 | 4. One-NPC Happy Path | 0/0 | Not started | - |

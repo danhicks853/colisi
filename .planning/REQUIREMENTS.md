@@ -152,11 +152,11 @@
 
 ### Project Health & Sustainability
 
-- [ ] **HEALTH-01**: Project tracks a `SCOPE.md` log of every system / feature change, with rationale and tradeoff
-- [ ] **HEALTH-02**: Project tracks a `slice-debt.md` log of every shortcut taken for the slice, with explicit promotion-or-payoff strategy
+- [x] **HEALTH-01**: Project tracks a `SCOPE.md` log of every system / feature change, with rationale and tradeoff *(COMPLETE 2026-05-10 plan 01-00: `.planning/SCOPE.md` created with format spec + 2 inaugural entries)*
+- [x] **HEALTH-02**: Project tracks a `slice-debt.md` log of every shortcut taken for the slice, with explicit promotion-or-payoff strategy *(COMPLETE 2026-05-10 plan 01-00: `.planning/slice-debt.md` created with format spec + 1 worked example)*
 - [ ] **HEALTH-03**: Project has pre-committed Year-3-Wall pivot tripwires (specific milestones whose miss triggers a scope cut or pause-and-reassess)
-- [ ] **HEALTH-04**: Project commits to a sustainable solo-dev cadence (target ~25 hours/week, daily/weekly/monthly/quarterly rhythms documented)
-- [ ] **HEALTH-05**: Persona-zero playtest ritual established and maintained from project month 1
+- [ ] **HEALTH-04**: Project commits to a sustainable solo-dev cadence (target ~25 hours/week, daily/weekly/monthly/quarterly rhythms documented) *(WORDING AMENDMENT PENDING plan 01-06: "~25 hours/week" supersedes by D-SUST-01..02 milestone-based cadence; see `20-sustainable-pace-cadence.md`)*
+- [ ] **HEALTH-05**: Persona-zero playtest ritual established and maintained from project month 1 *(RITUAL ESTABLISHED 2026-05-10 plan 01-00: `22-personazero-playtest-ritual.md` documents protocol; `.planning/playtest-log/` ready; first 2 sessions during plans 01-01 + 01-08 to fully satisfy "maintained")*
 
 ---
 
@@ -327,16 +327,18 @@ All 95 v1 requirements mapped to phases. Coverage = 95/95.
 | MKTG-04 | Phase 8 | Pending |
 | MKTG-05 | Phase 8 (capsule for slice) / Phase 11 (M2 trailer) | Pending |
 | MKTG-06 | Phase 1 (validation work fits with vision lock; results referenced in Phase 8 marketing copy) | Pending |
-| HEALTH-01 | Phase 1 (ongoing across all phases) | Pending |
-| HEALTH-02 | Phase 1 (ongoing across all phases) | Pending |
+| HEALTH-01 | Phase 1 (ongoing across all phases) | Complete (2026-05-10 plan 01-00) |
+| HEALTH-02 | Phase 1 (ongoing across all phases) | Complete (2026-05-10 plan 01-00) |
 | HEALTH-03 | Phase 1 (re-checked at every phase transition) | Pending |
 | HEALTH-04 | Phase 1 (ongoing across all phases) | Pending |
-| HEALTH-05 | Phase 1 (ongoing across all phases) | Pending |
+| HEALTH-05 | Phase 1 (ongoing across all phases) | Ritual established (2026-05-10 plan 01-00); 2 sessions pending plans 01-01 + 01-08 |
 
 **Coverage:**
 - v1 requirements: 96 total (84 original + 11 INFRA-XX + MKTG-06 added 2026-05-09)
 - Mapped to phases: 96 (100%) ✓
 - Unmapped: 0
+- Complete: 3 (INFRA-03 repo at github; HEALTH-01 SCOPE.md log; HEALTH-02 slice-debt.md log)
+- Ritual-established: 1 (HEALTH-05 — full satisfaction pending 2 sessions in plans 01-01 + 01-08)
 
 ---
 
