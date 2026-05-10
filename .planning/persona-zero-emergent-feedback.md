@@ -37,7 +37,7 @@ A running log of casual design feedback from Dawn (persona-zero) that surfaces *
 
 **Source:** Daniel — design move surfaced during pillar 1 mechanics-justified review
 
-**Status:** candidate
+**Status:** **adopted** *(2026-05-10 — Daniel committed during pillar 1 REQ-ID triage; SCOPE.md entry logged; REQUIREMENTS.md NARR-06 + SAVE-04 amendments queued for plan 01-02 sign-off)*
 
 **Context:** Reviewing pre-filled REQ-ID candidates for the "Character Development IS the gameplay" pillar. Claude flagged a possible tension: NARR-06 ("Player can review past choices and their outcomes in a journal / log") could conflict with DI #4 (no UI dedicated to character management). Daniel's response: reframe the log itself.
 
