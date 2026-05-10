@@ -21,11 +21,12 @@ order: write after pitch lands; can run parallel with core-fantasy + anti-positi
 
 # Pillars of Play
 
-## Pillar 1: {1–3 word name}
-Name: Character Development
+## Pillar 1: Character Development
 
 Why?
 Character development IS the gameplay. Everything we are designing, from tutoring villagers to hone their magic, to engineering connections between these villagers, relies on this pillar. Without character development, none of the player's choices matter at all. Deep-cozy players want to know that the choices they're making in this game are going to improve the world they are living in, not leave it stale.
+
+*Anchors:* D-VISION-04 (two-layer puzzle structure — magic-tutoring as moment-to-moment loop; matchmaking-via-environmental-manipulation as meta arcs); D-VISION-06 (BG3 × Sims dream cross translates mechanically to character development as core verb); D-VISION-02 (latent magic surfaces through relationship — character development is the surface mechanism); `research/SUMMARY.md` (persona-gap framing: "evolving relationships in a world that never punishes you" — deep-cozy demographic differentiator); `research/PERSONA.md` (persona-zero core fantasy: "talking to people and finding where I fit in").
 
 Design Implications
 - Meaningful choices made by the player MUST affect one or more NPCs, or the village itself, either positively or negatively.
@@ -38,7 +39,7 @@ Mode: The player cannot reliably intuit character state via diegetic feedback ch
 Signals: 
 - The player asks how an NPC is doing or how they feel about their current status.
 - The player looks for UI/UX to determine game or NPC state
-When these signals appear, we should investigate diegetic feedback systems and how to make them more intuitive
+When these signals appear, we should investigate diegetic feedback systems and how to make them more intuitive.
 - The player states that they were forced into a choice they did not want to do.
 - The player attempts to save-scum to obtain a more favorable outcome
 - The player quits the game after being railroaded into a negative choice.
