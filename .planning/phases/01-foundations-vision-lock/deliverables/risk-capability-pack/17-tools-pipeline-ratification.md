@@ -159,8 +159,10 @@ Re-evaluation triggers:
 ## Daniel signature line
 
 **Tools / Pipeline Ratification accepted by:** Daniel Hicks
-**Date:** {YYYY-MM-DD — Daniel signs at end of plan 01-02}
-**Notes:** {Daniel may flag any item still feeling unresolved at ratification}
+**Date:** 2026-05-10
+**Notes:** All locked items match research/STACK.md and CONTEXT.md decisions. No re-litigation without SCOPE.md entry justifying displacement.
+
+**Daniel signature:** 2026-05-10 — Tools/Pipeline ratification locked Phase 1; no re-litigation without SCOPE.md entry justifying displacement.
 
 ---
 

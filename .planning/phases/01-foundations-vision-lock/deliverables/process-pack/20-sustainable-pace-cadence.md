@@ -134,8 +134,10 @@ Specific delta thresholds at each Year-3-Wall checkpoint are authored in `21-yea
 ## Daniel signature line
 
 **Sustainable-pace Cadence ratified by:** Daniel Hicks
-**Date:** {YYYY-MM-DD — Daniel signs at end of plan 01-02}
-**REQUIREMENTS.md HEALTH-04 amendment applied:** {YYYY-MM-DD — at plan 01-06 close}
+**Date:** 2026-05-10
+**REQUIREMENTS.md HEALTH-04 amendment applied:** 2026-05-10 (this plan, 01-02; SCOPE.md row logged per PHILOSOPHY.md Amendment Process)
+
+**Daniel signature:** 2026-05-10 — Sustainable-pace Cadence locked Phase 1; D-SUST-01..08 operational; HEALTH-04 wording amended in REQUIREMENTS.md.
 
 ---
 

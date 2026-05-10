@@ -89,8 +89,10 @@ Phase 1 → Phase 2 transition checklist will include:
 ## Daniel signature line
 
 **Architecture Ratification accepted by:** Daniel Hicks
-**Date:** {YYYY-MM-DD — Daniel signs at plan 01-02 close}
-**Sprite-premise REQ amendments authored:** {YYYY-MM-DD — at Phase 1 → Phase 2 transition}
+**Date:** 2026-05-10
+**Sprite-premise REQ amendments authored:** Deferred to Phase 1 → Phase 2 transition (sprite-premise interpretation amendments listed above will be applied to REQUIREMENTS.md HOME-01..05, CRAFT-01..07, COMP-01..04, CTRL-01, NPC-09, NPC-06, ROM-01/02 at that gate per CONTEXT.md `<specifics>` resolution path).
+
+**Daniel signature:** 2026-05-10 — Architecture Ratification locked Phase 1; no re-litigation without SCOPE.md entry justifying displacement.
 
 ---
 

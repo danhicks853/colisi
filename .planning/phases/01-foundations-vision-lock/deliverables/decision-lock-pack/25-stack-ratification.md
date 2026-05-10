@@ -64,7 +64,9 @@ Phase-boundary upgrades only (`PHILOSOPHY.md` §III architecture guardrail: *"Ne
 ## Daniel signature line
 
 **Stack Ratification accepted by:** Daniel Hicks
-**Date:** {YYYY-MM-DD — Daniel signs at plan 01-02 close}
+**Date:** 2026-05-10
+
+**Daniel signature:** 2026-05-10 — Stack Ratification locked Phase 1; no re-litigation without SCOPE.md entry justifying displacement.
 
 ---
 

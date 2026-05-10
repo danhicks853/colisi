@@ -157,10 +157,12 @@ If unavailability lasts >1 month, this is a `15-risk-register.md` R-07 trigger a
 ## Daniel signature line
 
 **Persona-zero Playtest Ritual ratified by:** Daniel Hicks
-**Date:** {YYYY-MM-DD — at plan 01-02 close}
+**Date:** 2026-05-10
 **First 2 sessions executed:**
-- Session 1: {YYYY-MM-DD — link to playtest-log entry}
-- Session 2: {YYYY-MM-DD — link to playtest-log entry}
+- Session 1: 2026-05-10 — `.planning/playtest-log/2026-05-10-vision-pack-reaction.md` (vision-pack reaction; all D-SUST-07 questions returned affirmative)
+- Session 2: scheduled ≥2026-05-24 (bi-weekly cadence; plan 01-08)
+
+**Daniel signature:** 2026-05-10 — Persona-zero Playtest Ritual locked Phase 1; D-SUST-07 cadence operational; HEALTH-05 progressing.
 
 ---
 

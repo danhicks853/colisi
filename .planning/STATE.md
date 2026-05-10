@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v0.1
 milestone_name: milestone
 status: executing
-last_updated: "2026-05-10T03:40:34.639Z"
+last_updated: "2026-05-10T18:00:00.000Z"
 progress:
   total_phases: 12
   completed_phases: 0
   total_plans: 9
-  completed_plans: 1
+  completed_plans: 2
 ---
 
 # Project State: Colisi
@@ -30,16 +30,16 @@ progress:
 ## Current Position
 
 Phase: 01 (foundations-vision-lock) — EXECUTING
-Plan: 2 of 9 complete (01-00 scaffolding, 01-01 Vision Pack); 7 plans remaining
+Plan: 3 of 9 complete (01-00 scaffolding, 01-01 Vision Pack, 01-02 Risk/Capability/Process); 6 plans remaining
 **Milestone:** 1 of 2 (Vertical Slice)
 **Phase:** 1 of 12 — Foundations & Vision Lock
-**Plan:** 01-01 (Vision Pack) COMPLETE 2026-05-10; next plan = 01-02 (Risk/Capability/Process sign-off + REQUIREMENTS.md amendments)
-**Status:** Executing Phase 01. Vision Pack canonical (4 docs: pitch, pillars, core fantasy, anti-positioning); HEALTH-05 session 1 complete; 3 architectural amendments queued in SCOPE.md for plan 01-02 sign-off (NARR-06 replay reframe, SAVE-04 event-log schema, combat-row tightening).
+**Plan:** 01-02 (Risk/Capability/Process sign-off + REQUIREMENTS.md HEALTH-04 amendment) COMPLETE 2026-05-10; next plans = 01-03 (Loops/Journey), 01-04 (Scenario), 01-05 (World/Style), 01-06 (Decision Locks/Tripwires), 01-07 (MKTG-06)
+**Status:** Executing Phase 01. Vision Pack canonical; Risk-Capability-Process pack signed (7 deliverables); HEALTH-04 wording amended in REQUIREMENTS.md (milestone-based pacing, no hour tracking); SCOPE.md row 5 logs the amendment per PHILOSOPHY.md Amendment Process. HEALTH-05 session 1 complete; session 2 scheduled ≥2026-05-24. Sprite-premise REQ interpretation amendments still queued for Phase 1→2 transition.
 
 **Progress bar:**
 
 ```
-Phase 01 plans: [██░░░░░░░░] 2/9 complete (22%)
+Phase 01 plans: [███░░░░░░░] 3/9 complete (33%)
 M1: [          ] 0/8 phases
 M2: [          ] 0/4 phases (sketch only)
 v1: [          ] 0/12 phases total
@@ -89,6 +89,7 @@ v1: [          ] 0/12 phases total
 | 2026-05-10 | **NARR-06 reinterpreted as per-villager experiential replay system + SAVE-04 amended to event-log save schema.** Original NARR-06 ("Player can review past choices in a journal/log") → Daniel's reframe: choose a villager, watch fast-forward replay of their entire life since the wisp's arrival, slowing at critical choice junctures. SAVE-04 amended in lockstep — save state must be per-villager event log with timestamps and significance markers, not just snapshots. Architectural ripple to Phase 3 (SAVE design), Phase 4 (NARR system + juncture-tagging), Phase 6 (per-villager event capture), and possibly cinematic-camera REQ. | Daniel design move during pillar 1 mechanics-justified review; reframe collapses NARR-06 / pillar-1 DI-#4 tension (no UI dedicated to character management) by making the log diegetic-witnessable rather than text-read; unifies D-VISION-06 BG3 × Sims dream cross into a single concrete feature; functions as anti-filler audit tool. SCOPE.md entry logged; REQUIREMENTS.md amendments queued for plan 01-02 sign-off. | Phase 1 — execution |
 | 2026-05-10 | **HEALTH-05 session 1 complete (vision-pack reaction).** Dawn read Vision Pitch + Core Fantasy; D-SUST-07 structured questions returned all-affirmative with no friction signals (4/4 questions answered with positive/no-concerns responses). Continuity check ("Does this still feel like the game we co-developed?") returned "Yes." Strong-validation outcome is *expected* given Dawn co-developed the premise during 2026-05-09 `/gsd:discuss-phase 1` (D-VISION-05); session 2 (plan 01-08, bi-weekly follow-up) will surface delta-from-session-1 as the more substantive engagement signal. Log file: `.planning/playtest-log/2026-05-10-vision-pack-reaction.md`. | Dawn-conducted ritual session per D-SUST-07; HEALTH-05 cadence requirement progressing (1 of 2 minimum Phase 1 sessions complete). | Phase 1 — execution |
 | 2026-05-10 | Plan 01-00 scaffolding complete: 26 deliverable scaffolds + SCOPE.md (HEALTH-01 inaugural log) + slice-debt.md (HEALTH-02 inaugural log) + .planning/playtest-log/ (HEALTH-05 prerequisite). AI policy boundary held on every creative-content slot — zero Claude-generated names / in-world prose / dialogue / palettes / voice samples / marketing copy across all 14 creative-content scaffolds. | 12 synthesis-allowed scaffolds populated from research/STACK.md, research/ARCHITECTURE.md, research/PITFALLS.md, research/SUMMARY.md, and CONTEXT.md decisions. HEALTH-04 wording amendment surfaced (deferred to plan 01-06). Outside-reviewer designation tracked as Phase 1 blocker. | Phase 1 — execute-plan 01-00 |
+| 2026-05-10 | **Plan 01-02 complete: Risk + Capability + Process + Decision-Lock pack signed.** 7 deliverables Daniel-signed (15 risk register, 16 capability matrix, 17 tools/pipeline, 25 stack ratification, 26 architecture ratification, 22 persona-zero ritual, 20 sustainable-pace cadence). Risk register adjustments: R-07 dropped to green zone (L=1 I=3); R-09 + R-10 bumped to orange zone (L=3 I=5 each). Capability matrix: 15 of 17 rows scored; 2 cells deferred (Blender modeling pending INFRA-08; Music production pending composer-hire decision). REQUIREMENTS.md HEALTH-04 wording amended: dropped "target ~25 hours/week"; replaced with "milestone-based pacing per D-SUST-01..08 — continuous nightly session, monthly retro, quarterly review, bi-weekly persona-zero playtest." SCOPE.md row 5 logs the amendment per PHILOSOPHY.md Amendment Process. Sprite-premise REQ interpretation amendments still queued for Phase 1→2 transition. | All 7 docs are synthesis-allowed (Claude populated bodies in plan 01-00 from research; Daniel verified + scored + signed in this plan). REQ amendment was a copy-edit applying locked CONTEXT.md decision (D-SUST-01..02), not creative invention. AI-policy boundary held. | Phase 1 — execute-plan 01-02 |
 
 ### Open decisions
 
@@ -119,7 +120,7 @@ v1: [          ] 0/12 phases total
 - [x] Run `/gsd:plan-phase 1` to begin Phase 1 planning (DONE: 9-plan set generated 2026-05-09)
 - [x] Plan 01-00 (deliverable scaffolding): 26 deliverable scaffolds + SCOPE.md + slice-debt.md + .planning/playtest-log/ — COMPLETE 2026-05-10
 - [ ] Plan 01-01 (Vision Pack): Daniel authors Vision Pitch + Pillars + Core Fantasy + Anti-positioning; persona-zero session 1 (HEALTH-05 first session)
-- [ ] Plan 01-02 (Risk-Capability-Process): Daniel signs Risk Register / Capability Matrix / Tools-Pipeline / Stack / Architecture / Persona-zero ritual / Sustainable-pace
+- [x] Plan 01-02 (Risk-Capability-Process): 7 deliverables Daniel-signed; HEALTH-04 amended in REQUIREMENTS.md; SCOPE.md row 5 logged — COMPLETE 2026-05-10
 - [ ] Plan 01-03 (Loops & Journey): Daniel authors Core Loops + Player Journey + Pillar×Mechanic matrix + Failure-mode analysis
 - [ ] Plan 01-04 (Scenario Pack): Daniel authors Slice Scenario + Wow Beats + 30s Elevator Demo
 - [ ] Plan 01-05 (World & Style Pack): Daniel authors World Bible v0.1 + Mood Deck (zero-AI) + Style Guide v0.1
