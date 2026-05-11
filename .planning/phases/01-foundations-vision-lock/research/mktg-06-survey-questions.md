@@ -201,6 +201,13 @@ anti_bias_discipline:
 
 ---
 
+## Published survey
+
+**Form published:** 2026-05-11
+**Share link:** https://forms.gle/r8qv4qAceqdW9XjW7
+**Form builder:** `mktg-06-survey-form.gs` (Apps Script, run by Daniel under his Google account)
+**Source spec:** this file (`mktg-06-survey-questions.md`) — questions transcribed verbatim by Apps Script
+
 ## Distribution log
 
 > Per Task 1 Step C: pursue moderator approvals + log permission status per channel.
@@ -213,6 +220,8 @@ anti_bias_discipline:
 | Wholesome Games org | {Daniel pursues if available} | {YYYY-MM-DD} | {YYYY-MM-DD} | May have research-survey distribution channel |
 
 **Target response count:** ≥50 minimum; 100 ideal. Run distribution for ~2-4 weeks.
+
+**Anti-bias note (2026-05-11):** Daniel performs a form-validation smoke-test pass (fill out + submit) before distribution begins, then DELETES the test response from the response sheet so it does not enter the verdict tally. Per D-MKTG-03 anti-bias discipline: Daniel's responses + persona-zero (Dawn) responses MUST NOT enter the MKTG-06 corpus — Daniel is project vision-holder (responses would be thesis-confirming-bias) and Dawn is persona-zero anchor (already informs PERSONA.md). Both must stay in their respective channels (project-internal / playtest-log) and out of the survey corpus.
 
 ---
 
