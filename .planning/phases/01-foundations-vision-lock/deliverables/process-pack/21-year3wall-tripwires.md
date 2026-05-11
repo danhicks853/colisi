@@ -111,39 +111,77 @@ The metric is honest because:
 
 > **Status: deferred to plan 01-06.** Threshold cells below are populated by Daniel after a few hours of comparable-game research per `D-WALL-07` and `PITFALLS.md` Pitfall 3 ("Year-3-Wall thresholds set without comparable-game data" — sets thresholds on intuition rather than calibration). Sources: Chris Zukowski's wishlist-trajectory case studies, SteamDB stats for 5–10 cozy life sims, howtomarketagame.com posts.
 
+**Status: LOCKED 2026-05-10** (Daniel-recommended conservative thresholds from comparable-game research note; sourced from `research/year3wall-comparable-games-note.md`). Risk-tolerance posture: **conservative** — earlier-firing tripwires + more pause-and-replan moments + aligns with solo-dev burnout prevention per HEALTH-03 + D-SUST-01..08 sustainability commitments. False alarms acceptable per D-WALL-02; missed signals are not.
+
 | Checkpoint | Metric | Threshold | Source / rationale |
 |------------|--------|-----------|---------------------|
-| **m6** | MKTG-06 verdict | {populate from plan 01-06; minimum is "verdict landed" per HEALTH-03} | Per `D-MKTG-04` rubric |
-| **m6** | Cumulative phase-completion delta | {populate from plan 01-06} | `D-WALL-06` productivity metric |
-| **m12** | Cumulative phase-completion delta | {populate from plan 01-06; e.g., "if 3+ months behind, trip"} | `D-WALL-06` productivity metric; per `ROADMAP.md` Phase 3 risk |
-| **m12** | Phase 3 slice-blocking foundations status | {populate; minimum "all 9 in place"} | Per `ROADMAP.md` Phase 3 success criteria |
-| **m24** | Wishlist count (if Steam page is up) | {populate from comparable-game research} | Indie cozy life sim wishlist trajectories |
-| **m24** | Slice ship status | {populate; minimum is "slice in beta with ring-2 testers"} | `ROADMAP.md` Phase 7 timeline |
-| **m24** | Cumulative phase-completion delta | {populate} | `D-WALL-06` |
-| **m36** | Wishlist count | {populate from comparable-game research} | The existential checkpoint |
-| **m36** | "Vol. 1 pivot" criteria | {populate; e.g., "if slice not shipped AND wishlist <Nk, cut to 15–20hr Vol. 1"} | Per `ROADMAP.md` "Brutally Honest Timeline" + `HEALTH-03` |
-| **m36** | Productivity rate vs full-game scope | {populate; whether 30hr scope is reachable in 24-36 more months at observed productivity} | `ROADMAP.md` Brutally Honest Timeline |
+| **m6** | MKTG-06 verdict | **Verdict must land** (Confirmed / Refined / Rejected per D-MKTG-04) | Per `D-MKTG-04` rubric + HEALTH-03; verdict-landing is binary requirement |
+| **m6** | Cumulative phase-completion delta | **2 months behind cumulative phase plan trips** | `D-WALL-06` productivity metric; conservative posture (Zukowski analyses + comparable solo-dev timelines per research note) |
+| **m12** | Cumulative phase-completion delta | **3 months behind cumulative phase plan trips** | `D-WALL-06` productivity metric; per `ROADMAP.md` Phase 3 risk; conservative |
+| **m12** | Phase 3 slice-blocking foundations status | **<7 of 9 foundations in place trips** | Per `ROADMAP.md` Phase 3 success criteria; conservative (allows 2 of 9 to slip; below that signals real Phase 3 difficulty) |
+| **m24** | Wishlist count (if Steam page is up by m24) | **<1,000 wishlists trips** | Indie cozy life sim wishlist trajectories per research note; conservative midpoint of 500-2,000 range; assumes competent solo-dev devlog + festival cycle without requiring Wholesome Direct breakout |
+| **m24** | Slice ship status | **Slice not in late-development trips** (slice should be in beta or shipped to ring-2 testers per `ROADMAP.md` Phase 7) | `ROADMAP.md` Phase 7 timeline |
+| **m24** | Cumulative phase-completion delta | **6 months behind cumulative phase plan trips** | `D-WALL-06`; approaching Year-3-Wall warning territory |
+| **m36** | Wishlist count | **<3,000 wishlists trips** | The existential checkpoint; conservative midpoint of 2,000-5,000 range per research note |
+| **m36** | "Vol. 1 pivot" criteria | **If slice not shipped AND wishlist <3,000 → formal Vol. 1 pivot evaluation** (cut full-game scope to 15-20hr v1 commercial launch; defer remaining 10-15+ hours to free post-launch updates) | Per `ROADMAP.md` "Brutally Honest Timeline" + `HEALTH-03`; explicit pivot-criteria formula |
+| **m36** | Productivity rate vs full-game scope | **If observed pace = 24+ more months to complete remaining 30hr scope → consider Vol. 1 pivot** | `ROADMAP.md` Brutally Honest Timeline; productivity-realism check at existential checkpoint |
 
 ---
 
-## Outside-reviewer designation tracking
+## Outside-reviewer designation (D-WALL-05 reframe 2026-05-10)
 
-> **Phase 1 blocker:** outside reviewer name must be filled before plan 01-08 (Greenlight gate). Per `D-WALL-05`, the reviewer co-signs the Year-3-Wall criteria in Greenlight as load-bearing.
+> **Reframed 2026-05-10** (Daniel decision documented in SCOPE.md row): D-WALL-05's original "single named outside reviewer" structure does not fit Daniel's project profile (solo indie dev without pre-existing trusted-outsider relationships available for committed multi-year project review). Replaced with **hybrid LLM-primary + community-secondary structure** that preserves D-WALL-05's intent (break confirmation bias via independent perspective at each tripwire checkpoint).
 
-**Outside reviewer name:** {Daniel designates}
-**Relationship to project:** {Daniel describes — should NOT be persona-zero / Dawn}
-**Acknowledgment:** {Reviewer signature/email confirming they understand the role}
+### Outside-reviewer mechanism
+
+**Primary: Cross-family LLM review with standardized skeptical prompt + full project context.**
+
+- **Model:** cross-family LLM (NOT Claude — different training corpus + different biases). Initial choice: **GPT 5.4** (or whichever cross-family model is current at each tripwire date).
+- **Prompt template:** standardized, Claude-authored (per CLAUDE.md AI policy enforcement delegation), committable + transparent. Drafted at Phase 2 start before any tripwire fires (deferred per Daniel decision 2026-05-10).
+- **Inputs at each tripwire:** full project context (SCOPE.md + STATE.md + relevant Phase deliverables + current tripwire metric data) injected into LLM context window; standardized devil's-advocate / push-back / confirmation-bias-check skeptical prompt prepended.
+- **Output:** LLM analyzes whether tripwires fire + identifies confirmation bias + proposes response. Output is logged verbatim in `.planning/playtest-log/outside-review-{checkpoint}-{YYYY-MM-DD}.md`.
+- **Why this works:** Claude (this conversation, as AI policy enforcer per CLAUDE.md) writes the prompt with genuine skeptical / devil's-advocate framing; prompt is committable + transparent (can't be shaped to favor preferred outcome); cross-family model has different biases than Claude; LLM with full project context achieves information-continuity layer; analytical quality may exceed random community responses.
+
+**Secondary: Structured-community-feedback for public-commitment dimension.**
+
+- **Public-commitment baseline:** Year-3-Wall criteria (this entire `21-year3wall-tripwires.md` doc) posted publicly via MKTG-02 devlog at Phase 2 start. Once public, criteria cannot be quietly redefined when tripwires fire.
+- **Pre-checkpoint posts:** ~2-4 weeks before each tripwire (m6 / m12 / m24 / m36), Daniel posts current project state + asks for community read via devlog (Bluesky / Mastodon / blog) + r/CozyGamers / r/IndieGames / Wholesome Games org / indie dev Discord.
+- **At checkpoint:** Daniel posts whether tripwires fired + proposed response; engages community feedback over ~7-14 day window.
+- **Documentation:** all community feedback engagement logged transparently (where posted, when, representative feedback received, how it shaped response).
+- **Why secondary:** community provides public-commitment + social-accountability + occasional substantive feedback, but analytical-quality variable; LLM with locked-prompt provides more consistent analytical input.
+
+**Tertiary: Dawn (persona-zero) at HEALTH-05 ritual.**
+
+- After LLM analysis + community engagement, Daniel + Dawn execute HEALTH-05 ritual session focused on the tripwire moment.
+- Dawn provides persona-zero re-anchor — does the proposed response preserve the cozy promise + persona-zero alignment that grounded the project?
+- Internal sanity-check; complements outside perspectives without serving as outside review itself.
+
+### Mechanism caveats (honest)
+
+- **AI-policy structural irony:** project has strict anti-AI-content commitments per CLAUDE.md + PHILOSOPHY.md §V. Using AI as primary outside reviewer is a structural tension. D-WALL-05's intent is decision-process review (not creative content authoring), so the AI-policy concern is mitigated — but the irony is noted.
+- **Existential-moment limitation:** at m36 "consider Vol. 1 pivot," LLM private review lacks the social-pressure layer human reviewers provide. Mitigated by community public-commitment posts + Dawn HEALTH-05 anchor.
+- **Prompt-shaping risk mitigated by Claude authorship + transparency:** standardized prompt template lives in repo + posted in devlog at Phase 2 start. Prompt cannot be shaped post-hoc to favor preferred outcomes.
+
+### Outside-reviewer mechanism implementation tracking
+
+| Item | Status | Target |
+|---|---|---|
+| **Standardized LLM skeptical-prompt template** | DEFERRED to Phase 2 start | Claude-authored at Phase 2 kickoff per Daniel directive 2026-05-10; committable + transparent + published in devlog |
+| **Public commitment of Year-3-Wall criteria** | DEFERRED to Phase 2 / MKTG-02 devlog launch (~m3) | Post this entire doc publicly when devlog goes live |
+| **First LLM tripwire review** | Scheduled for m6 checkpoint | Run standardized prompt + log to playtest-log per protocol |
+| **Pre-checkpoint community posts** | Scheduled for ~2-4 weeks before each tripwire (m6 / m12 / m24 / m36) | Devlog + Reddit + Discord engagement per channel list above |
+| **Dawn HEALTH-05 tripwire-focused session** | Scheduled at each tripwire (post LLM + community engagement) | Bi-weekly cadence per D-SUST-07 absorbs naturally |
 
 ---
 
-## Daniel signature + Outside reviewer co-signature
+## Daniel signature
 
 **Year-3-Wall Tripwires Protocol ratified by:** Daniel Hicks
-**Date:** {YYYY-MM-DD — Daniel signs at plan 01-06 close}
+**Date:** 2026-05-10
+**Threshold posture:** Conservative (per `research/year3wall-comparable-games-note.md` Daniel-recommended set). Risk tolerance: solo-dev burnout prevention favors earlier-firing tripwires + more pause-and-replan moments.
+**Outside-reviewer mechanism:** Hybrid LLM-primary (GPT 5.4 / cross-family with Claude-authored standardized skeptical prompt) + community-secondary (public commitment + pre-checkpoint posts + at-checkpoint engagement) + Dawn HEALTH-05 tertiary anchor. Original single-named-reviewer model (D-WALL-05) reframed per Daniel decision 2026-05-10; SCOPE.md row added.
 
-**Outside reviewer co-signature on tripwire criteria:**
-**Reviewer:** {name}
-**Date:** {YYYY-MM-DD — co-signed at Greenlight per plan 01-08}
+**Daniel signature:** 2026-05-10 — Year-3-Wall thresholds LOCKED at conservative posture; outside-reviewer mechanism LOCKED at hybrid structure; standardized LLM prompt template authoring deferred to Phase 2 start.
 
 ---
 

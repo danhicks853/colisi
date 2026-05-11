@@ -120,8 +120,10 @@ Daniel's pushback during the discussion (verbatim from `01-CONTEXT.md`): *"how c
 ## Daniel signature line
 
 **Time Model Lock ratified by:** Daniel Hicks
-**Date:** {YYYY-MM-DD — Daniel signs at plan 01-06 close}
-**Trigger list status at sign-off:** {Locked here / Deferred to Phase 4 / Deferred to Phase 5}
+**Date:** 2026-05-10
+**Trigger list status at sign-off:** **LOCKED** (Few-trigger model: rest at sprite home/sanctum + festival participation; multi-day arc beats deferred to Phase 4/5 per D-TIME-05). Trigger list resolution propagated from plan 01-03 (`05-core-loops.md` Trigger list section LOCKED 2026-05-10). All D-TIME-01..05 elements committed; time-model contract is final.
+
+**Daniel signature:** 2026-05-10 — Time-model contract LOCKED at action-driven; trigger list LOCKED per Few-trigger model per D-TIME-05; time-model is final for Phase 1 + binds Phase 3 SAVE design + Phase 4 NARR design + Phase 5 NPC schedule data + continuous NPC pathing (D-TIME-04) architecture.
 
 ---
 
