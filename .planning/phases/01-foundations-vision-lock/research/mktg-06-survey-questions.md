@@ -212,14 +212,18 @@ anti_bias_discipline:
 
 > Per Task 1 Step C: pursue moderator approvals + log permission status per channel.
 
-| Channel | Permission status | Date pursued | Date approved | Notes |
-|---|---|---|---|---|
-| r/CozyGamers | {Daniel pursues} | {YYYY-MM-DD} | {YYYY-MM-DD} | Per subreddit rules (mod approval for surveys typical) |
-| Cozy Discord servers (~2-3) | {Daniel identifies + pursues} | {YYYY-MM-DD} | {YYYY-MM-DD} | DM moderators; identify which servers welcome research surveys |
-| Cozy gaming Bluesky/Mastodon tags | {Daniel pursues; passive distribution} | {YYYY-MM-DD} | n/a (passive tag-based; no mod approval needed for posting on own account) | Use cozy-game / wholesome-game hashtags |
-| Wholesome Games org | {Daniel pursues if available} | {YYYY-MM-DD} | {YYYY-MM-DD} | May have research-survey distribution channel |
+| Channel | Status | Date | Notes |
+|---|---|---|---|
+| Facebook indie devs group | POSTED 2026-05-11 | 2026-05-11 | Audience-mismatch caveat: dev-leaning audience, not players. Pitch self-selects for cozy-game-players via "if anyone... is into cozy games" gate. Track responses separately if possible. |
+| Twitter | POSTED 2026-05-11 | 2026-05-11 | Passive tag-based distribution via Daniel's account. No mod approval required. |
+| r/CozyGamers | POSTED 2026-05-11 | 2026-05-11 | Subreddit-direct post (mod approval flow per subreddit rules). |
+| Wholesome Games subreddit/Discord | HOLDING (deliberate) | n/a | Daniel hold rationale: not yet a regular in the community; dropping a survey link cold would read as drive-by extraction. Will pursue only after Daniel has community presence OR via mod DM with project context. |
+| Cozy Discord servers (~2-3) | TBD | — | Wholesome Games Discord + r/CozyGamers Discord + 1 from Disboard search. Hold pattern same as Wholesome subreddit if not already a community member. |
+| Bluesky/Mastodon cozy gaming tags | TBD | — | Passive tag distribution; no mod approval. Use #cozygames #cozygaming #indiegamedev #wholesomegames. |
 
-**Target response count:** ≥50 minimum; 100 ideal. Run distribution for ~2-4 weeks.
+**Target response count:** ≥50 minimum; 100 ideal. Run distribution for ~2-4 weeks from 2026-05-11.
+
+**Distribution discipline (Daniel directive 2026-05-11):** Don't drop survey links in communities where you're not already a present member. Build community-membership-first OR pursue via mod DM with full project context. The "drive-by-link" failure mode reads as extractive and degrades both the survey response rate AND the project's reputation in those communities. Wholesome Games specifically held pending community-presence-building or mod-permission path.
 
 **Anti-bias note (2026-05-11):** Daniel performs a form-validation smoke-test pass (fill out + submit) before distribution begins, then DELETES the test response from the response sheet so it does not enter the verdict tally. Per D-MKTG-03 anti-bias discipline: Daniel's responses + persona-zero (Dawn) responses MUST NOT enter the MKTG-06 corpus — Daniel is project vision-holder (responses would be thesis-confirming-bias) and Dawn is persona-zero anchor (already informs PERSONA.md). Both must stay in their respective channels (project-internal / playtest-log) and out of the survey corpus.
 
