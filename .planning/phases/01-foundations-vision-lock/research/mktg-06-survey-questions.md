@@ -223,6 +223,12 @@ anti_bias_discipline:
 
 **Target response count:** ≥50 minimum; 100 ideal. Run distribution for ~2-4 weeks from 2026-05-11.
 
+### Response collection milestones
+
+| Date | Count | Notes |
+|---|---|---|
+| 2026-05-11 (T+0) | 13 | First-day distribution: Facebook + Twitter + r/CozyGamers. Strong channel-fit signal — 26% of ≥50 minimum target in <24h. |
+
 **Distribution discipline (Daniel directive 2026-05-11):** Don't drop survey links in communities where you're not already a present member. Build community-membership-first OR pursue via mod DM with full project context. The "drive-by-link" failure mode reads as extractive and degrades both the survey response rate AND the project's reputation in those communities. Wholesome Games specifically held pending community-presence-building or mod-permission path.
 
 **Anti-bias note (2026-05-11):** Daniel performs a form-validation smoke-test pass (fill out + submit) before distribution begins, then DELETES the test response from the response sheet so it does not enter the verdict tally. Per D-MKTG-03 anti-bias discipline: Daniel's responses + persona-zero (Dawn) responses MUST NOT enter the MKTG-06 corpus — Daniel is project vision-holder (responses would be thesis-confirming-bias) and Dawn is persona-zero anchor (already informs PERSONA.md). Both must stay in their respective channels (project-internal / playtest-log) and out of the survey corpus.
