@@ -210,3 +210,93 @@ Daniel paired Dawn's seasonal audio feedback with character-coded leitmotifs (ea
 **Tonal alignment check:** ✓ Persona-zero-resonant (Dawn directly validated). ✓ Cozy guardrails preserved (cliffhanger creates wishlist conversion pressure but no time pressure or fail state in the slice itself). ✓ AI policy: all scenario content is Daniel-authored.
 
 **Review hook:** Already adopted (slice scenario design proceeds as outlined); validation will be revisited at HEALTH-05 session 2 (plan 01-08, ≥2026-05-24).
+
+---
+
+### 2026-05-10 — Wildflower as deep character design reference (Dawn)
+
+**Source:** Dawn (persona-zero) — design recommendation surfaced during World Bible §3 cosmology discussion 2026-05-10
+
+**Status:** **considering — trigger-at-Phase-6** *(Daniel records this as a future-fire item; activates when Phase 6 character authoring begins, ~m12-15 per ROADMAP estimate)*
+
+**Context:** Daniel was working through World Bible §3 (cosmology / pantheon / lore) authoring when Dawn surfaced this design recommendation outside the in-progress section.
+
+**Core recommendation (Dawn):** When Daniel gets to deep character design work (Phase 6 villager bio + arc authoring + dialog scripting for the full 12-15 cast), take cues from the game **Wildflower**. Daniel needs to play through it before Phase 6 character authoring lands.
+
+**Action items:**
+- **Daniel personal play task:** play through Wildflower at some point before Phase 6 character authoring begins (~m12-15). Not urgent now (Phase 1 currently active); can land any time during Phase 2-5 progression.
+- **Phase 6 plan input:** when `/gsd:plan-phase 6` or equivalent runs, include "review notes from Wildflower playthrough" as an input to character authoring sub-tasks.
+
+**Why this matters:**
+- Phase 6 character authoring is the largest creative-content load of the project (per ROADMAP 4-6 year horizon estimate). Any reference / inspiration source that sharpens Daniel's character-design vocabulary is high-leverage at that stage.
+- Dawn's design recommendations have been load-bearing across Phase 1 (pet adoption → D-VISION-11; faerie houses → D-VISION-10 Layer 3; seasonal audio → AUDIO architectural commitment; slice scenario validation). Her track record suggests Wildflower is worth treating as a serious recommendation.
+
+**Trigger mechanism:**
+- At Phase 6 kickoff (or earlier if Daniel plays Wildflower during Phase 2-5 down-time), review this entry; surface Wildflower-derived design notes as input to Phase 6 character authoring; update entry status to **adopted** with cross-link to specific character-design takeaways.
+- If Daniel plays Wildflower and finds it doesn't apply, update status to **rejected** with rationale.
+
+**Tonal alignment check:** ✓ Persona-zero-sourced (Dawn). ✓ AI policy: Claude does not play Wildflower or generate character-design content based on it; Daniel plays + authors at Phase 6. ✓ Cozy guardrails preserved (recommendation source is Dawn; trigger doesn't violate any locked decision).
+
+**Review hook:** Phase 6 kickoff (~m12-15) OR earlier when Daniel completes Wildflower playthrough.
+
+---
+
+### 2026-05-10 — Azriel (ACOTAR) as personality reference for Zhan (Dawn)
+
+**Source:** Dawn (persona-zero) — design recommendation surfaced during World Bible §3 cosmology discussion 2026-05-10 (immediately after Wildflower trigger entry)
+
+**Status:** **considering — trigger-at-Phase-6** *(Daniel records this as a future-fire item; activates when Phase 6 character authoring begins, particularly Zhan's bio + dialog scripting; ~m12-15 per ROADMAP estimate)*
+
+**Context:** Daniel was working through World Bible §3 (cosmology / pantheon / lore) authoring when Dawn surfaced this character-design recommendation outside the in-progress section.
+
+**Core recommendation (Dawn):** Azriel from *A Court of Thorns and Roses* (ACOTAR) by Sarah J. Maas as a **personality base reference for Zhan** (the leonid carpenter, magical construction archetype, shy/demure/quiet).
+
+**Notes for Phase 6 character authoring:**
+- Azriel's character traits that pair with Zhan's existing locked traits: stoic surface masking deep feeling; quiet competence; hidden depth; fierce loyalty / protection toward those he cares about; magic that reflects identity (Azriel's shadows ↔ Zhan's magical construction).
+- **Cozy promise filter required:** Azriel has heavy backstory elements (childhood abuse, scarred hands, etc.). Daniel's cast representation principle (2026-05-10 SCOPE.md row) explicitly excludes mature themes from villager backstories. Zhan-with-Azriel-personality must preserve the *demeanor and emotional register* without porting trauma-coded backstory elements. The reference is for "how does this character carry themselves" not "what is their backstory."
+- Phase 6 character authoring task: read relevant Azriel passages from ACOTAR books; identify the carrying-himself / quietly-intense aspects; apply to Zhan's dialog voice + scene framing while filtering out mature-theme elements per cozy promise + cast representation principle.
+
+**Pairs naturally with cast representation principle:**
+- Zhan is already locked as trans (FTM) + leonid. Azriel personality reference adds character interiority. Combined: a trans-male leonid carpenter with shy/demure/quiet carriage, Azriel-coded inner intensity, magical construction identity-magic. Phase 6 dialog authoring lands the full voice.
+
+**Action items:**
+- **Daniel personal read task:** read relevant Azriel passages (or full ACOTAR books) at some point before Phase 6 character authoring begins. Many ACOTAR readers can point to specific chapters where Azriel's character voice lands strongly.
+- **Phase 6 plan input:** when Phase 6 character authoring tasks fire, include "review Azriel character notes (filtered through cozy promise)" as Zhan-specific input.
+
+**Pattern observation:**
+Dawn's recommendations today (Wildflower for character design generally; Azriel for Zhan specifically) establish a pattern: she's curating character-design references from media she loves and proposing them as Phase 6 anchors. This pattern likely continues — future emergent-feedback entries may include additional character references (for Sprinkles, Ari, Cyrus, or future cast members). Worth tracking as the pattern develops.
+
+**Tonal alignment check:** ✓ Persona-zero-sourced (Dawn). ✓ AI policy: Claude does not read ACOTAR or generate character-design content based on Azriel; Daniel reads + authors at Phase 6. ✓ Cozy guardrails preserved by cast representation principle filter. ✓ Pillar 1 character development reinforced (depth of character interiority is Pillar 1 surface).
+
+**Review hook:** Phase 6 character authoring kickoff (~m12-15), specifically Zhan bio + dialog scripting. May be revisited at HEALTH-05 session 2 (plan 01-08, ≥2026-05-24) if Dawn surfaces additional character references in the interim.
+
+---
+
+### 2026-05-10 — Villager birthdays on the calendar (Dawn)
+
+**Source:** Dawn (persona-zero) — design recommendation surfaced during World Bible §7 cross-cultural elements discussion 2026-05-10
+
+**Status:** **adopted** *(2026-05-10 — Daniel adopts; World Bible §5 calendar + §6 cultures updated to note birthday tradition; specific per-villager birthday content is Phase 6 character authoring per cast-expansion planning.)*
+
+**Context:** Daniel was working through World Bible §7 (cross-cultural elements) authoring when Dawn surfaced this design recommendation. She cited her love of seeing birthdays on the calendar in cozy games (Stardew, AC patterns).
+
+**Core recommendation (Dawn):** Every villager needs a birthday. Birthdays appear on the calendar; they're personal celebrations woven through Sterling's annual rhythm.
+
+**Architectural integration:**
+- **§5 Calendar:** birthdays are calendar entries (not festivals, but tracked time-markers). ~12-15 villagers + cat = ~13-16 birthdays distributed across the ~112-day year (~1 per 7-8 days average).
+- **§6 Cultures (Sterling baseline):** gift-giving tradition includes birthday celebrations; each villager's birthday is a small community-marked occasion.
+- **D-VISION-13 any-to-any matchmaking:** birthdays don't directly drive matchmaking but provide natural relationship-deepening beats (gifts boost multi-axis relationship per NPC-03).
+- **Cozy promise compliance:** missing a villager's birthday must NOT punish the player. The villager might mention it casually after if missed; gift on day = relationship boost; no gift on day = no penalty.
+- **NG+ replayability:** birthdays interact with D-VISION-09 NG+ wisp memory — wisp recalls villagers' birthday gift preferences across playthroughs ("last time we gave Sprinkles a flower bouquet — try something different this time?").
+
+**Phase 6 content authoring tasks:**
+- Assign each villager a specific birthday (day in Sterling's calendar — likely a mix across all 4 seasons + cross-quarter timing)
+- Author each villager's preferred gifts (per their identity / vocation / personality)
+- Author birthday-scene dialog (per villager × per tonal state per D-VISION-14)
+- Slice scope: 4 villagers in slice could have birthdays mentioned but the slice's ~3-day span may not cover any of them — Phase 6 decides if any slice villager birthday falls in slice time
+
+**Tonal alignment check:** ✓ Persona-zero-sourced (Dawn). ✓ Cozy genre comparable (Stardew, AC pattern). ✓ AI policy: per-villager birthday specifics (date, gift preferences, dialog) are Daniel-authored at Phase 6. ✓ Cozy promise: no punishment for missing.
+
+**Review hook:** Already adopted at framework level. Phase 6 character authoring lands per-villager specifics.
+
+**Pattern observation:** Dawn's design contributions today (9 total): premise co-development (2026-05-09); pet adoption / cat; faerie houses; seasonal audio; slice scenario validation; Wildflower character-design trigger; Azriel-as-Zhan reference; birthday recommendations. Strong sustained engagement; she's actively co-developing Colisi across multiple Phase 1 sessions.
