@@ -144,6 +144,8 @@ Signals:
 - Expiring timers of ANY kind will not be added to this game. These include mini-game specific timers. Every mechanic of the game should allow the player to walk away from their computer and come back 15 days later to the same state.
 - Negative consequences will ALWAYS be clearly telegraphed to the player, and ALWAYS be a result of a choice the player made. *(This ties into the Character Development pillar as well.)*
 - We will never add interactive player combat mechanics of ANY kind. Ever.
+- **No real-time forward-timer gating of progression.** Resources, crafted items, growth processes, and unlocks must complete within a single play session — players cannot be forced to wait real-world minutes or hours for content to mature, melt, respawn, or unlock. Empirical anchor: Sandrock R24 ("waiting for copper to melt in realtime is cringe"), Dreamlight Valley R16 ("30 minutes to 4 hours for one item"). Locked 2026-05-10 — MKTG-06 corpus.
+- **No real-world-clock-tied content gating.** Content (NPCs, critters, events, shops) must not be locked to specific real-world hours of the day. Players' work/sleep schedules are not the game's content gate. Empirical anchor: Dreamlight Valley R11 ("people who work mon-Fridays 8-5 are being punished by locking specific critters to days and times that they work"). Locked 2026-05-10 — MKTG-06 corpus.
 
 **Mechanics this pillar justifies** (REQ-IDs from `.planning/REQUIREMENTS.md`):
 
@@ -187,12 +189,18 @@ Signals:
 
 Approachability is not a polish layer added after the "real" game is finished — it is a structural constraint on every system in Colisi. The deep-cozy demographic this game is built for disproportionately includes players with little or no prior gaming literacy, players unfamiliar with 3D navigation conventions, and players using low-spec laptops or integrated GPUs. These players frequently bounce off otherwise-interesting games before reaching the relationship systems that Pillars 1 and 2 are protecting. If Colisi silently assumes knowledge of camera control, inventory conventions, stat-sheet interpretation, or multi-input execution, then the audience the game is specifically FOR never reaches the character-development gameplay that defines the experience. Approachability therefore means reducing unnecessary interpretation load wherever possible: mechanics must be taught through use, inputs must remain simple and consistent, and the player must never feel embarrassed for not understanding a "standard" gaming convention. Pillar 1 ensures the player's choices matter; Pillar 2 ensures those choices are never punished; Pillar 3 ensures the player can actually reach and understand the choice surface in the first place.
 
+**Production polish IS accessibility (locked 2026-05-10 — MKTG-06 Steam review corpus empirical anchor)**
+
+Production polish is not a separate quality concern — it is part of approachability. A game that crashes on launch, loses save state to bugs, requires unintuitive control combinations, or stutters on integrated GPUs is **inaccessible** to the cozy demographic regardless of how friendly its mechanics are on paper. Players with limited time, energy, or technical patience will not push through a frustrating-because-broken experience to reach the relationship systems underneath. MKTG-06 Steam review classification (12-game corpus, 2026-05-10) provides direct empirical evidence: 43% of My Time at Portia negative reviews cite bugs/crashes/save-loss; Sun Haven's dominant complaint cluster is sleep-progression-blocking bugs; Coral Island players cite lose-day-progress-to-crashes; Dreamlight Valley reviewers cite 4-year-old bugs unfixed; and the broader "didn't click / engagement / theme-vibe mismatch" pattern across multiple comparables is frequently masking polish friction. Polish is table-stakes accessibility, not a bonus tier.
+
 **Design Implications**
 - Every new mechanic MUST be introduced through guided interaction before the player is expected to use it independently.
 - All critical gameplay information should be surfaced through diegetic or immediately understandable presentation, not buried inside layered UI menus or abstract stat sheets.
 - Core controls must remain consistent for the entire game. Once the player learns an interaction pattern, future systems should reuse that pattern whenever possible.
 - Any mechanic that depends on prior gaming conventions (quest logs, crafting hierarchies, camera assumptions, radial menus, inventory taxonomy, etc.) must be explicitly taught in-context before use.
 - The game must remain playable and visually readable on low-end hardware and integrated GPUs without degrading gameplay comprehension.
+- **Production polish is a phase-gate, not a finishing pass.** Crash-free first hour is a slice-ship gate; save/load round-trip reliability is a slice-ship gate; control intuitiveness is testable via HEALTH-05 ritual (naive playtester catches unintuitive controls).
+- **Anything shipped to a playtester must be functionally sound** — even pre-slice tech demos cannot contain breaking bugs. The "ship rough and patch later" model is rejected for this project.
 
 **Failure-mode Signature**
 
@@ -213,6 +221,7 @@ Signals:
 - We will NEVER assume that the player knows how to complete common game tasks, such as movement in a 3D space, camera rotation, or interaction targeting.
 - We will NEVER hide critical gameplay understanding behind layered menus, dense stat sheets, or unexplained UI abstractions.
 - We will NEVER require fast reaction speed or mechanical execution precision to progress.
+- **We will always strive to NEVER ship any playable demo, test, patch, or gameplay containing breaking bugs.** Even playtest tech demos must be functionally sound. (Anti-"ship rough then patch" — production polish is table-stakes accessibility, locked 2026-05-10.)
 
 **Mechanics this pillar justifies** (REQ-IDs from `.planning/REQUIREMENTS.md`):
 
@@ -244,10 +253,16 @@ Signals:
 - **UI-07** — Graphics quality presets targeting integrated-GPU hardware. Direct DI #5 enforcement at the rendering layer.
 - **UI-10** — First-run optional tutorial for someone who has never played a cozy game. Direct DI #1 enforcement at first-launch.
 
-*Enabler (not directly justified, but required for this pillar's diagnostic):*
-- **HEALTH-05** — Persona-zero playtest ritual. Without HEALTH-05 sessions (Dawn-shape player encountering the game cold), the failure-mode signature's signals can't be captured. Same enabler role as Pillars 1 and 2.
+*Production polish as accessibility (locked 2026-05-10 — MKTG-06 corpus empirical anchor):*
+- **POLISH-N** *(placeholder REQ — to be assigned at Phase 1→2 REQUIREMENTS.md amendment batch)* — Crash-free golden-path first hour is a slice-ship gate.
+- **POLISH-N+1** *(placeholder)* — Save/load round-trip reliability tested before every playtester/demo handoff.
+- **POLISH-N+2** *(placeholder)* — Control intuitiveness verified via HEALTH-05 ritual (naive playtester) before slice ship.
+- **POLISH-N+3** *(placeholder)* — No known breaking bug shipped to ANY external surface (playtest, tech demo, patch, gameplay). Anti-"ship rough then patch" — locked anti-clause.
 
-**Total: 20 REQs justified directly + 1 enabler.** *(UI-08 localization-routing, UI-09 content warning, and LOC-01..03 considered and rejected — they're localization-architecture concerns better housed in a future Localization treatment, probably surfacing in Phase 10 / M2 production phase, not as a Vision Bible pillar.)*
+*Enabler (not directly justified, but required for this pillar's diagnostic):*
+- **HEALTH-05** — Persona-zero playtest ritual. Without HEALTH-05 sessions (Dawn-shape player encountering the game cold), the failure-mode signature's signals can't be captured. Same enabler role as Pillars 1 and 2. *(Also serves as the polish-intuitiveness verification surface per 2026-05-10 expansion.)*
+
+**Total: 20 REQs justified directly + 4 POLISH-N placeholders + 1 enabler.** *(POLISH-N requirements queued for REQUIREMENTS.md amendment at Phase 1→2 transition; placeholders signal architectural commitment now.)* *(UI-08 localization-routing, UI-09 content warning, and LOC-01..03 considered and rejected — they're localization-architecture concerns better housed in a future Localization treatment, probably surfacing in Phase 10 / M2 production phase, not as a Vision Bible pillar.)*
 
 ---
 

@@ -171,6 +171,17 @@ Heavily Pillar 3 loaded — onboarding IS approachability; cardinal commitment.
 | **ONB-03** (re-tutorialize new mechanics) | 0 | 1 | 3 | Anti-clause "no untaught mechanics mid-game"; pairs with D-VISION-09 NG+ tutorial requirement. |
 | **ONB-04** (no prior gaming literacy assumed) | 0 | 1 | 3 | Cardinal approachability — assumes never-played-3D-game persona. |
 
+### Production polish & QA discipline (POLISH — 4 placeholder mechanics)
+
+**Architectural commit 2026-05-10** — Pillar 3 Approachability expanded to explicitly include production polish per MKTG-06 Steam review corpus empirical anchor (43% Portia bug-rate; Sun Haven sleep-progression bugs; Coral Island lose-day-progress-to-crashes; engagement-bounce pattern masks polish friction). Anti-clause: "We will always strive to NEVER ship any playable demo, test, patch, or gameplay containing breaking bugs." REQ-IDs (POLISH-N) are placeholders pending Phase 1→2 REQUIREMENTS.md amendment batch.
+
+| REQ-ID | P1 Char Dev | P2 Never Punishing | P3 Approachability | Justification |
+|---|:--:|:--:|:--:|---|
+| **POLISH-N (crash-free golden path)** | 0 | 2 | 3 | Cardinal accessibility — game that crashes is inaccessible to cozy demographic. Pillar 2 anti-punishment via no-progress-loss-to-bugs. |
+| **POLISH-N+1 (save/load round-trip reliability)** | 0 | 3 | 3 | Anti-save-loss is cardinal cozy commitment. Bug-induced save loss = effective punishment. Pillar 3 baseline accessibility. |
+| **POLISH-N+2 (control intuitiveness via HEALTH-05)** | 0 | 1 | 3 | Pillar 3 verification surface. Naive playtester catches unintuitive controls before slice ship. HEALTH-05 ritual is the diagnostic. |
+| **POLISH-N+3 (no breaking bug shipped externally)** | 0 | 2 | 3 | Anti-"ship rough then patch." Locked anti-clause 2026-05-10. Cozy demographic doesn't push through frustration. |
+
 ### Audio (AUDIO — 3 mechanics)
 
 **Re-scored 2026-05-10 under AUDIO architectural commitment** (character-coded leitmotifs + seasonal variations, per Dawn audit feedback). Resolves AUDIO-01 + AUDIO-02 weak-signal flags. REQUIREMENTS.md amendments queued for Phase 1→2 transition.

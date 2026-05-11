@@ -1,33 +1,41 @@
 ---
 phase: 01-foundations-vision-lock
 plan: 07
-status: partial-complete
-completed: 2026-05-10
+status: substantially-complete (Daniel-verification done; calendar-gated survey + verdict remain)
+completed: 2026-05-10 (Task 1 + Task 2 full); verification 2026-05-10
 gates_remaining:
-  - Daniel verifies 100% of LLM-classified Steam review tags (D-MKTG-02 requirement)
   - Daniel publishes Google Form survey via approved channels (Task 3 Step A)
   - ≥50 survey responses collected over ~2-4 weeks (calendar-gated)
   - Daniel authors final MARKET-EVIDENCE.md verdict (Task 3 Steps B-F)
   - Outside-reviewer cosignature (per D-WALL-05 hybrid mechanism reframed in plan 01-06)
+architectural_locks_made_during_verification:
+  - SCOPE.md row 16 — Pillar 3 expansion: production polish IS accessibility + anti-"ship rough then patch" anti-clause
+  - SCOPE.md row 17 — Pillar 2 anti-clause extension: no real-time forward-timer gating + no real-world-clock-tied content gating
 ---
 
 # Plan 01-07 SUMMARY — MKTG-06 Validation
 
 ## Outcome
 
-**Partial completion.** Task 1 and Task 2 LLM-classification done; Daniel-verification + survey publication + verdict authoring remain.
+**Substantially complete.** Task 1 + Task 2 (including Daniel-verification) DONE; Task 3 calendar-gated work remains.
 
 This plan has long-tail external dependencies (subreddit/Discord moderator approval; ≥50 survey responses over ~2-4 weeks) that cannot be compressed. Per Daniel's 2026-05-10 directive ("we can do everything up to that point just fine"), all wave-2-independent work executed now; calendar-gated work paused at the boundary.
 
-Key empirical discovery: **Steam API access (no key needed for review endpoint)** enabled real-data classification of 12 cozy-life-sim comparables in this plan rather than deferring to Phase 1→2 transition.
+**Key empirical discoveries from this plan:**
+1. **Steam API access (no key needed)** enabled real-data classification of 12 cozy-life-sim comparables.
+2. **Daniel-verification surfaced 2 architectural locks** during the corpus pass:
+   - Pillar 3 polish-as-accessibility (SCOPE row 16) — empirically validated by ~50+ bug/crash/polish-failure reviews
+   - Pillar 2 anti-clause extension (SCOPE row 17) — empirically validated by 12 cross-corpus timeforward-gating reviews
+3. **A new corpus category** (value-for-gameplay, distinct from endgame-cliff) surfaced from A Short Hike verification.
+4. **A new corpus category** (dev-labor-ethics) surfaced from Sun Haven verification — pairs with Colisi's AI-DISCLOSURE positioning advantage.
 
-## Task status
+## Task status (post-verification)
 
 | Task | Status | What's done | What remains |
 |---|---|---|---|
-| Task 1: Game list + survey questions + distribution prep | **DONE** | Hybrid 16-game list per D-MKTG-01 selection rule + Daniel curation; ~11 neutrally-worded survey questions Claude-drafted + Daniel-critiqued; distribution channel research done | Moderator approvals (Daniel external work — pursue when ready to publish) |
-| Task 2: Steam review mining + LLM classification | **SUBSTANTIALLY DONE** (calendar-independent portion) | Steam Web API queried 12 games × ~50 negative reviews = ~360 raw reviews fetched; 12 classification files written (Stardew/Cozy Grove/Coffee Talk/Spiritfarer/Coral Island/Palia/A Short Hike/Dreamlight Valley/Portia/Sandrock/Hokko Life/Sun Haven); `_summary-tallies.md` aggregating findings across corpus | Daniel verifies 100% of UNVERIFIED tags per D-MKTG-02 anti-bias requirement |
-| Task 3: Survey distribution + verdict authoring | **PAUSED at boundary** | Methodology synthesis present in scaffolded `27-MARKET-EVIDENCE.md`; sequencing note for outside-reviewer cosignature documented per plan 01-06 reviewer-designation (D-WALL-05 hybrid LLM-primary mechanism) | A: Daniel publishes Google Form via approved channels. B: ≥50 responses (~2-4 weeks). C-F: rubric application + draft verdict + outside-reviewer cosign + finalize + move to planning root |
+| Task 1: Game list + survey questions + distribution prep | **DONE** | 16-game hybrid list per D-MKTG-01 (12 fetched + 3 fetch-gap + 1 marked Palia); ~11 neutrally-worded survey questions Claude-drafted + Daniel-critiqued; distribution channel research done | Moderator approvals (Daniel external work — pursue when ready to publish) |
+| Task 2: Steam review mining + LLM classification + **Daniel verification** | **DONE** | Steam Web API queried 12 games × ~30 reviews per game = 362 reviews. **Daniel verified 100% of LLM tags 2026-05-10** per D-MKTG-02 anti-bias discipline. 310 substantive reviews (85.6% signal rate). Verified `_summary-tallies.md` regenerated with corpus-level findings. | — |
+| Task 3: Survey distribution + verdict authoring | **PAUSED at boundary** | Methodology synthesis present in scaffolded `27-MARKET-EVIDENCE.md`; outside-reviewer cosignature sequencing per plan 01-06 (D-WALL-05 hybrid LLM-primary mechanism) | A: Daniel publishes Google Form. B: ≥50 responses (~2-4 weeks). C-F: rubric + verdict + outside-reviewer cosign + finalize + move to planning root |
 
 ## Game list (Task 1)
 
@@ -37,60 +45,83 @@ Hybrid selection per D-MKTG-01: Steam tag "Cozy" + "Life Sim" sorted by review c
 
 ~11 questions Claude-drafted in neutral wording; Daniel critique pass logged inline. Covers demographics + game-bounce history + anti-feature reactions (5 anti-feature categories from D-MKTG-02 + required-combat) + positive-feature attractors + open-ended ideal-cozy-game framing + follow-up consent. Distribution log section present (pending moderator-approval entries). See `research/mktg-06-survey-questions.md`.
 
-## Steam review classification corpus (Task 2)
+## Steam review classification corpus (Task 2) — Daniel-verified
 
-**12 games × 30 reviews per game = 360 negative reviews classified.** Three games in the original list returned 0 reviews via Steam API `filter=recent` (Rune Factory 5, Wylde Flowers, Spirittea — likely appid mismatches in training data; documented as gaps rather than retried). Palia returned only 2 reviews (F2P games show review aggregation quirks).
+**Final corpus: 12 games × ~30 reviews each = 362 reviews fully Daniel-verified.** Post-verification substantive count: **310 of 362 (85.6% signal rate)** — UP from Claude-pre-verification 72%. Verification surfaced 2 architectural locks + 2 new corpus categories (see below).
 
-**Substantive sample after non-substantive filter:** 238 of 332 reviews (72% signal rate).
+**Fetch gaps (documented as known limitation):** 3 games in the original 15-game candidate list could not be classified due to appid issues: Rune Factory 5 (appid 1599420 returned 0 reviews; alternative appids tried but recovered Dead Space Remake by mistake), Wylde Flowers (appid 1612710 + alternatives all returned 0), Spirittea (appid 1840400 + multiple alternatives all returned 0). Without external appid-lookup mechanism, these gaps could not be recovered in this session. Final corpus is 12 games (within D-MKTG-01 minimum target of 10).
 
-All 360 review tags are currently **UNVERIFIED** (LLM-classified by Claude Opus 4.7); per D-MKTG-02 anti-bias discipline, Daniel must verify 100% before the corpus contributes to the formal verdict.
+**Palia recovery:** original `filter=recent` returned only 2 reviews due to F2P review aggregation quirks. Re-fetched with `filter=all` (sorted by helpfulness) which recovered 50 reviews. Combined corpus uses v1 (2 verified) + v2 supplementary (30 verified) = 32 Palia reviews total.
 
-### Three CRITICAL findings (per-game rate >30%)
+### Three CRITICAL findings (post-verification)
 
-| Finding | Per-game rate | Direct implication |
+| Finding | Verified rate | Direct implication |
 |---|---|---|
-| **Cozy Grove time-pressure** | **41%** (9 of 22 substantive) | Direct empirical support for Colisi's locked anti-clause against day clocks / daily-time-gates (per CLAUDE.md §3, Pillar 2, WORLD-05). Cozy demographic IS sensitive to time-pressure even when game is marketed as cozy. |
-| **Coffee Talk VN-style** | **72%** (18 of 25 substantive) | Direct empirical support for the locked Out-of-Scope anti-clause against pure-VN format. Confirms persona-zero's documented Coffee Talk bounce. Colisi's 3D embodied + interactive minigame layer (D-VISION-04) is the correct anti-shape. |
-| **A Short Hike endgame** | **33%** (7 of 21 substantive, "too-short" variant) | Validates 30+hr scope target. Cozy players want LONG content runways. Endgame-cliff anti-feature confirmed broadly distributed across comparables. |
+| **Cozy Grove time-pressure** | **40%** (10 of 25 substantive) | Direct empirical support for Colisi's locked anti-clause against day clocks. **6 reviews carry Daniel's "timeforward-gating" sub-tag** — direct hits on the NEW Pillar 2 anti-clause extension locked 2026-05-10 (SCOPE row 17). Cozy Grove is the cleanest empirical anchor for BOTH anti-clauses. |
+| **Coffee Talk VN-style** | **69%** (18 of 26 substantive) | Direct empirical support for the locked Out-of-Scope anti-clause against pure-VN format. Daniel sharpening: **"VN that didn't market itself as a VN suffers bad reviews because it's a VN"** — bounce is positioning-mismatch as much as format. |
+| **A Short Hike value-for-gameplay** | **30%** (8 of 27 substantive) — REFRAMED | **Pre-verification claim "33% endgame" OVERTURNED.** Daniel re-categorized 6 of 7 endgame-too-short rows as "value-for-gameplay" — distinct new category (pricing-vs-length expectation, NOT content-cliff-after-50-hours). Colisi's 30+hr scope target addresses BOTH but they are two failure modes, not one. |
 
-### Secondary findings (per-game rate 15–30%)
+### NEW corpus-level findings (surfaced during verification)
 
-- **My Time at Portia time-pressure 21%** + R18 direct hit on required-combat anti-clause ("Thought I finally found a casual game that doesn't make you go in caves and do fighting")
-- **Coral Island time-pressure 18%** + **endgame 14%** + multiplayer-broken (different shape than required-multiplayer)
+**1. Microtransactions concentration:** Palia 54% / Dreamlight 32% / Sun Haven heavy + Sandrock 3 verified hits. Concentrated in F2P/DLC-heavy subsegment but DOMINANT there. Colisi's locked MTX anti-clause empirically validated.
 
-### Cross-corpus patterns OUTSIDE the 5-category framework
+**2. Real-time-timer anti-clause extension empirically anchored:** 12 cross-corpus reviews validate the new Pillar 2 anti-clause locked 2026-05-10 (SCOPE row 17): Cozy Grove 6 + Dreamlight 3 + Sandrock 1 + Palia 2.
 
-Surfaced for Phase 8 positioning + roadmap-revision consideration:
+**3. Pillar-failure-shaped bounce datasets:** Spiritfarer (22 pillar tags / 73% of corpus), Cozy Grove (20+ pillar tags), Hokko Life (8 pillar tags). Cozy players bounce on **pillar failures more than on the 5 D-MKTG-02 anti-features**. Colisi's three-pillar architecture is empirically validated as structural response.
 
-- **Microtransactions sensitivity** (Dreamlight Valley 33%, Sun Haven heavy): cozy demographic is highly sensitive to monetization-coded mechanics. Colisi's locked anti-clauses against MTX/battle-passes directly address this.
-- **"Wide-but-shallow"** (Sun Haven R30, Hokko Life dominant): cozy players reward DEPTH over BREADTH. Colisi's "characters and relationships that keep evolving" core value is structurally the opposite of this bounce-pattern.
-- **AC-comparison-negative** (Hokko Life dominant): cozy games positioned as AC-alternative-but-less get punished. Colisi differentiation (sprite premise + matchmaking + magic identity) must NOT be positioned as Stardew/AC-alternative-with-less.
-- **Marketed-as-cozy mismatch** (Spiritfarer, Stardew): players who came expecting cozy and got platforming/stress-coded experience feel "cheated." Colisi positioning discipline (ALIGN-04 + Pillar 2) must avoid this.
-- **Dev-labor-ethics** (Sun Haven dominant ~30% of reviews): Colisi's solo-dev structure + AI-DISCLOSURE.md transparency gives structural advantage here.
+**4. Polish-as-accessibility empirical validation:** ~50+ bug/crash/save-loss/polish-failure reviews across 5+ games validate the Pillar 3 expansion locked 2026-05-10 (SCOPE row 16). R10 Coral Island autosave annotation (Daniel-flagged) cross-corpus pattern: granular autosave is required, not session-end-only.
 
-## Provisional verdict signal (pre-Daniel-verification, pre-survey)
+**5. Dev-labor-ethics — NEW corpus category:** Sun Haven dominant (~30% of reviews) + Palia acquisition pattern + scattered hits elsewhere. Daniel flagged as "could be a future category touching on AI assets." Colisi's AI-DISCLOSURE.md positioning is structurally advantageous with this player segment.
 
-The Steam review corpus provides **strong directional support** for the D-MKTG-02 thesis on 3 of the 5 anti-feature categories:
+**6. Marketing-honesty cross-corpus pattern:** Coffee Talk + Spiritfarer + Sandrock + Palia + Cozy Grove all show positioning-mismatch bounces. Players who expected X and got Y bounce hard. Colisi positioning-honesty discipline added.
 
-| Anti-feature | Corpus evidence | Provisional signal |
+### Secondary findings
+
+- **My Time at Portia time-pressure 17%** + R18 direct hit on required-combat anti-clause
+- **Coral Island time-pressure 17%** + **endgame 13%** + R10 autosave anchor (Daniel-flagged)
+- **Difficulty walls** = mostly minigame-difficulty pattern (Spiritfarer platforming, A Short Hike boat-race, Cozy Grove wheel-spin, Stardew fair-wheel) — minigame difficulty can break cozy register
+- **R23 Spiritfarer calibration warning** (Daniel-flagged): "Never punishing" must NOT slide into "no sense of accomplishment." Character-arc completions are the accomplishment vector, not difficulty walls. Cross-pillar P1×P2 authoring discipline empirically validated.
+- **R26 Spiritfarer emotional-toxicity pattern**: cast-representation-principle anti-clauses against mature/trauma themes empirically validated (game traps you in emotional-black-hole of guilt-loops Colisi structurally rejects).
+
+## Provisional verdict signal (POST Daniel-verification; pre-survey)
+
+The Daniel-verified Steam review corpus provides **STRONG directional support** for the D-MKTG-02 thesis on 3 of the 5 anti-feature categories + EMPIRICAL VALIDATION of 2 architectural locks made during verification:
+
+| Anti-feature | Corpus evidence | Verdict signal |
 |---|---|---|
-| Time-pressure | Cozy Grove 41% / Portia 21% / Coral Island 18% / Dreamlight 13%; 12% corpus rate | **STRONG SUPPORT** |
-| VN-style | Coffee Talk 72%; 8% corpus rate (concentrated in pure-VN comparable) | **STRONG SUPPORT (genre-segment-specific)** |
-| Endgame cliff | A Short Hike 33% (too-short variant) + 6 other games show ≥1; 8% corpus rate broadly distributed | **MODERATE-STRONG SUPPORT** |
-| Difficulty walls | Coffee Talk 2 (puzzles) + Spiritfarer 3 (platforming) + A Short Hike 2 (minigames); 5% corpus rate | **WEAK-MODERATE SUPPORT (minigame-difficulty pattern)** |
-| Required-multiplayer | Coral Island 1; 0.4% corpus rate | **INSUFFICIENT** — Palia sample too small; relies on persona-zero anchor |
+| Time-pressure | Cozy Grove 40% / Portia 17% / Coral 17% / Dreamlight 12%; 10% corpus rate + 12 timeforward-gating cross-corpus hits | **STRONG SUPPORT** (anti-clause + extension validated) |
+| VN-style | Coffee Talk 69%; 5.8% corpus rate (concentrated) | **STRONG SUPPORT (genre-segment-specific)** |
+| Endgame cliff | Coral 3 + Spiritfarer 2 + Dreamlight 2 + Hokko 2 + Sun Haven 2 + Sandrock 1; 4.8% corpus rate | **MODERATE SUPPORT** (down from pre-verification due to A Short Hike reframe) |
+| Difficulty walls | Spiritfarer 3 + Stardew 2 + Coffee Talk 2 + A Short Hike 2; 4.2% corpus rate | **WEAK-MODERATE SUPPORT** (minigame-difficulty pattern) |
+| Required-multiplayer | Coral Island R3 only; 0.3% | **INSUFFICIENT** — relies on persona-zero anchor |
 
-**Honest framing per PHILOSOPHY.md / Pitfall 4:** This evidence is *consistent with* the D-MKTG-02 thesis but does NOT independently validate it. The corpus shows cozy players DO bounce on time-pressure / VN-format / endgame-cliffs at meaningful rates. It does NOT show whether a hypothetical Colisi player segment large enough to support the project exists, or whether they would prefer Colisi's specific differentiation. **The survey (Task 3) remains the gate.**
+**Plus architectural locks empirically validated DURING this verification pass (SCOPE rows 16-17):**
+- Pillar 3 polish-as-accessibility: 50+ cross-corpus reviews
+- Pillar 2 anti-clause extension: 12 cross-corpus reviews
+
+**Honest framing per PHILOSOPHY.md / Pitfall 4:** Evidence is *consistent with* the D-MKTG-02 thesis AND empirically validates the architectural locks made today. Does NOT independently validate the underserved-demographic thesis — corpus shows cozy players bounce on these patterns at meaningful rates, but does NOT show whether a Colisi player segment large enough to support the project exists. **The survey (Task 3) remains the gate** for the demand-side thesis.
 
 ## What this plan did NOT do (deferred + why)
 
 | Deferred work | Why | When |
 |---|---|---|
-| Daniel verifies 100% of LLM tags | D-MKTG-02 anti-bias hard requirement; Daniel must read each quote (cannot batch-verify) | Daniel can begin row-by-row verification any time; bottleneck for verdict |
+| ~~Daniel verifies 100% of LLM tags~~ | DONE 2026-05-10 | — |
 | Survey publication | Requires moderator approvals + Google Form build (external work) | Daniel pursues when ready to publish |
 | ≥50 survey responses | Cannot compress 2-4 week response window | Calendar-gated |
-| MARKET-EVIDENCE.md verdict | Requires verified Steam data + survey results triangulated per D-MKTG-04 rubric | After Daniel verification + survey returns |
-| Outside-reviewer cosign | Reviewer designated in plan 01-06 (D-WALL-05 hybrid LLM-primary mechanism); cosign step gates on verdict draft | Final step before MARKET-EVIDENCE.md moves to planning root |
+| MARKET-EVIDENCE.md verdict | Requires survey results triangulated with verified Steam data per D-MKTG-04 rubric | After survey returns |
+| Outside-reviewer cosign | D-WALL-05 hybrid LLM-primary mechanism (plan 01-06); cosign step gates on verdict draft | Final step before MARKET-EVIDENCE.md moves to planning root |
+
+## Architectural locks made DURING verification
+
+Two load-bearing Phase 1 architectural commitments were locked DURING the corpus verification pass based on Daniel-flagged empirical patterns:
+
+### Pillar 3 expansion: Production polish IS accessibility (SCOPE row 16, 2026-05-10)
+
+Daniel directive after observing 43% Portia bug-rate + cross-corpus polish-friction pattern. New locked anti-clause: "We will always strive to NEVER ship any playable demo, test, patch, or gameplay containing breaking bugs. Even playtest tech demos must be functionally sound." 4 POLISH-N placeholder REQs added. Empirical anchor: ~50+ bug/crash/polish-failure reviews across 5+ games (Sun Haven, Dreamlight, Sandrock, Coral Island, Portia). Touched: `02-pillars-of-play.md` Pillar 3 / `07-pillar-mechanic-matrix.md` new POLISH cluster / `CLAUDE.md` guardrails / `feedback_polish_is_accessibility.md` memory. REQUIREMENTS.md POLISH-N1..4 additions queued for Phase 1→2 transition.
+
+### Pillar 2 anti-clause extension: No real-time-timer / real-world-clock gating (SCOPE row 17, 2026-05-10)
+
+Daniel directive surfaced from Sandrock R24 ("copper to melt in realtime is cringe") + cross-verified with Dreamlight R11 (work-schedule-tied critters) + R16 (30min-4hr resource respawn). Then further validated across Cozy Grove (6 timeforward-gating hits) + Palia (2 hits). Total 12 cross-corpus empirical anchors. Two new anti-clauses: (1) no real-time forward-timer gating; (2) no real-world-clock-tied content gating. Touched: `02-pillars-of-play.md` Pillar 2 / `CLAUDE.md` hard guardrails / `feedback_no_realtime_timer_gating.md` memory. REQUIREMENTS.md WORLD-05 amendment queued for Phase 1→2 transition.
 
 ## AI-policy compliance
 
@@ -121,9 +152,30 @@ The Steam review corpus provides **strong directional support** for the D-MKTG-0
 
 ## Health metrics progressed
 
-- **HEALTH-01:** Pending row for MKTG-06 verdict (after Task 3)
-- **MKTG-06 requirement:** ~67% progress (Task 1 done + Task 2 LLM-classification done; Daniel-verification + survey + verdict remain)
-- **AI policy enforcement:** Held on every boundary. Verdict-shaped editorial claims refused at synthesis layer (e.g., `_summary-tallies.md` says "consistent with" not "proves"); load-bearing verdict statement preserved for Daniel.
+- **HEALTH-01:** SCOPE.md rows 16 + 17 added during verification (Pillar 3 expansion + Pillar 2 anti-clause extension). Verdict row pending Task 3.
+- **MKTG-06 requirement:** ~85% progress (Task 1 + Task 2 with Daniel verification complete; survey + verdict remain).
+- **AI policy enforcement:** Held on every boundary. Verdict-shaped editorial claims refused at synthesis layer (`_summary-tallies.md` says "consistent with" not "proves"); load-bearing verdict statement preserved for Daniel.
+
+## Architectural amendments queued for Phase 1→2 transition (from this plan)
+
+| Amendment | Source | Type |
+|---|---|---|
+| POLISH-N1..4 (new requirements) | Pillar 3 expansion 2026-05-10 | New REQ additions |
+| WORLD-05 wording extension (real-time-timer + real-world-clock-tied content) | Pillar 2 anti-clause extension 2026-05-10 | REQ amendment |
+| Standardized LLM skeptical-prompt template (Phase 2 start) | D-WALL-05 reframe in plan 01-06 | Deferred deliverable |
+
+## Cross-corpus pattern surface (for MARKET-EVIDENCE.md authoring)
+
+When Task 3 verdict is authored, these load-bearing cross-corpus patterns should be incorporated:
+
+1. **3 of 5 D-MKTG-02 anti-features empirically supported** — time-pressure / VN-style / endgame-cliff. Difficulty and required-multiplayer remain weak-to-insufficient.
+2. **Pillar 2 anti-clause extension validated** — 12 cross-corpus timeforward-gating hits (Cozy Grove 6 + Dreamlight 3 + Sandrock 1 + Palia 2).
+3. **Pillar 3 polish-as-accessibility validated** — 50+ cross-corpus polish-failure reviews.
+4. **Microtransactions** — concentrated F2P/DLC-heavy bounce reason. Locked anti-clause empirically validated.
+5. **Pillar-failure-shaped bounce** — cozy players bounce on pillar failures (char-dev, never-punishing, approachability) MORE than on the 5-anti-feature framework. 3-pillar architecture validated.
+6. **Value-for-gameplay** — NEW category distinct from endgame-cliff. Colisi 30+hr scope addresses BOTH.
+7. **Dev-labor-ethics** — NEW category surfaced. Colisi's AI-DISCLOSURE positioning is structurally advantageous.
+8. **Marketing-honesty** — cross-corpus pattern. Position what the game IS, don't bait-and-switch.
 
 ## Cross-references
 

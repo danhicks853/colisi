@@ -55,6 +55,8 @@ The vertical slice is a checkpoint, NEVER the endpoint. Every system, architectu
 
 Never propose, accept, or implement:
 - Real-time-pressure mechanics (day clocks, missable windows, expiring events, stamina, tool durability, bedtime forcing)
+- **Real-time forward-timer gating** (wait X real-world minutes/hours for resources/crafted items/growth/unlocks to complete). Locked 2026-05-10 — MKTG-06 corpus (Sandrock R24, Dreamlight R16).
+- **Real-world-clock-tied content gating** (NPCs/critters/events/shops available only during specific real-world hours). Locked 2026-05-10 — MKTG-06 corpus (Dreamlight R11).
 - Endgame difficulty walls or stat-check failures
 - Story-completion-as-game-end
 - Restart-to-rebranch CYOA
@@ -63,8 +65,9 @@ Never propose, accept, or implement:
 - Skill trees that gate progression
 - Mid-game introduction of untaught mechanics
 - Ambiguous puzzles without telegraphed solutions
+- **Breaking bugs shipped externally** (playtest, tech demo, patch, gameplay). Locked 2026-05-10 — production polish IS accessibility (Pillar 3); empirical anchor MKTG-06 corpus.
 
-These come from PERSONA.md research. They are the design center of the game. Treat as immutable.
+These come from PERSONA.md research + MKTG-06 corpus evidence. They are the design center of the game. Treat as immutable.
 
 ### 4. Honesty Over Optimism
 
