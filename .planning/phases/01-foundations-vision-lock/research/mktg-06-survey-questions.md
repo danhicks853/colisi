@@ -238,6 +238,7 @@ anti_bias_discipline:
 |---|---|---|
 | 2026-05-11 (T+0) | 13 | First-day distribution: Facebook + Twitter + r/CozyGamers. Strong channel-fit signal — 26% of ≥50 minimum target in <24h. |
 | 2026-05-11 (T+0, later) | 20 | +7 in 2 hours after Daniel posted to **BitCraft in-game region chat** (where Daniel is moderately well known). 40% of minimum target. BitCraft now identified as highest-yield channel — empirical validation of the community-presence-first distribution discipline. |
+| 2026-05-11 (T+~5hr) | 27 | **54% of minimum target hit on day 1.** Channel additions since 20-milestone: r/AskGamers, Twitter meme repost, Discord status, Daniel's BitCraft community Discord, r/SampleSize (5 new channels). Velocity slowing post-front-load (expected pattern). At current curve: 50 minimum likely cleared in 1-3 days. |
 
 **Distribution discipline (Daniel directive 2026-05-11):** Don't drop survey links in communities where you're not already a present member. Build community-membership-first OR pursue via mod DM with full project context. The "drive-by-link" failure mode reads as extractive and degrades both the survey response rate AND the project's reputation in those communities. Wholesome Games specifically held pending community-presence-building or mod-permission path.
 
