@@ -144,7 +144,12 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
   9. **Minimal CI is configured.** `.github/workflows/godot-import-check.yml` runs `godot --headless --import` on every push to main, catches import errors before they ship. Free unlimited Actions minutes on public repo, so cost is zero. (Skip if Phase 3 hasn't initialized a Godot project yet — defer to Phase 3 only if blocking.)
   10. **`README.md`, `CONTRIBUTING.md`, `CHANGELOG.md` skeletons exist.** README covers: codename + pronunciation, project status (early development), intended audience, setup instructions for future contributors. CONTRIBUTING captures conventions for solo-Daniel-of-the-future. CHANGELOG follows Keep-A-Changelog format.
   11. **Privacy review is complete.** Decision recorded on whether `PERSONA.md` (containing wife's interview quotes) stays in the public repo, gets redacted to anonymous quotes, or moves to a `.local/` ignored path. Daniel's call; the requirement is that the call has been *made* and recorded.
-**Plans:** TBD
+**Plans:** 5 plans (3 waves)
+- [ ] 02-01-repo-hardening-files-PLAN.md - Wave 1: .gitignore + .gitattributes (LFS for 13+ binary extensions) + .editorconfig + LICENSE
+- [ ] 02-02-conventions-and-documentation-PLAN.md - Wave 1: CONVENTIONS.md (D-INFRA-conv-1..4) + CONTRIBUTING.md + CHANGELOG.md + README.md updates
+- [ ] 02-03-lfs-verification-and-ci-PLAN.md - Wave 2: LFS routing verified + .gitignore verified + .github/workflows/godot-import-check.yml scaffolded
+- [ ] 02-04-backup-and-restore-test-PLAN.md - Wave 3: BACKUP.md (3-tier per D-INFRA-bkp-1..2 + D-INFRA-art-3) + checkpoint:human-verify restore test
+- [ ] 02-05-decisions-recorded-and-phase-closure-PLAN.md - Wave 3: PROJECT.md Key Decisions (D-INFRA-art-1 + D-INFRA-priv-1) + SCOPE row 18 + REQUIREMENTS.md INFRA-01..11 Complete
 
 ---
 
@@ -297,7 +302,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundations & Vision Lock | 1/9 | In Progress | - |
-| 2. Infrastructure & Repo Setup | 0/0 | Not started | - |
+| 2. Infrastructure & Repo Setup | 0/5 | Planned | - |
 | 3. Project Skeleton & Foundational Systems | 0/0 | Not started | - |
 | 4. One-NPC Happy Path | 0/0 | Not started | - |
 | 5. Zones & World Systems | 0/0 | Not started | - |
