@@ -218,6 +218,7 @@ anti_bias_discipline:
 | Facebook indie devs group | POSTED 2026-05-11 | 2026-05-11 | Audience-mismatch caveat: dev-leaning audience, not players. Pitch self-selects for cozy-game-players via "if anyone... is into cozy games" gate. Track responses separately if possible. |
 | Twitter | POSTED 2026-05-11 | 2026-05-11 | Passive tag-based distribution via Daniel's account. No mod approval required. |
 | r/CozyGamers | POSTED 2026-05-11 | 2026-05-11 | Subreddit-direct post (mod approval flow per subreddit rules). |
+| **BitCraft in-game region chat** (emergent) | POSTED 2026-05-11 | 2026-05-11 | **Highest-yield channel observed so far (per Daniel report at 20 responses).** Daniel is moderately well known in the BitCraft community — the community-presence-first principle (memorized directive 2026-05-11) is empirically validated as a yield driver. Sample-composition caveat for MARKET-EVIDENCE.md methodology: BitCraft players are by definition multiplayer-tolerant cozy/sandbox players (MMO life-sim), which may skew Q4 required-multiplayer responses and Q5 positive-attractor patterns. Worth noting in verdict methodology transparency. |
 | Wholesome Games subreddit/Discord | HOLDING (deliberate) | n/a | Daniel hold rationale: not yet a regular in the community; dropping a survey link cold would read as drive-by extraction. Will pursue only after Daniel has community presence OR via mod DM with project context. |
 | Cozy Discord servers (~2-3) | TBD | — | Wholesome Games Discord + r/CozyGamers Discord + 1 from Disboard search. Hold pattern same as Wholesome subreddit if not already a community member. |
 | Bluesky/Mastodon cozy gaming tags | TBD | — | Passive tag distribution; no mod approval. Use #cozygames #cozygaming #indiegamedev #wholesomegames. |
@@ -229,6 +230,7 @@ anti_bias_discipline:
 | Date | Count | Notes |
 |---|---|---|
 | 2026-05-11 (T+0) | 13 | First-day distribution: Facebook + Twitter + r/CozyGamers. Strong channel-fit signal — 26% of ≥50 minimum target in <24h. |
+| 2026-05-11 (T+0, later) | 20 | +7 in 2 hours after Daniel posted to **BitCraft in-game region chat** (where Daniel is moderately well known). 40% of minimum target. BitCraft now identified as highest-yield channel — empirical validation of the community-presence-first distribution discipline. |
 
 **Distribution discipline (Daniel directive 2026-05-11):** Don't drop survey links in communities where you're not already a present member. Build community-membership-first OR pursue via mod DM with full project context. The "drive-by-link" failure mode reads as extractive and degrades both the survey response rate AND the project's reputation in those communities. Wholesome Games specifically held pending community-presence-building or mod-permission path.
 
