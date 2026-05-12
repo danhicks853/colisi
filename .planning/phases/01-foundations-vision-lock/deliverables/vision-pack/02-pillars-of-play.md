@@ -201,6 +201,7 @@ Production polish is not a separate quality concern — it is part of approachab
 - The game must remain playable and visually readable on low-end hardware and integrated GPUs without degrading gameplay comprehension.
 - **Production polish is a phase-gate, not a finishing pass.** Crash-free first hour is a slice-ship gate; save/load round-trip reliability is a slice-ship gate; control intuitiveness is testable via HEALTH-05 ritual (naive playtester catches unintuitive controls).
 - **Anything shipped to a playtester must be functionally sound** — even pre-slice tech demos cannot contain breaking bugs. The "ship rough and patch later" model is rejected for this project.
+- **Accessibility includes representation (Cast Representation Principle, locked 2026-05-10 per SCOPE row 13).** LGBTQ+ and disability representation is normalized across the cast — same-gender matchmaking pairs treated equally to any other; backstory partners of any gender mentioned without ceremony; non-human + disabled + diverse cultural backgrounds present as ambient reality of Sterling. Players of the relevant demographics see themselves in the world without needing to look for it. Without representation, the game is inaccessible to cozy players who specifically value seeing themselves reflected in cozy worlds.
 
 **Failure-mode Signature**
 
@@ -222,6 +223,7 @@ Signals:
 - We will NEVER hide critical gameplay understanding behind layered menus, dense stat sheets, or unexplained UI abstractions.
 - We will NEVER require fast reaction speed or mechanical execution precision to progress.
 - **We will always strive to NEVER ship any playable demo, test, patch, or gameplay containing breaking bugs.** Even playtest tech demos must be functionally sound. (Anti-"ship rough then patch" — production polish is table-stakes accessibility, locked 2026-05-10.)
+- **We will NEVER frame cast representation as a political statement or include preachy / identity-speech / "issue-game" framing.** Representation is normalized as ambient world reality — LGBTQ+ and disability presence in Sterling is treated as fact-of-the-world, not as message. (Cast Representation Principle anti-clause, locked 2026-05-10 per SCOPE row 13.)
 
 **Mechanics this pillar justifies** (REQ-IDs from `.planning/REQUIREMENTS.md`):
 

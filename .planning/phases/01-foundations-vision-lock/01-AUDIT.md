@@ -2,7 +2,7 @@
 phase: 01-foundations-vision-lock
 audit_date: 2026-05-11
 audit_purpose: Pre-Greenlight (plan 01-08) gap check against ROADMAP.md Phase 1 success criteria
-audit_outcome: 26/28 complete; 2 pending calendar/external gates; 1 minor cross-reference gap surfaced
+audit_outcome: 26/28 complete; 2 pending calendar/external gates; 1 minor cross-reference gap surfaced + resolved same-day
 ---
 
 # Phase 1 Audit — Pre-Greenlight Gap Check
@@ -143,17 +143,11 @@ Verified that 2026-05-10/11 architectural commitments (SCOPE rows 6-17) are refl
 
 ### Gap 3 (MINOR cross-reference): Cast Representation Principle not surfaced in 02-pillars-of-play.md
 
-**Status:** The Cast Representation Principle (SCOPE row 13, locked 2026-05-10) is documented in 09-slice-scenario-sketch.md, 12-world-bible-v0.1.md, and 14-style-guide-v0.1.md. Daniel's framing during the lock was "accessibility also means representation" — explicitly Pillar 3-coded. But Pillar 3 in 02-pillars-of-play.md does NOT currently surface the Cast Representation Principle as a Pillar 3 design implication or anti-clause.
+**RESOLVED 2026-05-11.** Option (c) applied: both design implication + anti-clause additions to Pillar 3 in `02-pillars-of-play.md`. The principle is now cross-referenced in 4 deliverables (02-pillars / 09-slice-scenario / 12-world-bible / 14-style-guide) + SCOPE row 13.
 
-**Severity:** MINOR. The principle is documented in the right downstream deliverables. The pillar doc doesn't reference it, but this is cross-reference completeness, not architectural omission.
+**Original status (pre-fix):** Documented in 3 downstream deliverables; missing from the Pillar 3 doc itself. Daniel's framing during the lock was "accessibility also means representation" — explicitly Pillar 3-coded.
 
-**Resolution options:**
-- **(a) Add to Pillar 3 design implications** — 1 line addition: "Cast representation: normalized LGBTQ+ + disability representation across cast; accessibility includes representation per locked Cast Representation Principle (SCOPE row 13)." Takes ~5 min.
-- **(b) Add to Pillar 3 anti-clauses** — 1 anti-clause: "We will NEVER frame cast representation as a political statement or include preachy/identity-speech framing — representation is normalized as ambient world reality." Takes ~5 min.
-- **(c) Both (a) and (b)** — fullest cross-reference; ~10 min total.
-- **(d) Accept the cross-reference gap** — principle is documented in 3 other deliverables; this is not blocking.
-
-**Recommendation:** Option (c) — light low-cost fix that closes the cross-reference loop. Pairs naturally with the Pillar 3 polish-as-accessibility expansion already in the doc.
+**Applied resolution:** Option (c) — design implication added describing normalized representation as accessibility; anti-clause added against political/preachy/identity-speech framing.
 
 ### Gap 4 (none — clean): REQUIREMENTS.md amendments
 
