@@ -204,8 +204,8 @@ anti_bias_discipline:
 ## Published survey
 
 **Form published:** 2026-05-11
-**Share link (current):** https://forms.gle/hnem8T62us8qn6qd7
-**Share link (previous, superseded 2026-05-11):** https://forms.gle/r8qv4qAceqdW9XjW7 — URL changed during the day; treat the current link as canonical
+**Share link (current canonical):** https://forms.gle/hnem8T62us8qn6qd7
+**Share link (alternate, still active):** https://forms.gle/r8qv4qAceqdW9XjW7 — Daniel confirmed 2026-05-11 both URLs route to the SAME Forms response sheet; no phantom-form risk. Original Twitter post (22h) uses the alternate URL and remains live.
 **Form builder:** `mktg-06-survey-form.gs` (Apps Script, run by Daniel under his Google account)
 **Source spec:** this file (`mktg-06-survey-questions.md`) — questions transcribed verbatim by Apps Script
 
@@ -219,7 +219,9 @@ anti_bias_discipline:
 | Twitter | POSTED 2026-05-11 | 2026-05-11 | Passive tag-based distribution via Daniel's account. No mod approval required. |
 | r/CozyGamers | POSTED 2026-05-11 | 2026-05-11 | Subreddit-direct post (mod approval flow per subreddit rules). |
 | **BitCraft in-game region chat** (emergent) | POSTED 2026-05-11 | 2026-05-11 | **Highest-yield channel observed so far (per Daniel report at 20 responses).** Daniel is moderately well known in the BitCraft community — the community-presence-first principle (memorized directive 2026-05-11) is empirically validated as a yield driver. Sample-composition caveat for MARKET-EVIDENCE.md methodology: BitCraft players are by definition multiplayer-tolerant cozy/sandbox players (MMO life-sim), which may skew Q4 required-multiplayer responses and Q5 positive-attractor patterns. Worth noting in verdict methodology transparency. |
-| r/AskGamers | POSTED 2026-05-11 | 2026-05-11 | Post URL: https://www.reddit.com/r/AskGamers/comments/1taop47/need_input_from_cozy_gamers/ Title self-selects ("Need input from cozy gamers"). AskGamers is broader-gaming subreddit; self-selection handles audience mismatch (similar dynamic to Facebook indie devs group). |
+| r/AskGamers | POSTED 2026-05-11 | 2026-05-11 | Post URL: https://www.reddit.com/r/AskGamers/comments/1taop47/need_input_from_cozy_gamers/ Title self-selects ("Need input from cozy gamers"). AskGamers is broader-gaming subreddit; self-selection handles audience mismatch (similar dynamic to Facebook indie devs group). **Methodology caveat:** body uses "validating my thesis and game pillars" framing — mild Pitfall 4 anti-bias concern (signals hypothesis-testing to respondents). Disclose in MARKET-EVIDENCE.md respondent-composition section. |
+| Twitter meme repost (Bernie "I am once again asking for your survey responses") | POSTED 2026-05-11 | 2026-05-11 | Quote-tweets original 22h-old post. Meme leverages Daniel's existing Twitter presence; recognizable share-friendly format. No anti-bias issue (image doesn't hint at thesis). |
+| Discord status | POSTED 2026-05-11 | 2026-05-11 | Passive ambient distribution via Daniel's Discord profile status ("Please fill this out!!" + survey URL). Leverages Daniel's existing Discord presence (community-presence-first principle). Low-friction, high-conversion for anyone who looks at the profile. |
 | Wholesome Games subreddit/Discord | HOLDING (deliberate) | n/a | Daniel hold rationale: not yet a regular in the community; dropping a survey link cold would read as drive-by extraction. Will pursue only after Daniel has community presence OR via mod DM with project context. |
 | Cozy Discord servers (~2-3) | TBD | — | Wholesome Games Discord + r/CozyGamers Discord + 1 from Disboard search. Hold pattern same as Wholesome subreddit if not already a community member. |
 | Bluesky/Mastodon cozy gaming tags | TBD | — | Passive tag distribution; no mod approval. Use #cozygames #cozygaming #indiegamedev #wholesomegames. |
