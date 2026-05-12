@@ -1,5 +1,15 @@
 # Colisi
 
+> # 📋 PLAYER RESEARCH SURVEY — TAKE 5 MINUTES TO HELP SHAPE THIS GAME
+>
+> ## **→ [TAKE THE SURVEY](https://forms.gle/hnem8T62us8qn6qd7) ←**
+>
+> If you play cozy games or life sims, your input would mean a lot. The survey is anonymous, takes ~5–10 minutes, and helps validate (or correct) the player-research thesis this game is being designed around. **No game pitch — just questions about what you like and what makes you bounce off cozy games.**
+>
+> Survey link: https://forms.gle/hnem8T62us8qn6qd7
+
+---
+
 > Pronounced *COH-LIE-SIGH* (/koʊˈlaɪsaɪ/), an initialism of **CO**zy **LI**fe **SI**m.
 
 A 3D narrative-driven cozy life sim, currently in early development. Built solo. Multi-year horizon.

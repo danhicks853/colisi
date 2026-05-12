@@ -204,7 +204,8 @@ anti_bias_discipline:
 ## Published survey
 
 **Form published:** 2026-05-11
-**Share link:** https://forms.gle/r8qv4qAceqdW9XjW7
+**Share link (current):** https://forms.gle/hnem8T62us8qn6qd7
+**Share link (previous, superseded 2026-05-11):** https://forms.gle/r8qv4qAceqdW9XjW7 — URL changed during the day; treat the current link as canonical
 **Form builder:** `mktg-06-survey-form.gs` (Apps Script, run by Daniel under his Google account)
 **Source spec:** this file (`mktg-06-survey-questions.md`) — questions transcribed verbatim by Apps Script
 
