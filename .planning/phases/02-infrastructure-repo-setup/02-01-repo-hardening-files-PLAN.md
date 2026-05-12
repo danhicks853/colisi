@@ -9,6 +9,7 @@ files_modified:
   - .gitattributes
   - .editorconfig
   - LICENSE
+  - .planning/research/STACK.md
 autonomous: true
 requirements:
   - INFRA-01
@@ -109,7 +110,7 @@ Output: Four files at repo root: `.gitignore`, `.gitattributes`, `.editorconfig`
     *.exe
     *.pck
     *.dmg
-    *.zip
+    /builds/*.zip
 
     # Secrets
     .env
@@ -121,6 +122,9 @@ Output: Four files at repo root: `.gitignore`, `.gitattributes`, `.editorconfig`
     ```
 
     Rationale: `.local/` added at bottom to support D-INFRA-priv-2 future-reversibility option (PERSONA.md can be moved to `.local/` if Daniel/Dawn ever want it private). Per D-INFRA-priv-1 it stays public for now; `.local/` ignored as preventive measure for future personal data.
+
+    **Zip-scope reconciliation (per checker Issue 3):** `.gitignore` uses `/builds/*.zip` (NOT the unscoped `*.zip`) so that the `.gitattributes` LFS rule for `*.zip` (Task 2) can still catch asset-pack archives committed under `res://assets/` or `.planning/research/`. The original STACK.md `.gitignore` block uses unscoped `*.zip`; this plan intentionally narrows that scope to avoid the contradiction with the LFS rule. Build-artifact zips (under `/builds/`) remain ignored.
+
 
     Note: `.vscode/` IS in .gitignore per STACK.md. If Daniel later wants shared VS Code settings (per criterion 7 optional), revisit with explicit exception lines (e.g., `!.vscode/extensions.json`). Phase 2 default: ignored.
 
@@ -136,6 +140,7 @@ Output: Four files at repo root: `.gitignore`, `.gitattributes`, `.editorconfig`
     - `.gitignore` contains `butler-key.txt` on its own line (project-specific secret extension)
     - `.gitignore` contains `.local/` on its own line (D-INFRA-priv-2 reversibility hook)
     - `.gitignore` contains `*.pck` on its own line (Godot pack export artifact)
+    - `.gitignore` contains `/builds/*.zip` on its own line (scoped per checker Issue 3 reconciliation; unscoped `*.zip` would block the .gitattributes LFS rule for asset-pack zips)
     - `.gitignore` line count is ≥ 20 (matches STACK.md spec plus additions; sanity check)
     - File uses LF line endings, not CRLF (cross-platform per D-INFRA discretion)
   </acceptance_criteria>
@@ -248,6 +253,19 @@ Output: Four files at repo root: `.gitignore`, `.gitattributes`, `.editorconfig`
     - SVG intentionally excluded from LFS (text/XML; diffs cleanly) per inline comment.
 
     Use Write tool.
+
+    **STACK.md amendment (per checker Issue 4):** STACK.md line ~334 currently lists `*.svg filter=lfs diff=lfs merge=lfs -text` in the canonical .gitattributes block. This plan intentionally overrides that. To prevent silent divergence between doc and reality (CLAUDE.md: "fix the document or fix the reality, but do not let them diverge silently"), amend STACK.md inline as part of this task:
+
+    1. Read `.planning/research/STACK.md` and locate the line `*.svg filter=lfs diff=lfs merge=lfs -text` (currently line ~334 in the .gitattributes block under section "Version Control + Git LFS Strategy").
+    2. Replace that line with:
+       ```
+       # *.svg INTENTIONALLY NOT LFS-tracked - SVG is text/XML and diffs cleanly.
+       # Per Phase 2 plan 02-01 + checker Issue 4 reconciliation 2026-05-11.
+       # If a specific large SVG should be LFS-tracked, add explicit per-file .gitattributes override.
+       ```
+    3. Use Edit-tool-style targeted replacement (read STACK.md, replace just that line, write back).
+
+    This brings STACK.md and Phase 2 .gitattributes into agreement without requiring a new D-INFRA-* decision (rationale is mechanical/technical, not architectural - SVG is genuinely text/XML).
   </action>
   <verify>
     <automated>cd D:\Projects\game; $a = Get-Content .gitattributes -Raw; ($a -match '\*\.png filter=lfs') -and ($a -match '\*\.glb filter=lfs') -and ($a -match '\*\.blend filter=lfs') -and ($a -match '\*\.ogg filter=lfs') -and ($a -match '\*\.ttf filter=lfs') -and ($a -match '\*\.res filter=lfs') -and ($a -match 'eol=lf')</automated>

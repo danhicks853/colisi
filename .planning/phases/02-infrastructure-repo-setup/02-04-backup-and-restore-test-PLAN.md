@@ -367,7 +367,7 @@ Note: this plan was originally targeted for Wave 2 but must run after plan 02-03
     Daniel review steps:
     1. Confirm test path `D:\TestRestore\colisi-2026-05-11\` is acceptable (or specify alternative).
     2. Confirm Google Drive desktop client is installed and configured to sync `D:\Projects\game` (if not, sub-blocker - proceed with tiers 1+3 testing only and document Drive-client gap as slice-debt).
-    3. Approve restore-test execution by typing "approved" (Claude executes Steps 1-5 above).
+    3. Approve restore-test execution by typing "approved" (Claude executes Steps 1-5 above) OR "approved with path: <alt>" (Claude uses alt path instead of default `D:\TestRestore\colisi-2026-05-11\`) OR "skip and document gap" (Claude logs to slice-debt.md as Phase 2 carry-forward; plan completes with carry-forward annotation).
     4. After execution, verify the resulting `restore-test-log.md`:
        - Open `D:\Projects\game\.planning\phases\02-infrastructure-repo-setup\verification\restore-test-log.md`
        - Confirm sections Test Date / Test Path / Procedure Followed / Outcomes / Anomalies all populated.
@@ -395,7 +395,18 @@ Note: this plan was originally targeted for Wave 2 but must run after plan 02-03
     - At least 1 new commit in `git log` matching message pattern `test(infra)` with both BACKUP.md and restore-test-log.md staged together
     - `git push origin main` succeeded after the commit (`git status -uno` shows "Your branch is up to date with 'origin/main'")
   </acceptance_criteria>
-  <resume-signal>Type "approved" to authorize Claude to execute the restore test on `D:\TestRestore\colisi-2026-05-11\`, OR "approved with path: <alternative-path>" to specify a different test path, OR "skip and document gap" to defer the test and log it as a Phase 2 carry-forward.</resume-signal>
+  <resume-signal>Two-stage resume signal (phrasings standardized with how-to-verify section per checker Issue 5):
+
+**Stage 1 - Authorize test execution.** Type ONE of:
+- "approved" - authorize Claude to execute the restore test on `D:\TestRestore\colisi-2026-05-11\`
+- "approved with path: <alternative-path>" - specify a different test path
+- "skip and document gap" - defer the test and log it as a Phase 2 carry-forward (plan completes with carry-forward annotation)
+
+**Stage 2 - After Claude executes Steps 1-5 and writes restore-test-log.md, approve commit.** Type ONE of (matching how-to-verify section "Approve commit by responding with"):
+- "log committed" - Claude commits BACKUP.md + restore-test-log.md and pushes; plan done.
+- "fix <issue>" - describe; Claude addresses and re-tests.
+- "drive client not installed; gap acknowledged" - gap logged to slice-debt.md; plan completes with carry-forward annotation.
+</resume-signal>
   <done>Restore test executed on different folder path; 3 integrity checks logged as PASS (or PASS-with-caveat); SHA256-confirmed bit-identical lfs-test.png recovery; restore-test-log.md captures all evidence; BACKUP.md + log committed and pushed; any Drive-client gap logged to slice-debt.md.</done>
 </task>
 

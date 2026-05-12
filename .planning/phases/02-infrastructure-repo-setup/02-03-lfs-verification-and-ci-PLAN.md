@@ -609,7 +609,8 @@ If LFS push hit a quota error, log it to VERIFICATION-LOG.md "Anomalies / Surpri
 <success_criteria>
 - INFRA-01 satisfied with verifiable evidence: PNG committed → `git lfs ls-files` lists it → `git show HEAD:<path>` shows LFS pointer text → push to GitHub succeeded
 - INFRA-02 satisfied with verifiable evidence: `.godot/` test dir created → `git status` does not list it → `git check-ignore -v` exits 0 → committed history has no `.godot/` paths
-- INFRA-09 satisfied: workflow file exists, has Godot 4.5.2 pin, detects-and-skips when no project.godot, runs headless import + error-line-scan + log-artifact when project lands, workflows/README.md documents the scaffold pattern
+- **INFRA-09 satisfaction floor (per checker Issue 6) is STRUCTURAL-ONLY verification:** YAML syntax valid + workflow file exists + workflow YAML detection logic verified by inspection + commit lands on main. **Actual runtime triggering of the CI on GitHub is OPTIONAL for Phase 2 closure.** If `gh` is unavailable or the run fails for environmental reasons (not a logic bug), log the issue in VERIFICATION-LOG.md but do NOT block plan closure. End-to-end runtime CI verification is deferred to Phase 3 first push that has a real `project.godot` to import-check (which is when the workflow no-op short-circuit deactivates). The success criterion phrasing in CONTEXT.md ("Minimal CI is configured") is satisfied by the scaffold per locked plan-discretion.
+- INFRA-09 structural checklist: workflow file exists, has Godot 4.5.2 pin, detects-and-skips when no project.godot, runs headless import + error-line-scan + log-artifact when project lands, workflows/README.md documents the scaffold pattern.
 - VERIFICATION-LOG.md captures evidence for both verifications with PASS outcomes
 - All work committed in 4 atomic commits pushed to origin/main
 - Phase 3 can confidently rely on LFS routing + .gitignore semantics + CI scaffold; no Phase 2 surprises remain

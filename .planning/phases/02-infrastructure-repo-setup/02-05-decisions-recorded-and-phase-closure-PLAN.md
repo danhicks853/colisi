@@ -2,7 +2,7 @@
 phase: 02-infrastructure-repo-setup
 plan: 05
 type: execute
-wave: 3
+wave: 4
 depends_on:
   - 02-infrastructure-repo-setup/01
   - 02-infrastructure-repo-setup/02
@@ -186,7 +186,7 @@ All artifacts must exist before this plan runs. Verify via the read_first step o
     - REQUIREMENTS.md INFRA-11 line contains `(COMPLETE` and `plan 02-05`
     - REQUIREMENTS.md Traceability table has INFRA-01 through INFRA-11 marked as "Complete"
     - REQUIREMENTS.md `[ ]` for INFRA-01 through INFRA-11 have all been flipped to `[x]` (mark them complete in the v1 Requirements list per the existing checkbox pattern used by HEALTH-01 and HEALTH-02)
-    - REQUIREMENTS.md Coverage summary "Complete: 13" (was 3) — count via `(Select-String -Path .planning/REQUIREMENTS.md -Pattern '^- \[x\]').Count` should return ≥ 13 (currently 3 + Phase 2 adding 10 = 13)
+    - REQUIREMENTS.md Coverage summary "Complete: 13" (was "Complete: 3" reflecting logically-complete count; actual `[x]` markers currently = 2 because INFRA-03 is logically DONE but still has `[ ]` — Task 1 flips INFRA-03 + 10 new Phase 2 INFRA = 11 flips, taking actual `[x]` count from 2 to 13) — count via `(Select-String -Path .planning/REQUIREMENTS.md -Pattern '^- \[x\]').Count` should return >= 13 (math per Section 5 block: 3 logically-complete-pre-Phase-2 [INFRA-03 + HEALTH-01 + HEALTH-02] + 10 new Phase 2 INFRA = 13)
   </acceptance_criteria>
   <done>PROJECT.md Key Decisions section contains 2 new rows recording D-INFRA-art-1 + D-INFRA-priv-1 per ROADMAP.md criteria 8+11. REQUIREMENTS.md INFRA-01..11 all annotated with Phase 2 completion + plan cross-references; Traceability table updated; checkbox state flipped to `[x]`; Coverage summary count updated from 3 to 13.</done>
 </task>
@@ -226,9 +226,9 @@ All artifacts must exist before this plan runs. Verify via the read_first step o
       total_phases: 12
       completed_phases: 1   # was 0; Phase 1 substantially complete (Greenlight gates closure but for plan-phase purposes, Phase 1 + Phase 2 are the substance)
       total_plans: 14       # was 9 (Phase 1: 9 plans); add 5 Phase 2 plans
-      completed_plans: 12   # was 8 (Phase 1: 7 complete + 1 partial); add 4 Phase 2 plans (02-01..02-04); this plan (02-05) makes 5 but counts after it finishes
+      completed_plans: 13   # post-this-plan: Phase 1 = 8 (plans 01-00..01-07; 7 complete + 01-07 partial counts as 1) + Phase 2 = 5 (plans 02-01..02-05) = 13 total. Per checker Issue 2: ambiguous "12" reference removed; "13" is the single canonical post-completion value.
     ```
-    Note: Adjust completed_plans count when this plan finishes; runtime adjustment is `completed_plans: 13` after 02-05 commits. State `13` to reflect post-plan state.
+    **Math (explicit per checker Issue 2):** Phase 1 contributes 8 (plans 01-00..01-07) + Phase 2 contributes 5 (plans 02-01..02-05) = 13 total completed_plans. State `13` to reflect post-this-plan-completion state. Because this plan IS 02-05, the count of 13 is correct only after this plan commits; write `13` at edit time on the assumption the file will be committed atomically with the value. The ambiguous "12" reference in the prior draft has been removed.
 
     Section 2 — "Last updated" line at top of body:
     Change from `**Last updated:** 2026-05-09 ...` (or current value) to: `**Last updated:** 2026-05-11 (after Phase 2 infrastructure lock — plans 02-01 through 02-05 complete; INFRA-01..11 all satisfied; Phase 3 ready to plan)`.
@@ -256,7 +256,15 @@ All artifacts must exist before this plan runs. Verify via the read_first step o
     (Progress bar character counts are approximate; match existing STATE.md style.)
 
     Section 5 — Requirements counter line:
-    Update from `3/96 mapped requirements satisfied` (current value approximate) to: `13/105 mapped requirements satisfied + 1 ritual progressing` (3 prior complete + 10 new INFRA from Phase 2 = 13 of 105 — note REQUIREMENTS.md total was corrected from 96 to 105 in Phase 1 amendment batch 2026-05-11). Complete list: INFRA-01..11 + HEALTH-01 + HEALTH-02. Ritual-progressing: HEALTH-05.
+    Update from `3/96 mapped requirements satisfied` (or whatever the current STATE.md shows) to: `13/105 mapped requirements satisfied + 1 ritual progressing`.
+
+    **Math (explicit per checker Issue 2):** Pre-Phase-2 logical-complete count = 3 (INFRA-03 DONE 2026-05-09 + HEALTH-01 + HEALTH-02). Note: INFRA-03 currently has `- [ ]` checkbox in REQUIREMENTS.md despite being DONE; Task 1 of this plan flips that checkbox to `[x]`. Phase 2 adds 10 new complete (INFRA-01, 02, 04, 05, 06, 07, 08, 09, 10, 11). 3 + 10 = 13.
+
+    **REQUIREMENTS.md total = 105** (confirmed per commit 7d5cefa on 2026-05-11 - Phase 1->2 transition amendment batch added POLISH-01..04 and corrected the pre-existing 96->105 count discrepancy). Verify at edit time: count of `- [ ]` plus count of `- [x]` lines in REQUIREMENTS.md should equal 105. Current snapshot: 103 pending + 2 complete = 105. After this plan checkbox flips: 92 pending + 13 complete = 105.
+
+    Coverage summary at the bottom of REQUIREMENTS.md (currently shows "Complete: 3" at line ~355) must be updated to "Complete: 13" - Task 1 of this plan already handles that update in REQUIREMENTS.md, so STATE.md just reflects the same number.
+
+    Original (pre-fix) phrasing was: "(3 prior complete + 10 new INFRA from Phase 2 = 13 of 105 — note REQUIREMENTS.md total was corrected from 96 to 105 in Phase 1 amendment batch 2026-05-11). Complete list: INFRA-01..11 + HEALTH-01 + HEALTH-02. Ritual-progressing: HEALTH-05."
 
     Section 6 — "Active todos" block:
     - Add: `- [x] Plan 02-01 (Repo hardening files): .gitignore + .gitattributes + .editorconfig + LICENSE — COMPLETE 2026-05-11`
@@ -394,6 +402,33 @@ All artifacts must exist before this plan runs. Verify via the read_first step o
     ```
 
     Run the script. Capture the output. If ALL PASS, Phase 2 is closed. If any FAIL, surface the gap and do NOT mark Phase 2 closed — the failing criterion gets a new task or carry-forward.
+
+    **Step C2: Cross-file invariant re-verification (per checker Issue 8)**
+
+    After all edits land, re-grep to confirm numeric invariants hold across files:
+    ```powershell
+    cd D:\Projects\game
+
+    # Invariant 1: REQUIREMENTS.md [x] count equals Coverage summary "Complete: N"
+    $xCount = (Select-String -Path .planning/REQUIREMENTS.md -Pattern '^- \[x\]').Count
+    $coverageLine = (Select-String -Path .planning/REQUIREMENTS.md -Pattern 'Complete:').Line
+    Write-Host "Invariant 1: [x] count = $xCount; coverage line = $coverageLine"
+    # Expect $xCount = 13 AND coverage line contains "13"
+
+    # Invariant 2: STATE.md completed_plans matches Phase 2 plan reality (13)
+    $stateCompletedPlans = (Select-String -Path .planning/STATE.md -Pattern 'completed_plans: \d+').Matches[0].Value
+    Write-Host "Invariant 2: STATE.md $stateCompletedPlans"
+    # Expect "completed_plans: 13"
+
+    # Invariant 3: STATE.md requirement counter line matches REQUIREMENTS.md total
+    $reqTotal = ((Select-String -Path .planning/REQUIREMENTS.md -Pattern '^- \[ \]').Count + $xCount)
+    $stateReqLine = (Select-String -Path .planning/STATE.md -Pattern '\d+/\d+ mapped requirements').Line
+    Write-Host "Invariant 3: req total = $reqTotal; STATE line = $stateReqLine"
+    # Expect $reqTotal = 105 AND STATE line contains "13/105"
+
+    # If any invariant fails, fix BEFORE Step B commit. After fix, re-run Steps B + C + C2.
+    ```
+
 
     **Step D: Append the verification output to plan 02-05 SUMMARY draft notes**
 
