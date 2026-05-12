@@ -166,7 +166,7 @@ The metric is honest because:
 
 | Item | Status | Target |
 |---|---|---|
-| **Standardized LLM skeptical-prompt template** | DEFERRED to Phase 2 start | Claude-authored at Phase 2 kickoff per Daniel directive 2026-05-10; committable + transparent + published in devlog |
+| **Standardized LLM skeptical-prompt template** | ~~DEFERRED to Phase 2 start~~ **DRAFTED 2026-05-11** at `.planning/tripwire-review-prompt.md` (v1.0; Claude-authored per AI policy enforcement delegation). Daniel review + sign pending. MKTG-02 devlog publication still scheduled for Phase 2 start. | v1.0 committed 2026-05-11; published before m6 tripwire window opens |
 | **Public commitment of Year-3-Wall criteria** | DEFERRED to Phase 2 / MKTG-02 devlog launch (~m3) | Post this entire doc publicly when devlog goes live |
 | **First LLM tripwire review** | Scheduled for m6 checkpoint | Run standardized prompt + log to playtest-log per protocol |
 | **Pre-checkpoint community posts** | Scheduled for ~2-4 weeks before each tripwire (m6 / m12 / m24 / m36) | Devlog + Reddit + Discord engagement per channel list above |
