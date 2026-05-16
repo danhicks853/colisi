@@ -8,6 +8,26 @@
 
 ---
 
+## 2026-05-16 — Tier 2 Drive carry-forward CLOSED
+
+**Event Date:** 2026-05-16 (same day as initial restore test; carry-forward closed ahead of 2026-05-30 deadline)
+**Closure:** Daniel completed the GUI-gated steps that the prior 2026-05-16 initial-restore-test entry deferred:
+
+- Google Drive desktop client installed via `winget install Google.GoogleDrive` (orchestrator side-task during Phase 2 execution; ~240 MB downloaded; install successful)
+- Daniel completed OAuth sign-in (browser flow)
+- Daniel selected **Mirror files** sync mode (not Stream; per BACKUP.md / D-INFRA-bkp-1 Tier 2 intent)
+- Daniel added `D:\Projects\game` to Drive's mirror-folder list via the desktop client's Preferences → Google Drive → My Computer → Add folder workflow
+
+**Daniel confirmation (verbatim):** "ok drive set up and has the game folder configured."
+
+**Tier 2 verification:** Drive sync now actively mirroring `D:\Projects\game` to Google Drive cloud. The Section 3.5 catch-up scenario (recover uncommitted local change from Drive after working-machine loss) is now **architecturally exercisable** — actual scenario test deferred to next quarterly retest (2026-08-11) per existing cadence; no need to spin a fresh test now since procedure parity with the locked BACKUP.md Section 3.5 wording is sufficient.
+
+**Carry-forward STATUS:** **CLOSED ahead of schedule** (closed 2026-05-16; was scheduled for 2026-05-30; saved 14 days of carry-forward tracking).
+
+**Slice-debt:** Not promoted. Carry-forward resolved within its window.
+
+---
+
 ## 2026-05-16 — Initial restore test (Phase 2 plan 02-04)
 
 **Test Date:** 2026-05-16 (started 19:05:41Z, finished 19:05:44Z UTC; ~3 sec wall-clock for clone + LFS pull combined)
