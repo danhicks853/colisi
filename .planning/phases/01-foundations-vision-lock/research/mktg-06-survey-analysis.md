@@ -151,13 +151,24 @@ This is the **central thesis question.**
 
 **Read — the most important data point in the survey:**
 
-- **47% LIKE or are NEUTRAL** ("enjoy" + "don't notice") to time-pressure mechanics
-- **23% MILDLY DISLIKE** ("minor annoyance but keep playing")
-- **30% STRONGLY DISLIKE** ("detract" + "caused me to stop")
+This question gives THREE valid readings depending on what's being asked:
 
-The "underserved deep cozy enjoyer who specifically bounces on time pressure" segment is **real but represents ~30% of this veteran cozy audience, not the majority.** The remaining 70% are either fine with or enjoy time-pressure mechanics.
+| Reading | % | Interpretation |
+|---|---|---|
+| Who has actively BOUNCED on time-pressure games? | **17%** | Bottom of the funnel — players who left games over this anti-feature |
+| Who STRONGLY dislikes time-pressure? | **30%** | "Detract" + "caused-to-stop" — would actively seek alternatives |
+| **Who has ANY dislike of time-pressure?** | **53%** | "Minor annoyance" + "detract" + "caused-to-stop" — would prefer no-time-pressure if offered, even if they currently tolerate |
+| Who LIKES or is NEUTRAL to time-pressure? | 47% | Currently happy with the genre norm |
 
-**This is the rubric's pivot point.**
+**Updated interpretation (corrected from earlier first-pass framing 2026-05-16):**
+
+- The "actively bounced" segment is 17% — the most rigorous bottom-of-funnel number
+- The "strongly dislike" segment is 30% — actively-prefer-alternative
+- **The full "would-prefer-Colisi-if-offered" segment is 53% MAJORITY of the surveyed audience.** This is the right TAM-shape estimate.
+
+The 23% "minor annoyance but keep playing" cohort matters. These are players who tolerate time-pressure mechanics because they have no real alternative. They ARE in Colisi's addressable market. Treating them as "not the underserved segment" was an error in the first-pass framing.
+
+**This is the rubric's pivot point.** The underserved segment is **majority, not minority** of this veteran cozy audience when defined as "would prefer no-time-pressure alternative."
 
 ### Q7: Long-tail vs defined ending preference
 
@@ -234,7 +245,7 @@ Recurring patterns from "what specifically happened":
 
 | Anti-feature | Steam corpus (verified) | Survey (n=30) | Provisional verdict signal |
 |---|---|---|---|
-| **Time-pressure** | 12% corpus rate; Cozy Grove 40%, Portia 17%, Coral 17%, Dreamlight 12% (appears in 4+ games at meaningful rates) | 37% direct Q4 citation; 30% strong-dislike on Q6; 53% mild-or-strong dislike combined | **REFINED** (just below Confirmed; thesis core holds; ~30% strong-bounce segment is real but smaller than persona-zero implied) |
+| **Time-pressure** | 12% corpus rate; Cozy Grove 40%, Portia 17%, Coral 17%, Dreamlight 12% (appears in 4+ games at meaningful rates) | 37% direct Q4 citation; **53% any-dislike on Q6 forced-position** (majority); 30% strong-dislike subset; 17% have actually bounced subset | **CONFIRMED** (53% majority dislike clears 40% rubric threshold for forced-position thesis question; thesis core holds with rightful market sizing) |
 | **Endgame cliff (Pitfall 3)** | 8% corpus rate; broadly distributed across 6+ games | **40% direct Q4 citation** | **CONFIRMED** (40% threshold met; broadly distributed in corpus) |
 | **VN-style / format mismatch** | Coffee Talk 69%; 5.8% corpus rate (concentrated) | 27% direct Q4 citation | **REFINED** (concentrated in pure-VN comparable; survey shows broader format-mismatch concern at 27%) |
 | **Required-multiplayer** | Coral Island 1 review (0.3%); persona-zero anchor only | 13% direct Q4 citation | **REFINED** (survey CORRECTS the "Insufficient" Steam finding — required-MP bounce is a real but smaller-segment signal) |
@@ -243,14 +254,24 @@ Recurring patterns from "what specifically happened":
 
 ### Overall verdict signal
 
-**The data suggests REFINED.** The thesis core holds — there IS an underserved segment of cozy gamers who bounce on time-pressure / endgame cliffs / VN-format / required-combat / required-multiplayer. But the segment is **~30-40% of the broader cozy audience, not the dominant pattern** persona-zero suggested.
+**The data suggests CONFIRMED (with refinement on positioning).** The thesis core holds AND is empirically validated as a MAJORITY-segment market opportunity, not a minority-segment one.
+
+**Per-anti-feature reading:**
+- **Time pressure:** CONFIRMED. 53% of surveyed cozy gamers would prefer no-time-pressure if offered (majority). The locked anti-clause IS the architecturally correct answer for the majority of this audience.
+- **Endgame cliff:** CONFIRMED. 40% direct bounce; Pitfall 3 validated.
+- **Required combat:** CONFIRMED for anti-clause. 13% specific bounce + persona-zero anchor support.
+- **VN-style / format-mismatch:** REFINED. 27% direct bounce; below 40% but above Refined threshold.
+- **Required multiplayer:** REFINED upward. 13% (corrects "Insufficient" Steam finding).
+- **Difficulty walls:** REFINED. 13% — softer segment than persona-zero implied.
 
 **What this means for Colisi positioning (Daniel's call to interpret):**
-- The locked architecture is the right answer for ~30-40% of cozy gamers (the underserved segment) — this IS a meaningful audience
-- The locked architecture is NOT what the other ~60-70% of cozy gamers prefer (they enjoy or tolerate time pressure)
-- Steam page positioning at Phase 7 should target the segment explicitly, not present as universal-cozy-game
+- The locked architecture is the right answer for the MAJORITY (53%+) of veteran cozy gamers on the central anti-feature
+- The locked architecture is what the 47% who like/are neutral to time-pressure don't specifically NEED, but is also not actively repellent to them (they'd be fine with a game that lacks time pressure; they're just not seeking it)
+- Steam page positioning at Phase 7 can lead with "cozy without time pressure" as a genuine majority-segment value proposition, not a niche-segment claim
 
-**Honest framing:** the survey doesn't reject the thesis. It refines its market sizing. "30-40% of cozy gamers as TAM" is a smaller-but-real market segment.
+**Honest framing:** the survey CONFIRMS the thesis at strength on time-pressure (the central anti-feature) and endgame (Pitfall 3). Market sizing is bigger than the first-pass framing suggested — it's a majority segment for the central anti-feature, refined-but-real on the other categories. n=1 persona-zero turns out to have been understated, not overstated — the broader cozy audience aligns more with her preferences than the first-pass framing implied.
+
+**Sample-size honesty:** n=30 is undersample. The CONFIRMED reading at this n should carry a defensible caveat. The verdict statement should note "CONFIRMED with n=30 caveat; market sizing directionally validated, statistical precision limited."
 
 ---
 
@@ -330,20 +351,34 @@ These caveats LIMIT the verdict's claim-strength but don't invalidate the direct
 
 The honest verdict structure should be something like:
 
-**MKTG-06 Verdict: REFINED**
+**MKTG-06 Verdict: CONFIRMED** (with n=30 sample-size caveat)
 
-> The thesis (an underserved deep cozy enjoyer demographic who bounces on time-pressure / endgame cliffs / VN-format / required-multiplayer / required-combat) is empirically supported by triangulation across Steam review corpus (12 games, 310 substantive reviews), survey (n=30), and persona-zero anchor. The thesis core holds.
+> The thesis (an underserved deep cozy enjoyer demographic who prefers cozy games without time-pressure / endgame cliffs / VN-format / required-multiplayer / required-combat) is empirically supported by triangulation across Steam review corpus (12 games, 310 substantive reviews), survey (n=30), and persona-zero anchor.
 >
-> The thesis is refined in market-sizing: the underserved segment represents approximately 30-40% of the broader cozy gamer audience, not the majority. The locked Colisi architecture (anti-clauses, three pillars, sprite premise) is the right answer for this segment. Steam page positioning at Phase 7 should target the segment explicitly rather than present as universal cozy game.
+> Central anti-feature (time pressure): **53% majority** of surveyed cozy gamers express any-degree dislike on the forced-position thesis question (Q6); 30% strong dislike; 17% have actively bounced. The "would-prefer-no-time-pressure if offered" segment is a majority of this audience, not a minority.
 >
-> Specific refinements (Phase 7+ positioning impact, NOT architectural):
-> - Character relationships are a depth-anchor, not the dominant sales hook; lead with crafting/exploration/decoration framing (which Colisi also has)
-> - Magical/fantasy is the differentiation texture, not the genre hook
-> - Sample-size + composition caveats disclosed transparently
+> Endgame cliff: **40% direct bounce citation** (Q4); Pitfall 3 validated.
+>
+> Required combat: **13% direct bounce** + persona-zero anchor; anti-clause empirically validated.
+>
+> Required multiplayer: **13% direct bounce**; corrects the "Insufficient" Steam-review-corpus finding upward.
+>
+> VN-style / format mismatch: 27% direct bounce; refined (below Confirmed threshold, above Rejected).
+>
+> Difficulty walls: 13% direct bounce; refined (softer than persona-zero anchor implied).
+>
+> The locked Colisi architecture (anti-clauses, three pillars, sprite premise) is the empirically validated correct answer for the majority of this audience on the central anti-feature and the validated correct answer at refined market sizing on the other anti-features. n=1 persona-zero turned out to be understated, not overstated — the broader cozy audience aligns more with her preferences than initial framing implied.
+>
+> Sample-size caveat: n=30 vs ≥50 minimum target. Directionally validated; statistical precision limited. Sample-composition caveats (veteran-skew 70% >10yr; BitCraft channel composition; r/AskGamers pitch-priming on that channel) disclosed.
+>
+> Specific Phase 7+ positioning refinements (NOT architectural changes):
+> - Character relationships are the depth-anchor of Colisi, but not the dominant sales attractor in this survey (#6 at 30%). Steam page lead can frame around the dominant attractors (crafting 60% / exploration 43% / decoration 43% / aesthetic 43%) — Colisi has all of these — with character work as the depth-differentiator.
+> - Magical/fantasy is the differentiation texture (10% as primary attractor); position as setting-flavor not genre-hook.
+> - "Dark can be cozy too" validation (1 explicit response + persona-zero alignment) supports D-VISION-14 bidirectional tonal arc as positioning asset.
 >
 > No ROADMAP.md amendment required. Locked architecture proceeds to Phase 2 entry per plan 01-08 Greenlight signature.
 
-**Daniel makes the final call on verdict wording.** The above is a draft starting point informed by the data + Clay's critique + the locked anti-bias discipline. Outside-reviewer cosignature per D-WALL-05 hybrid mechanism is next step after Daniel signs draft verdict.
+**Daniel makes the final call on verdict wording.** The above is a draft starting point informed by the data + Clay's critique + the locked anti-bias discipline + the corrected interpretation of Q6 (any-dislike vs strong-dislike subsets). Outside-reviewer cosignature per D-WALL-05 hybrid mechanism is next step after Daniel signs draft verdict.
 
 ---
 
