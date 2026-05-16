@@ -1,0 +1,113 @@
+# =============================================================================
+# godot-import-check.yml — Phase 2 SCAFFOLD (active from Phase 3 onward)
+# -----------------------------------------------------------------------------
+# PURPOSE: On every push and PR to main, run `godot --headless --import` to
+# catch import errors in Godot scenes, scripts, and resources before they ship.
+#
+# STATUS (2026-05-16): SCAFFOLDED, NOT YET ACTIVE.
+# No Godot project exists at the repo root yet — Phase 3 creates project.godot.
+# Until then, the workflow short-circuits via the existence check on the
+# first step. Once Phase 3 lands project.godot, the import step runs.
+#
+# REQUIREMENT: INFRA-09 (.planning/REQUIREMENTS.md)
+# SOURCE: .planning/research/STACK.md §"Build & Distribution Pipeline"
+# ENGINE PIN: Godot 4.5.2 stable (non-mono) per DEV-ENVIRONMENT.md
+# =============================================================================
+
+name: Godot import check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # allows manual trigger from Actions tab
+
+# Limit concurrent runs per branch so rapid pushes don't queue old runs
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  import-check:
+    name: Godot --headless --import
+    runs-on: ubuntu-latest
+    # Set the engine version here. Bump on phase-boundary engine upgrades only
+    # (per PHILOSOPHY.md Amendment Process), never mid-phase.
+    env:
+      GODOT_VERSION: "4.5.2"
+      GODOT_RELEASE_NAME: "stable"
+      GODOT_ARCHIVE: "Godot_v4.5.2-stable_linux.x86_64.zip"
+      GODOT_BINARY: "Godot_v4.5.2-stable_linux.x86_64"
+
+    steps:
+      - name: Checkout repo (with LFS)
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Detect whether a Godot project exists
+        id: detect
+        run: |
+          if [ -f "project.godot" ]; then
+            echo "godot_project_exists=true" >> "$GITHUB_OUTPUT"
+            echo "Found project.godot at repo root — proceeding with import check."
+          else
+            echo "godot_project_exists=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Phase 2 scaffold::No project.godot found at repo root. Phase 3 will create it; until then this workflow is a no-op."
+          fi
+
+      - name: Cache Godot binary
+        if: steps.detect.outputs.godot_project_exists == 'true'
+        id: cache-godot
+        uses: actions/cache@v4
+        with:
+          path: ~/godot/${{ env.GODOT_BINARY }}
+          key: godot-${{ env.GODOT_VERSION }}-${{ env.GODOT_RELEASE_NAME }}-linux
+
+      - name: Install Godot
+        if: steps.detect.outputs.godot_project_exists == 'true' && steps.cache-godot.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/godot
+          cd ~/godot
+          curl -L -o godot.zip "https://github.com/godotengine/godot-builds/releases/download/${{ env.GODOT_VERSION }}-${{ env.GODOT_RELEASE_NAME }}/${{ env.GODOT_ARCHIVE }}"
+          unzip godot.zip
+          chmod +x ${{ env.GODOT_BINARY }}
+
+      - name: Cache Godot .import directory (speeds up repeat runs)
+        if: steps.detect.outputs.godot_project_exists == 'true'
+        uses: actions/cache@v4
+        with:
+          path: .godot
+          key: godot-import-${{ env.GODOT_VERSION }}-${{ hashFiles('**/*.tscn', '**/*.tres', '**/*.gd', '**/*.import') }}
+          restore-keys: |
+            godot-import-${{ env.GODOT_VERSION }}-
+
+      - name: Run headless import
+        if: steps.detect.outputs.godot_project_exists == 'true'
+        run: |
+          ~/godot/${{ env.GODOT_BINARY }} --headless --import --path . 2>&1 | tee godot-import.log
+          # --import re-exports the import metadata; exit 0 = success, non-zero = error
+          # Fail the workflow on any "ERROR:" line in the log even if exit code was 0
+          # (Godot sometimes exits 0 despite logged errors)
+          if grep -E "^ERROR:|^SCRIPT ERROR:" godot-import.log; then
+            echo "::error::Godot reported errors during import. See log above."
+            exit 1
+          fi
+
+      - name: Upload import log on failure
+        if: failure() && steps.detect.outputs.godot_project_exists == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-import-log
+          path: godot-import.log
+          retention-days: 7
+
+      - name: Phase 2 scaffold notice (no project yet)
+        if: steps.detect.outputs.godot_project_exists == 'false'
+        run: |
+          echo "Phase 2 scaffold notice: godot-import-check.yml is in place but inactive."
+          echo "Activates automatically once Phase 3 creates project.godot at the repo root."
+          echo "Engine pin: ${{ env.GODOT_VERSION }} ${{ env.GODOT_RELEASE_NAME }} (Linux build used for CI; matches Daniel's local 4.5.2 Windows pin)."
