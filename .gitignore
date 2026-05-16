@@ -32,5 +32,5 @@ butler-key.txt
 .claude/settings.local.json
 
 # Ad-hoc verification scripts (Phase 2 plan-execution helpers; safe to delete)
-.tmp-verify-*.ps1
+.tmp-*.ps1
 .tmp.driveupload/

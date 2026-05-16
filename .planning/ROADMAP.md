@@ -149,7 +149,7 @@ This roadmap details **Milestone 1** (phases 1-8). **Milestone 2** (phases 9-12)
 - [x] 02-02-conventions-and-documentation-PLAN.md - Wave 1: CONVENTIONS.md (D-INFRA-conv-1..4) + CONTRIBUTING.md + CHANGELOG.md + README.md updates
 - [x] 02-03-lfs-verification-and-ci-PLAN.md - Wave 2: LFS routing verified + .gitignore verified + .github/workflows/godot-import-check.yml scaffolded
 - [x] 02-04-backup-and-restore-test-PLAN.md - Wave 3: BACKUP.md (3-tier per D-INFRA-bkp-1..2 + D-INFRA-art-3) + checkpoint:human-verify restore test
-- [ ] 02-05-decisions-recorded-and-phase-closure-PLAN.md - Wave 3: PROJECT.md Key Decisions (D-INFRA-art-1 + D-INFRA-priv-1) + SCOPE row 18 + REQUIREMENTS.md INFRA-01..11 Complete
+- [x] 02-05-decisions-recorded-and-phase-closure-PLAN.md - Wave 3: PROJECT.md Key Decisions (D-INFRA-art-1 + D-INFRA-priv-1) + SCOPE row 18 + REQUIREMENTS.md INFRA-01..11 Complete
 
 ---
 
