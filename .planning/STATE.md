@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v0.1
 milestone_name: milestone
 status: executing
-last_updated: "2026-05-16T22:30:48.424Z"
+last_updated: "2026-05-16T22:43:01.908Z"
 progress:
   total_phases: 12
   completed_phases: 0
   total_plans: 14
-  completed_plans: 9
+  completed_plans: 10
 ---
 
 # Project State: Colisi
@@ -30,11 +30,11 @@ progress:
 ## Current Position
 
 Phase: 02 (infrastructure-repo-setup) — EXECUTING
-Plan: 1 of 5 COMPLETE (02-01 repo-hardening-files DONE 2026-05-16); next = 02-02 (CONVENTIONS.md + README/CONTRIBUTING/CHANGELOG)
+Plan: 2 of 5 COMPLETE (02-01 repo-hardening-files DONE 2026-05-16; 02-02 conventions-and-documentation DONE 2026-05-16); next = 02-03 (LFS verification + CI)
 **Milestone:** 1 of 2 (Vertical Slice)
 **Phase:** 2 of 12 — Infrastructure & Repo Setup
-**Plan:** 02-01 (Repo Hardening Files) COMPLETE 2026-05-16. Carry-forward from Phase 1: 01-07 MKTG-06 calendar-gated completion (Daniel tag-verification + survey distribution + verdict) and 01-08 (Greenlight) still pending external/calendar gates.
-**Status:** Executing Phase 02. Plan 02-01 landed 4 atomic commits (.gitignore + .gitattributes + .editorconfig + LICENSE) plus STACK.md SVG-LFS reconciliation. LFS now armed BEFORE any binary asset commit. Next plans 02-02 (CONVENTIONS + README/CONTRIBUTING/CHANGELOG), 02-03 (LFS verification + CI), 02-04 (backup + restore test), 02-05 (decisions + phase closure).
+**Plan:** 02-02 (Conventions and Documentation) COMPLETE 2026-05-16. Carry-forward from Phase 1: 01-07 MKTG-06 calendar-gated completion (Daniel tag-verification + survey distribution + verdict) and 01-08 (Greenlight) still pending external/calendar gates.
+**Status:** Executing Phase 02. Plan 02-01 landed 4 atomic commits (.gitignore + .gitattributes + .editorconfig + LICENSE) plus STACK.md SVG-LFS reconciliation. Plan 02-02 landed 4 atomic commits creating CONVENTIONS.md (Godot project layout locked per D-INFRA-conv-1..4 BEFORE Phase 3) + CONTRIBUTING.md (solo-dev future-self conventions covering GSD workflow + Conventional Commits + Amendment Process + AI policy + slice-debt + sustainable pace) + CHANGELOG.md (Keep-A-Changelog v1.1.0 skeleton with [Unreleased] + Phase 1 milestone + project-init entries) + README.md augmentation (Setup-for-future-contributors + Project structure sections; survey CTA + AI disclosure preserved verbatim). INFRA-05 + INFRA-10 satisfied. Next plans 02-03 (LFS verification + CI), 02-04 (backup + restore test), 02-05 (decisions + phase closure).
 
 **Progress bar:**
 
@@ -107,6 +107,7 @@ v1: [          ] 0/12 phases total
 | 2026-05-16 | **Plan 02-01 complete: 4 repo-hardening files locked.** `.gitignore` (Godot-tuned + butler-key.txt + `.local/` reversibility hook), `.gitattributes` (30+ LFS extensions including D-INFRA-art-1 DAW projects + future trailer/web fonts/archives + text-file LF enforcement + Windows-batch CRLF), `.editorconfig` (LF default + GDScript tabs + Markdown 2-space-preserve-trailing + Windows-batch CRLF), `LICENSE` (All Rights Reserved + public-visibility-no-reuse + ML-training prohibition + future-relicensing + AS-IS no-warranty + GitHub-issues contact). All 4 atomic per-task commits (a13ab24 / 7ef3c20 / fd08de5 / 43842b2). LFS now armed BEFORE any binary asset commit. INFRA-01/02/06/07 satisfied (LFS verification gated on plan 02-03 test PNG commit). | STACK.md verbatim base for `.gitignore` and `.gitattributes`; D-INFRA-priv-2 reversibility hook (`.local/`); D-INFRA-art-1 single-repo-with-LFS art-source extensions; cross-platform LF discipline. STACK.md inline amendment (SVG LFS removal replaced with explanatory comment block per checker Issue 4 reconciliation) prevents silent doc/reality divergence. | Phase 2 — execute-plan 02-01 |
 | 2026-05-16 | **Per-task atomic commits chosen over plan-level single-commit alternative.** Plan 02-01 verification step 5 said "Commit all 4 files in a single atomic commit" but orchestrator GSD execute-plan protocol mandates per-task atomic commits. Followed orchestrator precedence (file-scoped staging via `git add <file>`, one logical change per commit). | Per-task commits give finer history granularity, align with plan's `<task>` boundaries, and match `task_commit_protocol` in execute-plan.md. | Phase 2 — execute-plan 02-01 |
 | 2026-05-16 | **STACK.md SVG LFS line amended inline within Task 2.** Replaced `*.svg filter=lfs diff=lfs merge=lfs -text` with a three-line explanatory comment block. Mechanical/technical reconciliation (SVG is genuinely text/XML and diffs cleanly), not architectural. No new D-INFRA-* decision required. | Per CLAUDE.md authoritative-docs precedence: "fix the document or fix the reality, but do not let them diverge silently." `.gitattributes` was the binding reality; STACK.md now agrees. | Phase 2 — execute-plan 02-01 |
+| 2026-05-16 | **Plan 02-02 complete: CONVENTIONS.md + CONTRIBUTING.md + CHANGELOG.md created + README.md augmented.** CONVENTIONS.md locks Godot project folder structure (D-INFRA-conv-1: 11 top-level `res://` folders by-type) + snake_case file naming (D-INFRA-conv-2) + scene+script same-folder pairing (D-INFRA-conv-3) + per-character + `_shared/` animation library (D-INFRA-conv-4) + 6-autoload cross-ref to ARCHITECTURE.md (EventBus/GameState/SaveManager/TimeService/Settings + DialogueManager facade). CONTRIBUTING.md captures GSD workflow + Conventional Commits + trunk-based branch model + PHILOSOPHY.md Amendment Process + verbatim CLAUDE.md AI policy summary + slice-debt/SCOPE discipline + sustainable-pace per D-SUST-01..08. CHANGELOG.md establishes Keep-A-Changelog v1.1.0 skeleton with `[Unreleased]` + Phase 1 milestone + project-init entries + semver mapping (v0.0.x pre-slice / v0.1.0 slice / v1.0.0 full game). README.md augmented additively: Setup-for-future-contributors section + Project structure tree + Phase 2 status update; survey CTA + AI disclosure + Stack + License + Contact sections PRESERVED verbatim. All 4 atomic per-task commits (a87234a / 5535429 / 9d8d9d1 / e441783). INFRA-05 + INFRA-10 satisfied. | Plan body referenced Dialogic 2 in some addons listings; CONVENTIONS.md correctly lists Nathan Hoad's Dialogue Manager per Phase 1 stack-ratification (STATE.md decision log 2026-05-09 row 3). README.md preservation verified via grep post-edit for survey CTA URL + AI disclosure header + All Rights Reserved + Godot 4.5.x. Per-task atomic commits over plan-level single commit follows orchestrator GSD execute-plan protocol (same precedent as plan 02-01). | Phase 2 — execute-plan 02-02 |
 
 ### Open decisions
 
@@ -165,7 +166,7 @@ Created 2026-05-10 during plan 01-00 execution at `.planning/SCOPE.md`. Format s
 
 ## Session Continuity
 
-**Last session:** 2026-05-16T22:30:48.421Z
+**Last session:** 2026-05-16T22:43:01.905Z
 
 - Defined PROJECT.md
 - Generated PERSONA.md, FEATURES.md, STACK.md, ARCHITECTURE.md, PITFALLS.md research
