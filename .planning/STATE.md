@@ -2,9 +2,9 @@
 gsd_state_version: 1.0
 milestone: v0.1
 milestone_name: milestone
-status: verifying
+status: planning
 stopped_at: Completed 02-05-decisions-recorded-and-phase-closure-PLAN.md (Phase 2 fully closed; 21 atomic commits across all 5 plans; all 11 INFRA requirements satisfied; 2 Phase 2 carry-forwards explicitly tracked)
-last_updated: "2026-05-16T23:33:30.339Z"
+last_updated: "2026-05-16T23:45:13.982Z"
 progress:
   total_phases: 12
   completed_phases: 1
@@ -33,10 +33,10 @@ progress:
 Phase: 02 (infrastructure-repo-setup) — **COMPLETE 2026-05-16**
 Plan: 5 of 5 complete (02-01 repo-hardening-files DONE; 02-02 conventions-and-documentation DONE; 02-03 lfs-verification-and-ci DONE; 02-04 backup-and-restore-test DONE; 02-05 decisions-recorded-and-phase-closure DONE 2026-05-16)
 **Milestone:** 1 of 2 (Vertical Slice)
-**Phase:** 2 of 12 — Infrastructure & Repo Setup COMPLETE 2026-05-16
-**Plan:** 02-05 (Decisions Recorded + Phase Closure) COMPLETE 2026-05-16
+**Phase:** 3 of 12 (project skeleton & foundational systems)
+**Plan:** Not started
 **Next phase:** 03 (Project Skeleton & Foundational Systems) — gated on Phase 1 plan 01-08 Greenlight completion + Phase 2 transition checklist
-**Status:** Phase 2 closure complete; 11 INFRA requirements satisfied. Infrastructure spine in place: .gitignore + .gitattributes (LFS verified end-to-end via 64×64 PNG round-trip OID e06f021364) + .editorconfig + LICENSE (All Rights Reserved + future-relicensing + ML-training prohibition) + CONVENTIONS.md (Godot folder structure locked BEFORE Phase 3) + CONTRIBUTING.md + CHANGELOG.md + README augmentation + BACKUP.md (3-tier strategy + restore test PASS at D:\\TestRestore\\colisi-2026-05-11\\ with 4 integrity checks: clean tree + 242 B lfs-test.png + PNG signature + SHA256 bit-identical match in ~3 sec wall-clock) + .github/workflows/godot-import-check.yml (Godot 4.5.2 pin; first run success run ID 25975070590, 10s). SCOPE.md row 18 logs the closure batch; PROJECT.md Key Decisions has D-INFRA-art-1 + D-INFRA-priv-1 individual rows per ROADMAP.md Phase 2 criteria 8+11. 21 atomic commits across all 5 Phase 2 plans. **Carry-forwards from Phase 2:** (1) Tier 2 Google Drive client GUI completion (Daniel OAuth + folder-add pending; orchestrator winget install COMPLETE 2026-05-16; **target deadline 2026-05-30** — 2 weeks; slice-debt promotion threshold = if not done by 2026-05-30, promote then); (2) sterling-rough-map.png LFS retro-migration disposition (Daniel decision pending at Phase 2 closure review; recommended pragmatic-leave-as-is given 38 KB negligible vs history-rewrite disruption). **Note:** Phase 1 plan 01-08 (Greenlight) is still pending and required to gate full M1 progression — this Phase 2 lock proceeds in parallel with Phase 1 closure work, per the Phase 1 partial-complete pattern observed since 2026-05-11.
+**Status:** Ready to plan
 
 **Progress bar:**
 
