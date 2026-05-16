@@ -273,7 +273,7 @@ The 23% "minor annoyance but keep playing" cohort tolerates time-pressure mechan
 
 > *Daniel: write 3-5 sentences here citing specific data points + the locked anti-clause architecture they validate + the architectural-amendment queue triggered by the REFINED-on-attractor-positioning finding (see next section).*
 
-**Date verdict signed:** {YYYY-MM-DD — Daniel signs after outside-reviewer cosignature per D-WALL-05}
+**Date verdict signed:** 2026-05-16 (Daniel-confirmed verbally; rationale prose above remains for Daniel to type when ready; outside-reviewer cosignature runs in parallel with amendment-batch execution per Daniel's just-in-time go-ahead, NOT a sequential gate)
 
 **Outside reviewer cross-check** *(per `D-WALL-05` hybrid mechanism reframed 2026-05-10 — see `21-year3wall-tripwires.md`)*:
 
@@ -338,7 +338,7 @@ Each amendment is executed via:
 3. REQUIREMENTS.md re-amendments (HOME-01..05 re-amendment; CRAFT cluster amendment; NEW EXPLORE/COLLECT cluster; D-VISION-04 amendment; D-VISION-03 amendment)
 4. Plan 02-05 (Phase 2 closure plan) re-scoped — PROJECT.md key-decisions section captures these amendments
 
-**Execution timing:** AFTER verdict signature + outside-reviewer cosignature + Dawn HEALTH-05 session 2 (Dawn already aware of customization pivot per Daniel's prior conversation; session 2 confirms architecturally).
+**Execution timing:** Amendment batch executes 2026-05-16 (post-verdict-signature). Cosignature gate (outside-reviewer LLM runs per D-WALL-05 tripwire-review-prompt.md) runs in PARALLEL with amendment commits — amendments are individually-reversible architectural commits (SCOPE.md rows + REQUIREMENTS amendments + deliverable updates); if cosignature returns red flags, revisit/revert. Dawn HEALTH-05 session 2 (≥2026-05-24 per ritual cadence) tertiary confirmation. Daniel green-lit 2026-05-16 with directive: "the thesis is mostly supported by the research points conducted thus far, with a few major exceptions... Roadmap and planning amendments will be required. No pillar violations or amendments are needed for these changes. Philosophy violated slightly ('the wisp does not collect') but gameplay and engagement should trump."
 
 **No ROADMAP.md amendment** required — phase ordering unchanged; amendments are architectural-scope within Phase 1 closure, not phase-restructuring.
 

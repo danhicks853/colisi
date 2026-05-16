@@ -111,3 +111,33 @@ When returning from art training to main GSD workflow:
 2. **Capability matrix amendments** via GSD edit of `16-capability-gap-matrix.md` — six rows listed above.
 3. **Decide on syllabus next-step:** Phase 3 (modular architecture kit-bash) is next in art syllabus, OR pause art training and return to main GSD threads (survey-distribution Task 3, REQUIREMENTS/PROJECT work, etc.).
 4. **Consider:** does the "Sterling's lampposts were grown, not built" framing extend to other infrastructure (buildings, fences, doorways, signs in general)? If yes, SCOPE.md amendment to lock the "grown-vs-built" world property. If no, keep scoped to lampposts only. Daniel-authored decision.
+
+---
+
+## Phase 3.1 session (2026-05-16) — scope/lore commitment
+
+**Daniel's commitments (Phase 3.1 reference pass + Option 2 silhouette critique, 2026-05-16):**
+
+> "some things grown, some built"
+>
+> "some houses may have older relics that were grown-not-built, and some may have built furniture. For example, this could be in the elder's house."
+
+**What this resolves:** The open question from Seed 1 about whether "grown" extends beyond lampposts. Daniel's answer is **mixed-mode at the instance level**, with a **character/age-driven distribution rule**:
+
+- **Grown furniture = older relics, pre-magic-receding heirlooms.** Not new growth — these are artifacts from before magic receded, persisting in the homes of villagers old enough to have owned them since the magic-age. Heirloom register.
+- **Built furniture = post-magic-receding villager-craft (default modern register).** Visible joinery, plank construction, hand-tool marks, paint-and-wear cues. What most households own.
+- **Distribution is character-driven.** Who owns which furniture maps to who they are in Sterling's history. The elder (canonically Cyrus — ancient human elder per World Bible §4.6) is the most plausible owner of grown-relic furniture because he's old enough to have lived in the magic-age. Younger villagers' households default to built furniture.
+
+**Direct slice implication:**
+- **Cyrus's house** = grown-relic furniture register (the Option 2 silhouette — twisted-vine arched chair + tree-stump table — is sketched as a candidate exemplar for this register).
+- **Generic villager interior / other slice cast houses** = built furniture register (the Option 1 silhouette — chunky chair with cutout back + plank-top table — is sketched as a candidate exemplar for this register).
+
+**Connection to Seed 1 (asset-progression-as-story-progression):** Grown-relic furniture, like the lampposts, is potentially subject to the **healing/regrowth progression arc** as magic returns. v1 grown-relic furniture = cracking/failing (analogous to v1 lampposts); v_mid = healing; v_endgame = vibrant and intact. This is a stronger version of Seed 1's commitment because it scales the progression-state pattern from "lampposts only" to "all grown infrastructure including interior heirlooms." Worth surfacing at amendment time as part of the broader progression-state design language, not a separate decision.
+
+**Broader implication for SCOPE.md amendment work:**
+- Lampposts: **grown** (locked by Seed 1)
+- Interior furniture: **mixed at instance level — character/age-driven distribution** (locked by this commitment)
+- Architecture (buildings themselves): **OPEN** — could be either, could be mixed within a single building. Daniel must author when Phase 3.2/3.3 (modular architecture) work begins. Same character-driven distribution rule may apply (older households have more grown-architecture remnants; newer households are villager-built).
+- Other infrastructure (fences, signs-as-standalone, doorways, bridges, wells): **OPEN** — case-by-case at the moment each asset gets authored.
+
+**For SCOPE.md amendment when promoted:** the world-state property is **"mixed-mode grown-and-built with character/age-driven distribution"** — softer than uniform-grown, richer than category-binary (interior=built / outdoor=grown). The narrative read — "magic receded; villagers built what magic used to grow; magic-grown artifacts persist as heirlooms in the homes of those old enough to have owned them; all grown infrastructure is currently cracking and will heal as magic returns" — is internally coherent and threads through lampposts + interior furniture + (eventually) architecture as a unified world-state design language.
