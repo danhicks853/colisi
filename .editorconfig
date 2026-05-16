@@ -1,0 +1,84 @@
+# =============================================================================
+# Colisi .editorconfig
+# https://editorconfig.org/
+# REQUIREMENT: INFRA-07 — consistent line endings + indentation across editors
+# =============================================================================
+
+# Stop editorconfig lookup at repo root
+root = true
+
+# =============================================================================
+# Default for ALL files (LF endings, UTF-8, trim trailing whitespace, final newline)
+# Cross-platform safety: Daniel is on Windows but LF is universal-safe
+# =============================================================================
+
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = tab
+indent_size = 4
+
+# =============================================================================
+# GDScript — TABS, 4-width display (Godot official style guide convention)
+# Godot built-in editor inserts tabs; mismatch causes diff churn
+# =============================================================================
+
+[*.gd]
+indent_style = tab
+indent_size = 4
+
+# =============================================================================
+# Godot scene/resource files — TABS (Godot serializer writes tabs)
+# =============================================================================
+
+[*.{tscn,tres,res,scn,cfg,godot,import}]
+indent_style = tab
+indent_size = 4
+
+# =============================================================================
+# Markdown — SPACES (2-width); preserve trailing-2-spaces line breaks
+# =============================================================================
+
+[*.md]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+
+# =============================================================================
+# YAML / JSON / TOML — SPACES (community convention)
+# =============================================================================
+
+[*.{yml,yaml,json,toml}]
+indent_style = space
+indent_size = 2
+
+# =============================================================================
+# CSV (Godot localization tables) — leave as-is, no whitespace normalization
+# =============================================================================
+
+[*.csv]
+trim_trailing_whitespace = false
+
+# =============================================================================
+# Shell / batch scripts
+# =============================================================================
+
+[*.{bat,cmd,ps1}]
+end_of_line = crlf
+indent_style = space
+indent_size = 4
+
+[*.sh]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+
+# =============================================================================
+# Web-export and HTML (future MKTG-02 devlog assets)
+# =============================================================================
+
+[*.{html,css,js,ts}]
+indent_style = space
+indent_size = 2
