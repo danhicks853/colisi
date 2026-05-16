@@ -186,14 +186,17 @@ A `.bat` or `.ps1` launcher script will be added in Phase 2 (INFRA-09 / tooling)
 
 ## Backup strategy
 
-(Detailed in Phase 2 / INFRA-04. Brief sketch here so you know what's coming.)
+**Authoritative document:** [`BACKUP.md`](BACKUP.md) at repo root — full 3-tier backup strategy + restore procedure + quarterly retest cadence. Locked 2026-05-11 (Phase 2 plan 02-04). **Read it. Test the restore. Re-test quarterly.**
 
-- **Primary:** GitHub remote at <https://github.com/danhicks853/colisi.git> (public)
-- **Secondary:** Local cloud-sync of working directory (OneDrive / Dropbox / Google Drive — choice deferred to Phase 2)
-- **Tertiary (optional):** External drive snapshot, monthly cadence
-- **Restore procedure:** Documented and tested at least once before Phase 3 begins (INFRA-04 success criterion)
+Briefest possible orientation (see BACKUP.md for the load-bearing detail):
 
-LFS quota matters here. If LFS quota is exhausted, the binary assets are still in your local clone but new clones will fail to pull binaries. Watch the quota; budget $5/mo Data Pack at the inflection point.
+- **Tier 1 — Primary:** GitHub remote at <https://github.com/danhicks853/colisi.git> (every push).
+- **Tier 2 — Secondary:** Google Drive desktop-client cloud-sync of `D:\Projects\game` (continuous). Setup per BACKUP.md Section 2.2.
+- **Tier 3 — Tertiary:** Quarterly tarball to Google Drive separate folder (manual; 4×/year per D-INFRA-art-3). Procedure: BACKUP.md Section 2.3.
+- **Restore procedure:** BACKUP.md Section 3 (Tier 1 fresh-clone via `git clone` + `git lfs install` + `git lfs pull` + 3 mandatory integrity checks). First test executed 2026-05-16 — all checks PASS; log: [`.planning/phases/02-infrastructure-repo-setup/verification/restore-test-log.md`](.planning/phases/02-infrastructure-repo-setup/verification/restore-test-log.md). Reproducibility runner: `_restore-test-runner.ps1` in same directory.
+- **Next quarterly retest:** **2026-08-11** (per BACKUP.md Section 5).
+
+LFS quota matters here. If LFS quota is exhausted, the binary assets are still in your local clone but new clones will fail to pull binaries. Watch the quota; budget $5/mo Data Pack at the inflection point per D-INFRA-art-2.
 
 ---
 
