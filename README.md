@@ -16,7 +16,7 @@ A 3D narrative-driven cozy life sim, currently in early development. Built solo.
 
 **Project codename:** Colisi (the shipped game's title may evolve as the world and characters crystallize).
 
-**Status:** Phase 1 of 12 — Foundations & Vision Lock. No playable game yet. The project is being built in public; planning artifacts, research, and roadmap live in this repo.
+**Status:** Phase 2 of 12 — Infrastructure & Repo Setup (Phase 1 substantially complete; MKTG-06 verdict + Greenlight remaining). No playable game yet. The project is being built in public; planning artifacts, research, and roadmap live in this repo. See [`.planning/STATE.md`](.planning/STATE.md) for live status.
 
 ---
 
@@ -25,6 +25,25 @@ A 3D narrative-driven cozy life sim, currently in early development. Built solo.
 Colisi is a cozy life sim aimed at players who love deep relationships, branching narrative, and crafting — but who consistently bounce off time-pressure systems, difficulty-curve walls, and "story ends → game ends" content cliffs that plague the genre. The design center is *characters and relationships that keep evolving, in a world that never punishes the player.*
 
 The core fantasy, in the lead persona's own words: *"Talking to the people and finding where I fit in."*
+
+---
+
+## Setup for future contributors
+
+If you are future-Daniel on a fresh machine, or an outside contributor with a green light (see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the contribution process — outside PRs require an issue first):
+
+1. **Install the locked toolchain.** See [`DEV-ENVIRONMENT.md`](DEV-ENVIRONMENT.md) for the complete required-tools list with installation commands (Godot 4.5.2, Blender 4.5 LTS, Git, Git LFS, VS Code + godot-tools extension).
+2. **Clone the repo with LFS:**
+   ```powershell
+   git lfs install
+   git clone https://github.com/danhicks853/colisi.git
+   cd colisi
+   git lfs pull
+   ```
+3. **Read the load-bearing docs in order:** [`PHILOSOPHY.md`](PHILOSOPHY.md) (project constitution) → [`CLAUDE.md`](CLAUDE.md) (load-bearing rules + AI policy) → [`CONTRIBUTING.md`](CONTRIBUTING.md) (workflow + commit conventions) → [`CONVENTIONS.md`](CONVENTIONS.md) (Godot project folder structure + naming).
+4. **Verify your environment** using the verification block at the bottom of [`DEV-ENVIRONMENT.md`](DEV-ENVIRONMENT.md).
+
+No Godot project exists yet (Phase 3 creates it). Once it does, the launch command will be `& 'D:\godot\Godot_v4.5.2-stable_win64.exe' --path D:\Projects\game` (adjust paths to your install).
 
 ---
 
@@ -56,6 +75,45 @@ This disclosure document is updated whenever AI usage scope changes. There will 
 | [`.planning/REQUIREMENTS.md`](.planning/REQUIREMENTS.md) | v1 requirements with phase traceability |
 | [`.planning/research/`](.planning/research/) | Foundational research artifacts |
 | [`CLAUDE.md`](CLAUDE.md) | AI development partner brief and load-bearing rule set |
+| [`CONVENTIONS.md`](CONVENTIONS.md) | Godot project folder structure + naming conventions (Phase 2+) |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Workflow, commit conventions, AI policy summary |
+| [`CHANGELOG.md`](CHANGELOG.md) | Milestone + release log (Keep-A-Changelog format) |
+
+---
+
+## Project structure
+
+High-level overview of what lives where in this repo:
+
+```
+colisi/
+├── README.md                  ← This file
+├── PHILOSOPHY.md              ← Project constitution
+├── CLAUDE.md                  ← Load-bearing rules + AI partner brief
+├── AI-DISCLOSURE.md           ← Public AI use disclosure
+├── CONTRIBUTING.md            ← Workflow + commit conventions
+├── CONVENTIONS.md             ← Godot project folder structure + naming
+├── CHANGELOG.md               ← Milestone + release log (Keep-A-Changelog)
+├── LICENSE                    ← All Rights Reserved
+├── DEV-ENVIRONMENT.md         ← Local-machine setup procedure
+├── .gitignore                 ← Godot-tuned ignores
+├── .gitattributes             ← Git LFS binary tracking
+├── .editorconfig              ← Cross-editor consistency
+├── .github/                   ← CI workflows (godot-import-check)
+├── .planning/                 ← Planning artifacts (GSD)
+│   ├── PROJECT.md
+│   ├── REQUIREMENTS.md
+│   ├── ROADMAP.md
+│   ├── STATE.md
+│   ├── SCOPE.md               ← Architectural-decision log (HEALTH-01)
+│   ├── slice-debt.md          ← Shortcut log (HEALTH-02)
+│   ├── research/              ← Foundational research
+│   ├── phases/                ← Per-phase planning artifacts
+│   └── playtest-log/          ← Persona-zero (HEALTH-05) session logs
+└── (Godot project, created in Phase 3 at the repo root level)
+```
+
+Conventions for the future Godot project: see [`CONVENTIONS.md`](CONVENTIONS.md).
 
 ---
 
