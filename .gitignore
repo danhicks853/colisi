@@ -1,0 +1,29 @@
+# Godot 4 specific
+.godot/
+.import/
+
+# Engine cache
+*.tmp
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+*.swo
+
+# Build artifacts
+/builds/
+/exports/
+*.exe
+*.pck
+*.dmg
+/builds/*.zip
+
+# Secrets
+.env
+*.pem
+butler-key.txt
+
+# User-specific local overrides (D-INFRA-priv-2 reversible-path placeholder)
+.local/
