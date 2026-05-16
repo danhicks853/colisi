@@ -136,9 +136,49 @@ No commit has ever touched a `.godot/`-pathed file. The ignore rule held from da
 
 ## CI Workflow Scaffold (INFRA-09)
 
-**Status:** Scaffold-only verification deferred to Task 2 of this plan. The workflow YAML, README, and structural validation will be recorded in this log's amendment block after Task 2 completes, OR captured in the plan SUMMARY.md if Task 2 introduces no anomalies.
+**Status:** ✅ PASS — scaffolded AND runtime-verified (exceeds plan's structural-only floor).
 
-**Floor (per plan's locked discretion):** Structural verification only — file exists + valid YAML + correct detection logic + Godot 4.5.2 pin. Actual GitHub Actions runtime triggering is OPTIONAL for Phase 2 closure; end-to-end runtime verification deferred to Phase 3 first push that has a real `project.godot` to import-check.
+**Structural verification:**
+
+- `.github/workflows/godot-import-check.yml` exists; valid YAML (parsed with Python `yaml.safe_load` — no errors).
+- Contains all required elements: `name: Godot import check`; `on:` with `push:`, `pull_request:`, `workflow_dispatch:` triggers; `GODOT_VERSION: "4.5.2"` engine pin; `godot --headless --import` command; `godot_project_exists` detection step; `lfs: true` LFS checkout; binary + `.godot` cache; `ERROR:` / `SCRIPT ERROR:` log scanning; `upload-artifact@v4` on failure with 7-day retention.
+- `.github/workflows/README.md` exists; documents scaffold-vs-active pattern; lists deferred future workflows (`itch-publish.yml`, `steam-publish.yml`, `gut-tests.yml`).
+
+**Runtime verification (bonus — above plan's floor):**
+
+The CI run fired on push of commit `7a5fb05` and completed in 10 seconds with conclusion `success`:
+
+```
+$ gh run list --workflow=godot-import-check.yml --limit 1
+completed  success  ci(02-03): scaffold godot-import-check workflow...  Godot import check  main  push  25975070590  10s  2026-05-16T22:50:39Z
+```
+
+The `detect` step correctly observed no `project.godot` at repo root and surfaced the expected GitHub annotation:
+
+```
+##[notice]No project.godot found at repo root. Phase 3 will create it; until then this workflow is a no-op.
+```
+
+The `Phase 2 scaffold notice` step ran with correct env vars confirming engine pin:
+
+```
+GODOT_VERSION: 4.5.2
+GODOT_RELEASE_NAME: stable
+GODOT_ARCHIVE: Godot_v4.5.2-stable_linux.x86_64.zip
+GODOT_BINARY: Godot_v4.5.2-stable_linux.x86_64
+
+Phase 2 scaffold notice: godot-import-check.yml is in place but inactive.
+Activates automatically once Phase 3 creates project.godot at the repo root.
+Engine pin: 4.5.2 stable (Linux build used for CI; matches Daniel's local 4.5.2 Windows pin).
+```
+
+All Godot-installing/running steps correctly skipped (their `if:` conditions were `false`). The no-op short-circuit works exactly as designed.
+
+**Commit SHA:** `7a5fb05` (CI scaffold commit).
+
+**GitHub Actions run ID:** `25975070590`.
+
+**Floor (per plan's locked discretion) — exceeded:** Structural verification only is the required floor; runtime triggering was OPTIONAL for Phase 2 closure. Since the run fired automatically on push and short-circuited cleanly, both structural AND runtime verification are recorded — Phase 3's first push with a real `project.godot` will simply flip the detection branch, and all downstream steps will execute for the first time.
 
 ---
 
