@@ -11,17 +11,17 @@
 
 ### Infrastructure & Repository
 
-- [x] **INFRA-01**: Repo configured with Git LFS *before any binary assets are committed* (.gitattributes tracking .png, .jpg, .ogg, .wav, .mp3, .glb, .gltf, .blend, .fbx, .ttf, .otf, .exr, .hdr, .tres binary forms)
-- [x] **INFRA-02**: Project has a Godot-tuned `.gitignore` excluding engine cache (`.godot/`), generated import metadata (`.import/` for older 4.x), per-developer build configs, and any export-preset secrets
-- [ ] **INFRA-03**: Repo is hosted on GitHub at `https://github.com/danhicks853/colisi.git` with main branch as the source of truth and at least one push completed (DONE 2026-05-09)
-- [x] **INFRA-04**: Backup/redundancy strategy is implemented and tested with a documented restore procedure (primary: GitHub; secondary: local cloud sync of working directory; restore tested at least once)
-- [x] **INFRA-05**: Folder structure and naming conventions for the Godot project are documented in `CONVENTIONS.md` (where scenes / scripts / assets / addons live, plus naming rules for scenes, scripts, resources, dialogue files)
-- [x] **INFRA-06**: License decision is made and a `LICENSE` file exists at repo root (default lean: "All Rights Reserved" copyright notice, since this is a commercial closed-source game with public source visibility)
-- [x] **INFRA-07**: Editor configuration committed (`.editorconfig` for consistent line endings and indentation across machines/editors; `.vscode/` settings if VS Code is used as secondary editor)
-- [ ] **INFRA-08**: Decision recorded on art-source repo split (Blender source files: in main repo via LFS, OR separate `colisi-art-source` repo for LFS quota management); follow-through deliverable based on decision
-- [x] **INFRA-09**: Minimal CI configured: GitHub Actions workflow that runs `godot --headless --import` to verify the project imports without errors on every push to main (free unlimited minutes on public repo)
-- [x] **INFRA-10**: `README.md`, `CONTRIBUTING.md` (solo-dev / future-self facing), and `CHANGELOG.md` skeletons exist with documented format conventions; README includes project status, dev setup instructions, and codename pronunciation
-- [ ] **INFRA-11**: Privacy review completed for public-repo visibility — decision recorded on whether `PERSONA.md` and other personal-data-bearing planning artifacts stay public, get redacted, or move to a `.local/` ignored path
+- [x] **INFRA-01**: Repo configured with Git LFS *before any binary assets are committed* (.gitattributes tracking .png, .jpg, .ogg, .wav, .mp3, .glb, .gltf, .blend, .fbx, .ttf, .otf, .exr, .hdr, .tres binary forms) *(COMPLETE 2026-05-16 plan 02-01 + verification plan 02-03: 36+ LFS extensions in .gitattributes; test 64×64 PNG (242 B, OID e06f021364) confirmed routing via git lfs ls-files + LFS pointer format verified + GitHub-side push triggered "Uploading LFS objects".)*
+- [x] **INFRA-02**: Project has a Godot-tuned `.gitignore` excluding engine cache (`.godot/`), generated import metadata (`.import/` for older 4.x), per-developer build configs, and any export-preset secrets *(COMPLETE 2026-05-16 plan 02-01 + verification plan 02-03: .gitignore Godot-tuned; nested `.godot/fake-cache-marker.txt` test confirmed excluded via `git check-ignore -v` exit 0 reporting `.gitignore:2:.godot/`.)*
+- [x] **INFRA-03**: Repo is hosted on GitHub at `https://github.com/danhicks853/colisi.git` with main branch as the source of truth and at least one push completed (DONE 2026-05-09) *(Reaffirmed Phase 2 plan 02-05; SCOPE row 18.)*
+- [x] **INFRA-04**: Backup/redundancy strategy is implemented and tested with a documented restore procedure (primary: GitHub; secondary: local cloud sync of working directory; restore tested at least once) *(COMPLETE 2026-05-16 plan 02-04: BACKUP.md (211 lines, 6 H2 sections) documents 3-tier strategy (D-INFRA-bkp-1..2 + D-INFRA-art-3); restore test executed at D:\\TestRestore\\colisi-2026-05-11\\ with 4 PASS integrity checks (clean tree + 242 B lfs-test.png + PNG signature 89 50 4E 47 + SHA256 bit-identical match) per restore-test-log.md.)*
+- [x] **INFRA-05**: Folder structure and naming conventions for the Godot project are documented in `CONVENTIONS.md` (where scenes / scripts / assets / addons live, plus naming rules for scenes, scripts, resources, dialogue files) *(COMPLETE 2026-05-16 plan 02-02: CONVENTIONS.md at repo root (226 lines, 8 H2 sections) documents folder structure (D-INFRA-conv-1) + snake_case naming (D-INFRA-conv-2) + scene+script same-folder pairing (D-INFRA-conv-3) + animation library pattern (D-INFRA-conv-4) + 6-autoload cross-ref to ARCHITECTURE.md.)*
+- [x] **INFRA-06**: License decision is made and a `LICENSE` file exists at repo root (default lean: "All Rights Reserved" copyright notice, since this is a commercial closed-source game with public source visibility) *(COMPLETE 2026-05-16 plan 02-01: LICENSE at repo root with All Rights Reserved + public-visibility-no-reuse + ML-training prohibition + future-relicensing clause + third-party-assets clause + AS-IS no-warranty + GitHub-issues contact pointer.)*
+- [x] **INFRA-07**: Editor configuration committed (`.editorconfig` for consistent line endings and indentation across machines/editors; `.vscode/` settings if VS Code is used as secondary editor) *(COMPLETE 2026-05-16 plan 02-01: .editorconfig at repo root with `root=true` + LF default + GDScript tabs + Markdown 2-space-preserve-trailing + Windows-batch CRLF + per-filetype overrides.)*
+- [x] **INFRA-08**: Decision recorded on art-source repo split (Blender source files: in main repo via LFS, OR separate `colisi-art-source` repo for LFS quota management); follow-through deliverable based on decision *(COMPLETE 2026-05-16 plan 02-05: D-INFRA-art-1 recorded in PROJECT.md Key Decisions — single repo + LFS for all binary assets including DCC source files; separate art-source repo deferred; D-INFRA-art-2 quota upgrade is reactive at ~80% free tier; D-INFRA-art-3 quarterly tarball manual. SCOPE row 18.)*
+- [x] **INFRA-09**: Minimal CI configured: GitHub Actions workflow that runs `godot --headless --import` to verify the project imports without errors on every push to main (free unlimited minutes on public repo) *(COMPLETE 2026-05-16 plan 02-03: .github/workflows/godot-import-check.yml (102 lines, valid YAML) scaffolded with Godot 4.5.2 stable Linux pin + project.godot detection + LFS-aware checkout + binary/.godot cache + ERROR-line scan + artifact-upload-on-failure; first GitHub Actions run completed successfully (run ID 25975070590, 10s); activates Phase 3 when project.godot lands.)*
+- [x] **INFRA-10**: `README.md`, `CONTRIBUTING.md` (solo-dev / future-self facing), and `CHANGELOG.md` skeletons exist with documented format conventions; README includes project status, dev setup instructions, and codename pronunciation *(COMPLETE 2026-05-16 plan 02-02: README.md updated with Setup-for-future-contributors + Project structure sections (preserving survey CTA + AI disclosure verbatim); CONTRIBUTING.md created (206 lines, 10 sections: GSD workflow + Conventional Commits + AI policy + slice-debt/SCOPE discipline + sustainable-pace); CHANGELOG.md created (78 lines, Keep-A-Changelog v1.1.0 + Semantic Versioning skeleton with [Unreleased] + Phase 1 milestone + project-init entries).*)
+- [x] **INFRA-11**: Privacy review completed for public-repo visibility — decision recorded on whether `PERSONA.md` and other personal-data-bearing planning artifacts stay public, get redacted, or move to a `.local/` ignored path *(COMPLETE 2026-05-16 plan 02-05: D-INFRA-priv-1 recorded in PROJECT.md Key Decisions — PERSONA.md stays public, informal Dawn consent, reversible to `.local/` if circumstances change. SCOPE row 18.)*
 
 ### Player & Controls
 
@@ -242,17 +242,17 @@ All 105 v1 requirements mapped to phases. Coverage = 105/105.
 
 | Requirement | Phase | Status |
 |---|---|---|
-| INFRA-01 | Phase 2 | Complete |
-| INFRA-02 | Phase 2 | Complete |
-| INFRA-03 | Phase 2 | Complete (DONE 2026-05-09) |
-| INFRA-04 | Phase 2 | Complete |
-| INFRA-05 | Phase 2 | Complete |
-| INFRA-06 | Phase 2 | Complete |
-| INFRA-07 | Phase 2 | Complete |
-| INFRA-08 | Phase 2 | Pending |
-| INFRA-09 | Phase 2 | Complete |
-| INFRA-10 | Phase 2 | Complete |
-| INFRA-11 | Phase 2 | Pending |
+| INFRA-01 | Phase 2 | **Complete (2026-05-16 plan 02-01 + verified 02-03)** |
+| INFRA-02 | Phase 2 | **Complete (2026-05-16 plan 02-01 + verified 02-03)** |
+| INFRA-03 | Phase 2 | **Complete (DONE 2026-05-09; reaffirmed plan 02-05)** |
+| INFRA-04 | Phase 2 | **Complete (2026-05-16 plan 02-04)** |
+| INFRA-05 | Phase 2 | **Complete (2026-05-16 plan 02-02)** |
+| INFRA-06 | Phase 2 | **Complete (2026-05-16 plan 02-01)** |
+| INFRA-07 | Phase 2 | **Complete (2026-05-16 plan 02-01)** |
+| INFRA-08 | Phase 2 | **Complete (2026-05-16 plan 02-05)** |
+| INFRA-09 | Phase 2 | **Complete (2026-05-16 plan 02-03)** |
+| INFRA-10 | Phase 2 | **Complete (2026-05-16 plan 02-02)** |
+| INFRA-11 | Phase 2 | **Complete (2026-05-16 plan 02-05)** |
 | CTRL-01 | Phase 3 | Pending |
 | CTRL-02 | Phase 3 | Pending |
 | CTRL-03 | Phase 3 | Pending |
@@ -352,7 +352,7 @@ All 105 v1 requirements mapped to phases. Coverage = 105/105.
 - v1 requirements: **105 total** (101 pre-existing — the prior "96" count was off; +4 POLISH-01..04 added 2026-05-11 per SCOPE row 16 Pillar 3 polish-as-accessibility lock)
 - Mapped to phases: 105 (100%) ✓
 - Unmapped: 0
-- Complete: 3 (INFRA-03 repo at github; HEALTH-01 SCOPE.md log; HEALTH-02 slice-debt.md log)
+- Complete: 13 (INFRA-01..11 all closed via Phase 2 plans 02-01..02-05; HEALTH-01 SCOPE.md log; HEALTH-02 slice-debt.md log)
 - Ritual-established: 1 (HEALTH-05 — full satisfaction pending 2 sessions in plans 01-01 + 01-08)
 
 **Phase 1→2 transition amendment batch 2026-05-11:** 27 individual amendments applied across REQUIREMENTS.md per all locked SCOPE.md rows from Phase 1 (rows 4 through 17). Batch covers: OOS "Required combat" tightening / WORLD-05 anti-clause extension (real-time-timer + real-world-clock) / POLISH-01..04 new requirements / AUDIO-01/02 architectural commitment / NPC-05/06 Spritesight + cat / WORLD-01/02 zone architecture + village-as-canvas / HOME-01..05 D-VISION-10 3-layer / SAVE-04 multi-source / NARR-01..07 cluster (D-VISION-09/12/13/14) / COMP-01..04 sprite-premise reinterpretation / CRAFT-01/02 wisp-catalyzes-villager-activity reinterpretation. All amendments cross-referenced to source SCOPE.md row. Original wording preserved in commit history.
