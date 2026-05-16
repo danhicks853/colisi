@@ -1,1 +1,70 @@
+# =============================================================================
+# Colisi Git LFS configuration
+# Source-of-truth: .planning/research/STACK.md §"Version Control + Git LFS Strategy"
+# REQUIREMENT: INFRA-01 — LFS configured BEFORE any binary asset committed
+
+# 3D models
+*.glb filter=lfs diff=lfs merge=lfs -text
+*.gltf filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.blend1 filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+# Images
 *.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.webp filter=lfs diff=lfs merge=lfs -text
+*.exr filter=lfs diff=lfs merge=lfs -text
+*.hdr filter=lfs diff=lfs merge=lfs -text
+*.dds filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.kra filter=lfs diff=lfs merge=lfs -text
+# Note: *.svg is INTENTIONALLY NOT LFS-tracked — SVG is text/XML and diffs cleanly.
+# If you have a large SVG that should be LFS-tracked, add explicit .gitattributes
+# override for that specific file.
+# Audio
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+*.flac filter=lfs diff=lfs merge=lfs -text
+*.aif filter=lfs diff=lfs merge=lfs -text
+*.aiff filter=lfs diff=lfs merge=lfs -text
+# Fonts (per INFRA-01 explicit extension list)
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.otf filter=lfs diff=lfs merge=lfs -text
+*.woff filter=lfs diff=lfs merge=lfs -text
+*.woff2 filter=lfs diff=lfs merge=lfs -text
+# Godot binary scenes / resources (only the binary form — keep .tscn and .tres as text)
+*.scn filter=lfs diff=lfs merge=lfs -text
+*.res filter=lfs diff=lfs merge=lfs -text
+# Video (for future trailer assets / capsule motion)
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+# Archives (sometimes committed for asset packs)
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+# Audio DAW project files (D-INFRA-art-1: art-source in main repo via LFS)
+*.lmms filter=lfs diff=lfs merge=lfs -text
+*.rpp filter=lfs diff=lfs merge=lfs -text
+*.aup3 filter=lfs diff=lfs merge=lfs -text
+# Text file line endings (cross-platform safety)
+# Always check out with LF endings (Daniel is on Windows; LF universal works)
+*.gd text eol=lf
+*.tres text eol=lf
+*.tscn text eol=lf
+*.cfg text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.csv text eol=lf
+*.po text eol=lf
+# Shell / batch scripts keep native endings (batch needs CRLF on Windows)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.sh text eol=lf

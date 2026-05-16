@@ -331,7 +331,9 @@ butler-key.txt
 *.exr filter=lfs diff=lfs merge=lfs -text
 *.hdr filter=lfs diff=lfs merge=lfs -text
 *.dds filter=lfs diff=lfs merge=lfs -text
-*.svg filter=lfs diff=lfs merge=lfs -text
+# *.svg INTENTIONALLY NOT LFS-tracked - SVG is text/XML and diffs cleanly.
+# Per Phase 2 plan 02-01 + checker Issue 4 reconciliation 2026-05-11.
+# If a specific large SVG should be LFS-tracked, add explicit per-file .gitattributes override.
 
 # Audio
 *.wav filter=lfs diff=lfs merge=lfs -text
