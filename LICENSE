@@ -1,0 +1,83 @@
+Colisi (project codename) — Copyright (c) 2026 Daniel Hicks. All Rights Reserved.
+
+The shipped game's title may differ from "Colisi" (codename) once finalized.
+Daniel Hicks is the sole copyright holder for all code, documentation, design,
+and original assets in this repository.
+
+-----------------------------------------------------------------------------
+Public visibility, no license to reuse
+-----------------------------------------------------------------------------
+
+This repository is PUBLIC for development-transparency reasons (see
+PHILOSOPHY.md and AI-DISCLOSURE.md for the rationale: the AI use policy and
+persona research are built in the open).
+
+Public visibility is NOT a license. You may:
+
+  * Read the code and documentation for personal study and education.
+  * Quote short excerpts for review, commentary, criticism, journalism, or
+    academic work, subject to applicable fair-use / fair-dealing law in
+    your jurisdiction.
+  * File GitHub issues describing bugs, concerns, or feedback.
+
+You may NOT, without separate prior written permission from the copyright
+holder:
+
+  * Copy, fork, or redistribute the code or assets (including reposting on
+    another platform or mirror).
+  * Use the code or assets in another project, commercial or non-commercial.
+  * Train machine-learning models on the code or assets.
+  * Publish or distribute modified versions.
+  * Use the codename, shipped game title (once announced), characters,
+    world, names, art, or audio in derivative works.
+
+-----------------------------------------------------------------------------
+Third-party assets
+-----------------------------------------------------------------------------
+
+Some assets in this repository (placeholder art / audio / fonts) may be
+sourced from third parties under their own licenses (e.g., CC0, CC-BY).
+Those licenses govern those specific assets and are documented in
+.planning/credits.md (to be created when the first third-party asset is
+committed). Assets carrying their own license retain that license; nothing
+in this LICENSE narrows the rights granted by an asset's original license.
+
+-----------------------------------------------------------------------------
+Future relicensing
+-----------------------------------------------------------------------------
+
+The copyright holder reserves the right to relicense any or all of this
+repository's original content under different terms in the future (for
+example: source-available license at v1 launch, open-source license post-
+commercial-life, public-domain dedication on archival). Past contributions
+by the copyright holder may be released under any future license at the
+copyright holder's sole discretion.
+
+Any contribution received from outside the copyright holder is, unless
+otherwise stated by the contributor, assumed to be licensed back to the
+copyright holder under terms allowing the copyright holder to relicense
+that contribution as part of the project. Outside contributors who wish
+to retain different terms must state them explicitly in the pull request
+or issue thread.
+
+-----------------------------------------------------------------------------
+No warranty
+-----------------------------------------------------------------------------
+
+THE REPOSITORY CONTENT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES,
+OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE,
+ARISING FROM, OUT OF, OR IN CONNECTION WITH THE REPOSITORY CONTENT OR THE
+USE OR OTHER DEALINGS IN THE REPOSITORY CONTENT.
+
+-----------------------------------------------------------------------------
+Questions
+-----------------------------------------------------------------------------
+
+Licensing questions, permission requests, or commercial-use inquiries:
+please open a GitHub issue at https://github.com/danhicks853/colisi/issues
+and tag the issue [licensing].
+
+-----------------------------------------------------------------------------
