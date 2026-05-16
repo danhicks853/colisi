@@ -27,3 +27,10 @@ butler-key.txt
 
 # User-specific local overrides (D-INFRA-priv-2 reversible-path placeholder)
 .local/
+
+# Claude Code per-machine harness settings (not project-shared)
+.claude/settings.local.json
+
+# Ad-hoc verification scripts (Phase 2 plan-execution helpers; safe to delete)
+.tmp-verify-*.ps1
+.tmp.driveupload/
