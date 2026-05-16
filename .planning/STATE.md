@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v0.1
 milestone_name: milestone
-status: paused
-last_updated: "2026-05-12T01:37:33.414Z"
+status: executing
+last_updated: "2026-05-16T22:30:48.424Z"
 progress:
   total_phases: 12
   completed_phases: 0
-  total_plans: 9
-  completed_plans: 8
+  total_plans: 14
+  completed_plans: 9
 ---
 
 # Project State: Colisi
@@ -21,7 +21,7 @@ progress:
 
 **Core value:** Characters and relationships that keep evolving, in a world that never punishes the player.
 
-**Current focus:** Phase 01 — foundations-vision-lock
+**Current focus:** Phase 02 — infrastructure-repo-setup
 
 **Top-line strategic stance:** Architect for the full 30+ hour shipping game from day one. Vertical slice (Milestone 1, phases 1-7) is a checkpoint and wishlist driver, not the endpoint. Full game (Milestone 2, phases 8-11) detailed phasing is deferred until end-of-M1 retro provides honest content-pacing data.
 
@@ -29,12 +29,12 @@ progress:
 
 ## Current Position
 
-Phase: 01 (foundations-vision-lock) — EXECUTING
-Plan: 7 of 9 complete + 1 partial (01-00 scaffolding, 01-01 Vision Pack, 01-02 Risk/Capability/Process, 01-03 Loops/Journey, 01-04 Scenario Pack, 01-05 World/Style Pack, 01-06 Decision Locks/Tripwires; 01-07 MKTG-06 PARTIAL — Task 1 + Task 2 LLM-classification done, Daniel-verification + survey + verdict gated on calendar/external); 01-08 Greenlight remaining
+Phase: 02 (infrastructure-repo-setup) — EXECUTING
+Plan: 1 of 5 COMPLETE (02-01 repo-hardening-files DONE 2026-05-16); next = 02-02 (CONVENTIONS.md + README/CONTRIBUTING/CHANGELOG)
 **Milestone:** 1 of 2 (Vertical Slice)
-**Phase:** 1 of 12 — Foundations & Vision Lock
-**Plan:** 01-07 (MKTG-06 Validation) PARTIAL-COMPLETE 2026-05-10; next = 01-07 calendar-gated completion (Daniel tag-verification + survey distribution + verdict) → 01-08 (Greenlight)
-**Status:** Executing Phase 01. Vision/Risk-Capability-Process/Loops-Journey/Scenario/World-Style packs all signed. Decision Locks/Tripwires complete. **MKTG-06 partial-complete 2026-05-10:** 16-game hybrid list selected per D-MKTG-01 + ~11 neutrally-worded survey questions Claude-drafted with Daniel critique pass + Steam Web API queried 12 of 16 games × 30 negative reviews per game = 360 reviews LLM-classified into anti-feature categories + `_summary-tallies.md` aggregating findings. **3 CRITICAL findings:** Cozy Grove 41% time-pressure / Coffee Talk 72% VN-style / A Short Hike 33% endgame-too-short (direct empirical support for 3 of 5 D-MKTG-02 anti-feature anti-clauses). All 360 review tags UNVERIFIED pending Daniel's 100% verification per D-MKTG-02 anti-bias requirement (bottleneck for verdict). Task 3 paused at boundary: Daniel publishes Google Form via approved channels + ≥50 responses (~2-4 weeks) + verdict authored + outside-reviewer cosign (per D-WALL-05 hybrid LLM-primary mechanism locked in plan 01-06). 10 total architectural locks. SCOPE.md rows 6-15 log the commits. HEALTH-05 session 1 complete; session 2 scheduled ≥2026-05-24. 12 persona-zero (Dawn) design contributions logged during Phase 1. Outside-reviewer mechanism standardized LLM prompt template DEFERRED to Phase 2 start (Claude-authored per AI policy enforcement delegation).
+**Phase:** 2 of 12 — Infrastructure & Repo Setup
+**Plan:** 02-01 (Repo Hardening Files) COMPLETE 2026-05-16. Carry-forward from Phase 1: 01-07 MKTG-06 calendar-gated completion (Daniel tag-verification + survey distribution + verdict) and 01-08 (Greenlight) still pending external/calendar gates.
+**Status:** Executing Phase 02. Plan 02-01 landed 4 atomic commits (.gitignore + .gitattributes + .editorconfig + LICENSE) plus STACK.md SVG-LFS reconciliation. LFS now armed BEFORE any binary asset commit. Next plans 02-02 (CONVENTIONS + README/CONTRIBUTING/CHANGELOG), 02-03 (LFS verification + CI), 02-04 (backup + restore test), 02-05 (decisions + phase closure).
 
 **Progress bar:**
 
@@ -104,6 +104,9 @@ v1: [          ] 0/12 phases total
 | 2026-05-10 | **SCOPE row 16 — Pillar 3 expansion: Production polish IS accessibility.** Pillar 3 (Approachability) re-scoped to explicitly include production polish — bugs/crashes/save-loss/unintuitive controls are accessibility failures. New locked anti-clause: "We will always strive to NEVER ship any playable demo, test, patch, or gameplay containing breaking bugs. Even playtest tech demos must be functionally sound." Empirical anchor: ~50+ bug/crash/polish-failure reviews across 5+ corpus games (Sun Haven, Dreamlight, Sandrock, Coral Island, Portia). 4 POLISH-N placeholder REQs added to Pillar 3. Touched: 02-pillars-of-play.md + 07-pillar-mechanic-matrix.md + CLAUDE.md guardrails + SCOPE row 16 + feedback memory + MEMORY.md index. REQUIREMENTS.md POLISH-N1..4 additions queued for Phase 1→2 transition. | Daniel directive during MKTG-06 Portia verification (43% Portia bug-rate observation) + cross-corpus polish-friction pattern (R10 Coral Island autosave annotation flagged the pattern explicitly). | Closes a meaningful gap by elevating production polish from "finishing pass" to "phase-gate accessibility commitment." Bug-induced save loss is effective punishment — Pillar 2 honored. Polish is table-stakes accessibility for cozy demographic. | Phase 1 — execute-plan 01-07 |
 | 2026-05-10 | **Plan 01-07 MKTG-06 partial-complete: Task 1 + Task 2 LLM-classification DONE.** 16-game hybrid list per D-MKTG-01 selection rule + Daniel curation; ~11 neutrally-worded survey questions Claude-drafted with Daniel critique; **Steam Web API queried 12 of 16 games × 30 negative reviews = 360 reviews LLM-classified** into D-MKTG-02 anti-feature categories; cross-corpus `_summary-tallies.md` aggregating findings. **3 CRITICAL findings (per-game rate >30%):** Cozy Grove 41% time-pressure (9 of 22 substantive) / Coffee Talk 72% VN-style (18 of 25) / A Short Hike 33% endgame-too-short (7 of 21). Direct empirical support for 3 of 5 D-MKTG-02 anti-feature anti-clauses (time-pressure / VN-style / endgame-cliff). All 360 LLM tags UNVERIFIED pending Daniel 100% verification per D-MKTG-02 anti-bias hard requirement. Task 3 paused at boundary: Daniel publishes Google Form via approved channels + ≥50 responses (~2-4 weeks) + verdict authored + outside-reviewer cosign (per D-WALL-05 hybrid LLM-primary mechanism). Honest framing preserved: evidence is *consistent with* thesis but not independently validating; survey remains the gate. | Daniel directive 2026-05-10 ("we can do everything up to that point just fine"); Steam API access enabled real-data classification rather than deferral. AI policy held: factual extraction + research-synthesis classification with Daniel-verification gate + load-bearing verdict statement preserved for Daniel. No marketing copy generated; no verdict-shaped editorial claims authored. | Phase 1 — execute-plan 01-07 |
 | 2026-05-10 | **D-VISION-11 LOCKED: Stray black cat + animal rescue meta-loop anchor type.** Discoverable optional companion uses existing magic-tutoring + matchmaking mechanics (no new systems to learn). Cat is tutorial case for animal rescue anchor type added to meta-loop catalog. Slice scope: cat appears as discoverable optional content; cat arc does NOT complete in slice (cliffhanger wishlist hook). NPC-06 reinterpretation: 12-15 villager cast includes multiple non-human characters PLUS optional discoverable companions like the cat. NPC-06 REQUIREMENTS.md wording amendment queued for Phase 1→2 transition. SCOPE.md row 8 logs the lock. | Honors Dawn's prior pet-adoption emergent-feedback entry (2026-05-10) by graduating it from candidate → adopted via tutorial + meta-anchor mechanism. Strong persona-zero alignment. Adds new meta-loop anchor type without expanding system surface (re-uses locked mechanics — no Pillar 3 "untaught mid-game system" violation). Wishlist hook potential (slice cat thread cliffhanger). NPC-06 REQ tightens from generic to specific design intent. | Phase 1 — execute-plan 01-03 |
+| 2026-05-16 | **Plan 02-01 complete: 4 repo-hardening files locked.** `.gitignore` (Godot-tuned + butler-key.txt + `.local/` reversibility hook), `.gitattributes` (30+ LFS extensions including D-INFRA-art-1 DAW projects + future trailer/web fonts/archives + text-file LF enforcement + Windows-batch CRLF), `.editorconfig` (LF default + GDScript tabs + Markdown 2-space-preserve-trailing + Windows-batch CRLF), `LICENSE` (All Rights Reserved + public-visibility-no-reuse + ML-training prohibition + future-relicensing + AS-IS no-warranty + GitHub-issues contact). All 4 atomic per-task commits (a13ab24 / 7ef3c20 / fd08de5 / 43842b2). LFS now armed BEFORE any binary asset commit. INFRA-01/02/06/07 satisfied (LFS verification gated on plan 02-03 test PNG commit). | STACK.md verbatim base for `.gitignore` and `.gitattributes`; D-INFRA-priv-2 reversibility hook (`.local/`); D-INFRA-art-1 single-repo-with-LFS art-source extensions; cross-platform LF discipline. STACK.md inline amendment (SVG LFS removal replaced with explanatory comment block per checker Issue 4 reconciliation) prevents silent doc/reality divergence. | Phase 2 — execute-plan 02-01 |
+| 2026-05-16 | **Per-task atomic commits chosen over plan-level single-commit alternative.** Plan 02-01 verification step 5 said "Commit all 4 files in a single atomic commit" but orchestrator GSD execute-plan protocol mandates per-task atomic commits. Followed orchestrator precedence (file-scoped staging via `git add <file>`, one logical change per commit). | Per-task commits give finer history granularity, align with plan's `<task>` boundaries, and match `task_commit_protocol` in execute-plan.md. | Phase 2 — execute-plan 02-01 |
+| 2026-05-16 | **STACK.md SVG LFS line amended inline within Task 2.** Replaced `*.svg filter=lfs diff=lfs merge=lfs -text` with a three-line explanatory comment block. Mechanical/technical reconciliation (SVG is genuinely text/XML and diffs cleanly), not architectural. No new D-INFRA-* decision required. | Per CLAUDE.md authoritative-docs precedence: "fix the document or fix the reality, but do not let them diverge silently." `.gitattributes` was the binding reality; STACK.md now agrees. | Phase 2 — execute-plan 02-01 |
 
 ### Open decisions
 
@@ -162,7 +165,7 @@ Created 2026-05-10 during plan 01-00 execution at `.planning/SCOPE.md`. Format s
 
 ## Session Continuity
 
-**Last session:** 2026-05-12T01:37:33.409Z
+**Last session:** 2026-05-16T22:30:48.421Z
 
 - Defined PROJECT.md
 - Generated PERSONA.md, FEATURES.md, STACK.md, ARCHITECTURE.md, PITFALLS.md research

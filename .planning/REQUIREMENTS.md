@@ -11,13 +11,13 @@
 
 ### Infrastructure & Repository
 
-- [ ] **INFRA-01**: Repo configured with Git LFS *before any binary assets are committed* (.gitattributes tracking .png, .jpg, .ogg, .wav, .mp3, .glb, .gltf, .blend, .fbx, .ttf, .otf, .exr, .hdr, .tres binary forms)
-- [ ] **INFRA-02**: Project has a Godot-tuned `.gitignore` excluding engine cache (`.godot/`), generated import metadata (`.import/` for older 4.x), per-developer build configs, and any export-preset secrets
+- [x] **INFRA-01**: Repo configured with Git LFS *before any binary assets are committed* (.gitattributes tracking .png, .jpg, .ogg, .wav, .mp3, .glb, .gltf, .blend, .fbx, .ttf, .otf, .exr, .hdr, .tres binary forms)
+- [x] **INFRA-02**: Project has a Godot-tuned `.gitignore` excluding engine cache (`.godot/`), generated import metadata (`.import/` for older 4.x), per-developer build configs, and any export-preset secrets
 - [ ] **INFRA-03**: Repo is hosted on GitHub at `https://github.com/danhicks853/colisi.git` with main branch as the source of truth and at least one push completed (DONE 2026-05-09)
 - [ ] **INFRA-04**: Backup/redundancy strategy is implemented and tested with a documented restore procedure (primary: GitHub; secondary: local cloud sync of working directory; restore tested at least once)
 - [ ] **INFRA-05**: Folder structure and naming conventions for the Godot project are documented in `CONVENTIONS.md` (where scenes / scripts / assets / addons live, plus naming rules for scenes, scripts, resources, dialogue files)
-- [ ] **INFRA-06**: License decision is made and a `LICENSE` file exists at repo root (default lean: "All Rights Reserved" copyright notice, since this is a commercial closed-source game with public source visibility)
-- [ ] **INFRA-07**: Editor configuration committed (`.editorconfig` for consistent line endings and indentation across machines/editors; `.vscode/` settings if VS Code is used as secondary editor)
+- [x] **INFRA-06**: License decision is made and a `LICENSE` file exists at repo root (default lean: "All Rights Reserved" copyright notice, since this is a commercial closed-source game with public source visibility)
+- [x] **INFRA-07**: Editor configuration committed (`.editorconfig` for consistent line endings and indentation across machines/editors; `.vscode/` settings if VS Code is used as secondary editor)
 - [ ] **INFRA-08**: Decision recorded on art-source repo split (Blender source files: in main repo via LFS, OR separate `colisi-art-source` repo for LFS quota management); follow-through deliverable based on decision
 - [ ] **INFRA-09**: Minimal CI configured: GitHub Actions workflow that runs `godot --headless --import` to verify the project imports without errors on every push to main (free unlimited minutes on public repo)
 - [ ] **INFRA-10**: `README.md`, `CONTRIBUTING.md` (solo-dev / future-self facing), and `CHANGELOG.md` skeletons exist with documented format conventions; README includes project status, dev setup instructions, and codename pronunciation
@@ -242,13 +242,13 @@ All 105 v1 requirements mapped to phases. Coverage = 105/105.
 
 | Requirement | Phase | Status |
 |---|---|---|
-| INFRA-01 | Phase 2 | Pending |
-| INFRA-02 | Phase 2 | Pending |
+| INFRA-01 | Phase 2 | Complete |
+| INFRA-02 | Phase 2 | Complete |
 | INFRA-03 | Phase 2 | Complete (DONE 2026-05-09) |
 | INFRA-04 | Phase 2 | Pending |
 | INFRA-05 | Phase 2 | Pending |
-| INFRA-06 | Phase 2 | Pending |
-| INFRA-07 | Phase 2 | Pending |
+| INFRA-06 | Phase 2 | Complete |
+| INFRA-07 | Phase 2 | Complete |
 | INFRA-08 | Phase 2 | Pending |
 | INFRA-09 | Phase 2 | Pending |
 | INFRA-10 | Phase 2 | Pending |
