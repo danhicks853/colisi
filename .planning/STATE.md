@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v0.1
 milestone_name: milestone
 status: executing
-last_updated: "2026-05-16T22:43:01.908Z"
+last_updated: "2026-05-16T22:55:19.821Z"
 progress:
   total_phases: 12
   completed_phases: 0
   total_plans: 14
-  completed_plans: 10
+  completed_plans: 11
 ---
 
 # Project State: Colisi
@@ -30,11 +30,11 @@ progress:
 ## Current Position
 
 Phase: 02 (infrastructure-repo-setup) — EXECUTING
-Plan: 2 of 5 COMPLETE (02-01 repo-hardening-files DONE 2026-05-16; 02-02 conventions-and-documentation DONE 2026-05-16); next = 02-03 (LFS verification + CI)
+Plan: 3 of 5 COMPLETE (02-01 repo-hardening-files DONE 2026-05-16; 02-02 conventions-and-documentation DONE 2026-05-16; 02-03 lfs-verification-and-ci DONE 2026-05-16); next = 02-04 (backup + restore test)
 **Milestone:** 1 of 2 (Vertical Slice)
 **Phase:** 2 of 12 — Infrastructure & Repo Setup
-**Plan:** 02-02 (Conventions and Documentation) COMPLETE 2026-05-16. Carry-forward from Phase 1: 01-07 MKTG-06 calendar-gated completion (Daniel tag-verification + survey distribution + verdict) and 01-08 (Greenlight) still pending external/calendar gates.
-**Status:** Executing Phase 02. Plan 02-01 landed 4 atomic commits (.gitignore + .gitattributes + .editorconfig + LICENSE) plus STACK.md SVG-LFS reconciliation. Plan 02-02 landed 4 atomic commits creating CONVENTIONS.md (Godot project layout locked per D-INFRA-conv-1..4 BEFORE Phase 3) + CONTRIBUTING.md (solo-dev future-self conventions covering GSD workflow + Conventional Commits + Amendment Process + AI policy + slice-debt + sustainable pace) + CHANGELOG.md (Keep-A-Changelog v1.1.0 skeleton with [Unreleased] + Phase 1 milestone + project-init entries) + README.md augmentation (Setup-for-future-contributors + Project structure sections; survey CTA + AI disclosure preserved verbatim). INFRA-05 + INFRA-10 satisfied. Next plans 02-03 (LFS verification + CI), 02-04 (backup + restore test), 02-05 (decisions + phase closure).
+**Plan:** 02-03 (LFS Verification and CI) COMPLETE 2026-05-16. Carry-forward from Phase 1: 01-07 MKTG-06 calendar-gated completion (Daniel tag-verification + survey distribution + verdict) and 01-08 (Greenlight) still pending external/calendar gates.
+**Status:** Executing Phase 02. Plan 02-01 landed 4 atomic commits (.gitignore + .gitattributes + .editorconfig + LICENSE) plus STACK.md SVG-LFS reconciliation. Plan 02-02 landed 4 atomic commits creating CONVENTIONS.md + CONTRIBUTING.md + CHANGELOG.md + README.md augmentation. **Plan 02-03 landed 5 atomic commits operationalizing the LFS + .gitignore + CI infrastructure: 64×64 magenta PNG committed as LFS pointer (OID e06f021364, 242 B) with verified GitHub-side LFS upload; nested `.godot/` directory verified excluded by `.gitignore:2:.godot/` rule with `git check-ignore -v` exit 0; `.github/workflows/godot-import-check.yml` (Godot 4.5.2 Linux pin + LFS checkout + no-op-when-no-project-godot detection) scaffolded AND first GitHub Actions run completed successfully (run ID 25975070590, 10s); VERIFICATION-LOG.md (231 lines) captures all evidence with reproduction procedure.** INFRA-01 + INFRA-02 + INFRA-09 satisfied (joining INFRA-05/06/07/10 from prior plans). Next plans 02-04 (backup + restore test), 02-05 (decisions + phase closure).
 
 **Progress bar:**
 
@@ -108,6 +108,7 @@ v1: [          ] 0/12 phases total
 | 2026-05-16 | **Per-task atomic commits chosen over plan-level single-commit alternative.** Plan 02-01 verification step 5 said "Commit all 4 files in a single atomic commit" but orchestrator GSD execute-plan protocol mandates per-task atomic commits. Followed orchestrator precedence (file-scoped staging via `git add <file>`, one logical change per commit). | Per-task commits give finer history granularity, align with plan's `<task>` boundaries, and match `task_commit_protocol` in execute-plan.md. | Phase 2 — execute-plan 02-01 |
 | 2026-05-16 | **STACK.md SVG LFS line amended inline within Task 2.** Replaced `*.svg filter=lfs diff=lfs merge=lfs -text` with a three-line explanatory comment block. Mechanical/technical reconciliation (SVG is genuinely text/XML and diffs cleanly), not architectural. No new D-INFRA-* decision required. | Per CLAUDE.md authoritative-docs precedence: "fix the document or fix the reality, but do not let them diverge silently." `.gitattributes` was the binding reality; STACK.md now agrees. | Phase 2 — execute-plan 02-01 |
 | 2026-05-16 | **Plan 02-02 complete: CONVENTIONS.md + CONTRIBUTING.md + CHANGELOG.md created + README.md augmented.** CONVENTIONS.md locks Godot project folder structure (D-INFRA-conv-1: 11 top-level `res://` folders by-type) + snake_case file naming (D-INFRA-conv-2) + scene+script same-folder pairing (D-INFRA-conv-3) + per-character + `_shared/` animation library (D-INFRA-conv-4) + 6-autoload cross-ref to ARCHITECTURE.md (EventBus/GameState/SaveManager/TimeService/Settings + DialogueManager facade). CONTRIBUTING.md captures GSD workflow + Conventional Commits + trunk-based branch model + PHILOSOPHY.md Amendment Process + verbatim CLAUDE.md AI policy summary + slice-debt/SCOPE discipline + sustainable-pace per D-SUST-01..08. CHANGELOG.md establishes Keep-A-Changelog v1.1.0 skeleton with `[Unreleased]` + Phase 1 milestone + project-init entries + semver mapping (v0.0.x pre-slice / v0.1.0 slice / v1.0.0 full game). README.md augmented additively: Setup-for-future-contributors section + Project structure tree + Phase 2 status update; survey CTA + AI disclosure + Stack + License + Contact sections PRESERVED verbatim. All 4 atomic per-task commits (a87234a / 5535429 / 9d8d9d1 / e441783). INFRA-05 + INFRA-10 satisfied. | Plan body referenced Dialogic 2 in some addons listings; CONVENTIONS.md correctly lists Nathan Hoad's Dialogue Manager per Phase 1 stack-ratification (STATE.md decision log 2026-05-09 row 3). README.md preservation verified via grep post-edit for survey CTA URL + AI disclosure header + All Rights Reserved + Godot 4.5.x. Per-task atomic commits over plan-level single commit follows orchestrator GSD execute-plan protocol (same precedent as plan 02-01). | Phase 2 — execute-plan 02-02 |
+| 2026-05-16 | **Plan 02-03 complete: LFS routing verified end-to-end + .gitignore semantics verified + CI workflow scaffolded and runtime-verified.** Verification A (INFRA-01): 64×64 magenta PNG committed via PowerShell System.Drawing (242 B); `git lfs ls-files` lists it; `git show HEAD:<path>` returns LFS pointer text (OID `e06f021364...` / size 242); `git push` triggered `Uploading LFS objects: 100% (1/1), 242 B`. Verification B (INFRA-02): nested `.godot/fake-cache-marker.txt` created in verification subdir; `git status` did not list it; `git check-ignore -v` exited 0 with `.gitignore:2:.godot/<TAB><path>`; zero history matches for `.godot/`. CI Scaffold (INFRA-09): `.github/workflows/godot-import-check.yml` (102 lines, valid YAML) with no-op-when-no-project-godot detection + Godot 4.5.2 stable Linux pin + LFS-aware checkout + binary/.godot cache + ERROR-line scanning + artifact-upload-on-failure; `.github/workflows/README.md` documents scaffold-vs-active pattern + deferred future workflows; **first GitHub Actions run completed successfully** (run ID 25975070590, 10s, no-op short-circuit fired correctly). VERIFICATION-LOG.md (231 lines) captures all evidence with reproduction procedure. 5 atomic per-task commits (e24008a / 0369516 / b8c3dd6 / 7a5fb05 / 66302f8). INFRA-01 + INFRA-02 + INFRA-09 satisfied. | Plan-allowed PowerShell System.Drawing chosen for PNG (produces real magenta image, more robust than 67 B minimum-PNG). Runtime CI verification captured even though plan's locked floor was structural-only — the push triggered the workflow automatically at zero extra cost. VERIFICATION-LOG.md amended in a second commit (initial commit b8c3dd6 captured LFS + gitignore only; addendum commit 66302f8 captured CI runtime evidence) — each commit reflects what was actually known at commit time per PHILOSOPHY.md honesty-over-optimism. No Rule 1-4 deviations fired. | Phase 2 — execute-plan 02-03 |
 
 ### Open decisions
 
@@ -166,7 +167,7 @@ Created 2026-05-10 during plan 01-00 execution at `.planning/SCOPE.md`. Format s
 
 ## Session Continuity
 
-**Last session:** 2026-05-16T22:43:01.905Z
+**Last session:** 2026-05-16T22:55:19.818Z
 
 - Defined PROJECT.md
 - Generated PERSONA.md, FEATURES.md, STACK.md, ARCHITECTURE.md, PITFALLS.md research

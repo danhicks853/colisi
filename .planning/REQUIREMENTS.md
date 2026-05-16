@@ -19,7 +19,7 @@
 - [x] **INFRA-06**: License decision is made and a `LICENSE` file exists at repo root (default lean: "All Rights Reserved" copyright notice, since this is a commercial closed-source game with public source visibility)
 - [x] **INFRA-07**: Editor configuration committed (`.editorconfig` for consistent line endings and indentation across machines/editors; `.vscode/` settings if VS Code is used as secondary editor)
 - [ ] **INFRA-08**: Decision recorded on art-source repo split (Blender source files: in main repo via LFS, OR separate `colisi-art-source` repo for LFS quota management); follow-through deliverable based on decision
-- [ ] **INFRA-09**: Minimal CI configured: GitHub Actions workflow that runs `godot --headless --import` to verify the project imports without errors on every push to main (free unlimited minutes on public repo)
+- [x] **INFRA-09**: Minimal CI configured: GitHub Actions workflow that runs `godot --headless --import` to verify the project imports without errors on every push to main (free unlimited minutes on public repo)
 - [x] **INFRA-10**: `README.md`, `CONTRIBUTING.md` (solo-dev / future-self facing), and `CHANGELOG.md` skeletons exist with documented format conventions; README includes project status, dev setup instructions, and codename pronunciation
 - [ ] **INFRA-11**: Privacy review completed for public-repo visibility — decision recorded on whether `PERSONA.md` and other personal-data-bearing planning artifacts stay public, get redacted, or move to a `.local/` ignored path
 
@@ -250,7 +250,7 @@ All 105 v1 requirements mapped to phases. Coverage = 105/105.
 | INFRA-06 | Phase 2 | Complete |
 | INFRA-07 | Phase 2 | Complete |
 | INFRA-08 | Phase 2 | Pending |
-| INFRA-09 | Phase 2 | Pending |
+| INFRA-09 | Phase 2 | Complete |
 | INFRA-10 | Phase 2 | Complete |
 | INFRA-11 | Phase 2 | Pending |
 | CTRL-01 | Phase 3 | Pending |
