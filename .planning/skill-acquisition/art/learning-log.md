@@ -191,3 +191,84 @@
 - **Next session target:** Phase 2.3 — Second stylized prop (wooden mug OR stylized lantern). Repeat the full pipeline as confirmation that the workflow is reflexive. Likely 30-50% faster than the mushroom now that the recipe is locked.
 
 ---
+
+## 2026-05-15 to 2026-05-16 — Session 08-N: Phase 2.3 — Second stylized prop (sign-lamp)
+
+- **Syllabus phase / module:** Phase 2.3 — Second stylized prop with full cel-shading pipeline + three new technique extensions.
+- **Status:** ✅ Complete.
+- **Goal:** Internalize the cel-shading prop pipeline at second pass AND extend it with three new techniques never used in mushroom: multi-mesh hierarchy, emissive lighting, authored animation.
+- **What was built:** Magic-receding wooden sign-lamp (silhouette #3 variant). First Colisi-style-aligned **animated** prop in the project. Saved at `D:\Projects\art-scratch\02-blender-fundamentals\lamppost\` (.blend + textures + day-lit and night-lit Eevee renders).
+
+- **Design exploration (3 silhouette thumbnails, distinct damage philosophies):**
+  - **#1 (rejected):** Cross-arm asymmetric post + broken bracket + upside-down lantern + half-detached sign — "village pragmatism, broken physical infrastructure"
+  - **#2 (rejected):** Tree-trunk organic post + broken branch + sign nailed to trunk (salvaged) + rope-improvised lantern mount — "village pragmatism, nature-touched"
+  - **#3 (WON, built):** Slim slender wooden post + Archimedean wooden scroll bracket + open-frame wooden-tine lantern with cracked tines + cracked post wood + green grass at base — "broken MAGIC infrastructure, magic receding from the world"
+  - Alternates #1 and #2 captured in [`technique-notes.md`](technique-notes.md) and [`handback-to-main-session.md`](handback-to-main-session.md) for future variant work.
+
+- **Design DNA committed to (must survive every progression version):**
+  - **Post style:** Slim slender magically-grown wooden column, tapered wider at base
+  - **Lamp head geometry:** Open-frame wooden-tine lantern with peaked cap, canonical upright on top of post
+  - **Flame container:** Inside open frame, flame visible through tine gaps; housing constant across versions, flame contents evolve (oil → magical → enchanted)
+  - Variable per-instance damage profile across v1 (every lamppost in village has different damage story)
+
+- **Setting/lore commitment surfaced mid-session:** Sterling's lampposts were **grown, not built** (Daniel's silhouette #3 framing: "this was grown like this"). Open question for SCOPE.md amendment about extension to other infrastructure. Captured in [`handback-to-main-session.md`](handback-to-main-session.md) Seed 1, elevated from plant-seed parking lot toward SCOPE.md amendment candidate.
+
+- **Asset-progression-as-story-progression seed enriched:** distinct asset versions (not shader-progression), variable damage across instances within v1, diegetic damage philosophy where each defect tells a specific story. v1 lamppost is now the proof-of-concept exemplar. Each future version (v_mid, v_endgame) is a separate `.glb` sharing locked DNA. Flame contents evolve (oil → magical) while housing stays constant.
+
+- **Pipeline executed end-to-end with three new techniques vs mushroom:**
+  1. **Multi-mesh hierarchy** — 5 separate child meshes (Post, Lamp, Fire, Sign_arm, Sign_link, Sign) parented under an Empty root (`Lamppost_Root`). Sign's origin set to top edge for swing-animation pivot.
+  2. **Emissive lighting** — Emission shader on flame + Point Light at flame's position + Eevee Bloom + Shadow Mode disabled on flame material (so light passes through). Two-element pattern for any glowing light source asset.
+  3. **Authored animation** — Action Editor keyframing + F-Modifier cyclic on sign rotation. First Blender animation in the project. Authored in Blender today; runtime procedural sway in Godot is the eventual shipping pattern (logged as Phase 4 follow-up in handback file).
+
+- **Hand-painted textures (5 surfaces, Procreate watercolor brushes):** Sign, Post, Sign_link, Sign_arm, Lamp. All using Wet Acrylic / Wet Ink / Wash brush families for the painterly + cel-shader synthesis. Damage cues (cracks, gouges, broken tine edges, magic-receding tonal shift) painted at texture level rather than modeled in geometry — confirms the "diegetic damage is texture work, not geometry" pipeline decision from session-opener.
+
+- **Renders produced:** Day-lit (lamp unlit per villager-extinguish-at-sunrise design, damage clearly visible in clean daylight) + Night-lit (lamp lit, warm flame against cool ambient, cozy focal mood). Two renders tell two different stories of the same asset — directly illustrating the asset-progression-as-story system in microcosm.
+
+- **Technique learned (highlights captured in [technique-notes.md](technique-notes.md) §Phase 2.3 additions):**
+  - Multi-mesh parent-child hierarchy with Empty root
+  - Bezier curve + bevel depth + convert-to-mesh for organic curves (rope connector)
+  - Extra Objects addon (Add → Curve → Spirals → Archemedian) for parametric spirals
+  - Mesh-to-mesh interpenetration is fine for static stylized assets (slight overlap at attachment points sells "connected")
+  - Recalculate Normals Outside (Shift+N) fixes Solidify outline appearing in wrong direction
+  - Merge by Distance for cleaning coincident verts at primitive caps (triangle-fan cylinders)
+  - Cap Fill Type at primitive creation matters: Triangle Fan vs N-Gon affects peak-extrusion ease
+  - Smart UV Project at Angle Limit 89° for irregular tubular meshes; manual seam-marking for clean-grain meshes
+  - UV orientation isn't automatic — flip via Ctrl+M in UV Editor if texture appears mirrored or upside-down
+  - Solidify thickness scales with mesh size; per-asset tuning required
+  - Emission alone doesn't cast light in Eevee — need separate Point Light for actual illumination
+  - Disable Shadow Mode (or Object → Ray Visibility → Shadow) on emissive material so its own mesh doesn't block its own light
+  - Blender 4.x keyframe shortcut change: `I` = insert with current Keying Set; `K` = open property-choice menu
+  - Curves cannot be UV-unwrapped without first converting to mesh
+  - Mouse-hover context for shortcuts (Ctrl+P, U, I, K) — must be over 3D viewport for most operations
+  - Outliner selection conventions are OPPOSITE to Windows: Ctrl+click = individual toggle, Shift+click = range select
+  - Watercolor brush family in Procreate produces texture painterly feel naturally — no special technique required, the brush IS the technique
+  - F-Modifier (Make Cyclic) in Graph Editor for looping animations
+
+- **Workflow tip discovered:** iCloud Photos folder works as bidirectional PC ↔ iPad transfer shortcut. Save UV PNGs to `C:\Users\[user]\iCloudPhotos\Photos\` on PC; they appear in iPad Photos app automatically. Procreate imports from Photos directly. Export painted textures back via Photos → syncs to PC. Faster than PairDrop for repeated iteration loops.
+
+- **Style-direction checks (final renders):**
+  - ✅ Hand-painted watercolor wood textures (Tang/Ghibli/Okami painterly anchor)
+  - ✅ Hard cel-shader bands cutting through (Hades graphic structure)
+  - ✅ Bold black ink outline (Hades-anchor + Solidify technique)
+  - ✅ Emissive flame + Point Light + Bloom (cozy night-lit feel; warm light spilling onto post)
+  - ✅ Diegetic damage cues reading at silhouette + texture + lighting levels
+  - ✅ Day-lit + night-lit renders tell different stories of same asset
+  - ✅ "Grown not built" wooden register reads (organic spiral, tapered base, integrated forms)
+  - ✅ Sign swing animation cyclic and stable
+  - ⚠️ Damage cracks lean toward pure-black (graphic) rather than dark-walnut-brown (wood-natural). Per-asset taste call; per-pillar acceptable for "magic-receding dramatic" register, could soften for Tang-leaning cozy register on future variants.
+
+- **AI policy notes:** All design decisions Daniel-authored — silhouettes (3 hand-sketched in Procreate), damage philosophy (3 distinct variations articulated), design DNA (3 locked components + variable list), world-state lore ("grown not built" framing), all palette and color choices, all 5 texture surfaces painted from scratch, sign swing animation parameters, render lighting + framing decisions. Claude taught technique, critiqued workflow + style-direction alignment, located human-creator addon (Extra Objects), provided shader/modifier recipes. Did NOT propose specific colors, designs, named entities, paint examples, or pre-author any creative content. Two seeds captured in handback for `/gsd:plant-seed` promotion (asset-progression system, fire sprite character) with explicit Claude-must-not-author notes on the fire sprite.
+
+- **Capability matrix implications (proposed amendments to `16-capability-gap-matrix.md` on return to main GSD):**
+  - **"Blender 3D modeling":** advanced (multi-mesh hierarchy + topology cleanup with damage + curve-based modeling + edge loops + bevels)
+  - **"Cel-shading shader development":** established (reusable Cel Node Group proven across mushroom + lamppost, 5 different mesh shapes)
+  - **"Hand-painted texture work (Procreate)":** established (5 textures painted with watercolor brush family; cel-shader synthesis confirmed)
+  - **NEW row: "Blender Action Editor / glTF animation":** basic (first authored animation; cyclic F-Modifier; ready for character-rig progression in Phase 6)
+  - **NEW row: "Emissive lighting in Eevee":** basic-established (Emission + Point Light + Bloom + Shadow disable recipe proven; applicable to all glowing-source assets)
+  - **NEW row: "Blender curves (Bezier + parametric spirals)":** basic (curve-to-mesh for organic tubular shapes)
+
+- **Phase 2.3 status:** ✅ Complete. **First Colisi-style-aligned ANIMATED prop shipped to art-scratch.**
+- **Phase 2 status:** ✅ Complete. All three modules (2.1 donut, 2.2 mushroom, 2.3 lamppost) closed. Daniel has reflexively-internalized the locked-style Blender prop pipeline plus three extensions (multi-mesh, emissive, animation).
+- **Next session target:** TBD on Daniel's return. Options: Phase 3 (modular architecture kit-bash) is the syllabus next-in-line; OR return to main GSD work and pick up the survey-distribution Task 3 thread or PROJECT/REQUIREMENTS work. Handback file captures seeds and capability-matrix amendments waiting for surface.
+
+---
