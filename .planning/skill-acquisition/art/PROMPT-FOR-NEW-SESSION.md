@@ -2,6 +2,12 @@
 
 > **Paste everything below verbatim into a fresh Claude session.** The new session will operate as a Blender/DCC tutor for Daniel under Colisi's AI policy. Designed to be self-contained: the new session reads the repo files referenced below to absorb the project context, style direction, and policy constraints without needing additional briefing.
 
+> **STATUS UPDATE 2026-05-16:** Phase 2 INFRA complete. Repo is now properly LFS-configured (`.gitattributes` rules for `.blend`, `.glb`, `.fbx`, `.png`, `.jpg`, `.psd`, `.kra`, `.wav`, `.ogg`, `.mp3`, `.exr`, `.hdr`, and 24+ other binary extensions). Backup operational across 3 tiers (GitHub + Google Drive mirror of `D:\Projects\game` + quarterly tarball cadence). Daniel has pivoted from **practice-only skill-acquisition** to **real-asset-first, learn-as-you-go**. Real assets now LAND IN THE REPO via LFS — see "Practice-file disposition" section for what's practice (still scratch-only) vs what's real (commits to `res://` paths via LFS).
+>
+> **CURRENT TARGET MODULE (Daniel-selected 2026-05-16):** Grassy terrain prototype — ocean plane + sculpted/displaced grass area + dirt road masking + mountain border, all in Blender, cel-shaded materials, simple enough for a few sessions, with plenty of empty space to drop test artifacts (lamppost, future props, future villager characters) for in-engine scale/cohesion testing. **Not slice-canonical** — this is a *prototype* to feel out scale, lighting, and cohesion across multiple assets. Slice village layout decisions stay deferred until SEED-001 elevation decision lands. After Blender export → import into Godot scratch project (godot-scratch outside repo, or after Phase 3 INFRA: directly into Colisi repo) → first-person walk-around camera → drop in v1 lamppost as first test artifact = **first time walking around in your game world**.
+
+> **Capability matrix amendments queued (from Phase 2.3 lamppost session handback):** Six rows pending edit to `.planning/phases/01-foundations-vision-lock/deliverables/process-pack/16-capability-gap-matrix.md`. The new session can land these via direct edit (covered by GSD workflow exemption below). See handback-to-main-session.md §"Other open art-session threads" for the full list.
+
 ---
 
 ## System role + framing (paste this section as the first message)
@@ -131,21 +137,39 @@ Files NOT to create:
 
 ## Practice-file disposition (where do .blend / .png / exports live?)
 
-**Practice files stay OUTSIDE the repo.**
+**As of 2026-05-16, Daniel has pivoted to real-asset-first.** Two distinct categories now:
 
-Reasons:
-- Practice .blend files, exports, failed attempts, intermediate renders are large binaries
-- GitHub free LFS quota = 1GB storage + 1GB/month bandwidth; practice churn would burn through this quickly (current quota strategy: reactive upgrade at ~80% per CONTEXT.md D-INFRA-art-2)
+### Practice files (exploration, failed attempts, intermediate iteration) → OUTSIDE the repo
+
+Practice work stays in `D:\Projects\art-scratch\` (already established). Reasons:
+- Practice .blend files, intermediate renders, failed attempts churn fast and are large
+- GitHub free LFS quota = 1GB storage + 1GB/month bandwidth; practice churn would burn through this quickly (D-INFRA-art-2 reactive-upgrade threshold = 80%)
 - Practice work is for learning, not shipping; no need to version-control failed mushroom #4
 
-Recommended structure (Daniel's choice; you can suggest):
-- `D:\Projects\art-scratch\` or `~/art-scratch/` — outside the repo entirely; local-only practice space
-- Within art-scratch: organize by skill milestone (e.g., `01-blender-fundamentals/`, `02-stylized-props/`, `03-cel-shading/`, `04-cat/`)
-- Successful pieces that Daniel wants to keep for portfolio / reference can be exported to a personal cloud backup (Google Drive per CONTEXT.md D-INFRA-bkp-1)
+Within `art-scratch/`: organize by skill milestone (e.g., `01-blender-fundamentals/`, `02-blender-fundamentals/lamppost/`, `03-terrain/`).
 
-**What DOES commit to the repo (`.planning/skill-acquisition/art/`):** only procedural docs — the learning log + tracker + notes + resource library. NO binary art assets.
+### Real assets (locked design DNA, slice-candidate or slice-canonical) → INTO the repo via LFS
 
-If Daniel wants to share a screenshot for critique in-session, he can paste it directly into chat without committing the file. After critique, the screenshot doesn't persist to disk unless he chooses.
+As of Phase 2 INFRA closure 2026-05-16, the repo accepts binary assets cleanly through LFS:
+- `.blend` source files → LFS (one per asset; the canonical authoring file)
+- `.glb` exports → LFS (the Godot-consumable file)
+- Textures / atlases → LFS (`.png`, `.jpg`, `.tga`, `.exr`)
+- Procreate `.procreate` source files if Daniel wants them committed → LFS
+- Audio masters / SFX exports → LFS (`.wav`, `.ogg`, `.mp3`, `.flac`)
+
+**Where in the repo:** Phase 3 will lock the canonical Godot `res://` folder paths per CONVENTIONS.md (`res://assets/models/`, `res://assets/textures/`, etc.). Pre-Phase-3, real assets can land in `.planning/art-assets/` or a similar staging path; final migration to `res://` happens at Phase 3 project creation.
+
+**The criterion for real-asset commit:** Daniel has explicitly locked the design DNA (e.g., the v1 lamppost silhouette #3 with the magically-grown wooden post + open-frame tine lantern + oil flame canon) AND he intends the asset to be slice-candidate or slice-canonical. Practice attempts toward that DNA stay in scratch; the locked exemplar commits.
+
+**Slice-debt awareness:** Anything Daniel locks today is anchored to today's skill level. In 6 months his Blender skills will be stronger; some of today's "real" assets may warrant a re-author pass before slice ship. That's expected — it's slice-debt territory, not perfectionism. Lock the DNA, ship v1, mark re-author-eligible if appropriate.
+
+### Procedural docs (learning log, technique notes, capability matrix amendments) → INTO the repo
+
+`learning-log.md`, `technique-notes.md`, `art-syllabus.md`, `capability-gap-matrix.md` amendments — these have always committed and continue to. NOT binary; no LFS needed.
+
+### Screenshots for in-session critique
+
+If Daniel pastes a screenshot directly into chat for critique, it doesn't need to persist — chat-attached images don't require a commit. After critique, the screenshot disappears with the chat history unless Daniel chooses to save it. For asset-critique-then-iterate-then-commit flow: keep working in `art-scratch/`, paste in-progress renders to chat as needed, commit the finalized `.blend` + `.glb` + render to the repo at the moment of "this is the locked real asset."
 
 ## Performance-target inheritance from CLAUDE.md
 
