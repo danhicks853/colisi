@@ -162,7 +162,7 @@ v1: [▓░░░░░░░░░░░] ~1.5/12 phases total
 - [x] Plan 02-04 (Backup + restore test): BACKUP.md + restore-test-log.md (4 integrity checks PASS) — COMPLETE 2026-05-16
 - [x] Plan 02-05 (Decisions recorded + phase closure): PROJECT.md + SCOPE row 18 + REQUIREMENTS.md INFRA-01..11 complete + STATE.md updated — COMPLETE 2026-05-16
 - [x] **Phase 2 carry-forward: Tier 2 Google Drive client GUI completion** — CLOSED 2026-05-16 ahead of 2026-05-30 deadline. Daniel completed OAuth + Mirror-mode + added `D:\Projects\game` to mirror-folder list (verbatim confirmation: "ok drive set up and has the game folder configured"). Tier 2 backup now actively mirroring repo to Drive cloud. Closure logged in `restore-test-log.md` as new "Tier 2 Drive carry-forward CLOSED" H2 entry. Section 3.5 catch-up scenario test deferred to next quarterly retest 2026-08-11 (no need to spin fresh test now; architectural parity sufficient).
-- [ ] **Phase 2 carry-forward: sterling-rough-map.png LFS retro-migration disposition** — Daniel decision pending at Phase 2 closure review; recommended pragmatic-leave-as-is (38 KB negligible vs history-rewrite disruption); if Daniel approves (a) leave-as-is → commit slice-debt entry; if (b) migrate → spawn separate gap-closure task
+- [x] **Phase 2 carry-forward: sterling-rough-map.png LFS retro-migration disposition** — CLOSED 2026-05-16. Daniel chose option (b) migrate + force-push. Executed `git lfs migrate import --include="*.png" --everything` (Daniel ran locally) + `git push --force-with-lease origin main` (39 KB / 2 LFS objects uploaded). sterling-rough-map.png now LFS-pointer with OID c7b379244b... at all history points. Side-effect: full history SHAs rewritten from first PNG-touch forward — commit SHAs referenced in plan SUMMARYs / SCOPE.md rows / STATE.md decisions log are stale-but-content-preserved. D:\TestRestore\colisi-2026-05-11 restore-test artifact is now divergent from origin (held the pre-migration history); functionally fine; can be deleted or re-cloned at quarterly retest 2026-08-11.
 - [ ] Schedule quarterly restore-test retest 2026-08-11 (D-INFRA-bkp-2 cadence; use `_restore-test-runner.ps1`)
 - [ ] Plan Phase 3 (Project Skeleton & Foundational Systems) — gated on Phase 1 plan 01-08 Greenlight + Phase 2 transition checklist
 
@@ -197,7 +197,7 @@ Created 2026-05-10 during plan 01-00 execution at `.planning/SCOPE.md`. Format s
 
 1. Read STATE.md (this file) for current position
 2. Confirm Phase 1 plan 01-08 (Greenlight) gate-status: if still pending, proceed with calendar-gated MKTG-06 verdict authoring + outside-reviewer cosign; if complete, proceed to step 3
-3. Check Phase 2 carry-forward statuses: (a) Tier 2 Google Drive sync operational by 2026-05-30? promote to slice-debt if not. (b) sterling-rough-map.png disposition selected by Daniel? execute selected option.
+3. Phase 2 carry-forwards both CLOSED 2026-05-16: (a) Tier 2 Drive operational; (b) sterling-rough-map.png migrated to LFS + history force-pushed. No carry-forward action needed.
 4. Run `/gsd:plan-phase 3` to begin Phase 3 plan generation
 5. Phase 3 creates the actual Godot project at the repo root — CONVENTIONS.md folder structure MUST be honored from the first `mkdir res://scenes`
 

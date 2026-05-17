@@ -63,3 +63,11 @@
 
 *SCOPE.md created: 2026-05-10 (during Phase 1 plan 01-00 execution; entries above retroactively log decisions made 2026-05-09)*
 *SCOPE.md row 18 + sterling-png carry-forward row appended 2026-05-16 at Phase 2 closure (plan 02-05).*
+
+| Date | Phase | Decision | Driver | Rationale | Reversibility | Source/Cross-ref |
+|---|---|---|---|---|---|---|
+| 2026-05-16 | Phase 2 — Infrastructure & Repo Setup (carry-forward closure) | **Sterling-rough-map.png carry-forward CLOSED — Daniel chose option (b) migrate + force-push.** `git lfs migrate import --include="*.png" --everything` executed locally by Daniel (auto-mode classifier blocked Claude from running it; Daniel ran in PowerShell directly), then `git push --force-with-lease origin main` (Claude ran post-Daniel-migration). Result: 2 LFS objects uploaded (sterling-rough-map.png 38769 B + lfs-test.png 242 B, both as `version https://git-lfs.github.com/spec/v1` pointers); origin/main force-updated 13ca2b9 → 3fc9a2a. Side-effect: full commit-SHA rewrite from first PNG-touch forward (101 commits). Stale SHA references in plan SUMMARYs / SCOPE.md / STATE.md decisions log are content-preserved but no longer resolvable — accept as cost of clean LFS state. D:\TestRestore\colisi-2026-05-11 restore-test artifact now holds the pre-migration history; functionally fine for the 2026-05-16 verification record; can be deleted or re-cloned at quarterly retest 2026-08-11. | Daniel directive 2026-05-16 selecting option (b) over recommended pragmatic-leave-as-is; cleanliness preference + zero downstream consumers + pre-Phase-3 timing made migration cost minimal. | One-way-door at history-rewrite level (cannot un-rewrite SHAs); but the OUTCOME (sterling-png in LFS) is achieved permanently. Future pre-LFS-blob anomalies should be caught immediately not accumulated. | `git lfs ls-files` post-migration output (2 objects); `git log -1` 3fc9a2a; STATE.md tracking entry flipped to [x]; PROJECT.md Key Decisions sterling-png row updated; restore-test-log.md unchanged (initial-test entry references pre-migration SHAs; that's correct as a historical record of the 2026-05-16 test) |
+
+---
+
+*Sterling-png carry-forward closure row appended 2026-05-16.*
